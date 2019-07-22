@@ -1,0 +1,121 @@
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    height: 4px;
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    cursor: pointer;
+    background: #ddd;
+    color: transparent;
+    height: 40px;
+    border: none;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  /* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #D9D9D6;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: -100vw 0 0 100vw #cc0000;
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: none;
+    border: 1px solid #D9D9D6;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    box-shadow: none;
+    border: 1px solid #D9D9D6;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #D9D9D6;
+    border-radius: 3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #D9D9D6;
+  }
+  input[type=range]:active::-webkit-slider-runnable-track {
+    background: #D9D9D6;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #D9D9D6;
+    border-radius: 3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #cc0000;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: none;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #cc0000;
+  }
+  input[type=range]:active::-ms-fill-lower {
+    background: #cc0000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #D9D9D6;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: none;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #D9D9D6;
+  }
+  input[type=range]:active::-ms-fill-upper {
+    background: #D9D9D6;
+  }

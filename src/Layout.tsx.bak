@@ -1,0 +1,102 @@
+import React from 'react'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
+import { Container, Row, Col, Button, UncontrolledCollapse } from 'reactstrap'
+import { Header } from './Header'
+import { pathPrefix } from '../gatsby-config'
+import { Layout } from 'antd'
+import { SidebarContents } from './SidebarContents'
+import { TableOfContents } from './TableOfContents'
+import './css/design-system/staples-ds.css'
+import './css/site/preview-overrides.css'
+
+const { Sider } = Layout
+
+
+export function RootLayout({ children, sidebarRoot }: any) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+          allMdx {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        const allPosts = data.allMdx.edges.map(
+          (edge: any) => edge.node.fields.slug
+        )
+        let onPostPage
+        if (typeof window !== 'undefined') {
+          const path = window.location.pathname.replace(
+            pathPrefix.slice(0, -1),
+            ''
+          )
+          if (
+            allPosts.indexOf(path) >= 0 ||
+            allPosts.indexOf(path.slice(0, -1)) >= 0
+          ) {
+            onPostPage = true
+          } else {
+            onPostPage = false
+          }
+        }
+
+        const { title } = data.site.siteMetadata
+
+        return (
+          <>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                { name: 'description', content: 'Sample' },
+                { name: 'keywords', content: 'sample, something' },
+              ]}
+            >
+            <html lang="en" />
+            </Helmet>
+            <Header siteTitle={title} />
+
+
+            <Container fluid className="pt-5">
+            <Row>
+              <Col xs="3" className="mt-5">
+                <SidebarContents root={sidebarRoot} />
+              </Col>
+
+              <Col xs="6">
+                {children}
+              </Col>
+
+              <Col xs="3">
+                <TableOfContents />
+              </Col>
+            </Row>
+            </Container>
+
+            <Layout>
+              <Sider
+                width={200}
+                style={{ background: '#fff', height: '100%' }}
+              />
+            </Layout>
+          </>
+        )
+      }}
+    />
+  )
+}
+
+export default RootLayout

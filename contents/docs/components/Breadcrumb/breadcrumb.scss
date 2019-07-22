@@ -1,0 +1,11 @@
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem; }
+  .breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #747679;
+    content: ">"; }
+
+ol li, ul li {
+  margin-bottom: 0px;
+}

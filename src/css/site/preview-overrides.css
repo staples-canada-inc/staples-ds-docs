@@ -1,0 +1,19 @@
+.badge-pill {
+    margin: 0 12px;
+}
+
+.dropdown-toggle {
+    margin: 0 12px;
+}
+
+.ant-anchor-link-active > .ant-anchor-link-title {
+    color: #198294;
+}
+
+
+.ant-anchor-ink-ball{
+    width: 10px;
+    height: 10px;
+    background-color: #198294;
+    border: 2px solid #198294;
+}

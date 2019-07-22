@@ -1,0 +1,23 @@
+input[type="color"] {
+    display: block;
+    width: 100%;
+    padding: 0px 3px;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: $line-height-base;
+    height: 46px;
+    color: $dark-gray;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid $light-gray;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &::placeholder {
+        color: $mid-gray;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

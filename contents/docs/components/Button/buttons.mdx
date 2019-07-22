@@ -1,0 +1,458 @@
+---
+title: Buttons
+root: "/docs"
+parents: ['Components']
+---
+
+
+import {
+	Button,
+	ButtonDropdown,
+	DropdownToggle,
+	DropdownMenu,
+	DropdownItem,
+	ButtonGroup,
+	ButtonToolbar,
+	UncontrolledButtonDropdown
+} from "reactstrap";
+
+# Buttons
+
+## Button Tags
+
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+
+### Buttons
+
+<Playground>
+	<Button color="primary" className="mr-2">
+		Primary
+	</Button>
+	<Button color="secondary" className="mr-2">
+		Secondary
+	</Button>
+	<Button color="tertiary" className="mr-2">
+		Tertiary
+	</Button>
+</Playground>
+
+    <!-- Used with <button> element -->
+    <button type="button" class="btn btn-primary">PRIMARY</button>
+    <button type="button" class="btn btn-secondary">SECONDARY</button>
+    <button type="button" class="btn btn-tertiary">TERTIARY</button>
+
+    <!-- Used with <a> element -->
+    <a class="btn btn-primary" href="#" role="button">PRIMARY</a>
+    <a class="btn btn-secondary" href="#" role="button">SECONDARY</a>
+    <a class="btn btn-tertiary" href="#" role="button">TERTIARY</a>
+
+    <!-- Used with <input> element -->
+    <input class="btn btn-primary" type="button" value="PRIMARY" onclick="msg()">
+    <input class="btn btn-secondary" type="button" value="SECONDARY" onclick="msg">
+    <input class="btn btn-tertiary" type="button" value="TERTIARY" onclick="msg()">
+
+## Group Buttons
+
+Note that these buttons have spaces between them. You can also group them with the `.btn-group` class. Here is an example.
+
+Wrap a series of buttons with `.btn` in `.btn-group`.
+
+**Note: Assistive Technology**
+In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate role attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
+
+In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
+
+<Playground>
+	<ButtonGroup>
+		<Button>Item Left</Button>
+		<Button>Item Middle</Button>
+		<Button>Item Right</Button>
+	</ButtonGroup>
+</Playground>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Item Left</button>
+        <button type="button" class="btn btn-primary">Item Middle</button>
+        <button type="button" class="btn btn-primary">Item Right</button>
+    </div>
+
+## Call to Action Button
+
+Call to Action (CTA) buttons are typically used in banners and carousels, or anywhere we would want the user to action a particular item. They may also be used on busy backgrounds to increase visibility. There is a limit of one CTA button per page and should be used for the most prominent action on the page. For additional buttons, please resort to one of the default styles.
+**There is a limit of one CTA button per page and should be used for the most prominent action on the page.**
+
+### CTA Buttons
+
+<Playground>
+	<Button color="primary" className="mr-2 cta">
+		Primary
+	</Button>
+	<Button color="secondary" className="mr-2 cta">
+		Secondary
+	</Button>
+	<Button color="tertiary" className="mr-2 cta">
+		Tertiary
+	</Button>
+	<br />
+	<Button color="primary" className="mr-2 mt-3 cta" size="lg">
+		Large Primary
+	</Button>
+	<Button color="secondary" className="mr-2 mt-3 cta" size="lg">
+		Large Secondary
+	</Button>
+	<Button color="tertiary" className="mr-2 mt-3 cta" size="lg">
+		Large Tertiary
+	</Button>
+</Playground>
+
+    <button type="button" class="btn btn-primary cta"Primary</button>
+    <button type="button" class="btn btn-secondary cta">Secondary</button>
+    <button type="button" class="btn btn-tertiary cta">Tertiary</button>
+
+## Sizes
+
+Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
+
+### Large Buttons
+
+<Playground>
+	<Button color="primary" className="mr-2" size="lg">
+		Large Primary
+	</Button>
+	<Button color="secondary" className="mr-2" size="lg">
+		Large Secondary
+	</Button>
+	<Button color="tertiary" className="mr-2" size="lg">
+		Large Tertiary
+	</Button>
+</Playground>
+
+    <button type="button" class="btn btn-primary btn-lg">Large Primary</button>
+    <button type="button" class="btn btn-secondary btn-lg">Large Secondary</button>
+    <button type="button" class="btn btn-tertiary btn-lg">Large Tertiary</button>
+
+### Small Buttons
+
+<Playground>
+	<Button color="primary" className="mr-2" size="sm">
+		Small Primary
+	</Button>
+	<Button color="secondary" className="mr-2" size="sm">
+		Small Secondary
+	</Button>
+	<Button color="tertiary" className="mr-2" size="sm">
+		Small Tertiary
+	</Button>
+</Playground>
+
+    <button type="button" class="btn btn-primary btn-sm">Primary</button>
+    <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+    <button type="button" class="btn btn-tertiary btn-sm">Tertiary</button>
+
+## Block Button
+
+Create block level buttons that span the full width of a parent-by adding `.btn-block`.
+
+<Playground>
+	<Button color="primary" size="lg" block>
+		Large Primary
+	</Button>
+	<Button color="secondary" size="lg" block>
+		Large Secondary
+	</Button>
+	<Button color="tertiary" size="lg" block>
+		Large Tertiary
+	</Button>
+</Playground>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block">Primary</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Secondary</button>
+    <button type="button" class="btn btn-tertiary btn-lg btn-block">Tertiary</button>
+
+## Active state
+
+Buttons will appear pressed (with a darker background, darker border and inset shadow) when active. There’s no need to add a class to `<button>`s as they use a pseudo-class. However, you can still force the same active appearance with `.active` (and include the aria-pressed='true' attribute) should you need to replicate the state programmatically.
+
+Add `.active` to items in the dropdown to style them as active.
+
+### Active Button
+
+<Playground>
+	<Button color="primary" active className="mr-2">
+		Primary
+	</Button>
+	<Button color="secondary" active className="mr-2">
+		Secondary
+	</Button>
+	<Button color="tertiary" active className="mr-2">
+		Tertiary
+	</Button>
+</Playground>
+
+    <button type="button" class="btn btn-primary active">Primary</button>
+    <button type="button" class="btn btn-secondary active">Secondary</button>
+    <button type="button" class="btn btn-tertiary active">Tertiary</button>
+
+## Disabled state
+
+Make buttons look inactive by adding the disabled boolean attribute to any `<button>` element.
+
+**However to make the style for disabled buttons in compliance to Staples Design System we would use another colour class for disabled buttons**
+
+Add `.disabled` to items in the dropdown to style them as disabled.
+
+### Disabled Default Button
+
+<Playground>
+
+    <Button color="primary" disabled className="mr-2">
+    	Primary
+    </Button>
+
+    <Button color="secondary" disabled className="mr-2">
+    	Secondary
+    </Button>
+
+    <Button color="tertiary" disabled className="mr-2">
+    	Tertiary
+    </Button>
+
+</Playground>
+
+    <button type="button" class="btn btn-tertiary" disabled >Primary</button>
+    <button type="button" class="btn btn-tertiary" disabled >Secondary</button>
+    <button type="button" class="btn btn-tertiary" disabled >Tertiary</button>
+
+### Disabled Call To Action Button
+
+<Playground>
+
+    <Button color="primary" disabled className="mr-2 cta">
+    	Primary
+    </Button>
+
+    <Button color="secondary" disabled className="mr-2 cta">
+    	Secondary
+    </Button>
+
+    <Button color="tertiary" disabled className="mr-2 cta">
+    	Tertiary
+    </Button>
+
+</Playground>
+
+    <button type="button" class="btn btn-primary cta" disabled>Primary</button>
+    <button type="button" class="btn btn-secondary cta" disabled>Secondary</button>
+    <button type="button" class="btn btn-tertiary cta" disabled>Tertiary</button>
+
+### Link functionality caveat
+
+The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex='-1'` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+
+Disabled buttons using the `<a>` element behave a bit differently:
+
+<ul>
+	<li>
+		It doesn't support the disabled attribute, so you must add the .disabled
+		class to make it visually appear disabled.
+	</li>
+	<li>
+		Some future-friendly styles are included to disable all pointer-events
+		on anchor buttons. In browsers which support that property, you won’t
+		see the disabled cursor at all.
+	</li>
+	<li>
+		Disabled buttons should include the aria-disabled='true' attribute to
+		indicate the state of the element to assistive technologies.
+	</li>
+</ul>
+
+<!-- ## Button Dropdowns
+
+Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here’s how you can put them to work with `<button>` elements:
+
+### Dropdown Button with Links and Dropdown Header
+
+<Playground>
+    <UncontrolledButtonDropdown>
+        <DropdownToggle caret>
+            Dropdown
+        </DropdownToggle>
+        <DropdownMenu>
+            <DropdownItem header>Header</DropdownItem>
+            <DropdownItem disabled>Action</DropdownItem>
+            <DropdownItem>Another Action</DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem>Another Action</DropdownItem>
+        </DropdownMenu>
+    </UncontrolledButtonDropdown>
+</Playground>
+
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <h6 class="dropdown-header">Dropdown header</h6>
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+
+## Drop variations
+
+Trigger dropdown menus to the left of elements by adding `.dropleft .dropright .dropup` to the parent element.
+
+<Playground>
+    <UncontrolledButtonDropdown direction="up">
+            <DropdownToggle caret>
+                Dropup
+            </DropdownToggle>
+            <DropdownMenu>
+                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem>Another Action</DropdownItem>
+            </DropdownMenu>
+    </UncontrolledButtonDropdown>
+
+    <UncontrolledButtonDropdown direction="left">
+            <DropdownToggle caret>
+                Dropleft
+            </DropdownToggle>
+            <DropdownMenu>
+                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem>Another Action</DropdownItem>
+            </DropdownMenu>
+    </UncontrolledButtonDropdown>
+
+    <UncontrolledButtonDropdown direction="right">
+            <DropdownToggle caret>
+                Dropleft
+            </DropdownToggle>
+            <DropdownMenu>
+                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem>Another Action</DropdownItem>
+            </DropdownMenu>
+    </UncontrolledButtonDropdown>
+
+</Playground>
+
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropleft
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropleft
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+    <div class="btn-group dropright">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropleft
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+
+## Split Button
+
+Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
+
+We use this extra class to reduce the horizontal padding on either side of the caret by 25% and remove the `margin-left` that’s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
+
+### Split Button and Dropdown Divider
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </div>
+
+## Split Dropleft
+
+Trigger dropdown menus to the left of elements by adding `.dropleft` to the parent element.
+
+### Split Dropleft Button
+
+    <div class="btn-group">
+        <div class="btn-group dropleft" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropleft</span>
+        </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-secondary">
+        Split dropleft
+      </button>
+    </div>
+
+## Split Dropright
+
+Trigger dropdown menus to the right of elements by adding `.dropright` to the parent element.
+
+### Split Dropright Button
+
+    <div class="btn-group dropright">
+        <button type="button" class="btn btn-secondary">
+        Split dropright
+      </button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropright</span>
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+## Split Dropup
+
+Trigger dropdown menus above elements by adding `.dropup` to the parent element.
+
+### Split Dropup Button
+
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary">
+        Split dropup
+      </button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div> -->

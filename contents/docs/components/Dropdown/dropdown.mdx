@@ -1,0 +1,209 @@
+---
+title: Dropdown
+root: '/docs'
+parents: ['Components']
+---
+
+
+import {
+	UncontrolledDropdown,
+	UncontrolledCollapse,
+	DropdownToggle,
+	DropdownMenu,
+	DropdownItem,
+	Button,
+	Card,
+	CardBody
+} from "reactstrap";
+
+# Dropdown Menu
+
+Dropdowns present a list of options that can be used to filter existing content. They can also be used for nested menu items or in responsive views for components such as tabs. For multi-level dropdowns, it is recommended to limit options to 1-2 additional levels as it can get confusing for the user.
+
+<Playground>
+	<UncontrolledDropdown>
+		<DropdownToggle caret>Dropdown</DropdownToggle>
+		<DropdownMenu>
+			<DropdownItem>Action</DropdownItem>
+			<DropdownItem>Another Action</DropdownItem>
+			<DropdownItem>Something else here</DropdownItem>
+		</DropdownMenu>
+	</UncontrolledDropdown>
+</Playground>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
+## Multi-Level Dropdown Menu
+
+In this dropdown menu, we have multi-leveled dropdowns which allows users to have the option to select certain things based on a subject/category.
+
+<Playground>
+	<UncontrolledDropdown>
+		<DropdownToggle caret>Dropdown</DropdownToggle>
+		<DropdownMenu>
+			<DropdownItem>First Level</DropdownItem>
+			<DropdownItem>First Level</DropdownItem>
+			<Button
+				type="button"
+				tabindex="0"
+				role="menuitem"
+				className="dropdown-toggle"
+				id="toggler"
+				caret
+			>
+				Toggle
+			</Button>
+			<UncontrolledCollapse
+				toggler="#toggler"
+				className="dropdown-submenu"
+			>
+				<DropdownItem>Second Level</DropdownItem>
+				<DropdownItem>Second Level</DropdownItem>
+			</UncontrolledCollapse>
+			<DropdownItem>First Level</DropdownItem>
+			<DropdownItem>First Level</DropdownItem>
+		</DropdownMenu>
+	</UncontrolledDropdown>
+</Playground>
+
+    <div class="dropdown">
+        <button type="button" aria-haspopup="true" aria-expanded="true" class="dropdown-toggle btn btn-secondary">Dropdown</button>
+        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">First Level</button>
+            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">First Level</button>
+            <button type="button" tabindex="0" role="menuitem" id="toggler" class="dropdown-toggle btn btn-secondary">Toggle</button>
+            <div toggler="#toggler" class="dropdown-submenu collapse">
+                <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Second Level</button>
+                <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Second Level</button>
+            </div>
+            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">First Level</button>
+            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">First Level</button>
+        </div>
+    </div>
+
+## Dropdown directions
+
+<Playground>
+    <UncontrolledDropdown direction="up">
+    <DropdownToggle caret>
+        Dropup
+    </DropdownToggle>
+    <DropdownMenu>
+        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem>Another Action</DropdownItem>
+    </DropdownMenu>
+    </UncontrolledDropdown>
+    <br/>
+    <UncontrolledDropdown direction="left">
+    <DropdownToggle caret>
+        Dropleft
+    </DropdownToggle>
+    <DropdownMenu>
+        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem>Another Action</DropdownItem>
+    </DropdownMenu>
+    </UncontrolledDropdown>
+    <br/>
+    <UncontrolledDropdown direction="right">
+    <DropdownToggle caret>
+        Dropright
+    </DropdownToggle>
+    <DropdownMenu>
+        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem>Another Action</DropdownItem>
+    </DropdownMenu>
+    </UncontrolledDropdown>
+
+</Playground>
+
+<!-- ### Navbar with Multi-Level Dropdown Menu
+
+    <ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+    </ul>
+
+We also can do dropdowns in forms.
+
+### Menu Forms
+
+Put a form within a dropdown menu, or make it into a dropdown menu, and use `margin or padding utilities` to give it the negative space you require.
+
+### Simple Dropdown Menu Form
+
+    <div class="dropdown-menu">
+    <form class="px-4 py-3">
+        <div class="form-group">
+        <label for="exampleDropdownFormEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+        <label for="exampleDropdownFormPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">
+            Remember me
+        </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">New around here? Sign up</a>
+    <a class="dropdown-item" href="#">Forgot password?</a>
+    </div> -->
+
+You can also change the directions of the dropdowns to become droplefts. droprights or dropups.
+
+<table>
+<thead>
+    <th>Class</th>
+    <th>Direction</th>
+
+</thead>
+<tbody>
+    <tr>
+        <td><code>.dropdown</code></td>
+        <td>Down</td>
+    </tr>
+    <tr>
+        <td><code>.dropright</code></td>
+        <td>Right</td>
+    </tr>
+    <tr>
+        <td><code>.dropleft</code></td>
+        <td>Left</td>
+    </tr>
+    <tr>
+        <td><code>.dropup</code></td>
+        <td>Up</td>
+    </tr>
+</tbody>
+</table>

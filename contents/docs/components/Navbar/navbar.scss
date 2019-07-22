@@ -1,0 +1,32 @@
+.navbar-brand {
+    max-width: 250px;
+}
+
+nav.nav-item {
+    line-height: auto !important;
+}
+
+nav.bg-primary,
+nav.bg-dark {
+    .navbar-nav {
+        .nav-link {
+            color: $white;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+nav.bg-light {
+    .navbar-nav {
+        .nav-link {
+            color: $dark-gray;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
