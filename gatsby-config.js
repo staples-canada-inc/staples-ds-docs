@@ -56,13 +56,22 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
-                    `gatsby-remark-prismjs`,
+                    `gatsby-remark-katex`,
                     {
                         resolve: `gatsby-remark-autolink-headers`,
                         options: {
                             className: 'post-toc-anchor',
                         },
                     },
+                    {
+                        resolve: `gatsby-transformer-remark`,
+                        options: {
+                          tableOfContents: {
+                            heading: null,
+                            maxDepth: 6,
+                          },
+                        },
+                      },
                 ],
             },
         },
@@ -83,14 +92,31 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: `gatsby-remark-prismjs`,
+                        resolve: `gatsby-remark-vscode`,
                         options: {
-                            classPrefix: 'language-',
-                            inlineCodeMarker: null,
-                            showLineNumbers: true,
-                            noInlineHighlight: false,
-                        },
-                    },
+                            colorTheme: {
+                                defaultTheme: 'OneDark-Pro',    // Required
+                                prefersDarkTheme: 'OneDark-Pro', // Optional: used with `prefers-color-scheme: dark`
+                                prefersLightTheme: 'Quiet Light'    // Optional: used with `prefers-color-scheme: light`
+                            }, // Read on for list of included themes. Also accepts object and function forms.
+                            wrapperClassName: '',  // Additional class put on 'pre' tag
+                            injectStyles: true,    // Injects (minimal) additional CSS for layout and scrolling
+                            extensions: [{
+                                identifier: 'zhuangtongfa.Material-theme',
+                                version: '2.26.0'
+                            }],        // Extensions to download from the marketplace to provide more languages and themes
+                            languageAliases: {},   // Map of custom/unknown language codes to standard/known language codes
+                            replaceColor: oldColor => ({
+                                'var(--primary)': 'var(--red)',
+                            })[oldColor.toLowerCase()] || oldColor,  // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
+                            getLineClassName: ({   // Function allowing dynamic setting of additional class names on individual lines
+                                content,             //   - the string content of the line
+                                index,               //   - the zero-based index of the line within the code fence
+                                language,            //   - the language specified for the code fence
+                                codeFenceOptions     //   - any options set on the code fence alongside the language (more on this later)
+                            }) => ''
+                        }
+                    }
                 ],
             },
         },

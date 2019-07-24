@@ -7,6 +7,7 @@ parents: ['Components']
 
 import SpinnerStaples from "./SpinnerStaples";
 import { Spinner } from "reactstrap";
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Spinners
 
@@ -16,25 +17,27 @@ Staples' spinners can be used to show the loading state in your projects. Theyâ€
 
 This is the primary custom spinner built for Staples Canada.
 
-<Playground>
+<ComponentPreview>
 	<SpinnerStaples className="mr-5" size="sm">
 		Loading...
 	</SpinnerStaples>
 	<SpinnerStaples className="mr-5">Loading...</SpinnerStaples>
 	<SpinnerStaples size="lg">Loading...</SpinnerStaples>
-</Playground>
+</ComponentPreview>
 
+```  html
     <div role="status" class="spinner-staples">
         <div class="square"></div>
         <div class="square"></div>
         <span class="sr-only">Loading...</span>
     </div>
+```
 
 ### Secondary Spinner
 
 This is the secondary spinner to be used in cases where the primary spinner is not ideal.
 
-<Playground>
+<ComponentPreview>
 	<Spinner color="secondary" size="sm">
 		Loading...
 	</Spinner>
@@ -42,11 +45,13 @@ This is the secondary spinner to be used in cases where the primary spinner is n
 	<Spinner color="secondary" size="lg">
 		Loading...
 	</Spinner>
-</Playground>
+</ComponentPreview>
 
+```  html
     <div class="spinner-border text-secondary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
+```
 
 ### Assistive Technology
 

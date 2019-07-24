@@ -15,12 +15,13 @@ import {
 	Card,
 	CardBody
 } from "reactstrap";
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Dropdown Menu
 
 Dropdowns present a list of options that can be used to filter existing content. They can also be used for nested menu items or in responsive views for components such as tabs. For multi-level dropdowns, it is recommended to limit options to 1-2 additional levels as it can get confusing for the user.
 
-<Playground>
+<ComponentPreview>
 	<UncontrolledDropdown>
 		<DropdownToggle caret>Dropdown</DropdownToggle>
 		<DropdownMenu>
@@ -29,8 +30,9 @@ Dropdowns present a list of options that can be used to filter existing content.
 			<DropdownItem>Something else here</DropdownItem>
 		</DropdownMenu>
 	</UncontrolledDropdown>
-</Playground>
+</ComponentPreview>
 
+```  html
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown button
@@ -41,12 +43,13 @@ Dropdowns present a list of options that can be used to filter existing content.
             <a class="dropdown-item" href="#">Something else here</a>
         </div>
     </div>
+```
 
 ## Multi-Level Dropdown Menu
 
 In this dropdown menu, we have multi-leveled dropdowns which allows users to have the option to select certain things based on a subject/category.
 
-<Playground>
+<ComponentPreview>
 	<UncontrolledDropdown>
 		<DropdownToggle caret>Dropdown</DropdownToggle>
 		<DropdownMenu>
@@ -73,8 +76,9 @@ In this dropdown menu, we have multi-leveled dropdowns which allows users to hav
 			<DropdownItem>First Level</DropdownItem>
 		</DropdownMenu>
 	</UncontrolledDropdown>
-</Playground>
+</ComponentPreview>
 
+```  html
     <div class="dropdown">
         <button type="button" aria-haspopup="true" aria-expanded="true" class="dropdown-toggle btn btn-secondary">Dropdown</button>
         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
@@ -89,10 +93,11 @@ In this dropdown menu, we have multi-leveled dropdowns which allows users to hav
             <button type="button" tabindex="0" role="menuitem" class="dropdown-item">First Level</button>
         </div>
     </div>
+```
 
 ## Dropdown directions
 
-<Playground>
+<ComponentPreview>
     <UncontrolledDropdown direction="up">
     <DropdownToggle caret>
         Dropup
@@ -123,7 +128,7 @@ In this dropdown menu, we have multi-leveled dropdowns which allows users to hav
     </DropdownMenu>
     </UncontrolledDropdown>
 
-</Playground>
+</ComponentPreview>
 
 <!-- ### Navbar with Multi-Level Dropdown Menu
 

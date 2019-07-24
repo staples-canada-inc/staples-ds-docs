@@ -1,2 +1,3 @@
 // gatsby-browser.js
-import 'prismjs/themes/prism-coy.css';
+require ('gatsby-remark-vscode/styles.css');
+//require("prismjs/plugins/line-numbers/prism-line-numbers.css");

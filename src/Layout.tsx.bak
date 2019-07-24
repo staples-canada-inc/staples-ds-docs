@@ -68,8 +68,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
             <html lang="en" />
             </Helmet>
             <Header siteTitle={title} />
-
-
+            
             <Container fluid className="pt-5">
             <Row>
               <Col xs="3" className="mt-5">

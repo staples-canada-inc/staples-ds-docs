@@ -1,0 +1,100 @@
+---
+title: Colours
+root: '/docs'
+parents: ['Design']
+---
+
+import { ColourPalette } from "./components/ColourPalette";
+import staplesRed from "../../../src/images/staples-red.svg";
+import white from "../../../src/images/white.svg";
+import charcoal from "../../../src/images/charcoal.svg";
+import midGray from "../../../src/images/mid-gray.svg";
+import lightGray from "../../../src/images/light-gray.svg";
+import lightestGray from "../../../src/images/lightest-gray.svg";
+import chartreuse from "../../../src/images/chartreuse.svg";
+import cork from "../../../src/images/cork.svg";
+import darkBlue from "../../../src/images/dark-blue.svg";
+import blue from "../../../src/images/blue.svg";
+import lightestBlue from "../../../src/images/lightest-blue.svg";
+import black from "../../../src/images/black.svg";
+import red from "../../../src/images/red.svg";
+import yellow from "../../../src/images/yellow.svg";
+import green from "../../../src/images/green.svg";
+import tertiary from "../../../src/images/tertiary.svg";
+
+
+# Colours
+
+#### Remaining consistent across Staples’ various digital products, whether it be applications, subsites or other experiences, requires rules around colour usage.
+
+## Colour Palette
+
+The Staples colour palette is comprised of Primary, Secondary and Tertiary colours. Each created with a specific purpose in mind to help shape the brand we’ve all come to know.
+
+<ColourPalette />
+
+## Applying Colour
+
+|  Colour                       | Usage                         |
+| :---------------------------- | :---------------------------- |
+| <img src={staplesRed} />      | **Staples Red** serves as the **primary call-to-action colour** across all Staples products and experiences. It is only to be used sparingly and with intent. Reserve its use to highlight critically important information. Never to be used in headings or body copy. |
+| <img src={white} />           | **White** is to be used as the **default background**. It’s also useful for meeting contrast requirements when there is a need to overlay text on top of solid colour elements.|
+| <img src={charcoal} />        | **Charcoal** is best suited for **headings** and **body copy**. It can be used as a background with white text on occasion. |
+| <img src={midGray} />         | **Mid-Gray** is intended for **pull quotes, sub-headings, lead text, list bullets, form input text, icons, tertiary links and buttons**, to name a few. |
+| <img src={lightGray} />       | **Light-Gray** is best used as the main colour for **element outlines, dividers, disabled text, buttons or states**. |
+| <img src={lightestGray} />    | **Lightest-Gray** is best used as a **background** to highlight important information or where a user is able to interact with elements. It should **never be used for text**. |
+| <img src={chartreuse} />      | **Chartreuse** is intended to be used sparingly to **accent deals or promotions**. |
+| <img src={cork} />            | **Cork** is used to **accent long running promotions** and as a solid colour background. |
+| <img src={darkBlue} />        | **Dark Blue** is predominantly used for **text links** and **secondary buttons**. |
+| <img src={blue} />            | **Blue** is to be used to **accent new or featured products** and as a solid colour background. |
+| <img src={lightestBlue} />    | **Lightest-Blue** is ideal for **hover states** within table elements, dropdowns, menus and lists. |
+
+
+---
+
+## Usage
+
+#### Colour in the Staples Design System is managed using colour tokens. This allows us to remain consistent across all our digital interfaces and applications.
+
+### Colour Tokens
+
+Colour in the Staples Design System is managed using colour tokens. Tokens are a method of noting colour by role or usage, independent of the actual colour value (hex). For instance, instead of having to code all instances of a primary button in a UI to be `#CC0000`, the primary button component specifies the token `$brand-red` for these buttons, and that token is specified in a separate file to be `#CC0000`.
+
+A single token can be associated to multiple roles, but only if the colour value is used consistently across those roles. This allows for uniform colour application and efficient global changes while maintaining full styling flexibility.
+
+### Neutral Colours
+
+| Tokens                  | Value   |                                               |
+| ----------------------- |---------|-----------------------------------------------|
+| $white                  | #FFFFFF | <img style={{width:40}} src={white} />        |
+| $lightest-gray          | #F3F3F2 | <img style={{width:40}} src={lightestGray} /> |
+| $light-gray             | #D9D9D6 | <img style={{width:40}} src={lightGray} />    |
+| $mid-gray               | #747679 | <img style={{width:40}} src={midGray} />      |
+| $dark-gray              | #444444 | <img style={{width:40}} src={charcoal} />     |
+| $black                  | #000000 | <img style={{width:40}} src={black} />        |
+
+
+### Brand Colours
+
+| Tokens        | Value   |                                               |
+|---------------|---------|-----------------------------------------------|
+| $primary      | #CC0000 | <img style={{width:40}} src={staplesRed} />   |
+| $secondary    | #198294 | <img style={{width:40}} src={darkBlue} />     |
+| $tertiary     | #747679 | <img style={{width:40}} src={midGray} />      |
+| $charcoal     | #444444 | <img style={{width:40}} src={charcoal} />     |
+| $blue         | #9BD3DD | <img style={{width:40}} src={blue} />         |
+| $lightest-blue| #EFF6F7 | <img style={{width:40}} src={lightestBlue} /> |
+| $chartreuse   | #D2D420 | <img style={{width:40}} src={chartreuse} />   |
+| $cork         | #DDCBA4 | <img style={{width:40}} src={cork} />         |
+
+
+### System Colours
+
+| Role            | Value   |                                              |
+|-----------------|---------|----------------------------------------------|
+| $error          | #E70000 | <img style={{width:40}} src={red} />         |
+| $warning        | #F9A424 | <img style={{width:40}} src={yellow} />      |
+| $success        | #18A654 | <img style={{width:40}} src={green} />       |
+| $info           | #747679 | <img style={{width:40}} src={tertiary} />    |
+
+

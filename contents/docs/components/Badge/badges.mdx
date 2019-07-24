@@ -5,6 +5,7 @@ parents: ['Components']
 ---
 
 import { Badge, Button } from 'reactstrap'
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Badges
 
@@ -13,7 +14,7 @@ Badges can be used as part of links or buttons to provide a counter.
 
 ## Scale to Parent
 
-<Playground>
+<ComponentPreview>
 	<h1>
 		Heading <Badge color="secondary">New</Badge>
 	</h1>
@@ -27,28 +28,32 @@ Badges can be used as part of links or buttons to provide a counter.
 		Heading <Badge color="secondary">New</Badge>
 	</h4>
 
-</Playground>
+</ComponentPreview>
 
+```  html
     <h1>Example heading <span class="badge badge-secondary">New</span></h1>
     <h2>Example heading <span class="badge badge-secondary">New</span></h2>
     <h3>Example heading <span class="badge badge-secondary">New</span></h3>
     <h4>Example heading <span class="badge badge-secondary">New</span></h4>
     <h5>Example heading <span class="badge badge-secondary">New</span></h5>
     <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+```
 
 ## Notification
 
 Badges can be used as part of links or buttons to provide a counter.
 
-<Playground>
+<ComponentPreview>
   <Button color="primary" outline>
     Notifications <Badge color="primary">4</Badge>
   </Button>
-</Playground>
+</ComponentPreview>
 
+```  html
     <button type="button" class="btn btn-primary">
         Notifications <span class="ml-2 badge badge-primary">4</span>
     </button>
+```
 
 Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
 
@@ -65,7 +70,7 @@ Using color to add meaning only provides a visual indication, which will not be 
 
 Use the `.badge-pill` modifier class to make badges more rounded (with a larger `border-radius` and additional horizontal `padding`).
 
-<Playground>
+<ComponentPreview>
   <Badge color="primary" className="mr-2" pill>
     Primary
   </Badge>
@@ -90,8 +95,9 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
   <Badge color="dark" className="mr-2" pill>
     Dark
   </Badge>
-</Playground>
+</ComponentPreview>
 
+```  html
     <span class="badge badge-primary badge-pill">Primary</span>
     <span class="badge badge-secondary badge-pill">Secondary</span>
     <span class="badge badge-success badge-pill">Success</span>
@@ -100,12 +106,13 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
     <span class="badge badge-info badge-pill">Info</span>
     <span class="badge badge-light badge-pill">Light</span>
     <span class="badge badge-dark badge-pill">Dark</span>
+```
 
 ### Links
 
 Using the contextual `.badge-*` classes on an `<a>` element quickly provides actionable badges with hover and focus states.
 
-<Playground>
+<ComponentPreview>
   <a href="#" className="mr-2 badge badge-primary">
     Primary
   </a>
@@ -130,8 +137,9 @@ Using the contextual `.badge-*` classes on an `<a>` element quickly provides act
   <a href="#" className="mr-2 badge badge-dark">
     Dark
   </a>
-</Playground>
+</ComponentPreview>
 
+```  html
     <a href="#" class="badge badge-primary">Primary</a>
     <a href="#" class="badge badge-secondary">Secondary</a>
     <a href="#" class="badge badge-success">Success</a>
@@ -140,3 +148,4 @@ Using the contextual `.badge-*` classes on an `<a>` element quickly provides act
     <a href="#" class="badge badge-info">Info</a>
     <a href="#" class="badge badge-light">Light</a>
     <a href="#" class="badge badge-dark">Dark</a>
+```

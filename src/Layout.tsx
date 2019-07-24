@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { Container, Row, Col, Button, UncontrolledCollapse } from 'reactstrap'
+import { Container, Row, Col, Button, UncontrolledCollapse,  } from 'reactstrap'
 import { Header } from './Header'
 import { pathPrefix } from '../gatsby-config'
 import { SidebarContents } from './SidebarContents'
@@ -9,9 +9,11 @@ import { TableOfContents } from './TableOfContents'
 import PageLayout from 'react-sidebar'
 import './css/design-system/staples-ds.css'
 import './css/site/preview-overrides.css'
+import menuToggle from "./images/menu-toggle.svg"
+import { Hamburger } from './Hamburger';
 
-const mql = window.matchMedia(`(min-width: 800px)`)
-const styleOverrieds = {
+const mql = window.matchMedia(`(min-width: 576px)`)
+const styleOverrides = {
     sidebar: {
         width: "280px",
         top: "56px",
@@ -19,24 +21,37 @@ const styleOverrieds = {
         paddingLeft: "30px",
         height: "100%",
         overflow: "hidden",
-        borderRight: "1px solid #d9d9d6"
+        borderRight: "1px solid #d9d9d6",
+        backgroundColor: "#ffffff"
     },
     content: {
         top: "50px",
-        paddingLeft: "30px"
+        paddingLeft: "0",
+        backgroundColor: "#f3f3f2"
     }
+}
+const menuToggleStyle = {
+    position: 'fixed',
+    top: '12px',
+    left: '20px',
+    zIndex: '9999999',
+    height:'30px', 
+    width: '30px',
+    display: 'block'
 }
 
 export class RootLayout extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+
     this.state = {
-      sidebarDocked: mql.matches,
-      sidebarOpen: false,
+      docked: mql.matches,
+      open: false,
     }
 
-    this.mediaQueryChanged = this.mediaQueryChanged.bind(this)
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this)
+    this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
+    this.toggleOpen = this.toggleOpen.bind(this);
+    this.onSetOpen = this.onSetOpen.bind(this);
 
   }
 
@@ -48,38 +63,58 @@ export class RootLayout extends React.Component {
     mql.removeListener(this.mediaQueryChanged)
   }
 
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open })
+  onSetOpen(open) {
+    this.setState({ open });
   }
 
   mediaQueryChanged() {
-    this.setState({ sidebarDocked: mql.matches, sidebarOpen: false })
+    this.setState({ 
+        docked: mql.matches, 
+        open: false 
+    })
   }
 
-  render() {
-    
+  toggleOpen(ev) {
+    this.setState({ open: !this.state.open });
 
+    if (ev) {
+      ev.preventDefault();
+    }
+}
+
+  render() {
     return (
     <>
-    <Header />
+    <Header/>
+
       <PageLayout
         sidebar={ <SidebarContents root={this.props.sidebarRoot} /> }
-        open={this.state.sidebarOpen}
-        docked={this.state.sidebarDocked}
-        onSetOpen={this.onSetSidebarOpen}
+        open={this.state.open}
+        docked={this.state.docked}
+        onSetOpen={this.onSetOpen}
         defaultSidebarWidth={280}
         shadow={false}
-        styles={styleOverrieds}
+        styles={styleOverrides}
       >
 
         <Container fluid>
           <Row>
-            <Col xs="12" lg="9">
+            <Col xs="12" lg="9" className="pl-lg-5 ml-lg-5">
               {this.props.children}
             </Col>
-            <Col xs="0" lg="3">
+            <span>
+          {!this.state.docked && (
+            <a
+              onClick={this.toggleOpen}
+              href="#" 
+            >
+              <img src={menuToggle} style={menuToggleStyle} />
+              </a>
+          )}
+        </span>
+            {/* <Col xs="0" lg="3">
               <TableOfContents />
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </PageLayout>

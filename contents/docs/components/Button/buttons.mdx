@@ -15,6 +15,7 @@ import {
 	ButtonToolbar,
 	UncontrolledButtonDropdown
 } from "reactstrap";
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Buttons
 
@@ -24,7 +25,7 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 ### Buttons
 
-<Playground>
+<ComponentPreview>
 	<Button color="primary" className="mr-2">
 		Primary
 	</Button>
@@ -34,22 +35,24 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 	<Button color="tertiary" className="mr-2">
 		Tertiary
 	</Button>
-</Playground>
+</ComponentPreview>
 
+```  html
     <!-- Used with <button> element -->
-    <button type="button" class="btn btn-primary">PRIMARY</button>
-    <button type="button" class="btn btn-secondary">SECONDARY</button>
-    <button type="button" class="btn btn-tertiary">TERTIARY</button>
+    <button type="button" class="btn btn-primary">Primay</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-tertiary">Tertiary</button>
 
     <!-- Used with <a> element -->
-    <a class="btn btn-primary" href="#" role="button">PRIMARY</a>
-    <a class="btn btn-secondary" href="#" role="button">SECONDARY</a>
-    <a class="btn btn-tertiary" href="#" role="button">TERTIARY</a>
+    <a class="btn btn-primary" href="#" role="button">Primay</a>
+    <a class="btn btn-secondary" href="#" role="button">Secondary</a>
+    <a class="btn btn-tertiary" href="#" role="button">Tertiary</a>
 
     <!-- Used with <input> element -->
     <input class="btn btn-primary" type="button" value="PRIMARY" onclick="msg()">
     <input class="btn btn-secondary" type="button" value="SECONDARY" onclick="msg">
     <input class="btn btn-tertiary" type="button" value="TERTIARY" onclick="msg()">
+```
 
 ## Group Buttons
 
@@ -62,19 +65,21 @@ In order for assistive technologies (such as screen readers) to convey that a se
 
 In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
 
-<Playground>
+<ComponentPreview>
 	<ButtonGroup>
 		<Button>Item Left</Button>
 		<Button>Item Middle</Button>
 		<Button>Item Right</Button>
 	</ButtonGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-primary">Item Left</button>
         <button type="button" class="btn btn-primary">Item Middle</button>
         <button type="button" class="btn btn-primary">Item Right</button>
     </div>
+```
 
 ## Call to Action Button
 
@@ -83,31 +88,21 @@ Call to Action (CTA) buttons are typically used in banners and carousels, or any
 
 ### CTA Buttons
 
-<Playground>
-	<Button color="primary" className="mr-2 cta">
-		Primary
-	</Button>
-	<Button color="secondary" className="mr-2 cta">
-		Secondary
-	</Button>
-	<Button color="tertiary" className="mr-2 cta">
-		Tertiary
-	</Button>
+<ComponentPreview>
+	<Button color="primary" className="mr-2 cta">Primary</Button>
+	<Button color="secondary" className="mr-2 cta">Secondary</Button>
+	<Button color="tertiary" className="mr-2 cta">Tertiary</Button>
 	<br />
-	<Button color="primary" className="mr-2 mt-3 cta" size="lg">
-		Large Primary
-	</Button>
-	<Button color="secondary" className="mr-2 mt-3 cta" size="lg">
-		Large Secondary
-	</Button>
-	<Button color="tertiary" className="mr-2 mt-3 cta" size="lg">
-		Large Tertiary
-	</Button>
-</Playground>
+	<Button color="primary" className="mr-2 mt-3 cta" size="lg">Large Primary</Button>
+	<Button color="secondary" className="mr-2 mt-3 cta" size="lg">Large Secondary</Button>
+	<Button color="tertiary" className="mr-2 mt-3 cta" size="lg">Large Tertiary</Button>
+</ComponentPreview>
 
+```  html
     <button type="button" class="btn btn-primary cta"Primary</button>
     <button type="button" class="btn btn-secondary cta">Secondary</button>
     <button type="button" class="btn btn-tertiary cta">Tertiary</button>
+```
 
 ## Sizes
 
@@ -115,59 +110,47 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 
 ### Large Buttons
 
-<Playground>
-	<Button color="primary" className="mr-2" size="lg">
-		Large Primary
-	</Button>
-	<Button color="secondary" className="mr-2" size="lg">
-		Large Secondary
-	</Button>
-	<Button color="tertiary" className="mr-2" size="lg">
-		Large Tertiary
-	</Button>
-</Playground>
+<ComponentPreview>
+	<Button color="primary" className="mr-2" size="lg">Large Primary</Button>
+	<Button color="secondary" className="mr-2" size="lg">Large Secondary</Button>
+	<Button color="tertiary" className="mr-2" size="lg">Large Tertiary</Button>
+</ComponentPreview>
 
+```  html
     <button type="button" class="btn btn-primary btn-lg">Large Primary</button>
     <button type="button" class="btn btn-secondary btn-lg">Large Secondary</button>
     <button type="button" class="btn btn-tertiary btn-lg">Large Tertiary</button>
+```
 
 ### Small Buttons
 
-<Playground>
-	<Button color="primary" className="mr-2" size="sm">
-		Small Primary
-	</Button>
-	<Button color="secondary" className="mr-2" size="sm">
-		Small Secondary
-	</Button>
-	<Button color="tertiary" className="mr-2" size="sm">
-		Small Tertiary
-	</Button>
-</Playground>
+<ComponentPreview>
+	<Button color="primary" className="mr-2" size="sm">Small Primary</Button>
+	<Button color="secondary" className="mr-2" size="sm">Small Secondary</Button>
+	<Button color="tertiary" className="mr-2" size="sm">Small Tertiary</Button>
+</ComponentPreview>
 
+```  html
     <button type="button" class="btn btn-primary btn-sm">Primary</button>
     <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
     <button type="button" class="btn btn-tertiary btn-sm">Tertiary</button>
+```
 
 ## Block Button
 
 Create block level buttons that span the full width of a parent-by adding `.btn-block`.
 
-<Playground>
-	<Button color="primary" size="lg" block>
-		Large Primary
-	</Button>
-	<Button color="secondary" size="lg" block>
-		Large Secondary
-	</Button>
-	<Button color="tertiary" size="lg" block>
-		Large Tertiary
-	</Button>
-</Playground>
+<ComponentPreview>
+	<Button color="primary" size="lg" block>Large Primary</Button>
+	<Button color="secondary" size="lg" block>Large Secondary</Button>
+	<Button color="tertiary" size="lg" block>Large Tertiary</Button>
+</ComponentPreview>
 
+```  html
     <button type="button" class="btn btn-primary btn-lg btn-block">Primary</button>
     <button type="button" class="btn btn-secondary btn-lg btn-block">Secondary</button>
     <button type="button" class="btn btn-tertiary btn-lg btn-block">Tertiary</button>
+```
 
 ## Active state
 
@@ -177,21 +160,17 @@ Add `.active` to items in the dropdown to style them as active.
 
 ### Active Button
 
-<Playground>
-	<Button color="primary" active className="mr-2">
-		Primary
-	</Button>
-	<Button color="secondary" active className="mr-2">
-		Secondary
-	</Button>
-	<Button color="tertiary" active className="mr-2">
-		Tertiary
-	</Button>
-</Playground>
+<ComponentPreview>
+	<Button color="primary" active className="mr-2">Primary</Button>
+	<Button color="secondary" active className="mr-2">Secondary</Button>
+	<Button color="tertiary" active className="mr-2">Tertiary</Button>
+</ComponentPreview>
 
+```  html
     <button type="button" class="btn btn-primary active">Primary</button>
     <button type="button" class="btn btn-secondary active">Secondary</button>
     <button type="button" class="btn btn-tertiary active">Tertiary</button>
+```
 
 ## Disabled state
 
@@ -203,47 +182,31 @@ Add `.disabled` to items in the dropdown to style them as disabled.
 
 ### Disabled Default Button
 
-<Playground>
+<ComponentPreview>
+    <Button color="primary" disabled className="mr-2">Primary</Button>
+    <Button color="secondary" disabled className="mr-2">Secondary</Button>
+    <Button color="tertiary" disabled className="mr-2">Tertiary</Button>
+</ComponentPreview>
 
-    <Button color="primary" disabled className="mr-2">
-    	Primary
-    </Button>
-
-    <Button color="secondary" disabled className="mr-2">
-    	Secondary
-    </Button>
-
-    <Button color="tertiary" disabled className="mr-2">
-    	Tertiary
-    </Button>
-
-</Playground>
-
+```  html
     <button type="button" class="btn btn-tertiary" disabled >Primary</button>
     <button type="button" class="btn btn-tertiary" disabled >Secondary</button>
     <button type="button" class="btn btn-tertiary" disabled >Tertiary</button>
+```
 
 ### Disabled Call To Action Button
 
-<Playground>
+<ComponentPreview>
+    <Button color="primary" disabled className="mr-2 cta">Primary</Button>
+    <Button color="secondary" disabled className="mr-2 cta">Secondary</Button>
+    <Button color="tertiary" disabled className="mr-2 cta">Tertiary</Button>
+</ComponentPreview>
 
-    <Button color="primary" disabled className="mr-2 cta">
-    	Primary
-    </Button>
-
-    <Button color="secondary" disabled className="mr-2 cta">
-    	Secondary
-    </Button>
-
-    <Button color="tertiary" disabled className="mr-2 cta">
-    	Tertiary
-    </Button>
-
-</Playground>
-
+```  html
     <button type="button" class="btn btn-primary cta" disabled>Primary</button>
     <button type="button" class="btn btn-secondary cta" disabled>Secondary</button>
     <button type="button" class="btn btn-tertiary cta" disabled>Tertiary</button>
+```
 
 ### Link functionality caveat
 
@@ -273,7 +236,7 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 
 ### Dropdown Button with Links and Dropdown Header
 
-<Playground>
+<ComponentPreview>
     <UncontrolledButtonDropdown>
         <DropdownToggle caret>
             Dropdown
@@ -286,7 +249,7 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
             <DropdownItem>Another Action</DropdownItem>
         </DropdownMenu>
     </UncontrolledButtonDropdown>
-</Playground>
+</ComponentPreview>
 
 
     <div class="dropdown">
@@ -306,7 +269,7 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 
 Trigger dropdown menus to the left of elements by adding `.dropleft .dropright .dropup` to the parent element.
 
-<Playground>
+<ComponentPreview>
     <UncontrolledButtonDropdown direction="up">
             <DropdownToggle caret>
                 Dropup
@@ -337,8 +300,9 @@ Trigger dropdown menus to the left of elements by adding `.dropleft .dropright .
             </DropdownMenu>
     </UncontrolledButtonDropdown>
 
-</Playground>
+</ComponentPreview>
 
+```  html
     <div class="btn-group dropup">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropleft
@@ -394,6 +358,7 @@ We use this extra class to reduce the horizontal padding on either side of the c
             <a class="dropdown-item" href="#">Separated link</a>
         </div>
     </div>
+```
 
 ## Split Dropleft
 
@@ -416,6 +381,7 @@ Trigger dropdown menus to the left of elements by adding `.dropleft` to the pare
         Split dropleft
       </button>
     </div>
+```
 
 ## Split Dropright
 
@@ -436,6 +402,7 @@ Trigger dropdown menus to the right of elements by adding `.dropright` to the pa
             <a class="dropdown-item" href="#">Something else here</a>
         </div>
     </div>
+```
 
 ## Split Dropup
 

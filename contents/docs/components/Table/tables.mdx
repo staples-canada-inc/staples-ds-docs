@@ -13,7 +13,7 @@ Due to the widespread use of tables across third-party widgets like calendars an
 
 ## Default Table
 
-<Playground>
+<ComponentPreview>
 	<Table>
 		<thead>
 			<tr>
@@ -44,8 +44,9 @@ Due to the widespread use of tables across third-party widgets like calendars an
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table">
         <thead>
             <tr>
@@ -76,10 +77,11 @@ Due to the widespread use of tables across third-party widgets like calendars an
             </tr>
         </tbody>
     </table>
+```
 
 You can also invert the colors—light text on a dark background—with `.table-dark`.
 
-<Playground>
+<ComponentPreview>
 	<Table dark>
 		<thead>
 			<tr>
@@ -110,8 +112,9 @@ You can also invert the colors—light text on a dark background—with `.table-
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-dark">
         <thead>
             <tr>
@@ -142,6 +145,7 @@ You can also invert the colors—light text on a dark background—with `.table-
             </tr>
         </tbody>
     </table>
+```
 
 <!-- ## Table Head Options
 
@@ -179,6 +183,7 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
             </tr>
         </tbody>
     </table>
+```
 
 ### Dark Theme
 
@@ -213,13 +218,14 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
         </tbody>
     </table> -->
 
+
 ## Striped Table
 
 ### Light Theme
 
 Use `.table-striped` to add zebra-striping to table rows within the `<tbody>`.
 
-<Playground>
+<ComponentPreview>
 	<Table striped>
 		<thead>
 			<tr>
@@ -250,8 +256,9 @@ Use `.table-striped` to add zebra-striping to table rows within the `<tbody>`.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-striped">
         <thead>
             <tr>
@@ -282,10 +289,11 @@ Use `.table-striped` to add zebra-striping to table rows within the `<tbody>`.
             </tr>
         </tbody>
     </table>
+```
 
 ### Dark Theme
 
-<Playground>
+<ComponentPreview>
 	<Table dark striped>
 		<thead>
 			<tr>
@@ -316,8 +324,9 @@ Use `.table-striped` to add zebra-striping to table rows within the `<tbody>`.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-striped table-dark">
         <thead>
             <tr>
@@ -348,6 +357,7 @@ Use `.table-striped` to add zebra-striping to table rows within the `<tbody>`.
             </tr>
         </tbody>
     </table>
+```
 
 ## Borderless Table
 
@@ -355,7 +365,7 @@ Use `.table-striped` to add zebra-striping to table rows within the `<tbody>`.
 
 Add `.table-borderless` for a table without borders.
 
-<Playground>
+<ComponentPreview>
 	<Table borderless>
 		<thead>
 			<tr>
@@ -386,8 +396,9 @@ Add `.table-borderless` for a table without borders.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-borderless">
         <thead>
             <tr>
@@ -418,10 +429,11 @@ Add `.table-borderless` for a table without borders.
             </tr>
         </tbody>
     </table>
+```
 
 ### Dark Theme
 
-<Playground>
+<ComponentPreview>
 	<Table borderless dark>
 		<thead>
 			<tr>
@@ -452,8 +464,9 @@ Add `.table-borderless` for a table without borders.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-borderless table-dark">
         <thead>
             <tr>
@@ -484,6 +497,7 @@ Add `.table-borderless` for a table without borders.
             </tr>
         </tbody>
     </table>
+```
 
 ## Hoverable Table
 
@@ -491,7 +505,7 @@ Add `.table-borderless` for a table without borders.
 
 Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
-<Playground>
+<ComponentPreview>
 	<Table hover>
 		<thead>
 			<tr>
@@ -522,8 +536,9 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-hover">
         <thead>
             <tr>
@@ -554,10 +569,11 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
             </tr>
         </tbody>
     </table>
+```
 
 ### Dark Theme
 
-<Playground>
+<ComponentPreview>
 	<Table hover dark>
 		<thead>
 			<tr>
@@ -588,8 +604,9 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-hover table-dark">
         <thead>
             <tr>
@@ -620,12 +637,13 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
             </tr>
         </tbody>
     </table>
+```
 
 ## Compact Table
 
 Add `.table-sm` to make tables more compact by cutting cell padding in half.
 
-<Playground>
+<ComponentPreview>
 	<Table size="sm">
 		<thead>
 			<tr>
@@ -656,8 +674,9 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table table-sm">
         <thead>
             <tr>
@@ -688,6 +707,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
             </tr>
         </tbody>
     </table>
+```
 
 You can also apply the dark theme colour class to the compact table.
 
@@ -697,7 +717,7 @@ Use contextual classes to colour table rows or individual cells.
 
 ### Contextual Rows
 
-<Playground>
+<ComponentPreview>
 	<Table>
 		<thead>
 			<tr>
@@ -734,8 +754,9 @@ Use contextual classes to colour table rows or individual cells.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table">
         <thead>
             <tr>
@@ -792,10 +813,11 @@ Use contextual classes to colour table rows or individual cells.
             </tr>
         </tbody>
     </table>
+```
 
 ### Contextual Cells
 
-<Playground>
+<ComponentPreview>
 	<Table>
 		<thead>
 			<tr>
@@ -824,8 +846,9 @@ Use contextual classes to colour table rows or individual cells.
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <table class="table">
         <thead>
             <tr>
@@ -854,6 +877,7 @@ Use contextual classes to colour table rows or individual cells.
             </tr>
         </tbody>
     </table>
+```
 
 Regular table background variants are not available with the dark theme however, you may use text or background utilities to achieve similar styles.
 
@@ -869,7 +893,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 
 ### Simple Responsive Table
 
-<Playground>
+<ComponentPreview>
 	<Table responsive>
 		<thead>
 			<tr>
@@ -912,8 +936,9 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 			</tr>
 		</tbody>
 	</Table>
-</Playground>
+</ComponentPreview>
 
+```  html
     <div class="bd-example">
         <div class="table-responsive">
             <table class="table">
@@ -972,6 +997,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
             </table>
         </div>
     </div>
+```
 
 ### Breakpoint Specific
 
@@ -981,34 +1007,42 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
 
 #### Small
 
+```  html
         <div class="table-responsive-sm">
             <table class="table">
                 ...
             </table>
         </div>
+```
 
 #### Medium
 
+```  html
         <div class="table-responsive-md">
             <table class="table">
                 ...
             </table>
         </div>
+```
 
 #### Large
 
+```  html
         <div class="table-responsive-lg">
             <table class="table">
                 ...
             </table>
         </div>
+```
 
 #### Extra-Large
 
+```  html
         <div class="table-responsive-xl">
             <table class="table">
                 ...
             </table>
         </div>
+```
 
 **Note:** Since browsers do not currently support `range context queries`, we work around the limitations of `min- and max- prefixes` and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.

@@ -19,6 +19,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap'
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Navbar
 
@@ -43,7 +44,7 @@ Navbars have built-in support for a handful of sub-components. Choose from the f
 
 The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
 
-<Playground>
+<ComponentPreview>
 	<Navbar color="light" light expand="md" className="mb-3">
 		<NavbarBrand href="/">Staples Canada Inc.</NavbarBrand>
 	</Navbar>
@@ -54,8 +55,9 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
     	</NavbarBrand>
     </Navbar>
 
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
     </nav>
@@ -64,6 +66,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
             <img src="/static/img/Staples_Logo_EN.svg" width="30" alt="" />
         </a>
     </nav>
+```
 
 ### Nav
 
@@ -76,7 +79,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 
 #### Navbar with Dropdown
 
-<Playground>
+<ComponentPreview>
   <Navbar color="light" light expand="md">
     <NavbarBrand href="/">
       
@@ -104,8 +107,9 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
       </Nav>
     </UncontrolledCollapse>
   </Navbar>
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav class="navbar navbar-expand-md navbar-light bg-light"><a href="/" class="navbar-brand"><img src="/static/img/Staples_Logo_EN.6b0b5406.svg" style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div toggler="#toggler" class="collapse navbar-collapse">
             <ul class="ml-auto navbar-nav">
@@ -119,6 +123,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
             </ul>
         </div>
     </nav>
+```
 
 ## Navbar Styles
 
@@ -126,7 +131,7 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 
 ### Primary Theme
 
-<Playground>
+<ComponentPreview>
   <Navbar color="primary" dark expand="md">
     <NavbarBrand href="/">
       
@@ -154,11 +159,12 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
       </Nav>
     </UncontrolledCollapse>
   </Navbar>
-</Playground>
+</ComponentPreview>
+```
 
 ### Light-Gray Theme
 
-<Playground>
+<ComponentPreview>
   <Navbar color="light" light expand="md">
     <NavbarBrand href="/">
       <img style={{ height: 30 }} src={staplesLogo} />
@@ -186,11 +192,12 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
       </Nav>
     </UncontrolledCollapse>
   </Navbar>
-</Playground>
+</ComponentPreview>
+```
 
 ### Charcoal Theme
 
-<Playground>
+<ComponentPreview>
     <Navbar color="dark" dark expand="md">
 		<NavbarBrand href="/">
 			
@@ -219,8 +226,9 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 		</UncontrolledCollapse>
 	</Navbar>
 
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav class="navbar navbar-expand-md navbar-dark bg-primary"><a href="/" class="navbar-brand"><img src="/static/img/Staples_Logo_White_EN.svg" style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div toggler="#toggler" class="collapse navbar-collapse">
             <ul class="ml-auto navbar-nav">
@@ -260,6 +268,7 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
             </ul>
         </div>
     </nav>
+```
 
 ## Assistive Technology
 

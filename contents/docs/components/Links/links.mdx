@@ -4,7 +4,7 @@ root: '/docs'
 parents: ['Components']
 ---
 
-
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Links
 
@@ -14,23 +14,27 @@ Links are words on a webpage that are also a hyperlink to another page. They are
 
 Simple links would be used in places such as tabs, breadcrumbs, pagination, etc.
 
-<Playground>
+<ComponentPreview>
 	<a href="#">Link 1</a>
 	<br />
 	<a href="#">Link 2</a>
 	<br />
 	<a href="#">Link 3</a>
-</Playground>
+</ComponentPreview>
 
+```html
     <a href="#">Link 1</a><br/>
     <a href="#">Link 2</a><br/>
     <a href="#">Link 3</a>
+```
 
 ### Text Link
 
 Text links are often underlined, in addition to coloured, to further help the user distinguish links from regular copy and meet accessibility standards.
-    
+
+```html
     <p>This is a sample <a href="#">text link</a> within a body of text.</p>
+```
 
 ### Style
 

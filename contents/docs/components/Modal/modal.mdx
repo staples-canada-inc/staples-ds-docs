@@ -4,9 +4,9 @@ root: '/docs'
 parents: ['Components']
 ---
 
-
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import ModalDemo1 from "./Modal";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import ModalDemo1 from './Modal'
 
 # Modal
 
@@ -18,57 +18,95 @@ Below is a static modal (meaning its `position` and `display` have been overridd
 
 Here is an example of a simple modal:
 
-<Playground>
-	<ModalDemo1 
+<ComponentPreview>
+  <ModalDemo1
     modalTitle="Modal title"
-    buttonLabel="Launch demo modal" 
-    modalContent="Modal content goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-</Playground>
+    buttonLabel="Launch demo modal"
+    modalContent="Modal content goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  />
+</ComponentPreview>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button>
+```html
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
+  Launch demo modal
+</button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header p-4">
-                    <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
-            </svg>
-            </button>
-                </div>
-                <div class="modal-body p-4">
-                    Modal content goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-                <div class="modal-footer p-4">
-                    <a href="#" data-dismiss="modal"><strong>Close</strong></a>
-                    <button type="button" class="btn btn-primary ml-3">Save changes</button>
-                </div>
-            </div>
-        </div>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header p-4">
+        <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <svg
+            class="Header-navToggleIcon Header-navToggleIcon--open"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        Modal content goes here. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+      <div class="modal-footer p-4">
+        <a href="#" data-dismiss="modal"><strong>Close</strong></a>
+        <button type="button" class="btn btn-primary ml-3">Save changes</button>
+      </div>
     </div>
+  </div>
+</div>
+```
 
 Or you can have two buttons in the footer like this:
 
-    <div>
-        <div class="col-md-6 ml-auto">
-            <button type="button" class="btn btn-primary btn-block mt-0">Agree</button>
-        </div>
-        <div class="col-md-6 ml-auto">
-            <button type="button" class="btn btn-tertiary btn-block align-middle" data-dismiss="modal">Close</button>
-        </div>
-    </div>
+```html
+  <div class="col-md-6 ml-auto">
+    <button type="button" class="btn btn-primary btn-block mt-0">Agree</button>
+  </div>
+  <div class="col-md-6 ml-auto">
+    <button
+      type="button"
+      class="btn btn-tertiary btn-block align-middle"
+      data-dismiss="modal"
+    >
+      Close
+    </button>
+  </div>
+```
 
 ## Scrollable Modal
 
 You can also create a scrollable modal that allows the user to scroll the modal content by adding `.modal-dialog-scrollable` to `.modal-dialog`. This is typically used for consent forms and agreements.
 
+```html
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Launch demo modal
@@ -98,6 +136,8 @@ You can also create a scrollable modal that allows the user to scroll the modal 
         </div>
     </div>
 
+```
+
 ## Sizing & Layout
 
 Utilize the grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then use the normal grid system classes as you would anywhere else.
@@ -105,7 +145,7 @@ Utilize the grid system within a modal by nesting `.container-fluid` within the 
 Modals have two optional sizes available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrow viewports.
 
 ### Large Modal
-
+```html
     <!-- Large modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
 
@@ -116,9 +156,10 @@ Modals have two optional sizes available via modifier classes to be placed on a 
         </div>
     </div>
     </div>
+```
 
 ### Small Modal
-
+```html
     <!-- Small modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
 
@@ -129,6 +170,8 @@ Modals have two optional sizes available via modifier classes to be placed on a 
         </div>
     </div>
     </div>
+
+````
 
 ### Vertically Centered
 
@@ -144,11 +187,11 @@ Modals use `position: fixed`, which can sometimes be a bit particular about its 
 
 Due to the way HTML5 defines its semantics, the autofocus HTML attribute has no effect on modals. To achieve the same effect, use custom JavaScript.
 
-```javascript
+```html
 $("#myModal").on("shown.bs.modal", function() {
 	$("#myInput").trigger("focus");
 });
-```
+````
 
 The modal plugin toggles your hidden content on demand via data attributes or JavaScript. It also adds `.modal-open` to the `<body>` to override default scrolling behavior and generates a `.modal-backdrop` to provide a click area for dismissing open modals when clicking outside the modal.
 
@@ -156,13 +199,18 @@ The modal plugin toggles your hidden content on demand via data attributes or Ja
 
 To activate a modal without writing JavaScript, set `data-toggle="modal"` on a controller element, like a button, along with a `data-target="#foo"` or `href="#foo"` to target a specific modal to toggle.
 
+```html
     <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+
+```
 
 ### Via JavaScript
 
 Call a modal with id myModal with a single line of JavaScript:
 
+```html
     $('#myModal').modal(options)
+```
 
 ### Options
 
@@ -210,6 +258,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 		</tr>
 	</tbody>
 </table>
+```
 
 ### Methods
 
@@ -217,33 +266,41 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 Activates your content as a modal. Accepts an optional options object.
 
+```html
     $('#myModal').modal({
         keyboard: false
     })
+```
 
 #### .modal('toggle')
 
 Manually toggles a modal. Returns to the caller before the modal has actually been shown or hidden (i.e. before the shown.bs.modal or hidden.bs.modal event occurs).
 
+```html
     $('#myModal').modal('toggle')
+```
 
 #### .modal('show')
 
 Manually opens a modal. Returns to the caller before the modal has actually been shown (i.e. before the shown.bs.modal event occurs).
 
+```html
     $('#myModal').modal('show')
+```
 
 #### .modal('hide')
 
 Manually hides a modal. Returns to the caller before the modal has actually been hidden (i.e. before the hidden.bs.modal event occurs).
-
+```html
     $('#myModal').modal('hide')
+```
 
 #### .modal('handleUpdate')
 
 Manually readjust the modal’s position if the height of a modal changes while it is open (i.e. in case a scrollbar appears).
-
+```html
     $('#myModal').modal('handleUpdate')
+```
 
 #### .modal('dispose')
 
@@ -254,48 +311,49 @@ Destroys an element’s modal.
 The modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the `<div class="modal">`).
 
 <table class="table table-bordered table-striped">
-	<thead>
-		<tr>
-			<th style={{ width: 150 }}>Event Type</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>show.bs.modal</td>
-			<td>
-				This event fires immediately when the <code>show</code> instance
-				method is called. If caused by a click, the clicked element is
-				available as the <code>relatedTarget</code> property of the
-				event.
-			</td>
-		</tr>
-		<tr>
-			<td>shown.bs.modal</td>
-			<td>
-				This event is fired when the modal has been made visible to the
-				user (will wait for CSS transitions to complete). If caused by a
-				click, the clicked element is available as the{" "}
-				<code>relatedTarget</code> property of the event.
-			</td>
-		</tr>
-		<tr>
-			<td>hide.bs.modal</td>
-			<td>
-				This event is fired immediately when the <code>hide</code>{" "}
-				instance method has been called.
-			</td>
-		</tr>
-		<tr>
-			<td>hidden.bs.modal</td>
-			<td>
-				This event is fired when the modal has finished being hidden
-				from the user (will wait for CSS transitions to complete).
-			</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th style={{ width: 150 }}>Event Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show.bs.modal</td>
+      <td>
+        This event fires immediately when the <code>show</code> instance method
+        is called. If caused by a click, the clicked element is available as the{' '}
+        <code>relatedTarget</code> property of the event.
+      </td>
+    </tr>
+    <tr>
+      <td>shown.bs.modal</td>
+      <td>
+        This event is fired when the modal has been made visible to the user
+        (will wait for CSS transitions to complete). If caused by a click, the
+        clicked element is available as the <code>relatedTarget</code> property
+        of the event.
+      </td>
+    </tr>
+    <tr>
+      <td>hide.bs.modal</td>
+      <td>
+        This event is fired immediately when the <code>hide</code> instance
+        method has been called.
+      </td>
+    </tr>
+    <tr>
+      <td>hidden.bs.modal</td>
+      <td>
+        This event is fired when the modal has finished being hidden from the
+        user (will wait for CSS transitions to complete).
+      </td>
+    </tr>
+  </tbody>
 </table>
 
+``` html
     $('#myModal').on('hidden.bs.modal', function (e) {
         // do something...
     })
+```

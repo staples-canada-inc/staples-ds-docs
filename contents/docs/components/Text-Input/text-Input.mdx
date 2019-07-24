@@ -25,25 +25,27 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 
 ### Static Text Box
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleEmail">Input without validation</Label>
 		<Input />
 		<FormFeedback>You will not be able to see this</FormFeedback>
 		<FormText>Example help text that remains unchanged.</FormText>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <label for="exampleStaticInput">Plain Text (Static)</label>
             <input id="exampleStaticInput" plaintext value="Some plain text/ static value" readonly="readonly">
         </div>
     </form>
+```
 
 ### Email
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleEmail">Email</Label>
 		<Input
@@ -53,18 +55,20 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="with a placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <label for="exampleEmail">Email</label>
             <input type="email" class="form-control" id="exampleEmail" name="email" placeholder="with a placeholder">
         </div>
     </form>
+```
 
 ### Password
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="examplePassword">Password</Label>
 		<Input
@@ -74,18 +78,20 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="password placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <label for="examplePassword">Password</label>
             <input type="password" class="form-control" name="password" id="examplePassword" placeholder="password placeholder">
         </div>
     </form>
+```
 
 ### URL
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleUrl">Url</Label>
 		<Input
@@ -95,8 +101,9 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="url placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
 
         <div class="form-group">
@@ -104,10 +111,11 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
             <input type="url" class="form-control" name="url" id="exampleUrl" placeholder="url placeholder">
         </div>
     </form>
+```
 
 ### Datetime Picker
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleDatetime">Datetime</Label>
 		<Input
@@ -117,18 +125,20 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="datetime placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <Label for="exampleDatetime"> Datetime </Label>
             <input type="datetime" class="form-control" name="datetime" id="exampleDatetime" placeholder="datetime placeholder">
         </div>
     </form>
+```
 
 ### Date Picker
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleDate">Date</Label>
 		<Input
@@ -138,18 +148,20 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="date placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <Label for="exampleDate">Date</Label>
             <input type="date" class="form-control" name="date" id="exampleDate" placeholder="date placeholder">
         </div>
     </form>
+```
 
 ### Time
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleTime">Time</Label>
 		<Input
@@ -159,18 +171,20 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="time placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <Label for="exampleTime">Time</Label>
             <Input type="time" class="form-control" name="time" id="exampleTime" placeholder="time placeholder">
         </div>
     <form>
+```
 
 ### Colour Picker
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleColor">Color</Label>
 		<Input
@@ -180,8 +194,9 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="color placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <Label for="exampleColor">Color</Label>
@@ -189,10 +204,11 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
             <input type="color" class="form-control" name="color" id="exampleColor" placeholder="color placeholder" value="#ffffff">
         </div>
     </form>
+```
 
 ### Search
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleSearch">Search</Label>
 		<Input
@@ -202,29 +218,31 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 			placeholder="search placeholder"
 		/>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <Label for="exampleSearch">Search</Label>
             <input type="search" name="search" id="exampleSearch" placeholder="search placeholder" required>
         </div>
     </form>
+```
 
 ### Text Area
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleText">Text Area</Label>
 		<Input type="textarea" name="text" id="exampleText" />
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
 For file inputs, swap the `.form-control` for `.form-control-file`.
 
 ### File Selector
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleFile">File</Label>
 		<Input type="file" name="file" id="exampleFile" />
@@ -233,14 +251,16 @@ For file inputs, swap the `.form-control` for `.form-control-file`.
 			It's a bit lighter and easily wraps to a new line.
 		</FormText>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <label for="exampleFormControlFile1">Example file input</label>
             <input type="file" class="form-control-file" id="exampleFormControlFile1">
         </div>
     </form>
+```
 
 ## Select
 
@@ -251,7 +271,7 @@ Custom `<select>` menus only require a custom class `.custom-select` to trigger 
 You may also choose from small or large custom selects to match similarly sized text inputs.
 submissions
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleSelect">Select</Label>
 		<Input type="select" name="select" id="exampleSelect">
@@ -262,8 +282,9 @@ submissions
 			<option>5</option>
 		</Input>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <select class="custom-select" required>
@@ -276,12 +297,13 @@ submissions
             </select>
         </div>
     </form>
+```
 
 ### Multiple Select
 
 The `multiple` attribute is also supported. As is the size attribute along with multiple.
 
-<Playground>
+<ComponentPreview>
 	<FormGroup>
 		<Label for="exampleSelectMulti">Select Multiple</Label>
 		<Input
@@ -297,8 +319,9 @@ The `multiple` attribute is also supported. As is the size attribute along with 
 			<option>5</option>
 		</Input>
 	</FormGroup>
-</Playground>
+</ComponentPreview>
 
+```  html
     <form>
         <div class="form-group">
             <Label for="exampleSelectMulti">Select Multiple</Label>
@@ -311,6 +334,7 @@ The `multiple` attribute is also supported. As is the size attribute along with 
             </select>
         </div>
     </form>
+```
 
 ## Validation
 
@@ -318,7 +342,7 @@ Provide valuable, actionable feedback to your users with HTML5 form validationâ€
 
 We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
 
-<Playground>
+<ComponentPreview>
 	<Form>
 		<FormGroup>
 			<Label for="exampleEmail">Valid input</Label>
@@ -345,7 +369,8 @@ We currently recommend using custom validation styles, as native browser default
 			</FormFeedback>
 		</FormGroup>
 	</Form>
-</Playground>
+</ComponentPreview>
+
 
 ### How it Works
 

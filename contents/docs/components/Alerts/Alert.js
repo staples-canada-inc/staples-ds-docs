@@ -1,5 +1,6 @@
 import React from 'react';
-import { UncontrolledAlert } from 'reactstrap';
+import { UncontrolledAlert } from 'reactstrap'
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx';
 
 function AlertExample() {
   return (

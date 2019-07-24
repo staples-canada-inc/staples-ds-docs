@@ -1,0 +1,139 @@
+---
+title: Typography
+root: '/docs'
+parents: ['Design']
+---
+
+import powerWords from "../../../src/images/power-words.svg";
+import sentanceCase from "../../../src/images/sentance-case.svg";
+import verticalRhythm from "../../../src/images/vertical-rhythm.svg";
+import embeddedText from "../../../src/images/embedded-text.png";
+
+# Typography
+
+Typography works to establish clear hierarchy, organize information and guide users through the content of a product or experience.
+
+### Official Typeface
+
+**TT Norms** is the official digital typeface of Staples. Lulo Clean is to never be used for digital as it does not meet online accessibility standards.
+
+<button class="btn btn-secondary">[Download TT Norms](#)</button>
+
+### Weights
+
+Font weight is an essential typographic variable that can add emphasis and differentiate content to establish hierarchy. Font weight and size pairings must be carefully balanced. A bold weight will have more emphasis than a lighter weight of the same font size. However, a lighter weight can have more prominence than its bold counterpart if larger in size.
+
+We suggest using **TT Norms Regular, Medium and Bold** for Staples digital.
+
+<div class="col bg-light w-100 pl-5 py-4">
+	<h2>TT Norms Regular (400)</h2>
+	<h2>TT Norms Medium (500)</h2>
+	<h2>TT Norms Bold (700)</h2>
+</div>
+
+### Display Styles
+
+| Display                                                                        | Properties                                                                                                                                                       |
+| ------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p className="display-1">Display 1</p> | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 96px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 2.625 rem; <br/> |
+| <p className="display-2">Display 2</p> | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 32px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 2.625 rem; <br/> |
+| <p className="display-3">Display 3</p> | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 28px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 2.625 rem; <br/> |
+| <p className="display-4">Display 4</p> | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 24px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 2.625 rem; <br/> |
+
+### Header Styles
+
+| Header                                              |                                                                                                            | Properties                                                                                                                                                  |
+| --------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <h1>H1</h1>  | <h1>ABCDEFGHIJKLM...<br/>abcdefghijklmnopq...</h1>                  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 40px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 55px; <br/>  |
+| <h2>H2</h2>  | <h2>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h2>  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 32px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 45px; <br/>  |
+| <h3>H3</h3>  | <h3>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h3>  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 28px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 40px; <br/>  |
+| <h4>H4</h4>  | <h4>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h4>  | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 24px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 32px; <br/> |
+| <h5>H5</h5>  | <h5>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h5>  | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 20px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 26px; <br/> |
+
+### Paragraph Styles
+
+| Paragraph                                                           | Properties                                                                                                                                                  |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Body</p>                 | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 16px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 20px; <br/> |
+| <p className="lead">Lead</p> | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 16px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 20px; <br/>  |
+| <p className="small">Small</p> | font-family: TT Norms Bold; <br/> font-weight: 700; <br/> font-size: 12px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 16px; <br/>    |
+
+## Type Best Practices
+
+<div class="row">
+    <div class="col-md-6">
+        <img src={sentanceCase} />
+        <p>Headings should use sentence case to meet accessibility standards. Never underline headings.</p>
+    </div>
+    <div class="col-md-6">
+        <img src={powerWords} />
+        <p>Power words should only be emphasized at the end of a sentence or a fragment.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src={embeddedText} style={{width:'340px'}} />
+        <p>Do not embed text into images. This not only makes text difficult to read in responsive layouts, but makes copy inaccessible to screen readers and devices.</p>
+    </div>
+    <div class="col-md-6">
+        <img src={verticalRhythm} />
+        <p>Use the specified line heights and follow correct vertical rhythm and spacing.</p> 
+    </div>
+</div>
+
+---
+
+## Usage
+
+Type in the Staples Design System is managed using type tokens. This allows us to remain consistent across all our digital interfaces and applications.
+
+### Type Tokens
+
+Staples uses type tokens to manage typography. Type tokens are pre-set configurations of typographic elements such as font size, weight, or leading (line height). Selecting the appropriate type style is determined by layout and template structure. Layouts may have several levels of architecture or areas that require varying typographic hierarchies.  Refer to the typography guidelines and best practices when pairing header and paragraph styles together to establish visual hierarchy.
+
+### Font Family
+
+    $font-family-regular: "TT Norms Regular";
+    $font-family-medium: "TT Norms Medium";
+    $font-family-bold: "TT Norms Bold";
+
+### Sans-serif Font Stack
+
+    $font-family-sans-serif: $font-family-regular !default;
+
+### Mono Font Stack
+
+    $font-family-monospace:
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace !default;
+
+### Weights
+
+| Token                | Role             | Weight |
+| -------------------- | ---------------- | ------ |
+| \$font-weight-normal | TT Norms Regular | 400    |
+| \$font-weight-medium | TT Norms Medium  | 500    |
+| \$font-weight-bold   | TT Norms Bold    | 700    |
+
+### Scale
+
+| Token                  | Role            | Size            |
+| ---------------------- | --------------- | --------------- |
+| \$display1-size        | Display 1       | 96px / 6rem     |
+| \$display2-size        | Display 2       | 88px / 5.5rem   |
+| \$display3-size        | Display 3       | 72px / 4.5rem   |
+| \$display4-size        | Display 3       | 56px / 3.5rem   |
+| \$h1-font-size         | Header 1        | 40px / 3.286rem |
+| \$h2-font-size         | Header 2        | 32px / 2.572rem |
+| \$h3-font-size         | Header 3        | 28px / 2rem     |
+| \$h4-font-size         | Header 4        | 24px / 1.72rem  |
+| \$h5-font-size         | Header 4        | 20px / 1.286rem |
+| \$h6-font-size         | Header 6        | 16px / 1rem     |
+| \$lead-font-size       | Lead            | 16px / 1.25rem  |
+| \$small-font-size      | Small / Caption | 12px / 0.855rem |
+| \$blockquote-font-size | Blockquotes     | 12px / 0.855rem |

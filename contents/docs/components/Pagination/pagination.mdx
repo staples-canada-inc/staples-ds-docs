@@ -6,6 +6,7 @@ parents: ['Components']
 
 
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 # Pagination
 
@@ -15,7 +16,7 @@ Typically, pagination is used where there is more than 25 items displayed in one
 
 Here is a simple implementation of a pagination:
 
-<Playground>
+<ComponentPreview>
 	<Pagination aria-label="Page navigation example">
 		<PaginationItem>
 			<PaginationLink first href="#" />
@@ -39,8 +40,9 @@ Here is a simple implementation of a pagination:
 			<PaginationLink last href="#" />
 		</PaginationItem>
 	</Pagination>
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item">
@@ -68,6 +70,7 @@ Here is a simple implementation of a pagination:
             </li>
         </ul>
     </nav>
+```
 
 ## Disabled and Active States
 
@@ -75,7 +78,7 @@ Pagination links are customizable for different circumstances. Use `.disabled` f
 
 While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
 
-<Playground>
+<ComponentPreview>
 	<Pagination aria-label="Page navigation example">
 		<PaginationItem disabled>
 			<PaginationLink first href="#" />
@@ -99,8 +102,9 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 			<PaginationLink last href="#" />
 		</PaginationItem>
 	</Pagination>
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item disable" >
@@ -128,6 +132,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
             </li>
         </ul>
     </nav>
+```
 
 ## Sizing
 
@@ -135,7 +140,7 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 
 ### Large Pagination
 
-<Playground>
+<ComponentPreview>
 	<Pagination size="lg" aria-label="Page navigation example">
 		<PaginationItem>
 			<PaginationLink first href="#" />
@@ -159,8 +164,9 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 			<PaginationLink last href="#" />
 		</PaginationItem>
 	</Pagination>
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav aria-label="...">
         <ul class="pagination pagination-lg">
             <li class="page-item disable" >
@@ -193,10 +199,11 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
             </li>
         </ul>
     </nav>
+```
 
 ### Small Pagination
 
-<Playground>
+<ComponentPreview>
 	<Pagination size="sm" aria-label="Page navigation example">
 		<PaginationItem>
 			<PaginationLink first href="#" />
@@ -220,8 +227,9 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 			<PaginationLink last href="#" />
 		</PaginationItem>
 	</Pagination>
-</Playground>
+</ComponentPreview>
 
+```  html
     <nav aria-label="...">
         <ul class="pagination pagination-sm">
             <li class="page-item disable" >
@@ -254,6 +262,7 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
             </li>
         </ul>
     </nav>
+```
 
 ## Usage
 
