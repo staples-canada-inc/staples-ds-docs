@@ -1,0 +1,99 @@
+.avatar-sm {
+    width: 36;
+    height: 36;
+    background-color: #198294;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.avatar {
+    width: 60;
+    height: 60;
+    background-color: #198294;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.avatar-lg {
+    width: 84;
+    height: 84;
+    background-color: #198294;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.avatar-xl {
+    width: 108;
+    height: 108;
+    background-color: #198294;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.initials-sm {
+    font-size: 18px;
+    /* 50% of parent */
+    line-height: 1;
+    position: relative;
+    top: 9px;
+    /* 25% of parent */
+    color: white;
+}
+
+.initials {
+    font-size: 30px;
+    /* 50% of parent */
+    line-height: 1;
+    position: relative;
+    top: 15px;
+    /* 25% of parent */
+    color: white;
+}
+
+.initials-lg {
+    font-size: 42px;
+    /* 50% of parent */
+    line-height: 1;
+    position: relative;
+    top: 21px;
+    /* 25% of parent */
+    color: white;
+}
+
+.initials-xl {
+    font-size: 54px;
+    /* 50% of parent */
+    line-height: 1;
+    position: relative;
+    top: 27px;
+    /* 25% of parent */
+    color: white;
+}
+
+.avatar-img-sm {
+    border-radius: 50%;
+    width: 36;
+    height: 36;
+    background-size: cover;
+}
+
+.avatar-img {
+    border-radius: 50%;
+    width: 60;
+    height: 60;
+    background-size: cover;
+}
+
+.avatar-img-lg {
+    border-radius: 50%;
+    width: 84;
+    height: 84;
+    background-size: cover;
+}
+
+.avatar-img-xl {
+    border-radius: 50%;
+    width: 108;
+    height: 108;
+    background-size: cover;
+}
