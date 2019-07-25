@@ -34,50 +34,49 @@ A breadcrumb is a list of links to the parent pages of the current page in hiera
 
 ```html
 <nav class="navbar navbar-default " aria-label="breadcrumb">
-  <ol class="breadcrumb bg-white">
-    <li class="breadcrumb-item">
-      <a class="text-decoration-none" href="#">Home</a>
-    </li>
-    <li class="breadcrumb-item text-decoration-none">
-      <a class="text-decoration-none" href="#">Library</a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
+    <ol class="breadcrumb bg-white">
+        <li class="breadcrumb-item">
+            <a class="text-decoration-none" href="#">Home</a>
+        </li>
+        <li class="breadcrumb-item text-decoration-none">
+            <a class="text-decoration-none" href="#">Library</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
 </nav>
 ```
 
 ### Changing the Separator
+  Separators are automatically added in CSS through `::before` and `content`. They can be changed by changing `$breadcrumb-divider`. The `quote` function is needed to generate the quotes around a string, so if you want > as separator, you can use this:
 
-Separators are automatically added in CSS through `::before` and `content`. They can be changed by changing `$breadcrumb-divider`. The `quote` function is needed to generate the quotes around a string, so if you want > as separator, you can use this:`$breadcrumb-divider: quote(">");`
+`$breadcrumb-divider: quote(">");`
 
-Or by using CSS we can also do this and apply padding. Here's an example:
+  Or by using CSS we can also do this and apply padding. Here's an example: 
 
 ```css
-.breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem;
+.breadcrumb-item + .breadcrumb-item { 
+    padding-left: 0.5rem; 
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  display: inline-block;
-  padding-right: 0.5rem;
-  color: #747679;
-  content: '>';
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #747679;
+    content: ">"; 
 }
 ```
+  It’s also possible to use a base64 embedded SVG icon:
 
-It’s also possible to use a base64 embedded SVG icon:
-
-```css
+```scss
 $breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
 ```
 
-The separator can be removed by setting `$breadcrumb-divider` to `none`:
+  The separator can be removed by setting `$breadcrumb-divider` to `none`:
 
-```css
+```scss
 $breadcrumb-divider: none;
 ```
 
 ### Assistive Technology
+  Since breadcrumbs provide a navigation, it’s a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
 
-Since breadcrumbs provide a navigation, it’s a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
-
-For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#breadcrumb) for the breadcrumb pattern.
+  For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#breadcrumb) for the breadcrumb pattern.

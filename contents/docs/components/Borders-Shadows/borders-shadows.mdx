@@ -17,30 +17,58 @@ Use border utilities to add or remove an element's borders. Choose class `.borde
 
 ### Additive
 
-```html
+<ComponentPreview>
+<div class="d-flex justify-content-between">
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border-top"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border-right"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border-bottom"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border-left"></div>
+</div>
+</ComponentPreview>
 
+```html
 <span class="border"></span>
 <span class="border-top"></span>
 <span class="border-right"></span>
 <span class="border-bottom"></span>
 <span class="border-left"></span>
-
 ```
 
 ### Subtractive
 
+<ComponentPreview>
+<div class="d-flex justify-content-between">
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border border-0"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border border-top-0"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border border-right-0"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border border-bottom-0"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-light border border-left-0"></div>
+</div>
+</ComponentPreview>
+
 ```html
-<span class="border-0"></span>
-<span class="border-top-0"></span>
-<span class="border-right-0"></span>
-<span class="border-bottom-0"></span>
-<span class="border-left-0"></span>
+<span class="border border-0"></span>
+<span class="border border-top-0"></span>
+<span class="border border-right-0"></span>
+<span class="border border-bottom-0"></span>
+<span class="border border-left-0"></span>
 ```
 
 ## Colour
 
 Change the border colour using utilities built on our colour theme.
 
+<ComponentPreview>
+<div class="d-flex justify-content-between">
+    <div class="p-5 m-3 w-25 d-inline-flex border border-primary"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex border border-secondary"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex border border-tertiary"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex border border-success"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex border border-danger"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex border border-warning"></div>
+</div>
+</ComponentPreview>
 
 ```html
 <span class="border border-primary"></span>
@@ -58,6 +86,17 @@ Change the border colour using utilities built on our colour theme.
 
 Add classes to an element to easily round its corners.
 
+<ComponentPreview>
+<div class="d-flex justify-content-between">
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded-top"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded-right"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded-bottom"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded-left"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded-circle"></div>
+    <div class="p-5 m-3 w-25 d-inline-flex bg-dark rounded-0"></div>
+</div>
+</ComponentPreview>
 
 ```html
 <img src="..." alt="..." class="rounded">
@@ -66,7 +105,6 @@ Add classes to an element to easily round its corners.
 <img src="..." alt="..." class="rounded-bottom">
 <img src="..." alt="..." class="rounded-left">
 <img src="..." alt="..." class="rounded-circle">
-<img src="..." alt="..." class="rounded-pill">
 <img src="..." alt="..." class="rounded-0">
 ```
 
@@ -113,10 +151,14 @@ Use line utilities to quickly style lines. This can be done by using border-left
 
 Create horizontal lines by using the `<hr>` tag. 
 
+<ComponentPreview>
+    <hr/>
+</ComponentPreview>
+
 ```html
 <hr>
 ```
-You can also customize the `<hr>` tag to adjust the line weight as shown below.
+You can also customize the `<hr>` tag to adjust the line weight as shown below. 
 
 ```html
 <style>
@@ -136,7 +178,16 @@ You can also customize the `<hr>` tag to adjust the line weight as shown below.
 ## Drop Shadows
 Add or remove shadows to elements with box-shadow utilities.
 
-While shadows on components are disabled by default, it can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match). Ensure all shadows use our light-gray (#D9D9D6).
+You can quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes.
+
+<ComponentPreview>
+<div class="d-flex justify-content-between">
+    <div class="shadow-none p-5 m-3 w-25 d-inline-flex bg-light border">No shadow</div>
+    <div class="shadow-sm p-5 m-3 w-25 d-inline-flex bg-light border">Small shadow</div>
+    <div class="shadow p-5 m-3 w-25 d-inline-flex bg-light border">Regular shadow</div>
+    <div class="shadow-lg p-5 m-3 w-25 d-inline-flex bg-light border">Larger shadow</div>            
+</div>
+</ComponentPreview>
 
 ```html
 <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
