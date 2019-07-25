@@ -170,7 +170,6 @@ export const ColourPalette = () => {
                     </Card>
                 </Col>
             </Row>
-
         </Container>
     )
 }

@@ -100,7 +100,7 @@ module.exports = {
                                 prefersLightTheme: 'Quiet Light'    // Optional: used with `prefers-color-scheme: light`
                             }, // Read on for list of included themes. Also accepts object and function forms.
                             wrapperClassName: '',  // Additional class put on 'pre' tag
-                            injectStyles: true,    // Injects (minimal) additional CSS for layout and scrolling
+                            injectStyles: false,    // Injects (minimal) additional CSS for layout and scrolling
                             extensions: [{
                                 identifier: 'zhuangtongfa.Material-theme',
                                 version: '2.26.0'
