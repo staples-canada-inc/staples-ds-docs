@@ -1,0 +1,355 @@
+---
+title: Toasts
+root: '/docs'
+parents: ['Components']
+---
+
+# Toasts
+
+Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They’re built with flexbox, so they’re easy to align and position.
+
+
+## Basic Toasts
+
+To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use `display: flex`, allowing easy alignment of content thanks to our margin and flexbox utilities.
+
+Toasts are as flexible as you need and have very little required markup. At minimum, a single element is required to contain your "toasted" content with a dismiss button.
+
+```html
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="..." />
+    <strong class="mr-auto">Staples</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
+```
+
+## Translucent Toasts
+
+Toasts are slightly translucent, and can blur the elements they appear over in browsers that support the `backdrop-filter` CSS property.
+
+```html
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="..." />
+    <strong class="mr-auto">Staples</strong>
+    <small class="text-muted">11 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
+```
+
+## Stacking
+
+When you have multiple toasts, they stack vertically by default.
+
+```html
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="...">
+    <strong class="mr-auto">Staples</strong>
+    <small class="text-muted">just now</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    See? Just like this.
+  </div>
+</div>
+
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="..." />
+    <strong class="mr-auto">Staples</strong>
+    <small class="text-muted">2 seconds ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Heads up, toasts will stack automatically
+  </div>
+</div>
+```
+
+## Position
+
+You can customize the placement of toasts as needed with css. The top right of an interface is commonly used for notifications, as is the top middle. However, if you intend on displaying toasts one at a time, you can specify the position in the `.toast` class itself.
+
+```html
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+  <div class="toast" style="position: absolute; top: 0; right: 0;">
+    <div class="toast-header">
+      <img src="..." class="rounded mr-2" alt="..." />
+      <strong class="mr-auto">Staples</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+```
+
+To generate multiple notifications at once, consider wrapping the toasts in a `<div>` element so they can easily stack as a group.
+
+```html
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+  <!-- Position it -->
+  <div style="position: absolute; top: 0; right: 0;">
+
+    <!-- Then put toasts within -->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded mr-2" alt="..." />
+        <strong class="mr-auto">Staples</strong>
+        <small class="text-muted">just now</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        See? Just like this.
+      </div>
+    </div>
+
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded mr-2" alt="..." />
+        <strong class="mr-auto">Staples</strong>
+        <small class="text-muted">2 seconds ago</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        Heads up, toasts will stack automatically
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+You can also use flexbox utilities to align toasts horizontally and/or vertically.
+
+```html
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+  <!-- Then put toasts within -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded mr-2" alt="..." />
+      <strong class="mr-auto">Staples</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+```
+
+## Toast with Avatar
+
+Toasts can contain additional elements such as avatars, headers, and body copy as shown below. 
+
+
+```html
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+    <div class="toast-header border-0 pt-3 pl-3 pr-3">    
+        <div class="">
+            <img src="https://images.ctfassets.net/2yd1b0rk61ek/1f6o6A8a4QMY2Aqec9W511/628deae66cf70e357ced67e335c58fb7/190719_schoolsupplies_c.jpg" alt="..." class="avatar-img rounded-circle" width="36" height="36" />
+        </div>       
+        <strong class="mr-auto pl-3">Username</strong>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+            </svg>
+            </button>
+    </div>
+    <div class="toast-body pl-3 pr-3">
+        This is an example of a toast message with two lines of copy.
+    </div>
+</div>  
+```
+
+## Toast with Links 
+Toasts can also contain links.
+
+```html
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+    <div class="toast-header border-0 pt-3 pl-3 pr-3">         
+        <strong class="mr-auto">1 item added to cart</strong>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+            </svg>
+        </button>
+    </div>
+    <div class="toast-body pt-0 pl-3 pr-3">
+        <p class="mt-0 mb-2">This is an example of a toast message.</p>
+        <a href="#">View Cart</a>
+    </div>
+</div>
+```
+
+## Assistive Technology
+
+To help screen readers and similar assistive technologies treat toasts as they're intended to be, you should wrap your toasts in an `aria-live` region. Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without having to move the user's focus or direct their attention elsewhere. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single unit, rather than announcing just the changes. 
+
+The live region needs to be present in the markup *before* the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will not be announced by assistive technologies.
+
+Do not use toasts to convey essential information. If the notification's content is important to the process, such as a list of errors in a form, then it is best to use [alerts](#) instead.
+
+You also need to adapt the `role` and `aria-live` level depending on the content. If it's an important message like an error, use `role="alert" aria-live="assertive"`, otherwise use `role="status" aria-live="polite"` attributes.
+
+As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
+
+
+```html
+<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
+  <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
+</div>
+```
+
+## Usage
+
+Unlike a modal, a toast is an unobtrusive element used to display brief, auto-expiring snippets of information to a user. They are often used as notifications for messages, actions (adding cart items) and/or updates, to name a few.
+
+### Overview
+
+Toasts will automatically hide if you do not specify `autohide: false`. A close button should also be added to allow users to dismiss the toast.
+
+Since toasts are opt-in for performance reasons, **you must initialize them yourself**. You are also required to position them as well.
+
+
+### JavaScript Behavior
+
+Initialize toasts via JavaScript:
+
+```javascript
+$('.toast').toast(option)
+```
+
+### Options
+
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style={{width:100}}>Name</th>
+      <th style={{width:100}}>Type</th>
+      <th style={{width:50}}>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>animation</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Apply a CSS fade transition to the toast</td>
+    </tr>
+    <tr>
+      <td>autohide</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Auto hide the toast</td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td>number</td>
+      <td>
+        <code>500</code>
+      </td>
+      <td>Delay hiding the toast (ms)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+#### $().toast(options)
+
+Attaches a toast handler to an element collection.
+
+#### .toast('show')
+
+Reveals an element’s toast. Returns to the caller before the toast has actually been shown (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead `your toast won’t show.
+
+```javascript
+$('#element').toast('show')
+```
+
+#### .toast('hide')
+
+Hides an element’s toast. Returns to the caller before the toast has actually been hidden (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`.
+
+```javascript
+$('#element').toast('hide')
+```
+
+#### .toast('dispose')
+
+Hides an element’s toast. Your toast will remain on the DOM but won’t show anymore.
+
+```javascript
+$('#element').toast('dispose')
+```
+
+### Events
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style={{width:150}}>Event Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show.bs.toast</td>
+      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+    </tr>
+    <tr>
+      <td>shown.bs.toast</td>
+      <td>This event is fired when the toast has been made visible to the user.</td>
+    </tr>
+    <tr>
+      <td>hide.bs.toast</td>
+      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+    </tr>
+    <tr>
+      <td>hidden.bs.toast</td>
+      <td>This event is fired when the toast has finished being hidden from the user.</td>
+    </tr>
+  </tbody>
+</table>
+
+```javascript
+$('#myToast').on('hidden.bs.toast', function () {
+  // do something…
+})
+```

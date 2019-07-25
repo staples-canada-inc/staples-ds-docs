@@ -4,6 +4,8 @@ root: '/docs'
 parents: ['Components']
 ---
 
+import logo from '../../../../src/images/Staples_Logo_EN.svg'
+import logo_white from '../../../../src/images/Staples_Logo_White_EN.svg'
 
 import {
   Collapse,
@@ -48,24 +50,23 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 	<Navbar color="light" light expand="md" className="mb-3">
 		<NavbarBrand href="/">Staples Canada Inc.</NavbarBrand>
 	</Navbar>
-
     <Navbar color="light" light expand="md">
     	<NavbarBrand href="/">
-    		
+    		<img src={logo} height="30" alt="" />
     	</NavbarBrand>
     </Navbar>
 
 </ComponentPreview>
 
 ```  html
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-    </nav>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="/static/img/Staples_Logo_EN.svg" width="30" alt="" />
-        </a>
-    </nav>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src={logo} height="30" alt="" />
+    </a>
+</nav>
 ```
 
 ### Nav
@@ -82,7 +83,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 <ComponentPreview>
   <Navbar color="light" light expand="md">
     <NavbarBrand href="/">
-      
+      <img src={logo} style="height: 30px;" />
     </NavbarBrand>
     <NavbarToggler id="toggler" />
     <UncontrolledCollapse toggler="#toggler" navbar>
@@ -110,19 +111,19 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 </ComponentPreview>
 
 ```  html
-    <nav class="navbar navbar-expand-md navbar-light bg-light"><a href="/" class="navbar-brand"><img src="/static/img/Staples_Logo_EN.6b0b5406.svg" style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-        <div toggler="#toggler" class="collapse navbar-collapse">
-            <ul class="ml-auto navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-                <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                        <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-light bg-light"><a href="/" class="navbar-brand"><img src={logo} style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div toggler="#toggler" class="collapse navbar-collapse">
+        <ul class="ml-auto navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
+                    <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 ```
 
 ## Navbar Styles
@@ -134,7 +135,7 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 <ComponentPreview>
   <Navbar color="primary" dark expand="md">
     <NavbarBrand href="/">
-      
+      <img src={logo_white} style="height: 30px;" />
     </NavbarBrand>
     <NavbarToggler id="toggler" />
     <UncontrolledCollapse toggler="#toggler" navbar>
@@ -160,14 +161,14 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
     </UncontrolledCollapse>
   </Navbar>
 </ComponentPreview>
-```
+
 
 ### Light-Gray Theme
 
 <ComponentPreview>
   <Navbar color="light" light expand="md">
     <NavbarBrand href="/">
-      <img style={{ height: 30 }} src={staplesLogo} />
+      <img style={{ height: 30 }} src={logo} />
     </NavbarBrand>
     <NavbarToggler id="toggler" />
     <UncontrolledCollapse toggler="#toggler" navbar>
@@ -193,14 +194,14 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
     </UncontrolledCollapse>
   </Navbar>
 </ComponentPreview>
-```
+
 
 ### Charcoal Theme
 
 <ComponentPreview>
     <Navbar color="dark" dark expand="md">
 		<NavbarBrand href="/">
-			
+			<img src={logo_white} style="height: 30px;" />
 		</NavbarBrand>
 		<NavbarToggler id="toggler" />
 		<UncontrolledCollapse toggler="#toggler" navbar>
@@ -229,45 +230,45 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 </ComponentPreview>
 
 ```  html
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary"><a href="/" class="navbar-brand"><img src="/static/img/Staples_Logo_White_EN.svg" style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-        <div toggler="#toggler" class="collapse navbar-collapse">
-            <ul class="ml-auto navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-                <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                        <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-        <nav class="navbar navbar-expand-md navbar-light bg-light"><a href="/" class="navbar-brand"><img src="/static/img/Staples_Logo_EN.svg" style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-        <div toggler="#toggler" class="collapse navbar-collapse">
-            <ul class="ml-auto navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-                <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                        <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark"><a href="/" class="navbar-brand"><img src="/static/img/Staples_Logo_White_EN.svg" style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-        <div toggler="#toggler" class="collapse navbar-collapse">
-            <ul class="ml-auto navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-                <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                        <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary"><a href="/" class="navbar-brand"><img src={logo} style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div toggler="#toggler" class="collapse navbar-collapse">
+        <ul class="ml-auto navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
+                    <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <nav class="navbar navbar-expand-md navbar-light bg-light"><a href="/" class="navbar-brand"><img src={logo} style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div toggler="#toggler" class="collapse navbar-collapse">
+        <ul class="ml-auto navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
+                    <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark"><a href="/" class="navbar-brand"><img src={logo} style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div toggler="#toggler" class="collapse navbar-collapse">
+        <ul class="ml-auto navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
+                    <div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 ```
 
 ## Assistive Technology

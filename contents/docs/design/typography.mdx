@@ -44,11 +44,11 @@ We suggest using **TT Norms Regular, Medium and Bold** for Staples digital.
 
 | Header                                              |                                                                                                            | Properties                                                                                                                                                  |
 | --------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <h1>H1</h1>  | <h1>ABCDEFGHIJKLM...<br/>abcdefghijklmnopq...</h1>                  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 40px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 55px; <br/>  |
+| <h1>H1</h1>  | <h1>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h1>  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 40px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 55px; <br/>  |
 | <h2>H2</h2>  | <h2>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h2>  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 32px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 45px; <br/>  |
 | <h3>H3</h3>  | <h3>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h3>  | font-family: TT Norms Medium; <br/> font-weight: 500; <br/> font-size: 28px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 40px; <br/>  |
-| <h4>H4</h4>  | <h4>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h4>  | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 24px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 32px; <br/> |
-| <h5>H5</h5>  | <h5>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h5>  | font-family: TT Norms Regular; <br/> font-weight: 400; <br/> font-size: 20px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 26px; <br/> |
+| <h4>H4</h4>  | <h4>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h4>  | font-family: TT Norms Regular; <br/> font-weight: 500; <br/> font-size: 24px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 32px; <br/> |
+| <h5>H5</h5>  | <h5>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</h5>  | font-family: TT Norms Regular; <br/> font-weight: 500; <br/> font-size: 20px; <br/> color: #444444; <br/> letter-spacing: 0; <br/> line-height: 26px; <br/> |
 
 ### Paragraph Styles
 
@@ -93,24 +93,36 @@ Staples uses type tokens to manage typography. Type tokens are pre-set configura
 
 ### Font Family
 
-    $font-family-regular: "TT Norms Regular";
-    $font-family-medium: "TT Norms Medium";
-    $font-family-bold: "TT Norms Bold";
+```scss
+
+$font-family-regular: "TT Norms Regular";
+$font-family-medium: "TT Norms Medium";
+$font-family-bold: "TT Norms Bold";
+
+```
 
 ### Sans-serif Font Stack
 
-    $font-family-sans-serif: $font-family-regular !default;
+```scss
+
+$font-family-sans-serif: $font-family-regular !default;
+
+```
 
 ### Mono Font Stack
 
-    $font-family-monospace:
-        SFMono-Regular,
-        Menlo,
-        Monaco,
-        Consolas,
-        "Liberation Mono",
-        "Courier New",
-        monospace !default;
+```scss
+
+$font-family-monospace:
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace !default;
+
+```
 
 ### Weights
 

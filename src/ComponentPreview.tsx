@@ -11,7 +11,7 @@ const previewStyles = {
   padding: '2rem 2rem 2.5rem',
   margin: '0',
   backgroundColor: '#ffffff',
-  border: ' 1rem solid #ffffff,',
+  border: '1px solid #d9d9d6',
 }
 
 export const ComponentPreview = ({ children }: any) => {

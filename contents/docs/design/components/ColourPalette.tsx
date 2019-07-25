@@ -5,14 +5,14 @@ export const ColourPalette = () => {
     return (
         <Container>
             <Row>
-                <Col className="pl-0 my-4" xs={12}>
+                <Col className="pl-0" xs={12}>
                     <h5>Primary Palette</h5>
                 </Col>
             </Row>
             <Row className="mb-5">
                 <Col className="pl-0 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="border-0 p-2 p-md-4 bg-primary">
-                        <CardBody className="text-white">
+                        <CardBody className="p-0 text-white">
                             <CardTitle className="text-bold text-small">
                                 <b>Staples Red</b>
                             </CardTitle>
@@ -25,7 +25,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 pl-md-3 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="p-2 p-md-4 bg-white">
-                        <CardBody className="text-dark">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold">
                                 <b>White</b>
                             </CardTitle>
@@ -39,14 +39,14 @@ export const ColourPalette = () => {
             </Row>
 
             <Row>
-                <Col className="pl-0 my-4" sm={12}>
+                <Col className="pl-0" sm={12}>
                     <h5>Secondary Palette</h5>
                 </Col>
             </Row>
             <Row className="mb-5">
                 <Col className="pl-0 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="border-0 p-2 p-md-4 bg-dark">
-                        <CardBody className="text-white">
+                        <CardBody className="p-0 text-white">
                             <CardTitle className="text-bold text-small">
                                 <b>Charcoal</b>
                             </CardTitle>
@@ -59,7 +59,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 pl-md-3 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="p-2 p-md-4 bg-gray">
-                        <CardBody className="text-white">
+                        <CardBody className="p-0 text-white">
                             <CardTitle className="text-bold">
                                 <b>Mid-Gray</b>
                             </CardTitle>
@@ -72,7 +72,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 pl-md-3 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="p-2 p-md-4 border-0 bg-light-gray">
-                        <CardBody className="text-dark">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold">
                                 <b>Light-Gray</b>
                             </CardTitle>
@@ -84,8 +84,8 @@ export const ColourPalette = () => {
                     </Card>
                 </Col>
                 <Col className="pl-0 col-4 pt-4 pt-md-0" xs={12} md={4}>
-                    <Card className="mt-md-4 p-2 border-0 p-md-4 bg-lightest-gray">
-                        <CardBody className="text-dark">
+                    <Card className="border-0 mt-md-4 p-2 p-md-4 bg-lightest-gray">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold">
                                 <b>Lightest Gray</b>
                             </CardTitle>
@@ -99,14 +99,14 @@ export const ColourPalette = () => {
             </Row>
 
             <Row>
-                <Col className="pl-0 my-4" sm={12}>
+                <Col className="pl-0" sm={12}>
                     <h5>Tertiary Palette</h5>
                 </Col>
             </Row>
             <Row className="mb-5">
                 <Col className="pl-0 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="border-0 p-2 p-md-4 bg-chartreuse">
-                        <CardBody className="text-dark">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold text-small">
                                 <b>Chartreuse</b>
                             </CardTitle>
@@ -119,7 +119,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 pl-md-3 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="p-2 p-md-4 border-0 bg-cork">
-                        <CardBody className="text-dark">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold">
                                 <b>Cork</b>
                             </CardTitle>
@@ -132,7 +132,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 pl-md-3 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="p-2 p-md-4 border-0 bg-dark-blue">
-                        <CardBody className="text-white">
+                        <CardBody className="p-0 text-white">
                             <CardTitle className="text-bold">
                                 <b>Dark Blue</b>
                             </CardTitle>
@@ -145,7 +145,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="mt-md-4 p-2 border-0 p-md-4 bg-blue">
-                        <CardBody className="text-dark">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold">
                                 <b>Blue</b>
                             </CardTitle>
@@ -158,7 +158,7 @@ export const ColourPalette = () => {
                 </Col>
                 <Col className="pl-0 pl-md-3 col-4 pt-4 pt-md-0" xs={12} md={4}>
                     <Card className="mt-md-4 p-2 p-md-4 border-0 bg-lightest-blue">
-                        <CardBody className="text-dark">
+                        <CardBody className="p-0 text-dark">
                             <CardTitle className="text-bold">
                                 <b>Lightest Blue</b>
                             </CardTitle>

@@ -23,6 +23,7 @@
     "gatsby-plugin-sharp": "^2.2.8",
     "gatsby-plugin-typescript": "^2.0.11",
     "gatsby-remark-autolink-headers": "2.0.16",
+    "gatsby-remark-default-html-attrs": "^1.0.0",
     "gatsby-remark-katex": "2.0.6",
     "gatsby-remark-prismjs": "^3.2.8",
     "gatsby-remark-vscode": "^1.0.6",

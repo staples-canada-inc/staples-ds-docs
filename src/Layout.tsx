@@ -15,19 +15,19 @@ import { Hamburger } from './Hamburger';
 const mql = window.matchMedia(`(min-width: 576px)`)
 const styleOverrides = {
     sidebar: {
-        width: "280px",
+        width: "310px",
         top: "56px",
         paddingTop: "30px",
         paddingLeft: "30px",
         height: "100%",
         overflow: "hidden",
         borderRight: "1px solid #d9d9d6",
-        backgroundColor: "#ffffff"
+        backgroundColor: "#f3f3f2"
     },
     content: {
         top: "50px",
         paddingLeft: "0",
-        backgroundColor: "#f3f3f2"
+        backgroundColor: "#ffffff"
     }
 }
 const menuToggleStyle = {
@@ -92,7 +92,7 @@ export class RootLayout extends React.Component {
         open={this.state.open}
         docked={this.state.docked}
         onSetOpen={this.onSetOpen}
-        defaultSidebarWidth={280}
+        defaultSidebarWidth={310}
         shadow={false}
         styles={styleOverrides}
       >

@@ -2,6 +2,14 @@
   max-width: 720px;
 }
 
+.modal-title{
+    margin-top: 0px;
+}
+
+.modal-header{
+    border-bottom: none;
+}
+
 .modal-content{
   position: relative;
   display: flex;
@@ -16,6 +24,7 @@
   border: 1p solid $light;
   border-radius: 0px;
   outline: 0;
+  padding: 20px;
 }
 
 .close{
@@ -32,5 +41,6 @@
 }
 
 .modal-footer{
-  background: #f3f3f3
+  //background: #f3f3f3
+  border-top: none;
 }

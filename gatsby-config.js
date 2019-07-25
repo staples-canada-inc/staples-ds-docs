@@ -56,6 +56,12 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
+                    {
+                        resolve:`gatsby-remark-default-html-attrs`,
+                        options: {
+                          'table': 'table'
+                        }
+                      },
                     `gatsby-remark-katex`,
                     {
                         resolve: `gatsby-remark-autolink-headers`,

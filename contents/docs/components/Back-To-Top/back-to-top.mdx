@@ -1,0 +1,45 @@
+---
+title: Back To Top
+root: '/docs'
+parents: ['Components']
+---
+
+# Back To Top Button
+
+The back-to-top button allows users to easily return to the top of the page they are viewing. It scrolls back to the top after it is clicked. 
+
+In order to create a back-to-top button, you would use the `.back-to-top-button` class. 
+
+```html
+<a id="back-to-top-button"></a>
+```
+
+For this to work we need a script that allows the function to happen. Once clicked, the button will hide and the user returns back to the top of the page. This button must remain hidden at all times and only appear once the viewer has scrolled past a certain point. This value can be customized.
+
+```javascript
+var btn = $('#back-to-top-button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, 300);
+});
+```
+
+## Usage 
+
+A custom button that scrolls to the top of the page when clicked.
+
+In its orginal state, the background is white and on hover becomes our lightest-blue (#EFF6F7). The button is 60x60px in size and should always be displayed in the lower right corner. The placement of the button is 30px from the bottom and 30px from the right: 
+ 
+```css
+bottom: 30px;
+right: 30px;
+```

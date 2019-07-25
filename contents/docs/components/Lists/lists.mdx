@@ -1,0 +1,177 @@
+---
+title: Lists
+root: '/docs'
+parents: ['Components']
+---
+
+# Lists
+
+Lists consist of related content grouped together and organized vertically.
+
+## Unordered List
+
+Use the `<ul>` tag to create an unordered list that isn't numbered.
+
+```html
+<ul>
+  <li>Bread</li>
+  <li>Eggs</li>
+  <li>Milk</li>
+  <li>Coffee</li>
+</ul>
+```
+
+You can also nest lists—ordered or unordered—within lists.
+
+### Unordered List with Nested List
+
+```html
+<ul>
+  <li>Bread</li>
+  <li>Eggs</li>
+  <li>Milk</li>
+  <li>Coffee</li>
+  <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ol>
+</ul>
+```
+
+```html
+<ul>
+  <li>Bread</li>
+  <li>Eggs</li>
+  <li>Milk</li>
+  <li>Coffee</li>
+  <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ul>
+</ul>
+```
+
+## Ordered List
+
+Use the `<ol>` tag to create a numbered list.
+
+```html
+<ol>
+  <li>Bread</li>
+  <li>Eggs</li>
+  <li>Milk</li>
+  <li>Coffee</li>
+</ol>
+```
+
+Again, you can nest lists within lists—ordered or unordered.
+
+### Ordered List with Nested List
+
+```html
+<ol>
+  <li>Bread</li>
+  <li>Eggs</li>
+  <li>Milk</li>
+  <li>Coffee</li>
+  <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ol>
+</ol>
+```
+
+```html
+<ol>
+  <li>Bread</li>
+  <li>Eggs</li>
+  <li>Milk</li>
+  <li>Coffee</li>
+  <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ul>
+</ol>
+```
+
+##List Groups
+
+A list group is an unordered list with list items and proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+
+```html
+<ul class="list-group">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+```
+
+## Usage
+
+### Variations
+
+| List Type      | Purpose                                                                    |
+| :------------- | :------------------------------------------------------------------------- |
+| Unordered List | To present content of equal status or value.                               |
+| Ordered List   | Imply sequence and order. Commonly used when giving a set of instructions. |
+| List Group     | To present content of equal status or value.                               |
+
+### Length
+
+Typically, lists should be used to present simple or short pieces of information.
+
+### Order
+
+Arrange list items in a logical way. For example, if the list pertains to resource use, the default order might be highest resource use to lowest. Whereas, grouping items into smaller sub-categories might be more meaningful in other contexts. Alternatively, alphabetical or numerical order is also widely used.
+
+### Text
+
+Ensure list items are grammatically parallel. For example, do not mix passive voice with active voice or declarative sentences (statements) with imperative sentences (direct command).
+
+### Style
+
+The `list-style-type` property specifies the type of list item marker.
+
+```css
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+```
+
+The `list-style-image` property specifies an image as the list item marker.
+
+```css
+ul {
+  list-style-image: url('sqpurple.gif');
+}
+```
+
+The `list-style-position` property specifies the position of the list-item markers (bullet points).
+
+```css
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+```
