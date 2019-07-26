@@ -1,10 +1,7 @@
-sample: https://www.jannikbuschke.de/gatsby-antd-docs/
 
-# Gatsby Ant-Design Documentation Starter
+# Staples Design System Core
 
-Forked from https://github.com/cvluca/gatsby-starter-markdown.
-
-This starter is boilerplate for (technical) documentation websites optionally accomponied by a blog (you can use it forever you want of course).
+This is the code and components that makeup the Staples design guidlines and documentation website.
 
 # Getting started
 
@@ -19,27 +16,11 @@ Visit http://localhost:8000.
 
 Edit files in `/content/docs` and see live updates.
 
-# Features
-
-- [x] Ant Design
-- [x] Typescript
-- [x] Markdown
-- [x] MDX
-- [x] Syntax highlighting
 
 # Roadmap
 
-- [x] Add typescript
-- [x] Remove Redux
-- [x] General simplifications
-- [x] Add mdx
-- [x] Add syntax highlighting with prismjs
-- [x] Improve Header UI
-- [ ] Fix menu item links not showing active state
-- [ ] Blog feature / second content type
-- [ ] Improved typings
-- [ ] Improved responsiveness
-- [ ] Add Search
+- [ ] Add custom namespace support
+
 
 # Hosting
 
@@ -54,3 +35,8 @@ and copy the content of the public folder to the webspace.
 # License
 
 MIT
+
+# Special Thanks To
+Jannik Buschke - [Gatsby Starter For Docs](https://github.com/jannikbuschke/gatsby-antd-docs)
+twbs Team - [Bootstrap 4.0](https://github.com/twbs/bootstrap)
+Reactstrap Team - [Reactstrap](https://reactstrap.github.io)

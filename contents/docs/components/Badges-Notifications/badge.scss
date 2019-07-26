@@ -1,13 +1,61 @@
-.btn {
-    .badge{
-        margin-left: .375rem;
-    }
-}
-.badge-pill {
-    padding: 5px 12px;
+.badge{
+    padding: 8px 12px;
     font-family: 'TT Norms Medium', sans-serif;
     line-height: 15px;
-    border-radius: $btn-border-radius;
+    border-radius: 0px;
+}
+
+h1{
+    .badge{
+        line-height: 25px;
+    }
+}
+h2{
+    .badge{
+        line-height: 22px;
+    }
+}
+h3{
+    .badge{
+        line-height: 18px;
+    }
+}
+h4{
+    .badge{
+        line-height: 15px;
+    }
+}
+h5{
+    .badge{
+        line-height: 12px;
+    }
+}
+h6{
+    .badge{
+        line-height: 9px;
+    }
+}
+
+
+.btn {
+    .badge{
+        right: -48px;
+        top: -30px;
+    }
+}
+
+a.badge{
+    padding: 8px 12px;
+    font-family: 'TT Norms Medium', sans-serif;
+    line-height: 15px;
+    border-radius: 0px;
+}
+
+.badge-pill {
+    padding: 8px 12px;
+    font-family: 'TT Norms Medium', sans-serif;
+    line-height: 15px;
+    border-radius: 0px;
 }
 
 .badge-warning {
