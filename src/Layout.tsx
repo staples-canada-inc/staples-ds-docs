@@ -25,14 +25,14 @@ const styleOverrides = {
         backgroundColor: "#f3f3f2"
     },
     content: {
-        top: "50px",
+        top: "80px",
         paddingLeft: "0",
         backgroundColor: "#ffffff"
     }
 }
 const menuToggleStyle = {
     position: 'fixed',
-    top: '12px',
+    top: '20px',
     left: '20px',
     zIndex: '9999999',
     height:'30px', 
@@ -85,8 +85,14 @@ export class RootLayout extends React.Component {
   render() {
     return (
     <>
-    <Header/>
+    <Helmet
+      title="Staples Design System"
+      meta={[
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' },
+      ]} />
 
+    <Header/>
       <PageLayout
         sidebar={ <SidebarContents root={this.props.sidebarRoot} /> }
         open={this.state.open}
@@ -96,7 +102,6 @@ export class RootLayout extends React.Component {
         shadow={false}
         styles={styleOverrides}
       >
-
         <Container fluid>
           <Row>
             <Col xs="12" lg="9" className="pl-lg-5 ml-lg-5">

@@ -1,29 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Header } from '../Header'
 
+import {Container, Col, Row} from 'reactstrap'
+
+import {Header} from '../Header'
+import {HeroBanner} from './components/HeroBanner'
+import {Features} from './components/Features'
+import {QuickAccess} from './components/QuickAccess'
 
 const IndexPage = () => {
   return (
-    <div align="center" style={{ padding: 80 }}>
-      <p
-        style={{
-          color: 'cornflowerblue',
-          fontSize: 50,
-          fontWeight: 'bold',
-        }}
-      >
-        Gatsby Ant Design Docs Boilerplate
-      </p>
-      <h2>A gatsby starter to create documentation websites</h2>
-      <p>
-        This is a fork of{' '}
-        <a href="https://github.com/cvluca/gatsby-starter-markdown">
-          https://github.com/cvluca/gatsby-starter-markdown
-        </a>
-      </p>
-      <br />
-    </div>
+    <>
+    <Header/>
+    <HeroBanner/>
+    <Features/>
+    <QuickAccess/>
+    </>
   )
 }
 

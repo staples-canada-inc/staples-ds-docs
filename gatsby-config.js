@@ -38,6 +38,13 @@ module.exports = {
                 path: `${__dirname}/contents`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `icons`,
+                path: `${__dirname}/src/images/icons`,
+            },
+        },
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
         {
@@ -105,7 +112,7 @@ module.exports = {
                                 prefersDarkTheme: 'OneDark-Pro', // Optional: used with `prefers-color-scheme: dark`
                                 prefersLightTheme: 'Quiet Light'    // Optional: used with `prefers-color-scheme: light`
                             }, // Read on for list of included themes. Also accepts object and function forms.
-                            wrapperClassName: '',  // Additional class put on 'pre' tag
+                            wrapperClassName: 'html',  // Additional class put on 'pre' tag
                             injectStyles: false,    // Injects (minimal) additional CSS for layout and scrolling
                             extensions: [{
                                 identifier: 'zhuangtongfa.Material-theme',

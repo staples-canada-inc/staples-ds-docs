@@ -39,7 +39,7 @@ To implement a fixed grid, multiply units by six and mix them together. When til
 Construct columns by either dividing a space into a fluid grid, or by tiling fixed boxes in multiples. For dense content like typography, element icons and smaller components use the mini unit for spatial reference and alignment. For larger items, like carousels, banners, promotions and modals, you can refer to larger units of the mini unit.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_cols_rows} class="w-75" />
+    <img src={grid_cols_rows} class="w-100" />
 </div>
 
 
@@ -47,7 +47,7 @@ Construct columns by either dividing a space into a fluid grid, or by tiling fix
 The margins at the outer edge of the grid are always the same size regardless of breakpoint, even when columns are fluid. The Staples Design System uses a margin of 10px.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_margins} class="w-75" />
+    <img src={grid_margins} class="w-100" />
 </div>
 
 
@@ -55,7 +55,7 @@ The margins at the outer edge of the grid are always the same size regardless of
 Padding is always a fixed multiple of mini units. In the Staples Design System it’s 12 px at all standard breakpoints. Always align type against the padding. Some design tools add padding to text boxes by default; check text box padding and remove if necessary.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_padding} class="w-75" />
+    <img src={grid_padding} class="w-100" />
 </div>
 
 
@@ -63,7 +63,7 @@ Padding is always a fixed multiple of mini units. In the Staples Design System i
 Grid gutters can be absent as illustrated above, or present as shown below. The margin around each grid box is 15px for a total gutter of 30px. Note how the total gutter size maintains the scaling proportions as it’s divisible by six. For closely related content, consider a gutterless grid. Apply gutters when content warrants more separation.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_gutters} class="w-75" />
+    <img src={grid_gutters} class="w-100" />
 </div>
 
 
@@ -71,8 +71,8 @@ Grid gutters can be absent as illustrated above, or present as shown below. The 
 ### Sizing Scale
 The sizing scale is centered around the mini unit. Use it to size content as well as negative space. Like a type scale, the sizing scale constrains the range of sizes to improve consistency and rhythm, while still allowing flexibility. Spacing tokens are applied to maintain consistency across Staples interfaces.
 
-<div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={sizing_scale} class="w-75" />
+<div class="col-12 col-md-9 bg-light w-100 text-center py-4 mb-5">
+    <img src={sizing_scale} class="w-100" />
 </div>
 
 | Mini Unit(s)        | Sizing Scale       | 
@@ -106,7 +106,7 @@ Choose an aspect ratio from the table, then multiply the base unit in each dimen
 Use the fixed sizing scale to set vertical spacing between sections, by adding it to the top or bottom margin of a box. 
 
 <div class="col col-md-9 bg-light w-100 text-center py-4">
-    <img src={vertical_spacing} class="w-75" />
+    <img src={vertical_spacing} class="w-100" />
 </div>
 
 The same applies to components. Use the mini unit for smaller spacing within components and text fields, or between text boxes and other dense items. When multiple components adhere to the same scale, grid relationships naturally emerge. 
@@ -120,8 +120,6 @@ The same applies to components. Use the mini unit for smaller spacing within com
 Since Staples.ca is predominantly desktop first, we use a set of maximum-width media queries to create sensible breakpoints for the layouts of our interfaces. The breakpoints specify a maximum viewport width and allow us to scale down elements as the screen size gets smaller.
 
 Use this set of standard breakpoints to maintain layout integrity across screen sizes. For optimal results, test the design and code at each of these breakpoints.
-
-
 
 
 | Screen Size         | Device                    | Breakpoint (max-width) | 

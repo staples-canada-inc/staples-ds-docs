@@ -4,12 +4,11 @@ import logo from './images/Staples_Logo_White_EN.svg'
 
 export class Header extends Component{
 
-
   render() {
     return (
-      <Navbar color="dark" dark expand="md" fixed="top" className="pl-5 pl-sm-2" >
+      <Navbar color="dark" dark expand="md" fixed="top" className="pl-5 pl-sm-2 py-3" >
         <NavbarBrand href="/" className="pl-3 pl-sm-2" >
-          <img src={logo} style={{ height: '30px' }} />
+          <img src={logo} style={{ height: '30px' }} /><p className=" py-1 pl-0 border-left pl-3 ml-3 d-inline">Design System</p>
         </NavbarBrand>
         <Nav className="ml-auto" navbar>
           <NavItem>
