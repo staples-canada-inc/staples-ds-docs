@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
-export const Features = () => {
+const Features = () => {
     return (
         <Container>
             <Row className="my-5 py-5">
@@ -40,3 +40,5 @@ export const Features = () => {
         </Container>
     )
 }
+
+export default Features

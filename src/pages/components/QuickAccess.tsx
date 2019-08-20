@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
-export const QuickAccess = () => {
+const QuickAccess = () => {
     return (
       <Container>
         <Row>
@@ -46,3 +46,4 @@ export const QuickAccess = () => {
     )
   }
   
+export default QuickAccess

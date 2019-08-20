@@ -9,7 +9,7 @@ var divStyle = {
     paddingTop: '120px'
 }
 
-export const HeroBanner = () => {
+const HeroBanner = () => {
     return (
         <div className="mb-5" >
             <Jumbotron style={divStyle}>
@@ -25,3 +25,5 @@ export const HeroBanner = () => {
         </div>
     )
 }
+
+export default HeroBanner
