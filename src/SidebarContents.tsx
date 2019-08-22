@@ -71,7 +71,7 @@ interface Props {
   root: any
 }
 
-export const SidebarContents = ({ root }: Props) => {
+const SidebarContents = ({ root }: Props) => {
   return (
     <StaticQuery
       query={graphql`
@@ -137,3 +137,5 @@ export const SidebarContents = ({ root }: Props) => {
     />
   )
 }
+
+export default SidebarContents

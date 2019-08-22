@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { NavItem, NavLink, Navbar, Nav, NavbarBrand } from 'reactstrap'
 import logo from './images/Staples_Logo_White_EN.svg'
 
-export class Header extends Component{
+class Header extends Component{
 
   render() {
     return (
@@ -21,3 +21,5 @@ export class Header extends Component{
     )
   }
 }
+
+export default Header
