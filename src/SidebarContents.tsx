@@ -3,14 +3,14 @@ import { graphql, StaticQuery, Link } from 'gatsby'
 import { Nav, NavItem } from 'reactstrap'
 import { pathPrefix } from '../gatsby-config'
 
-
 const sidebarNav = {
-    overflowY: 'scroll',
-    height: '100%',
-    width: '100%',
-    paddingRight: '17px', /* Increase/decrease this value for cross-browser compatibility */
-    boxSizing: 'content-box' /* So the width will be 100% + 17px */
-  };
+  overflowY: 'scroll',
+  height: '100%',
+  width: '100%',
+  paddingRight:
+    '17px' /* Increase/decrease this value for cross-browser compatibility */,
+  boxSizing: 'content-box' /* So the width will be 100% + 17px */,
+}
 
 const convertToTree = data => {
   const list = data.map(edge => {
@@ -71,7 +71,7 @@ interface Props {
   root: any
 }
 
-const SidebarContents = ({ root }: Props) => {
+export const SidebarContents = ({ root }: Props) => {
   return (
     <StaticQuery
       query={graphql`
@@ -105,7 +105,9 @@ const SidebarContents = ({ root }: Props) => {
               sortTree(item.children)
               return (
                 <Nav vertical key={item.key} className="mb-3">
-                 <h5 className="mb-0"><strong>{item.title}</strong></h5>
+                  <h5 className="mb-0">
+                    <strong>{item.title}</strong>
+                  </h5>
                   {loop(item.children)}
                 </Nav>
               )
@@ -115,7 +117,7 @@ const SidebarContents = ({ root }: Props) => {
                 <Link to={item.path} className="nav-link">
                   {item.title}
                 </Link>
-              </NavItem>              
+              </NavItem>
             )
           })
         const keys =
@@ -125,7 +127,8 @@ const SidebarContents = ({ root }: Props) => {
         console.log({ keys, tree: loop(tree) })
         //const defaultOpenKeys = dir.map(item => item.key)
         return (
-          <div vertical 
+          <div
+            vertical
             //defaultOpenKeys={defaultOpenKeys}
             selectedKeys={keys}
             style={sidebarNav}

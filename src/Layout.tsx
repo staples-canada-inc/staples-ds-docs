@@ -12,7 +12,8 @@ import './css/site/preview-overrides.css'
 import menuToggle from './images/menu-toggle.svg'
 import { Hamburger } from './Hamburger'
 
-const mql = window.matchMedia(`(min-width: 576px)`)
+const mql = typeof window !== 'undefined' && window.matchMedia(`(min-width: 576px)`)
+
 const styleOverrides = {
   sidebar: {
     width: '310px',
@@ -54,7 +55,7 @@ export class RootLayout extends React.Component {
     this.onSetOpen = this.onSetOpen.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     mql.addListener(this.mediaQueryChanged)
   }
 
