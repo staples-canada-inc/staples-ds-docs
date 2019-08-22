@@ -1,16 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import { Container, Row, Col, Button, UncontrolledCollapse } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 import { Header } from './Header'
-import { pathPrefix } from '../gatsby-config'
 import { SidebarContents } from './SidebarContents'
-import { TableOfContents } from './TableOfContents'
 import PageLayout from 'react-sidebar'
 import './css/design-system/staples-ds.css'
 import './css/site/preview-overrides.css'
 import menuToggle from './images/menu-toggle.svg'
-import { Hamburger } from './Hamburger'
 
 const mql = typeof window !== 'undefined' && window.matchMedia(`(min-width: 576px)`)
 
