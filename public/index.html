@@ -1,182 +1,43 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="generator" content="Gatsby 2.1.37"/>
-        <title data-react-helmet="true"></title>
-        <link rel="shortcut icon" href="/icons/icon-48x48.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="manifest" href="/manifest.webmanifest"/>
-        <meta name="theme-color" content="#663399"/>
-        <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/>
-        <style type="text/css">
-            .post-toc-anchor {
-                float: left;
-                padding-right: 4px;
-                margin-left: -20px;
-            }
-            h1 .post-toc-anchor svg,
-            h2 .post-toc-anchor svg,
-            h3 .post-toc-anchor svg,
-            h4 .post-toc-anchor svg,
-            h5 .post-toc-anchor svg,
-            h6 .post-toc-anchor svg {
-                visibility: hidden;
-            }
-            h1 .post-toc-anchor:focus svg,
-            h1:hover .post-toc-anchor svg,
-            h2 .post-toc-anchor:focus svg,
-            h2:hover .post-toc-anchor svg,
-            h3 .post-toc-anchor:focus svg,
-            h3:hover .post-toc-anchor svg,
-            h4 .post-toc-anchor:focus svg,
-            h4:hover .post-toc-anchor svg,
-            h5 .post-toc-anchor:focus svg,
-            h5:hover .post-toc-anchor svg,
-            h6 .post-toc-anchor:focus svg,
-            h6:hover .post-toc-anchor svg {
-                visibility: visible;
-            }
-        </style>
-        <script>
-            document.addEventListener("DOMContentLoaded", function (event) {
-                var hash = window.decodeURI(location.hash.replace('#', ''))
-                if (hash !== '') {
-                    var element = document.getElementById(hash)
-                    if (element) {
-                        var offset = element.offsetTop
-                        // Wait for the browser to finish rendering before scrolling.
-                        setTimeout((function () {
-                            window.scrollTo(0, offset - 0)
-                        }), 0)
-                    }
-                }
-            })
-        </script>
-        <link as="script" rel="preload" href="/component---src-pages-index-tsx-5c52f22c9df6c5f4d8fd.js"/>
-        <link as="script" rel="preload" href="/app-19150625776ee3a703b0.js"/>
-        <link as="script" rel="preload" href="/webpack-runtime-b6bc58581af4ea665d30.js"/>
-        <link as="fetch" rel="preload" href="/static/d/555/path---index-6a9-Yb3RyJW6o00BQ5is86zDZbOCY.json" crossorigin="use-credentials"/></head>
-    <body>
-        <noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript>
-        <div id="___gatsby">
-            <div style="outline:none" tabindex="-1" role="group">
-                <nav class="pl-5 pl-sm-2 py-3 navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                    <a href="/" class="pl-3 pl-sm-2 navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgyIiBoZWlnaHQ9IjU5IiB2aWV3Qm94PSIwIDAgMjgyIDU5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPHBhdGggZD0iTTI2MCAyOS45SDI1MS43VjYuN0gyNjBWMEgyNTEuNkMyNDggMCAyNDUgMyAyNDUgNi42VjMwQzI0NSAzMy42IDI0OCAzNi42IDI1MS42IDM2LjZIMjYwVjI5LjlaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjY2LjYgNi43SDI3NC45VjI5LjlIMjY2LjZWMzYuNkgyNzVDMjc4LjYgMzYuNiAyODEuNiAzMy42IDI4MS42IDMwVjYuNkMyODEuNiAzIDI3OC42IDAgMjc1IDBIMjY2LjZWNi43WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE4LjUgNDkuOUM4LjYgNDkuOSAxLjIgNDQuNyAwIDM2LjNIMTAuMkMxMS42IDM5LjYgMTUuNiA0MC45IDE4LjUgNDAuOUMyMi41IDQwLjkgMjUuNiAzOS43IDI1LjYgMzcuNEMyNS42IDM1LjIgMjQuMiAzNC4zIDE3LjQgMzMuMkMxMC40IDMyLjEgMS4xIDMwLjIgMS4xIDIxLjVDMS4xIDE1LjMgNi40IDkgMTcuOCA5QzI2LjggOSAzMy40IDEzLjkgMzQuNyAyMS4ySDI0LjNDMjMuNyAxOS40IDIxLjUgMTcuOSAxNy44IDE3LjlDMTMuMiAxNy45IDExLjMgMTkuNiAxMS4zIDIxQzExLjMgMjMgMTQuMiAyMy43IDE5IDI0LjVDMjguNyAyNi4xIDM1LjcgMjguMiAzNS43IDM2LjdDMzUuNyA0NC41IDI4LjUgNDkuOSAxOC41IDQ5LjlaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNTkgNDguOUM0Ny41IDUwLjEgNDEuNSA0My4yIDQxLjUgMzIuNVYyMS4ySDM2LjhWMTIuM0g0MS41VjBINTEuNVYxMi4zSDU5VjIxLjJINTEuNVYzMi43QzUxLjUgMzguMiA1NCA0MC4yIDU5IDM5LjlWNDguOVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMjUuMiAxOC40QzExOS43IDE4LjQgMTE1LjIgMjMuMyAxMTUuMiAyOS40QzExNS4yIDM1LjUgMTE5LjcgNDAuNiAxMjUuMiA0MC42QzEzMC43IDQwLjYgMTM1LjIgMzUuOCAxMzUuMiAyOS40QzEzNS4yIDIzLjEgMTMwLjcgMTguNCAxMjUuMiAxOC40Wk0xMjYuNiA0OS44QzEyMi4xIDQ5LjggMTE4LjEgNDguMSAxMTUuMSA0NS4yVjU4LjlIMTA1VjkuOUgxMTQuNlYxNEMxMTcuNiAxMC45IDEyMS44IDkgMTI2LjUgOUMxMzYuNyA5IDE0NS4xIDE3LjggMTQ1LjEgMjkuM0MxNDUuMiA0MSAxMzYuOCA0OS44IDEyNi42IDQ5LjhaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTU4LjQgMEgxNDguNFY0OUgxNTguNFYwWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE5MS41IDI1LjJDMTkwLjMgMjAuNiAxODYuNSAxNy44IDE4MS43IDE3LjhDMTc3LjEgMTcuOCAxNzMuNSAyMC43IDE3Mi4xIDI1LjJIMTkxLjVWMjUuMlpNMTcxLjkgMzMuNEMxNzMuMiAzOC4yIDE3NyA0MS4xIDE4MS43IDQxLjFDMTg1IDQxLjEgMTg4LjMgMzkuNyAxOTAgMzYuNUgyMDAuN0MxOTguNCA0NC41IDE5MS41IDQ5LjkgMTgxLjggNDkuOUMxNzAuOCA0OS45IDE2MS44IDQwLjggMTYxLjggMjkuNUMxNjEuOCAxOC4yIDE3MC44IDguOSAxODEuOCA4LjlDMTkzLjMgOC45IDIwMi45IDE3LjkgMjAxLjUgMzMuM0gxNzEuOVYzMy40WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTIyMS43IDI0LjVDMjE2LjggMjMuNyAyMTQgMjMuMSAyMTQgMjFDMjE0IDE5LjYgMjE1LjkgMTcuOSAyMjAuNSAxNy45QzIyNC4yIDE3LjkgMjI2LjQgMTkuMyAyMjcgMjEuMkgyMzcuNEMyMzYuMSAxMy44IDIyOS40IDkgMjIwLjUgOUMyMDkuMiA5IDIwMy44IDE1LjQgMjAzLjggMjEuNUMyMDMuOCAzMC4yIDIxMy4xIDMyLjEgMjIwLjEgMzMuMkMyMjYuOSAzNC4zIDIyOC4zIDM1LjIgMjI4LjMgMzcuNEMyMjguMyAzOS43IDIyNS4zIDQwLjkgMjIxLjIgNDAuOUMyMTguMyA0MC45IDIxNC41IDM5LjggMjEzIDM2LjdIMjAyLjdDMjA0IDQ0LjkgMjExLjMgNTAuMSAyMjEuMiA1MC4xQzIzMS4yIDUwLjEgMjM4LjMgNDQuNiAyMzguMyAzNi45QzIzOC4zIDI4LjIgMjMxLjQgMjYuMSAyMjEuNyAyNC41WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTgwLjMgNDAuNkM4NS44IDQwLjYgOTAuMyAzNS43IDkwLjMgMjkuNkM5MC4zIDIzLjUgODUuOCAxOC40IDgwLjMgMTguNEM3NC44IDE4LjQgNzAuMyAyMy4yIDcwLjMgMjkuNkM3MC4zIDM1LjkgNzQuOCA0MC42IDgwLjMgNDAuNlpNNzguOSA5LjFDODMuNCA5LjEgODcuNCAxMC44IDkwLjQgMTMuN1Y5LjlIMTAwLjVWNDlIOTAuOVY0NC45Qzg3LjkgNDggODMuNyA0OS45IDc5IDQ5LjlDNjguOCA0OS45IDYwLjQgNDEuMSA2MC40IDI5LjZDNjAuMyAxOCA2OC42IDkuMSA3OC45IDkuMVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iMjgxLjYiIGhlaWdodD0iNTguOSIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K" style="height:30px"/>
-                        <p class=" py-1 pl-0 border-left pl-3 ml-3 d-inline">Design System</p>
-                    </a>
-                    <ul class="ml-auto navbar-nav">
-                        <li class="nav-item">
-                            <a href="https://github.com/reactstrap/reactstrap" class="nav-link">V1.0</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="mb-5">
-                    <div style="background-image:url(/static/Staples_Line_Illustration-eae231dd3a8da7807f6bc59234292efd.svg);padding-top:120px" class="jumbotron">
-                        <div class="pb-4 mb-4 pl-lg-5 container">
-                            <h1 class="mb-2">Think Brand, Live Digital</h1>
-                            <p class="lead col-md-6 pl-0 pb-4">Our design system provides a common language and guiding principals that help us build great experiences for Staple&#x27;s employees and customers.</p>
-                            <p class="mt-4 pt-4">
-                                <a href="/docs/getting-started" class="cta btn btn-primary">View Documentation</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="my-5 py-5 row">
-                        <div class="col">
-                            <div class="card">
-                                <div class="p-5 card-body">
-                                    <div class="h3 mt-0 mb-3 card-title">Start Learning</div>
-                                    <p class="card-text">Explore the documentation to learn how to use our design system and it&#x27;s components in your next project.</p>
-                                    <a href="http://localhost:8000/docs/getting-started" class="btn btn-link">View Documentation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="p-5 card-body">
-                                    <div class="h3 mt-0 mb-3 card-title">Resources &amp; Downloads</div>
-                                    <p class="card-text">Download all the resources and dependancies you&#x27;ll need to start developing with the Staples Design System.</p>
-                                    <a href="http://localhost:8000/docs/resources-download" class="btn btn-link">View Downloads</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><hr class="my-5"/></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="border-0 card">
-                                <div class="p-5 card-body">
-                                    <div class="h3 mt-0 mb-3 card-title">Content</div>
-                                    <p class="card-text">Why, when and how to use our design system.</p>
-                                    <button class="btn btn-link btn btn-secondary">View Content Guidelines</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="border-0 card">
-                                <div class="p-5 card-body">
-                                    <div class="h3 mt-0 mb-3 card-title">Design</div>
-                                    <p class="card-text">Why, when and how to use our design system.</p>
-                                    <button class="btn btn-link btn btn-secondary">View Design Guidelines</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="border-0 card">
-                                <div class="p-5 card-body">
-                                    <div class="h3 mt-0 mb-3 card-title">Components</div>
-                                    <p class="card-text">Why, when and how to use our design system.</p>
-                                    <button class="btn btn-link btn btn-secondary">View Components</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="border-0 card">
-                                <div class="p-5 card-body">
-                                    <div class="h3 mt-0 mb-3 card-title">Templates</div>
-                                    <p class="card-text">Why, when and how to use our design system.</p>
-                                    <button class="btn btn-link btn btn-secondary">View Templates</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script id="gatsby-script-loader">
-            /* <![CDATA[ */
-            window.page = {
-                "componentChunkName": "component---src-pages-index-tsx",
-                "jsonName": "index",
-                "path": "/"
-            };
-            window.dataPath = "555/path---index-6a9-Yb3RyJW6o00BQ5is86zDZbOCY";/* ]]> */
-        </script>
-        <script id="gatsby-chunk-mapping">
-            /* <![CDATA[ */
-            window.___chunkMapping = {
-                "app": ["/app-19150625776ee3a703b0.js"],
-                "component---src-templates-template-tsx": ["/component---src-templates-template-tsx-0417ebd6714089677925.js"],
-                "component---src-pages-index-tsx": ["/component---src-pages-index-tsx-5c52f22c9df6c5f4d8fd.js"],
-                "component---src-pages-blog-tsx": ["/component---src-pages-blog-tsx-e47e1accd50c9e527453.js"],
-                "component---src-pages-components-features-tsx": ["/component---src-pages-components-features-tsx-28996ed759b9b8d4a77a.js"],
-                "component---src-pages-components-hero-banner-tsx": ["/component---src-pages-components-hero-banner-tsx-525e700d5eb60f86aeed.js"],
-                "component---src-pages-components-quick-access-tsx": ["/component---src-pages-components-quick-access-tsx-2aaf3c085ca519cfb1dc.js"],
-                "pages-manifest": ["/pages-manifest-36099d145d4235343487.js"]
-            };/* ]]> */
-        </script>
-        <script src="/webpack-runtime-b6bc58581af4ea665d30.js" async=""></script>
-        <script src="/app-19150625776ee3a703b0.js" async=""></script>
-        <script src="/component---src-pages-index-tsx-5c52f22c9df6c5f4d8fd.js" async=""></script>
-    </body>
-</html>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.1.37"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=07fab8ad5473f1e15e5f98b64f5d02eda19b8316"/><style type="text/css">
+    .post-toc-anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .post-toc-anchor svg,
+    h2 .post-toc-anchor svg,
+    h3 .post-toc-anchor svg,
+    h4 .post-toc-anchor svg,
+    h5 .post-toc-anchor svg,
+    h6 .post-toc-anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .post-toc-anchor svg,
+    h2:hover .post-toc-anchor svg,
+    h3:hover .post-toc-anchor svg,
+    h4:hover .post-toc-anchor svg,
+    h5:hover .post-toc-anchor svg,
+    h6:hover .post-toc-anchor svg,
+    h1 .post-toc-anchor:focus svg,
+    h2 .post-toc-anchor:focus svg,
+    h3 .post-toc-anchor:focus svg,
+    h4 .post-toc-anchor:focus svg,
+    h5 .post-toc-anchor:focus svg,
+    h6 .post-toc-anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link as="script" rel="preload" href="/component---src-pages-index-tsx-5c52f22c9df6c5f4d8fd.js"/><link as="script" rel="preload" href="/app-19150625776ee3a703b0.js"/><link as="script" rel="preload" href="/webpack-runtime-cf824e8474a67bf76e65.js"/><link as="fetch" rel="preload" href="/static/d/555/path---index-6a9-Yb3RyJW6o00BQ5is86zDZbOCY.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><nav class="pl-5 pl-sm-2 py-3 navbar navbar-expand-md navbar-dark bg-dark fixed-top"><a href="/" class="pl-3 pl-sm-2 navbar-brand"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgyIiBoZWlnaHQ9IjU5IiB2aWV3Qm94PSIwIDAgMjgyIDU5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPHBhdGggZD0iTTI2MCAyOS45SDI1MS43VjYuN0gyNjBWMEgyNTEuNkMyNDggMCAyNDUgMyAyNDUgNi42VjMwQzI0NSAzMy42IDI0OCAzNi42IDI1MS42IDM2LjZIMjYwVjI5LjlaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjY2LjYgNi43SDI3NC45VjI5LjlIMjY2LjZWMzYuNkgyNzVDMjc4LjYgMzYuNiAyODEuNiAzMy42IDI4MS42IDMwVjYuNkMyODEuNiAzIDI3OC42IDAgMjc1IDBIMjY2LjZWNi43WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE4LjUgNDkuOUM4LjYgNDkuOSAxLjIgNDQuNyAwIDM2LjNIMTAuMkMxMS42IDM5LjYgMTUuNiA0MC45IDE4LjUgNDAuOUMyMi41IDQwLjkgMjUuNiAzOS43IDI1LjYgMzcuNEMyNS42IDM1LjIgMjQuMiAzNC4zIDE3LjQgMzMuMkMxMC40IDMyLjEgMS4xIDMwLjIgMS4xIDIxLjVDMS4xIDE1LjMgNi40IDkgMTcuOCA5QzI2LjggOSAzMy40IDEzLjkgMzQuNyAyMS4ySDI0LjNDMjMuNyAxOS40IDIxLjUgMTcuOSAxNy44IDE3LjlDMTMuMiAxNy45IDExLjMgMTkuNiAxMS4zIDIxQzExLjMgMjMgMTQuMiAyMy43IDE5IDI0LjVDMjguNyAyNi4xIDM1LjcgMjguMiAzNS43IDM2LjdDMzUuNyA0NC41IDI4LjUgNDkuOSAxOC41IDQ5LjlaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNTkgNDguOUM0Ny41IDUwLjEgNDEuNSA0My4yIDQxLjUgMzIuNVYyMS4ySDM2LjhWMTIuM0g0MS41VjBINTEuNVYxMi4zSDU5VjIxLjJINTEuNVYzMi43QzUxLjUgMzguMiA1NCA0MC4yIDU5IDM5LjlWNDguOVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMjUuMiAxOC40QzExOS43IDE4LjQgMTE1LjIgMjMuMyAxMTUuMiAyOS40QzExNS4yIDM1LjUgMTE5LjcgNDAuNiAxMjUuMiA0MC42QzEzMC43IDQwLjYgMTM1LjIgMzUuOCAxMzUuMiAyOS40QzEzNS4yIDIzLjEgMTMwLjcgMTguNCAxMjUuMiAxOC40Wk0xMjYuNiA0OS44QzEyMi4xIDQ5LjggMTE4LjEgNDguMSAxMTUuMSA0NS4yVjU4LjlIMTA1VjkuOUgxMTQuNlYxNEMxMTcuNiAxMC45IDEyMS44IDkgMTI2LjUgOUMxMzYuNyA5IDE0NS4xIDE3LjggMTQ1LjEgMjkuM0MxNDUuMiA0MSAxMzYuOCA0OS44IDEyNi42IDQ5LjhaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTU4LjQgMEgxNDguNFY0OUgxNTguNFYwWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE5MS41IDI1LjJDMTkwLjMgMjAuNiAxODYuNSAxNy44IDE4MS43IDE3LjhDMTc3LjEgMTcuOCAxNzMuNSAyMC43IDE3Mi4xIDI1LjJIMTkxLjVWMjUuMlpNMTcxLjkgMzMuNEMxNzMuMiAzOC4yIDE3NyA0MS4xIDE4MS43IDQxLjFDMTg1IDQxLjEgMTg4LjMgMzkuNyAxOTAgMzYuNUgyMDAuN0MxOTguNCA0NC41IDE5MS41IDQ5LjkgMTgxLjggNDkuOUMxNzAuOCA0OS45IDE2MS44IDQwLjggMTYxLjggMjkuNUMxNjEuOCAxOC4yIDE3MC44IDguOSAxODEuOCA4LjlDMTkzLjMgOC45IDIwMi45IDE3LjkgMjAxLjUgMzMuM0gxNzEuOVYzMy40WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTIyMS43IDI0LjVDMjE2LjggMjMuNyAyMTQgMjMuMSAyMTQgMjFDMjE0IDE5LjYgMjE1LjkgMTcuOSAyMjAuNSAxNy45QzIyNC4yIDE3LjkgMjI2LjQgMTkuMyAyMjcgMjEuMkgyMzcuNEMyMzYuMSAxMy44IDIyOS40IDkgMjIwLjUgOUMyMDkuMiA5IDIwMy44IDE1LjQgMjAzLjggMjEuNUMyMDMuOCAzMC4yIDIxMy4xIDMyLjEgMjIwLjEgMzMuMkMyMjYuOSAzNC4zIDIyOC4zIDM1LjIgMjI4LjMgMzcuNEMyMjguMyAzOS43IDIyNS4zIDQwLjkgMjIxLjIgNDAuOUMyMTguMyA0MC45IDIxNC41IDM5LjggMjEzIDM2LjdIMjAyLjdDMjA0IDQ0LjkgMjExLjMgNTAuMSAyMjEuMiA1MC4xQzIzMS4yIDUwLjEgMjM4LjMgNDQuNiAyMzguMyAzNi45QzIzOC4zIDI4LjIgMjMxLjQgMjYuMSAyMjEuNyAyNC41WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTgwLjMgNDAuNkM4NS44IDQwLjYgOTAuMyAzNS43IDkwLjMgMjkuNkM5MC4zIDIzLjUgODUuOCAxOC40IDgwLjMgMTguNEM3NC44IDE4LjQgNzAuMyAyMy4yIDcwLjMgMjkuNkM3MC4zIDM1LjkgNzQuOCA0MC42IDgwLjMgNDAuNlpNNzguOSA5LjFDODMuNCA5LjEgODcuNCAxMC44IDkwLjQgMTMuN1Y5LjlIMTAwLjVWNDlIOTAuOVY0NC45Qzg3LjkgNDggODMuNyA0OS45IDc5IDQ5LjlDNjguOCA0OS45IDYwLjQgNDEuMSA2MC40IDI5LjZDNjAuMyAxOCA2OC42IDkuMSA3OC45IDkuMVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iMjgxLjYiIGhlaWdodD0iNTguOSIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K" style="height:30px"/><p class=" py-1 pl-0 border-left pl-3 ml-3 d-inline">Design System</p></a><ul class="ml-auto navbar-nav"><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">V1.0</a></li></ul></nav><div class="mb-5"><div style="background-image:url(/static/Staples_Line_Illustration-eae231dd3a8da7807f6bc59234292efd.svg);padding-top:120px" class="jumbotron"><div class="pb-4 mb-4 pl-lg-5 container"><h1 class="mb-2">Think Brand, Live Digital</h1><p class="lead col-md-6 pl-0 pb-4">Our design system provides a common language and guiding principals that help us build great experiences for Staple&#x27;s employees and customers.</p><p class="mt-4 pt-4"><a href="/docs/getting-started" class="cta btn btn-primary">View Documentation</a></p></div></div></div><div class="container"><div class="my-5 py-5 row"><div class="col"><div class="card"><div class="p-5 card-body"><div class="h3 mt-0 mb-3 card-title">Start Learning</div><p class="card-text">Explore the documentation to learn how to use our design system and it&#x27;s components in your next project.</p><a href="http://localhost:8000/docs/getting-started" class="btn btn-link">View Documentation</a></div></div></div><div class="col"><div class="card"><div class="p-5 card-body"><div class="h3 mt-0 mb-3 card-title">Resources &amp; Downloads</div><p class="card-text">Download all the resources and dependancies you&#x27;ll need to start developing with the Staples Design System.</p><a href="http://localhost:8000/docs/resources-download" class="btn btn-link">View Downloads</a></div></div></div></div><hr class="my-5"/></div><div class="container"><div class="row"><div class="col"><div class="border-0 card"><div class="p-5 card-body"><div class="h3 mt-0 mb-3 card-title">Content</div><p class="card-text">Why, when and how to use our design system.</p><button class="btn btn-link btn btn-secondary">View Content Guidelines</button></div></div></div><div class="col"><div class="border-0 card"><div class="p-5 card-body"><div class="h3 mt-0 mb-3 card-title">Design</div><p class="card-text">Why, when and how to use our design system.</p><button class="btn btn-link btn btn-secondary">View Design Guidelines</button></div></div></div><div class="col"><div class="border-0 card"><div class="p-5 card-body"><div class="h3 mt-0 mb-3 card-title">Components</div><p class="card-text">Why, when and how to use our design system.</p><button class="btn btn-link btn btn-secondary">View Components</button></div></div></div><div class="col"><div class="border-0 card"><div class="p-5 card-body"><div class="h3 mt-0 mb-3 card-title">Templates</div><p class="card-text">Why, when and how to use our design system.</p><button class="btn btn-link btn btn-secondary">View Templates</button></div></div></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-pages-index-tsx","jsonName":"index","path":"/"};window.dataPath="555/path---index-6a9-Yb3RyJW6o00BQ5is86zDZbOCY";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-19150625776ee3a703b0.js"],"component---src-templates-template-tsx":["/component---src-templates-template-tsx-8a81d96630b233da07c3.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-5c52f22c9df6c5f4d8fd.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-697c2d83d1b91aa3e4c4.js"],"component---src-pages-components-features-tsx":["/component---src-pages-components-features-tsx-28996ed759b9b8d4a77a.js"],"component---src-pages-components-hero-banner-tsx":["/component---src-pages-components-hero-banner-tsx-525e700d5eb60f86aeed.js"],"component---src-pages-components-quick-access-tsx":["/component---src-pages-components-quick-access-tsx-2aaf3c085ca519cfb1dc.js"],"pages-manifest":["/pages-manifest-36099d145d4235343487.js"]};/*]]>*/</script><script src="/webpack-runtime-cf824e8474a67bf76e65.js" async=""></script><script src="/app-19150625776ee3a703b0.js" async=""></script><script src="/component---src-pages-index-tsx-5c52f22c9df6c5f4d8fd.js" async=""></script></body></html>

@@ -42,7 +42,7 @@ export class RootLayout extends React.Component {
     super(props)
 
     this.state = {
-      docked: mql.matches,
+      docked: true,
       open: false,
     }
 
