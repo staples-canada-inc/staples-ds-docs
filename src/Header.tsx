@@ -20,7 +20,7 @@ export class Header extends Component {
         </NavbarBrand>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
+            <NavLink href="https://github.com/staples-canada-inc/staples-ds-docs">
               V1.0
             </NavLink>
           </NavItem>

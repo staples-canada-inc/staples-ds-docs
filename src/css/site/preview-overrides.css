@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "TT Norms Regular";
+    src: url("../../fonts/tt_norms_regular-webfont.woff") format("woff"), url("../../fonts/tt_norms_regular-webfont.woff2") format("woff2");
+    font-weight: normal; }
+  
+  @font-face {
+    font-family: "TT Norms Medium";
+    src: url("../../fonts/tt_norms_medium-webfont.woff") format("woff"), url("../../fonts/tt_norms_medium-webfont.woff2") format("woff2");
+    font-weight: medium; }
+  
+  @font-face {
+    font-family: "TT Norms Bold";
+    src: url("../../fonts/tt_norms_bold-webfont.woff") format("woff"), url("../../fonts/tt_norms_bold-webfont.woff2") format("woff2");
+    font-weight: bold; }
+
+a, body, p{
+    font-family: TT Norms Regular,Gotham,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
 .badge-pill {
     margin: 0 12px;
 }
