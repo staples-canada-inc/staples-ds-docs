@@ -4,9 +4,39 @@ root: '/docs'
 parents: ['Components']
 ---
 
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+
+
 # Tabs
 
 Tabs are used to quickly switch between views or navigate content within the same context. We have two styles of tabs which can be used for Staples digital.
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<li class="nav-item">
+    <a class="nav-link" href="#">
+    Tab 1
+    </a>
+</li>
+```
+
+</HtmlCodeBlock>
+
+<ReactCodeBlock>
+
+```html
+<UncontrolledAlert color="info">
+        I am an alert and I can be dismissed!
+</UncontrolledAlert>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ### Simple Tabs
 
@@ -21,9 +51,7 @@ A basic tab style where the tab in view is outlined. The text behaves similar to
     <a class="nav-link" href="#">Tab 2</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-      >Tab 3</a
-    >
+    <a class="nav-link" hreef="#">Tab 3</a>
   </li>
 </ul>
 ```
