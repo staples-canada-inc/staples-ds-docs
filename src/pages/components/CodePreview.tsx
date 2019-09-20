@@ -23,7 +23,7 @@ export class CodePreview extends Component {
   render() {
     return (
       <>
-        <Nav tabs>
+        <Nav tabs className="mt-3">
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
@@ -45,7 +45,7 @@ export class CodePreview extends Component {
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}>
+        <TabContent activeTab={this.state.activeTab} className="mt-3">
           {this.props.children}
         </TabContent>
       </>
