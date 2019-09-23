@@ -22,4 +22,5 @@ export const ComponentPreview = ({ children }: any) => {
     </>
   )
 }
- 
+
+export default ComponentPreview
