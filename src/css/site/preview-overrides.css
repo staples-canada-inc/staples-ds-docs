@@ -37,6 +37,16 @@ a, body, p{
     border: 2px solid #198294;
 }
 
+a[aria-current="page"]{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #0e4953;
+}
+
+.nav.flex-column .nav-item .nav-link:hover{
+    text-decoration: underline;
+}
+
 .vscode-highlight {
     --vscode-highlight-padding-v: 1rem;
     --vscode-highlight-padding-h: 1.5rem;

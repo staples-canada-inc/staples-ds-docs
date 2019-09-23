@@ -4,88 +4,116 @@ root: '/docs'
 parents: ['Components']
 ---
 
-
-import {
-	Card,
-	CardImg,
-	CardText,
-	CardBody,
-	CardTitle,
-	CardSubtitle,
-	Button,
-	ListGroup,
-	ListGroupItem
-} from "reactstrap";
-
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
 
 # Card
 
 A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors and powerful display options.
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no `margin` by default, so use `spacing utilities` as needed.
+Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no margin by default, so use spacing utilities as needed.
 
-Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they’ll naturally fill the full width of its parent element. This is easily customized with our various `sizing options`.
+Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they’ll naturally fill the full width of its parent element. This is easily customized with our various sizing options.
 
 ### Basic Card
 
 <ComponentPreview>
-	<Card style={{ width: 330 }}>
-		<CardImg
-			top
-			width="100%"
-			src="https://source.unsplash.com/600x300?nature"
-			alt="Card image cap"
-		/>
-		<CardBody>
-			<CardTitle className="h5 mb-3">Card title</CardTitle>
-			<CardText>
-				Some quick example text to build on the card title and make up
-				the bulk of the card's content.
-			</CardText>
-			<Button className="btn-link">View More</Button>
-		</CardBody>
-	</Card>
+<Card style={{ width: 330 }}>
+    <Card.Img variant="top" src="https://source.unsplash.com/600x300?nature" alt="..." />
+    <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+        Some text to make up the bulk of
+        the card's content.
+        </Card.Text>
+        <a href="#">View More</a>
+    </Card.Body>
+</Card>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="card">
-    <img class="card-img-top" src="https://source.unsplash.com/600x300?nature" alt="Card image cap" />
+    <img class="card-img-top" src="..." alt="..." />
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Some text to make up the bulk of the card's content.</p>
         <a href="#" class="card-link">View More</a>
     </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Card style={{ width: 330 }}>
+    <Card.Img variant="top" src="..." alt="..." alt="..." />
+    <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+        Some text to make up the bulk of
+        the card's content.
+        </Card.Text>
+        <a href="#">View More</a>
+    </Card.Body>
+</Card>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 You can also use buttons with links within a card using this documentation:
 
 ### Card with Button
 
 <ComponentPreview>
-	<Card style={{ width: 500 }}>
-		<CardImg
-			top
-			width="100%"
-			src="https://source.unsplash.com/600x300?nature"
-			alt="Card image cap"
-		/>
-		<CardBody>
-			<Button color="primary" block>
-				View More
-			</Button>
-		</CardBody>
-	</Card>
+<Card style={{ width: 500 }}>
+    <Card.Img variant="top" src="https://source.unsplash.com/500x250?nature" alt="..." />
+    <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <br />
+        <Button color="secondary" block>View More</Button>
+    </Card.Body>
+</Card>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="card">
+    <img class="card-img-top" src="..." alt="..." />
     <div class="card-body">
-        <button href="#" class="btn btn-primary btn-block">View More</button>
+        <h5 class="card-title">Card title</h5>
+        <button href="#" class="btn btn-secondary btn-block">View More</button>
     </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Card style={{ width: 500 }}>
+    <Card.Img variant="top" src="..." alt="..."  />
+    <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <br />
+        <Button color="secondary" block>View More</Button>
+    </Card.Body>
+</Card>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Variations
 
@@ -97,11 +125,14 @@ The building block of a card is the `.card-body.` Use it whenever you need a pad
 
 <ComponentPreview>
 	<Card style={{ width: 330 }}>
-		<CardBody>
+		<Card.Body>
 			<p>This is some text within a card body.</p>
-		</CardBody>
+		</Card.Body>
 	</Card>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="card">
@@ -111,6 +142,20 @@ The building block of a card is the `.card-body.` Use it whenever you need a pad
 </div>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Card style={{ width: 330 }}>
+    <Card.Body>
+        <p>This is some text within a card body.</p>
+    </Card.Body>
+</Card>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 ### Titles, Text and Links
 
 Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
@@ -118,56 +163,300 @@ Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, l
 Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely.
 
 <ComponentPreview>
-	<Card style={{ width: 330 }}>
-		<CardBody>
-			<CardTitle className="h5 mb-3">Card title</CardTitle>
-			<CardSubtitle>Card subtitle</CardSubtitle>
-			<CardText>
-				Some quick example text to build on the card title and make up
-				the bulk of the card's content.
-			</CardText>
-			<Button className="btn-link">View More</Button>
-		</CardBody>
-	</Card>
+<Card style={{ width: 330 }}>
+    <Card.Body>
+        <Card.Title className="h5 mb-3">Card title</Card.Title>
+        <Card.Subtitle><strong>Card subtitle</strong></Card.Subtitle>
+        <Card.Text>
+            Some text to make up
+            the bulk of the card's content.
+        </Card.Text>
+        <a href="#">View More</a>
+    </Card.Body>
+</Card>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link" >View More</a>
+        <p class="card-text">Some text to make up the bulk of the card's content.</p>
+        <a href="#">View More</a>
     </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Card style={{ width: 330 }}>
+    <Card.Body>
+        <Card.Title className="h5 mb-3">Card title</Card.Title>
+        <Card.Subtitle><strong>Card subtitle</strong></Card.Subtitle>
+        <Card.Text>
+            Some text to make up
+            the bulk of the card's content.
+        </Card.Text>
+        <a href="#">View More</a>
+    </Card.Body>
+</Card>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ### Images
 
 `.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
 
 <ComponentPreview>
-	<Card style={{ width: 330 }}>
-		<CardImg
-			top
-			width="100%"
-			src="https://source.unsplash.com/600x300?nature"
-			alt="Card image cap"
-		/>
-		<CardBody>
-			<CardText>
-				Some quick example text to build on the card title and make up
-				the bulk of the card's content.
-			</CardText>
-		</CardBody>
-	</Card>
+<Card style={{ width: 330 }}>
+    <Card.Img variant="top" src="https://source.unsplash.com/600x300?nature" />
+    <Card.Body>
+        <Card.Text>
+        Some text to make up the bulk of
+        the card's content.
+        </Card.Text>
+    </Card.Body>
+</Card>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="card">
-<img class="card-img-top" src="https://source.unsplash.com/600x300?nature" alt="Card image cap" />
+    <img class="card-img-top" src="..." alt="..." />
     <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Some text to make up the bulk of the card's content.</p>
     </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Card style={{ width: 330 }}>
+    <Card.Img variant="top" src="..." alt="..." />
+    <Card.Body>
+        <Card.Text>
+        Some text to make up the bulk of
+        the card's content.
+        </Card.Text>
+    </Card.Body>
+</Card>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## React API
+
+### Card
+
+`import Card from 'react-bootstrap/Card'`
+
+<table class="table-bordered">
+    <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="prop-table-row">
+                <td class="text-monospace">as
+                </td>
+                <td class="text-monospace">
+                    <div>elementType</div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="PropTable-PropDescription-module--cls1--29mNj">
+                        <p>You can use a custom element type for this component.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="prop-table-row">
+                <td class="text-monospace">bg
+                </td>
+                <td class="text-monospace">
+                    <div><span><code>'primary'</code><span> | </span><code>'secondary'</code><span> | </span><code>'success'</code><span> | </span><code>'danger'</code><span> | </span><code>'warning'</code><span> | </span><code>'info'</code><span> | </span><code>'dark'</code><span> | </span><code>'light'</code></span></div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="PropTable-PropDescription-module--cls1--29mNj">
+                        <p>Sets card background</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="prop-table-row">
+                <td class="text-monospace">body
+                </td>
+                <td class="text-monospace">
+                    <div>boolean</div>
+                </td>
+                <td><code class="PropTable-Code-module--cls1--2iQb5">false</code></td>
+                <td>
+                    <div class="PropTable-PropDescription-module--cls1--29mNj">
+                        <p>When this prop is set, it creates a Card with a Card.Body inside
+                            passing the children directly to it</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="prop-table-row">
+                <td class="text-monospace">border
+                </td>
+                <td class="text-monospace">
+                    <div><span><code>'primary'</code><span> | </span><code>'secondary'</code><span> | </span><code>'success'</code><span> | </span><code>'danger'</code><span> | </span><code>'warning'</code><span> | </span><code>'info'</code><span> | </span><code>'dark'</code><span> | </span><code>'light'</code></span></div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="PropTable-PropDescription-module--cls1--29mNj">
+                        <p>Sets card border color</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="prop-table-row">
+                <td class="text-monospace">text
+                </td>
+                <td class="text-monospace">
+                    <div><span><code>'primary'</code><span> | </span><code>'secondary'</code><span> | </span><code>'success'</code><span> | </span><code>'danger'</code><span> | </span><code>'warning'</code><span> | </span><code>'info'</code><span> | </span><code>'dark'</code><span> | </span><code>'light'</code><span> | </span><code>'white'</code><span> | </span><code>'muted'</code></span></div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="PropTable-PropDescription-module--cls1--29mNj">
+                        <p>Sets card text color</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="prop-table-row">
+                <td class="text-monospace">bsPrefix
+                </td>
+                <td class="text-monospace">
+                    <div>string</div>
+                </td>
+                <td><code class="PropTable-Code-module--cls1--2iQb5">'card'</code></td>
+                <td>
+                    <div class="PropTable-PropDescription-module--cls1--29mNj">
+                        <p>Change the underlying component CSS base class name and modifier class names prefix. <strong>This is an escape hatch</strong> for working with heavily customized bootstrap css.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+<br />
+
+### Card.Body
+
+`import Card from 'react-bootstrap/Card'`
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="prop-table-row">
+            <td class="text-monospace">as
+            </td>
+            <td class="text-monospace">
+                <div>elementType</div>
+            </td>
+            <td><code class="PropTable-Code-module--cls1--2iQb5">&lt;div&gt;</code></td>
+            <td>
+                <div class="PropTable-PropDescription-module--cls1--29mNj">
+                    <p>You can use a custom element type for this component.</p>
+                </div>
+            </td>
+        </tr>
+        <tr class="prop-table-row">
+            <td class="text-monospace">bsPrefix
+            <span class="badge">required</span></td>
+            <td class="text-monospace">
+                <div>string</div>
+            </td>
+            <td><code class="PropTable-Code-module--cls1--2iQb5">'card-body'</code></td>
+            <td>
+                <div class="PropTable-PropDescription-module--cls1--29mNj">
+                    <p>Change the underlying component CSS base class name and modifier class names prefix. <strong>This is an escape hatch</strong> for working with heavily customized bootstrap css.</p>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+
+### Card.Image
+
+`import Card from 'react-bootstrap/Card'`
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="prop-table-row">
+            <td class="text-monospace">as
+            </td>
+            <td class="text-monospace">
+                <div>elementType</div>
+            </td>
+            <td></td>
+            <td>
+                <div class="PropTable-PropDescription-module--cls1--29mNj">
+                    <p>You can use a custom element type for this component.</p>
+                </div>
+            </td>
+        </tr>
+        <tr class="prop-table-row">
+            <td class="text-monospace">variant
+            </td>
+            <td class="text-monospace">
+                <div><span><code>'top'</code><span> | </span><code>'bottom'</code></span></div>
+            </td>
+            <td><code class="PropTable-Code-module--cls1--2iQb5">null</code></td>
+            <td>
+                <div class="PropTable-PropDescription-module--cls1--29mNj">
+                    <p>Defines image position inside
+                        the card.</p>
+                </div>
+            </td>
+        </tr>
+        <tr class="prop-table-row">
+            <td class="text-monospace">bsPrefix
+            </td>
+            <td class="text-monospace">
+                <div>string</div>
+            </td>
+            <td><code class="PropTable-Code-module--cls1--2iQb5">'card-img'</code></td>
+            <td>
+                <div class="PropTable-PropDescription-module--cls1--29mNj">
+                    <p>Change the underlying component CSS base class name and modifier class names prefix. <strong>This is an escape hatch</strong> for working with heavily customized bootstrap css.</p>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<br />

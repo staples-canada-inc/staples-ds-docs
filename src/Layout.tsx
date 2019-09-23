@@ -7,6 +7,7 @@ import PageLayout from 'react-sidebar'
 import './css/design-system/staples-ds.css'
 import './css/site/preview-overrides.css'
 import menuToggle from './images/menu-toggle.svg'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 const mql = typeof window !== 'undefined' && window.matchMedia(`(min-width: 576px)`)
 
@@ -22,7 +23,7 @@ const styleOverrides = {
     backgroundColor: '#f3f3f2',
   },
   content: {
-    top: '80px',
+    top: '73px',
     paddingLeft: '0',
     backgroundColor: '#ffffff',
   },
@@ -99,6 +100,13 @@ export class RootLayout extends React.Component {
           shadow={false}
           styles={styleOverrides}
         >
+
+        {/* <Breadcrumb>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item href="#">Components</Breadcrumb.Item>
+            <Breadcrumb.Item active>Alerts</Breadcrumb.Item>
+        </Breadcrumb> */}
+          
           <Container fluid>
             <Row>
               <Col xs="12" lg="9" className="pl-lg-5 ml-lg-5">

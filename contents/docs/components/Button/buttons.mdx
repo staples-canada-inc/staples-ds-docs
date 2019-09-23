@@ -4,13 +4,15 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import Button from 'react-bootstrap/Button'
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
-import ToggleButton from 'react-bootstrap/ToggleButton'
 import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Button from 'react-bootstrap/Button'
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
+import ToggleButton from 'react-bootstrap/ToggleButton'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+
 
 # Buttons
 
@@ -88,20 +90,40 @@ In order for assistive technologies (such as screen readers) to convey that a se
 In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
 
 <ComponentPreview>
-  <ButtonGroup>
-    <Button>Item Left</Button>
-    <Button>Item Middle</Button>
-    <Button>Item Right</Button>
-  </ButtonGroup>
+<ButtonGroup aria-label="Basic example">
+  <Button color="secondary">Left</Button>
+  <Button color="secondary">Middle</Button>
+  <Button color="secondary">Right</Button>
+</ButtonGroup>
 </ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button class="btn btn-primary">Item Left</button>
-  <button class="btn btn-primary">Item Middle</button>
-  <button class="btn btn-primary">Item Right</button>
+  <button class="btn btn-secondary">Item Left</button>
+  <button class="btn btn-secondary">Item Middle</button>
+  <button class="btn btn-secondary">Item Right</button>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<ButtonGroup aria-label="Basic example">
+  <Button color="secondary">Left</Button>
+  <Button color="secondary">Middle</Button>
+  <Button color="secondary">Right</Button>
+</ButtonGroup>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
 
 ## Call to Action Button
 
@@ -120,34 +142,14 @@ Call to Action (CTA) buttons are typically used in banners and carousels, or any
   <Button color="tertiary" className="mr-2 mt-3 cta" size="lg">Large Tertiary</Button>
 </ComponentPreview>
 
-```html
-    <button class="btn btn-primary cta"Primary</button>
-    <button class="btn btn-secondary cta">Secondary</button>
-    <button class="btn btn-tertiary cta">Tertiary</button>
-```
-
-## Sizes
-
-Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
-
-### Large Buttons
-
-<ComponentPreview>
-  <Button color="primary" className="mr-2" size="lg">Large Primary</Button>
-  <Button color="secondary" className="mr-2" size="lg">Large Secondary</Button>
-  <Button color="tertiary" className="mr-2" size="lg">Large Tertiary</Button>
-</ComponentPreview>
-
-```html
-<button class="btn btn-primary btn-lg">Large Primary</button>
-<button class="btn btn-secondary btn-lg">Large Secondary</button>
-<button class="btn btn-tertiary btn-lg">Large Tertiary</button>
-```
-
 <CodePreview>
 <HtmlCodeBlock>
 
 ```html
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button>
+<button class="btn btn-tertiary">Tertiary</button>
+
 <button class="btn btn-primary btn-lg">Large Primary</button>
 <button class="btn btn-secondary btn-lg">Large Secondary</button>
 <button class="btn btn-tertiary btn-lg">Large Tertiary</button>
@@ -157,6 +159,10 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <ReactCodeBlock>
 
 ```html
+<Button color="primary">Primary</Button>
+<Button color="secondary">Secondary</Button>
+<Button color="tertiary">Tertiary</Button>
+
 <Button color="primary" size="lg">Large Primary</Button>
 <Button color="secondary" size="lg">Large Secondary</Button>
 <Button color="tertiary" size="lg">Large Tertiary</Button>
@@ -165,40 +171,63 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 </ReactCodeBlock>
 </CodePreview>
 
-### Small Buttons
+
+
+## Sizes
+
+Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 <ComponentPreview>
-  <Button color="primary" className="mr-2" size="sm">Large Primary</Button>
-  <Button color="secondary" className="mr-2" size="sm">Large Secondary</Button>
-  <Button color="tertiary" className="mr-2" size="sm">Large Tertiary</Button>
+    <Button color="primary" className="mr-2 mt-3" size="sm">Small Primary</Button>
+    <Button color="secondary" className="mr-2 mt-3" size="sm">Small Secondary</Button>
+    <Button color="tertiary" className="mr-2 mt-3" size="sm">Small Tertiary</Button>
+    <br />
+    <Button color="primary" className="mr-2 mt-3" size="md">Primary</Button>
+    <Button color="secondary" className="mr-2 mt-3" size="md">Secondary</Button>
+    <Button color="tertiary" className="mr-2 mt-3" size="md">Tertiary</Button>
+    <br />
+    <Button color="primary" className="mr-2 mt-3" size="lg">Large Primary</Button>
+    <Button color="secondary" className="mr-2 mt-3" size="lg">Large Secondary</Button>
+    <Button color="tertiary" className="mr-2 mt-3" size="lg">Large Tertiary</Button>
 </ComponentPreview>
-
-```html
-<button class="btn btn-primary btn-sm">Large Primary</button>
-<button class="btn btn-secondary btn-sm">Large Secondary</button>
-<button class="btn btn-tertiary btn-sm">Large Tertiary</button>
-```
 
 <CodePreview>
 <HtmlCodeBlock>
 
 ```html
-<button class="btn btn-primary btn-sm">Large Primary</button>
-<button class="btn btn-secondary btn-sm">Large Secondary</button>
-<button class="btn btn-tertiary btn-sm">Large Tertiary</button>
+<button class="btn btn-primary btn-sm">Small Primary</button>
+<button class="btn btn-secondary btn-sm">Small Secondary</button>
+<button class="btn btn-tertiary btn-sm">Small Tertiary</button>
+
+<button class="btn btn-primary btn-md">Primary</button>
+<button class="btn btn-secondary btn-md">Secondary</button>
+<button class="btn btn-tertiary btn-md">Tertiary</button>
+
+<button class="btn btn-primary btn-lg">Large Primary</button>
+<button class="btn btn-secondary btn-lg">Large Secondary</button>
+<button class="btn btn-tertiary btn-lg">Large Tertiary</button>
 ```
 
 </HtmlCodeBlock>
 <ReactCodeBlock>
 
 ```html
-<Button color="primary" size="sm">Large Primary</Button>
-<Button color="secondary" size="sm">Large Secondary</Button>
-<Button color="tertiary" size="sm">Large Tertiary</Button>
+<Button color="primary" size="sm">Small Primary</Button>
+<Button color="secondary" size="sm">Small Secondary</Button>
+<Button color="tertiary" size="sm">Small Tertiary</Button>
+
+<Button color="primary" size="md">Primary</Button>
+<Button color="secondary" size="md">Secondary</Button>
+<Button color="tertiary" size="md">Tertiary</Button>
+
+<Button color="primary" size="lg">Large Primary</Button>
+<Button color="secondary" size="lg">Large Secondary</Button>
+<Button color="tertiary" size="lg">Large Tertiary</Button>
 ```
 
 </ReactCodeBlock>
 </CodePreview>
+
 
 ## Block Button
 
@@ -240,22 +269,31 @@ Add `.active` to items in the dropdown to style them as active.
 ### Active Button
 
 <ComponentPreview>
-  <Button color="primary" active className="mr-2">
-    Primary
-  </Button>
-  <Button color="secondary" active className="mr-2">
-    Secondary
-  </Button>
-  <Button color="tertiary" active className="mr-2">
-    Tertiary
-  </Button>
+  <Button color="primary" active className="mr-2">Primary</Button>
+  <Button color="secondary" active className="mr-2">Secondary</Button>
+  <Button color="tertiary" active className="mr-2">Tertiary</Button>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <button class="btn btn-primary active">Primary</button>
 <button class="btn btn-secondary active">Secondary</button>
 <button class="btn btn-tertiary active">Tertiary</button>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Button color="primary" active>Primary</Button>
+<Button color="secondary" active>Secondary</Button>
+<Button color="tertiary" active>Tertiary</Button>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Disabled state
 
@@ -268,16 +306,13 @@ Add `.disabled` to items in the dropdown to style them as disabled.
 ### Disabled Default Button
 
 <ComponentPreview>
-  <Button color="primary" disabled className="mr-2">
-    Primary
-  </Button>
-  <Button color="secondary" disabled className="mr-2">
-    Secondary
-  </Button>
-  <Button color="tertiary" disabled className="mr-2">
-    Tertiary
-  </Button>
+  <Button color="primary" disabled className="mr-2">Primary</Button>
+  <Button color="secondary" disabled className="mr-2">Secondary</Button>
+  <Button color="tertiary" disabled className="mr-2">Tertiary</Button>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <button class="btn btn-tertiary" disabled>Primary</button>
@@ -285,25 +320,47 @@ Add `.disabled` to items in the dropdown to style them as disabled.
 <button class="btn btn-tertiary" disabled>Tertiary</button>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+  <Button color="primary" disabled>Primary</Button>
+  <Button color="secondary" disabled>Secondary</Button>
+  <Button color="tertiary" disabled>Tertiary</Button>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 ### Disabled Call To Action Button
 
 <ComponentPreview>
-  <Button color="primary" disabled className="mr-2 cta">
-    Primary
-  </Button>
-  <Button color="secondary" disabled className="mr-2 cta">
-    Secondary
-  </Button>
-  <Button color="tertiary" disabled className="mr-2 cta">
-    Tertiary
-  </Button>
+  <Button color="primary" disabled className="mr-2 cta">Primary</Button>
+  <Button color="secondary" disabled className="mr-2 cta">Secondary</Button>
+  <Button color="tertiary" disabled className="mr-2 cta">Tertiary</Button>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <button class="btn btn-primary cta" disabled>Primary</button>
 <button class="btn btn-secondary cta" disabled>Secondary</button>
 <button class="btn btn-tertiary cta" disabled>Tertiary</button>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+  <Button color="primary" className="cta" disabled>Primary</Button>
+  <Button color="secondary" className="cta" disabled>Secondary</Button>
+  <Button color="tertiary" className="cta" disabled>Tertiary</Button>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 ### Link functionality caveat
 
