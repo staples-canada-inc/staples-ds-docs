@@ -70,6 +70,7 @@ a, body, p{
 .onedark-pro .mtk11 { color: #9BD3DD !important; }
 .onedark-pro .mtk12 { color: #F44747; }
 .onedark-pro .mtk13 { color: #5C6370; }
+.onedark-pro .mtk19 { color: #747679 !important; }
 .onedark-pro .mtk20 { color: #747679 !important; }
 .onedark-pro .mtki { font-style: italic; }
 .onedark-pro .mtkb { font-weight: bold; }
@@ -120,7 +121,7 @@ background-color: #F5F5F5;
 .pl--quiet-light .mtk16 { color: #DDFFDD; }
 .pl--quiet-light .mtk17 { color: #434343; }
 .pl--quiet-light .mtk18 { color: #DDDDFF; }
-.pl--quiet-light .mtk19 { color: #333333FF; }
+.pl--quiet-light .mtk19 { color: #747679; }
 .pl--quiet-light .mtk20 { color: #747679 !important; }
 .pl--quiet-light .mtk21 { color: #EAEBE6; }
 .pl--quiet-light .mtki { font-style: italic; }

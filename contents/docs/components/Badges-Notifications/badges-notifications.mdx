@@ -4,8 +4,12 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { Badge, Button } from 'reactstrap'
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import Badge from 'react-bootstrap/Badge'
+import Button from 'react-bootstrap/Button'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
 
 # Badges & Notifications
 
@@ -15,13 +19,15 @@ Badges can be used as part of links or buttons to provide a counter.
 ## Scale to Parent
 
 <ComponentPreview>
-	<h1>Heading <Badge color="secondary">New</Badge></h1>
-	<h2>Heading <Badge color="secondary">New</Badge></h2>
-	<h3>Heading <Badge color="secondary">New</Badge></h3>
-	<h4>Heading <Badge color="secondary">New</Badge></h4>
-    <h5>Heading <Badge color="secondary">New</Badge></h5>
-
+<h1>Heading <Badge variant="primary">New</Badge></h1>
+<h2>Heading <Badge variant="secondary">New</Badge></h2>
+<h3>Heading <Badge variant="tertiary">New</Badge></h3>
+<h4>Heading <Badge variant="success">New</Badge></h4>
+<h5>Heading <Badge variant="warning">New</Badge></h5>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```  html
 <h1>Heading <span class="badge badge-secondary">New</span></h1>
@@ -31,21 +37,74 @@ Badges can be used as part of links or buttons to provide a counter.
 <h5>Heading <span class="badge badge-secondary">New</span></h5>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<h1>Heading <Badge variant="primary">New</Badge></h1>
+<h2>Heading <Badge variant="secondary">New</Badge></h2>
+<h3>Heading <Badge variant="tertiary">New</Badge></h3>
+<h4>Heading <Badge variant="success">New</Badge></h4>
+<h5>Heading <Badge variant="warning">New</Badge></h5>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+
 ## Notification
 
 Badges can be used as part of links or buttons to provide a counter.
 
 <ComponentPreview>
-  <Button color="primary" outline>
-    Notifications <Badge color="primary">4</Badge>
-  </Button>
+<Button variant="primary" className="badge-notification mr-4 btn-primary">
+    Notifications<Badge variant="primary">4</Badge>
+</Button>
+<Button variant="secondary" className="badge-notification mr-4 btn-secondary">
+    Notifications<Badge variant="secondary">4</Badge>
+</Button>
+<Button variant="tertiary" className="badge-notification mr-4 btn-tertiary">
+    Notifications<Badge variant="tertiary">4</Badge>
+</Button>
 </ComponentPreview>
 
-```  html
-<button type="button" class="btn btn-primary">
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<button class="btn badge-notification btn-primary">
     Notifications <span class="ml-2 badge badge-primary">4</span>
 </button>
+<button class="btn badge-notification btn-secondary">
+    Notifications <span class="ml-2 badge badge-secondary">4</span>
+</button>
+<button class="btn badge-notification btn-tertiary">
+    Notifications <span class="ml-2 badge badge-tertiary">4</span>
+</button>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```  html
+<Button variant="primary" className="badge-notification btn-primary">
+    Notifications<Badge variant="primary">4</Badge>
+</Button>
+<Button variant="secondary" className="badge-notification btn-secondary">
+    Notifications<Badge variant="secondary">4</Badge>
+</Button>
+<Button variant="tertiary" className="badge-notification btn-tertiary">
+    Notifications<Badge variant="tertiary">4</Badge>
+</Button>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
 
 Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
 
@@ -55,27 +114,48 @@ Unless the context is clear (as with the “Notifications” example, where it i
 
 <ComponentPreview>
 <div class="mb-3">
-  <Badge color="primary" className="mr-2" pill>Primary</Badge>
-  <Badge color="secondary" className="mr-2" pill>Secondary</Badge>
-  <Badge color="tertiary" className="mr-2" pill>Tertiary</Badge>
+  <Badge variant="primary" className="mr-2">Primary</Badge>
+  <Badge variant="secondary" className="mr-2">Secondary</Badge>
+  <Badge variant="tertiary" className="mr-2">Tertiary</Badge>
 </div>
-  <Badge color="success" className="mr-2" pill>Success</Badge>
-  <Badge color="danger" className="mr-2" pill>Danger</Badge>
-  <Badge color="warning" className="mr-2" pill>Warning</Badge>
-  <Badge color="light" className="mr-2" pill>Light</Badge>
-  <Badge color="dark" className="mr-2" pill>Dark</Badge>
+  <Badge variant="success" className="mr-2">Success</Badge>
+  <Badge variant="danger" className="mr-2">Danger</Badge>
+  <Badge variant="warning" className="mr-2">Warning</Badge>
+  <Badge variant="light" className="mr-2">Light</Badge>
+  <Badge variant="dark" className="mr-2">Dark</Badge>
 </ComponentPreview>
 
+<CodePreview>
+<HtmlCodeBlock>
+
 ```  html
-<span class="badge badge-primary badge-pill">Primary</span>
-<span class="badge badge-secondary badge-pill">Secondary</span>
-<span class="badge badge-success badge-pill">Success</span>
-<span class="badge badge-danger badge-pill">Danger</span>
-<span class="badge badge-warning badge-pill">Warning</span>
-<span class="badge badge-info badge-pill">Info</span>
-<span class="badge badge-light badge-pill">Light</span>
-<span class="badge badge-dark badge-pill">Dark</span>
+<span class="badge badge-primary">Primary</span>
+<span class="badge badge-secondary">Secondary</span>
+<span class="badge badge-success">Success</span>
+<span class="badge badge-danger">Danger</span>
+<span class="badge badge-warning">Warning</span>
+<span class="badge badge-info">Info</span>
+<span class="badge badge-light">Light</span>
+<span class="badge badge-dark">Dark</span>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Badge variant="primary">Primary</Badge>
+<Badge variant="secondary">Secondary</Badge>
+<Badge variant="tertiary">Tertiary</Badge>
+<Badge variant="success">Success</Badge>
+<Badge variant="danger">Danger</Badge>
+<Badge variant="warning">Warning</Badge>
+<Badge variant="light">Light</Badge>
+<Badge variant="dark">Dark</Badge>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 ### Link Badges
 
@@ -83,19 +163,22 @@ Using the contextual `.badge-*` classes on an `<a>` element quickly provides act
 
 <ComponentPreview>
 <div class="mb-3">
-  <a href="#" className="mr-2 badge badge-primary">Primary</a>
-  <a href="#" className="mr-2 badge badge-secondary">Secondary</a>
-  <a href="#" className="mr-2 badge badge-tertiary">Tertiary</a>
+  <Badge variant="primary" className="mr-2"><a href="#">Primary</a></Badge>
+  <Badge variant="secondary" className="mr-2"><a href="#">Secondary</a></Badge>
+  <Badge variant="tertiary" className="mr-2"><a href="#">Tertiary</a></Badge>
 </div>
-  <a href="#" className="mr-2 badge badge-success">Success</a>
-  <a href="#" className="mr-2 badge badge-danger">Danger</a>
-  <a href="#" className="mr-2 badge badge-warning">Warning</a>
-  <a href="#" className="mr-2 badge badge-light">Light</a>
-  <a href="#" className="mr-2 badge badge-dark">Dark</a>
+  <Badge variant="success" className="mr-2"><a href="#">Success</a></Badge>
+  <Badge variant="danger" className="mr-2"><a href="#">Danger</a></Badge>
+  <Badge variant="warning" className="mr-2"><a href="#">Warning</a></Badge>
+  <Badge variant="light" className="mr-2"><a href="#">Light</a></Badge>
+  <Badge variant="dark" className="mr-2"><a href="#">Dark</a></Badge>
 </ComponentPreview>
 
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```  html
-<div class="mb-3">
 <a href="#" class="badge badge-primary">Primary</a>
 <a href="#" class="badge badge-secondary">Secondary</a>
 <a href="#" class="badge badge-tertiary">Tertiary</a>
@@ -106,6 +189,26 @@ Using the contextual `.badge-*` classes on an `<a>` element quickly provides act
 <a href="#" class="badge badge-dark">Dark</a>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```  html
+<Badge variant="primary"><a href="#">Primary</a></Badge>
+<Badge variant="secondary"><a href="#">Secondary</a></Badge>
+<Badge variant="tertiary"><a href="#">Tertiary</a></Badge>
+<Badge variant="success"><a href="#">Success</a></Badge>
+<Badge variant="danger"><a href="#">Danger</a></Badge>
+<Badge variant="warning"><a href="#">Warning</a></Badge>
+<Badge variant="light"><a href="#">Light</a></Badge>
+<Badge variant="dark"><a href="#">Dark</a></Badge>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
 ## Assistive Technology
 
-Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the `.sr-only` class.
+Using variant to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the variant is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the `.sr-only` class.
+
+<br/>

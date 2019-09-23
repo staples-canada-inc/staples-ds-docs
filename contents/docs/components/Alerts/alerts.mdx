@@ -5,19 +5,20 @@ parents: ['Components']
 ---
 
 import {
-  Alert,
-  Closer,
-  UncontrolledAlert,
-  TabContent,
-  TabPane,
-  Button,
+// Alert,
+// Closer,
+// UncontrolledAlert,
+TabContent,
+TabPane,
+Button,
 } from 'reactstrap'
 import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
 import classnames from 'classnames'
-
+import Alert from 'react-bootstrap/Alert'
+import AlertDismiss from './AlertDismiss'
 
 # Alerts
 
@@ -27,12 +28,12 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 
 
 <ComponentPreview>
-  <Alert color="primary">This is a primary alert — check it out!</Alert>
-  <Alert color="secondary">This is a secondary alert — check it out!</Alert>
-  <Alert color="success">This is a success alert — check it out!</Alert>
-  <Alert color="danger">This is a danger alert — check it out!</Alert>
-  <Alert color="warning">This is a warning alert — check it out!</Alert>
-  <Alert color="info">This is a info alert — check it out!</Alert>
+	<Alert variant="primary">This is a primary alert — check it out!</Alert>
+	<Alert variant="secondary">This is a secondary alert — check it out!</Alert>
+	<Alert variant="success">This is a success alert — check it out!</Alert>
+	<Alert variant="danger">This is a danger alert — check it out!</Alert>
+	<Alert variant="warning">This is a warning alert — check it out!</Alert>
+	<Alert variant="info">This is a info alert — check it out!</Alert>
 </ComponentPreview>
 
 <CodePreview>
@@ -49,147 +50,241 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 ```
 
 </HtmlCodeBlock>
-
 <ReactCodeBlock>
 
 ```html
-<Alert color="primary">This is a primary alert — check it out!</Alert>
-<Alert color="secondary">This is a secondary alert — check it out!</Alert>
-<Alert color="success">This is a success alert — check it out!</Alert>
-<Alert color="danger">This is a danger alert — check it out!</Alert>
-<Alert color="warning">This is a warning alert — check it out!</Alert>
-<Alert color="info">This is a info alert — check it out!</Alert>
+<Alert variant="primary">This is a primary alert — check it out!</Alert>
+<Alert variant="secondary">This is a secondary alert — check it out!</Alert>
+<Alert variant="success">This is a success alert — check it out!</Alert>
+<Alert variant="danger">This is a danger alert — check it out!</Alert>
+<Alert variant="warning">This is a warning alert — check it out!</Alert>
+<Alert variant="info">This is a info alert — check it out!</Alert>
 ```
 
 </ReactCodeBlock>
 </CodePreview>
 
-
-
-
 ## Alerts with Links
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+Use the `.alert-link` utility class to quickly provide matching color links within any alert.
 
 <ComponentPreview>
-  <Alert color="primary">
-    This is a primary alert with{' '}
-    <a href="#" className="alert-link">
-      an example link
-    </a>
-    . Give it a click if you like.
-  </Alert>
-  <Alert color="secondary">
-    This is a secondary alert with{' '}
-    <a href="#" className="alert-link">
-      an example link
-    </a>
-    . Give it a click if you like.
-  </Alert>
-  <Alert color="success">
-    This is a success alert with{' '}
-    <a href="#" className="alert-link">
-      an example link
-    </a>
-    . Give it a click if you like.
-  </Alert>
-  <Alert color="danger">
-    This is a danger alert with{' '}
-    <a href="#" className="alert-link">
-      an example link
-    </a>
-    . Give it a click if you like.
-  </Alert>
-  <Alert color="warning">
-    This is a warning alert with{' '}
-    <a href="#" className="alert-link">
-      an example link
-    </a>
-    . Give it a click if you like.
-  </Alert>
-  <Alert color="info">
-    This is a info alert with{' '}
-    <a href="#" className="alert-link">
-      an example link
-    </a>
-    . Give it a click if you like.
-  </Alert>
+	<Alert variant="primary">
+		This is a primary alert with{' '}
+		<Alert.Link href="#">an example link</Alert.Link>.
+		Give it a click if you like.
+	</Alert>
+	<Alert variant="secondary">
+		This is a secondary alert with{' '}
+		<Alert.Link href="#">an example link</Alert.Link>.
+		Give it a click if you like.
+	</Alert>
+	<Alert variant="success">
+		This is a success alert with{' '}
+		<Alert.Link href="#">an example link</Alert.Link>.
+		Give it a click if you like.
+	</Alert>
+	<Alert variant="danger">
+		This is a danger alert with{' '}
+		<Alert.Link href="#">an example link</Alert.Link>.
+		Give it a click if you like.
+	</Alert>
+	<Alert variant="warning">
+		This is a warning alert with{' '}
+		<Alert.Link href="#">an example link</Alert.Link>.
+		Give it a click if you like.
+	</Alert>
+	<Alert variant="info">
+		This is a info alert with{' '}
+		<Alert.Link href="#">an example link</Alert.Link>.
+		Give it a click if you like.
+	</Alert>
 </ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div class="alert alert-primary" role="alert">
-  A simple primary alert with
-  <a href="#" class="alert-link">an example link</a>. Give it a click if you
-  like.
+	A simple primary alert with
+	<a href="#" class="alert-link">an example link</a>.
+	Give it a click if you like.
 </div>
 <div class="alert alert-secondary" role="alert">
-  A simple secondary alert with
-  <a href="#" class="alert-link">an example link</a>. Give it a click if you
-  like.
+	A simple secondary alert with
+	<a href="#" class="alert-link">an example link</a>.
+	Give it a click if you like.
 </div>
 <div class="alert alert-success" role="alert">
-  A simple success alert with
-  <a href="#" class="alert-link">an example link</a>. Give it a click if you
-  like.
+	A simple success alert with
+	<a href="#" class="alert-link">an example link</a>.
+	Give it a click if you like.
 </div>
 <div class="alert alert-danger" role="alert">
-  A simple danger alert with <a href="#" class="alert-link">an example link</a>.
-  Give it a click if you like.
+	A simple danger alert with 
+	<a href="#" class="alert-link">an example link</a>.
+	Give it a click if you like.
 </div>
 <div class="alert alert-warning" role="alert">
-  A simple warning alert with
-  <a href="#" class="alert-link">an example link</a>. Give it a click if you
-  like.
+	A simple warning alert with
+	<a href="#" class="alert-link">an example link</a>.
+	Give it a click if you like.
 </div>
 <div class="alert alert-info" role="alert">
-  A simple info alert with <a href="#" class="alert-link">an example link</a>.
-  Give it a click if you like.
+	A simple info alert with 
+	<a href="#" class="alert-link">an example link</a>.
+	Give it a click if you like.
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Alert variant="primary">
+	This is a primary alert with{' '}
+	<Alert.Link href="#">an example link</Alert.Link>.
+	Give it a click if you like.
+</Alert>
+<Alert variant="secondary">
+	This is a secondary alert with{' '}
+	<Alert.Link href="#">an example link</Alert.Link>.
+	Give it a click if you like.
+</Alert>
+<Alert variant="success">
+	This is a success alert with{' '}
+	<Alert.Link href="#">an example link</Alert.Link>.
+	Give it a click if you like.
+</Alert>
+<Alert variant="danger">
+	This is a danger alert with{' '}
+	<Alert.Link href="#">an example link</Alert.Link>.
+	Give it a click if you like.
+</Alert>
+<Alert variant="warning">
+	This is a warning alert with{' '}
+	<Alert.Link href="#">an example link</Alert.Link>.
+	Give it a click if you like.
+</Alert>
+<Alert variant="info">
+	This is a info alert with{' '}
+	<Alert.Link href="#">an example link</Alert.Link>.
+	Give it a click if you like.
+</Alert>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Large Alerts
 
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
 <ComponentPreview>
-  <Alert color="success">
-    <h4 className="alert-heading">Well done!</h4>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example
-      text is going to run a bit longer so that you can see how spacing within
-      an alert works with this kind of content.
-    </p>
-    <hr />
-    <p className="mb-0">
-      Whenever you need to, be sure to use margin utilities to keep things nice
-      and tidy.
-    </p>
-  </Alert>
+	<Alert variant="success">
+		<h4 className="alert-heading">Well done!</h4>
+		<p>
+			Aww yeah, you successfully read this important alert message. This example
+			text is going to run a bit longer so that you can see how spacing within
+			an alert works with this kind of content.
+		</p>
+		<hr />
+		<p className="mb-0">
+			Whenever you need to, be sure to use margin utilities to keep things nice
+			and tidy.
+		</p>
+	</Alert>
 </ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
 
 ```html
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>
-    Aww yeah, you successfully read this important alert message. This example
-    text is going to run a bit longer so that you can see how spacing within an
-    alert works with this kind of content.
-  </p>
-  <hr />
-  <p class="mb-0">
-    Whenever you need to, be sure to use margin utilities to keep things nice
-    and tidy.
-  </p>
+	<h4 class="alert-heading">Well done!</h4>
+	<p>
+		Aww yeah, you successfully read this important alert message. This example
+		text is going to run a bit longer so that you can see how spacing within an
+		alert works with this kind of content.
+	</p>
+	<hr />
+	<p class="mb-0">
+		Whenever you need to, be sure to use margin utilities to keep things nice
+		and tidy.
+	</p>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Alert variant="success">
+	<h4 className="alert-heading">Well done!</h4>
+	<p>
+		Aww yeah, you successfully read this important alert message. This example
+		text is going to run a bit longer so that you can see how spacing within
+		an alert works with this kind of content.
+	</p>
+	<hr />
+	<p className="mb-0">
+		Whenever you need to, be sure to use margin utilities to keep things nice
+		and tidy.
+	</p>
+</Alert>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 ## Dismiss Alerts
 
 <ComponentPreview>
-  <UncontrolledAlert color="info">
-    <strong>Holy guacamole!</strong> I am an alert and I can be dismissed!
-  </UncontrolledAlert>
+	<AlertDismiss />
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+
+```html
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+	<button type="button" class="close" aria-label="Close">
+		<span aria-hidden="true">×</span>
+	</button>
+	<strong>Holy guacamole!</strong> I am an alert and I can be dismissed!
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```JavaScript
+function AlertDismiss() {
+    const [show, setShow] = useState(true);
+  
+    if (show) {
+      return (
+        <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+          <Alert.Heading><strong>Holy guacamole!</strong> </Alert.Heading>
+          <p>
+          I am an alert and I can be dismissed!
+          </p>
+        </Alert>
+      );
+    }
+    return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+  }
+  
+export default AlertDismiss;
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 <br />
 
@@ -201,4 +296,4 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 - If you’re building our JavaScript from source, it requires util.js. The compiled version includes this.
 - Add a dismiss button and the .alert-dismissible class, which adds extra padding to the right of the alert and positions the .close button.
 - On the dismiss button, add the data-dismiss="alert" attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
+	- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.

@@ -4,7 +4,13 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Image from 'react-bootstrap/Image'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 # Avatars
 
@@ -15,25 +21,41 @@ Avatars are typically profile images that either contain a placeholder, initials
 Avatars with an image use the `<img>` tag and include the `.avatar-img` class. This class uses css to manipulate an image into an avatar. It can also be used for avatar placeholder icons. 
 
 <ComponentPreview>
-    <img src="https://source.unsplash.com/216x216?face" alt="..." class="avatar-img"/>
+    <Image src="https://source.unsplash.com/216x216?face" alt="..." className="avatar-img-xl"  />
 </ComponentPreview>
 
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-
-<img src="#" alt="..." class="avatar-img"/>
-
+<img src="#" alt="placeholder" class="avatar-img-xl" />
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Image src="https://source.unsplash.com/216x216?face" alt="..." className="avatar-img-xl" />
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
 
 ### Avatar Sizes
 
 There are different sizes available for avatars {sm|lg|xl} in addition to the default size. 
 
 <ComponentPreview>
-    <img src="https://source.unsplash.com/216x216?face" alt="..." class="mr-3 avatar-img-sm"/>
-    <img src="https://source.unsplash.com/216x216?face" alt="..." class="mr-3 avatar-img"/>
-    <img src="https://source.unsplash.com/216x216?face" alt="..." class="mr-3 avatar-img-lg"/>
-    <img src="https://source.unsplash.com/216x216?face" alt="..." class="mr-3 avatar-img-xl"/>
+    <Image src="https://source.unsplash.com/216x216?face" alt="..." className="mr-3 avatar-img-sm"/>
+    <Image src="https://source.unsplash.com/216x216?face" alt="..." className="mr-3 avatar-img"/>
+    <Image src="https://source.unsplash.com/216x216?face" alt="..." className="mr-3 avatar-img-lg"/>
+    <Image src="https://source.unsplash.com/216x216?face" alt="..." className="mr-3 avatar-img-xl"/>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <img src="#" alt="..." class="avatar-img-sm"/>
@@ -42,6 +64,20 @@ There are different sizes available for avatars {sm|lg|xl} in addition to the de
 <img src="#" alt="..." class="avatar-img-xl"/>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Image src="#" alt="..." className="avatar-img-sm"/>
+<Image src="#" alt="..." className="avatar-img"/>
+<Image src="#" alt="..." className="avatar-img-lg"/>
+<Image src="#" alt="..." className="avatar-img-xl"/>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
 ## Avatar With User Initials
 
 For creating avatars with the user's initials, use the `.avatar` class which creates the size of the image and background. Before inputting the initials, use the `span` tag and then use our custom `initials` class to properly apply the initials in the avatar. 
@@ -49,37 +85,90 @@ For creating avatars with the user's initials, use the `.avatar` class which cre
 Once again, We also have different sizes available for these avatars {sm|lg|xl} in addition to the default size (MD in this case).
 
 <ComponentPreview>
-<div class="mb-3 avatar-sm">
-  <span class="initials-sm">SM</span>
-</div>
-<div class="mb-3 avatar">
-  <span class="initials">MD</span>
-</div>
-<div class="mb-3 avatar-lg">
-  <span class="initials-lg">LG</span>
-</div>
-<div class="mb-3 avatar-xl">
-  <span class="initials-xl">XL</span>
-</div>
+    <Row>
+        <Col>
+            <div class="avatar-sm">
+                <span class="initials-sm">SM</span>
+            </div>
+        </Col>
+        <Col>
+            <div class="avatar">
+                <span class="initials">MD</span>
+            </div>
+        </Col>
+        <Col>
+            <div class="avatar-lg">
+                <span class="initials-lg">LG</span>
+            </div>
+        </Col>
+        <Col>
+            <div class="avatar-xl">
+                <span class="initials-xl">XL</span>
+            </div>
+        </Col>
+    </Row>
 </ComponentPreview>
 
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-<div class="avatar-sm">
-  <span class="initials-sm">SM</span>
-</div>
-    
-<div class="avatar">
-  <span class="initials">MD</span>
-</div>
-
-<div class="avatar-lg">
-  <span class="initials-lg">LG</span>
-</div>
-
-<div class="avatar-xl">
-  <span class="initials-xl">XL</span>
+<div class="row">
+    <div class="col">
+        <div class="avatar-sm">
+            <span class="initials-sm">SM</span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="avatar">
+            <span class="initials">MD</span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="avatar-lg">
+            <span class="initials-lg">LG</span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="avatar-xl">
+            <span class="initials-xl">XL</span>
+        </div>
+    </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Row>
+    <Col>
+        <div class="avatar-sm">
+            <span class="initials-sm">SM</span>
+        </div>
+    </Col>
+    <Col>
+        <div class="avatar">
+            <span class="initials">MD</span>
+        </div>
+    </Col>
+    <Col>
+        <div class="avatar-lg">
+            <span class="initials-lg">LG</span>
+        </div>
+    </Col>
+    <Col>
+        <div class="avatar-xl">
+            <span class="initials-xl">XL</span>
+        </div>
+    </Col>
+</Row>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 ## Usage
 

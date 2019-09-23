@@ -7306,7 +7306,7 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: visible; }
 
 .badge {
-  padding: 8px 12px;
+  padding: 4px 8px;
   font-family: 'TT Norms Medium', sans-serif;
   line-height: 15px;
   border-radius: 0px; }
@@ -7339,6 +7339,12 @@ a.badge {
   line-height: 15px;
   border-radius: 0px; }
 
+.badge a {
+  color: #fff !important; }
+
+.badge.badge-light a {
+  color: #444444 !important; }
+
 .badge-pill {
   padding: 8px 12px;
   font-family: 'TT Norms Medium', sans-serif;
@@ -7348,9 +7354,52 @@ a.badge {
 .badge-warning {
   color: #fff; }
 
-.btn:hover span {
-  background-color: #fff;
-  color: #cc0000; }
+.btn-secondary.btn.badge-notification {
+  position: relative; }
+  .btn-secondary.btn.badge-notification .badge {
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    border-radius: 4px;
+    border: 1px solid #cc0000;
+    background-color: #cc0000; }
+  .btn-secondary.btn.badge-notification:hover .badge {
+    background-color: #fff;
+    color: #cc0000;
+    border: 1px solid #cc0000; }
+
+.btn-primary.btn.badge-notification {
+  position: relative;
+  border: 1px solid #cc0000 !important;
+  color: #cc0000 !important; }
+  .btn-primary.btn.badge-notification .badge {
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    border-radius: 4px;
+    border: 1px solid #cc0000;
+    background-color: #cc0000; }
+  .btn-primary.btn.badge-notification:hover {
+    color: #fff !important;
+    background-color: #cc0000 !important; }
+    .btn-primary.btn.badge-notification:hover .badge {
+      background-color: #fff;
+      color: #cc0000;
+      border: 1px solid #cc0000; }
+
+.btn-tertiary.btn.badge-notification {
+  position: relative; }
+  .btn-tertiary.btn.badge-notification .badge {
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    border-radius: 4px;
+    border: 1px solid #cc0000;
+    background-color: #cc0000; }
+  .btn-tertiary.btn.badge-notification:hover .badge {
+    background-color: #fff;
+    color: #cc0000;
+    border: 1px solid #cc0000; }
 
 .rounded {
   border-radius: 0.375rem !important; }
