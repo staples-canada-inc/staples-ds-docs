@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Container, Row, Col } from 'reactstrap'
 import { Header } from './Header'
 import { SidebarContents } from './SidebarContents'
+import { TableOfContents } from './TableOfContents'
 import PageLayout from 'react-sidebar'
 import './css/design-system/staples-ds.css'
 import './css/site/preview-overrides.css'
@@ -100,7 +101,7 @@ export class RootLayout extends React.Component {
           shadow={false}
           styles={styleOverrides}
         >
-
+            
         {/* <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
             <Breadcrumb.Item href="#">Components</Breadcrumb.Item>

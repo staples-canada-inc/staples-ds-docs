@@ -1,0 +1,92 @@
+---
+title: Images
+root: '/docs'
+parents: ['Components']
+---
+
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+# Images
+
+## Corners & Edges
+
+<ComponentPreview>
+<Container>
+  <Row>
+    <Col xs={6} md={4}>
+      <Image src="https://source.unsplash.com/150x150?ocean" rounded />
+    </Col>
+    <Col xs={6} md={4}>
+      <Image src="https://source.unsplash.com/150x150?ocean" roundedCircle />
+    </Col>
+    <Col xs={6} md={4}>
+      <Image src="https://source.unsplash.com/150x150?ocean" thumbnail />
+    </Col>
+  </Row>
+</Container>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-6"><img src="..." class="rounded" alt="..." /></div>
+        <div class="col-md-4 col-6"><img src="..." class="rounded-circle" alt="..." /></div>
+        <div class="col-md-4 col-6"><img src="..." class="img-thumbnail" alt="..." /></div>
+    </div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Container>
+  <Row>
+    <Col xs={6} md={4}>
+      <Image src="..." alt="..." rounded />
+    </Col>
+    <Col xs={6} md={4}>
+      <Image src="..." alt="..." roundedCircle />
+    </Col>
+    <Col xs={6} md={4}>
+      <Image src="..." alt="..." thumbnail />
+    </Col>
+  </Row>
+</Container>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Fluid Images
+
+<ComponentPreview>
+    <Image src="https://source.unsplash.com/1500x250?ocean" fluid />
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<img src="..." alt="..." class="img-fluid" style="width: 100%; display: block;" />
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Image src="..." alt="..." fluid />
+```
+
+</ReactCodeBlock>
+</CodePreview>

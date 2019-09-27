@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import { Nav, NavItem } from 'reactstrap'
+import { Nav, NavItem, Table } from 'reactstrap'
 import { pathPrefix } from '../gatsby-config'
 
 const sidebarNav = {

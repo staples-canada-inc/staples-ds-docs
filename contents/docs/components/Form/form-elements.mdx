@@ -1,0 +1,936 @@
+---
+title: Forms
+root: '/docs'
+parents: ['Components']
+---
+
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Form from 'react-bootstrap/Form'
+import Button from "react-bootstrap/Button"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+
+# Forms
+
+### Basic Form
+
+The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging.
+
+By default it only applies `margin-bottom` however, it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`, `<div>`, or any other element.
+
+
+<ComponentPreview>
+<Form>
+    <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+        </Form.Text>
+    </Form.Group>
+    <Form.Group controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+    </Form.Group>
+    <Form.Group controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+    </Form.Group>
+    <Button variant="primary" type="submit">
+        Submit
+    </Button>
+</Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-group">
+        <label class="form-label" for="formBasicEmail">Email address</label>
+        <input type="email" placeholder="Enter email" id="formBasicEmail" class="form-control" />
+        <small class="text-muted form-text">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="formBasicPassword">Password</label>
+        <input type="password" placeholder="Password" id="formBasicPassword" class="form-control" />
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input type="checkbox" id="formBasicCheckbox" class="form-check-input" />
+            <label title="" for="formBasicCheckbox" class="form-check-label">Check me out</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+        </Form.Text>
+    </Form.Group>
+
+    <Form.Group controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+    </Form.Group>
+    <Form.Group controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+    </Form.Group>
+    <Button variant="primary" type="submit">
+        Submit
+    </Button>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+### Form Controls
+
+Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
+
+<ComponentPreview>
+<Form>
+    <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="name@example.com" />
+    </Form.Group>
+    <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label>Example select</Form.Label>
+        <Form.Control as="select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </Form.Control>
+    </Form.Group>
+    <Form.Group controlId="exampleForm.ControlSelect2">
+        <Form.Label>Example multiple select</Form.Label>
+        <Form.Control as="select" multiple>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </Form.Control>
+    </Form.Group>
+    <Form.Group controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Example textarea</Form.Label>
+        <Form.Control as="textarea" rows="3" />
+    </Form.Group>
+</Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Example multiple select</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="name@example.com" />
+    </Form.Group>
+    <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label>Example select</Form.Label>
+        <Form.Control as="select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </Form.Control>
+    </Form.Group>
+    <Form.Group controlId="exampleForm.ControlSelect2">
+        <Form.Label>Example multiple select</Form.Label>
+        <Form.Control as="select" multiple>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </Form.Control>
+    </Form.Group>
+    <Form.Group controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Example textarea</Form.Label>
+        <Form.Control as="textarea" rows="3" />
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+### Layout
+
+The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element.
+
+<ComponentPreview>
+    <Form>
+        <Form.Group controlId="formGroupEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
+        <Form.Group controlId="formGroupPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+    </Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" />
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Another label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input" />
+    </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group controlId="formGroupEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+    </Form.Group>
+    <Form.Group controlId="formGroupPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+### From Grid
+
+More complex forms can be built using our **grid classes**. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+
+Here is an example of two individual `"column"` fields in a row:
+
+<ComponentPreview>
+    <Form>
+        <Row>
+            <Col>
+                <Form.Control placeholder="First name" />
+            </Col>
+            <Col>
+                <Form.Control placeholder="Last name" />
+            </Col>
+        </Row>
+    </Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name" />
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" />
+        </div>
+    </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Row>
+        <Col>
+            <Form.Control placeholder="First name" />
+        </Col>
+        <Col>
+            <Form.Control placeholder="Last name" />
+        </Col>
+    </Row>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+### Form Row
+
+You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+
+<ComponentPreview>
+<Form>
+    <Form.Row>
+        <Col>
+            <Form.Control placeholder="First name" />
+        </Col>
+        <Col>
+            <Form.Control placeholder="Last name" />
+        </Col>
+    </Form.Row>
+</Form>
+</ComponentPreview>
+
+ 
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name" />
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" />
+        </div>
+    </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Row>
+        <Col>
+            <Form.Control placeholder="First name" />
+        </Col>
+        <Col>
+            <Form.Control placeholder="Last name" />
+        </Col>
+    </Form.Row>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+### Complex Layouts
+
+More complex layouts can also be created with the grid system.
+Here is one example:
+
+<ComponentPreview>
+<Form>
+    <Form.Row>
+        <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
+        <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+    </Form.Row>
+    <Form.Group controlId="formGridAddress1">
+        <Form.Label>Address</Form.Label>
+        <Form.Control placeholder="1234 Main St" />
+    </Form.Group>
+    <Form.Group controlId="formGridAddress2">
+        <Form.Label>Address 2</Form.Label>
+        <Form.Control placeholder="Apartment, studio, or floor" />
+    </Form.Group>
+    <Form.Row>
+        <Form.Group as={Col} controlId="formGridCity">
+            <Form.Label>City</Form.Label>
+            <Form.Control />
+        </Form.Group>
+        <Form.Group as={Col} controlId="formGridProvince">
+            <Form.Label>Province</Form.Label>
+            <Form.Control as="select">
+                <option>Choose...</option>
+                <option>...</option>
+            </Form.Control>
+        </Form.Group>
+        <Form.Group as={Col} controlId="formGridPostal">
+            <Form.Label>Postal Code</Form.Label>
+            <Form.Control />
+        </Form.Group>
+    </Form.Row>
+    <Form.Group id="formGridCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+    </Form.Group>
+    <Button variant="primary" type="submit">
+        Submit
+    </Button>
+</Form>
+</ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="with a placeholder" />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="password placeholder" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+    </div>
+    <div class="form-group">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputProvince">Province</label>
+            <select id="inputProvince" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputPostalCode">Postal Code</label>
+            <input type="text" class="form-control" id="inputPostalCode" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary float-right">SUBMIT</button>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Row>
+        <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+    </Form.Row>
+
+    <Form.Group controlId="formGridAddress1">
+        <Form.Label>Address</Form.Label>
+        <Form.Control placeholder="1234 Main St" />
+    </Form.Group>
+
+    <Form.Group controlId="formGridAddress2">
+        <Form.Label>Address 2</Form.Label>
+        <Form.Control placeholder="Apartment, studio, or floor" />
+    </Form.Group>
+
+    <Form.Row>
+        <Form.Group as={Col} controlId="formGridCity">
+            <Form.Label>City</Form.Label>
+            <Form.Control />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridProvince">
+            <Form.Label>Province</Form.Label>
+            <Form.Control as="select">
+                <option>Choose...</option>
+                <option>...</option>
+            </Form.Control>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridPostal">
+            <Form.Label>Postal Code</Form.Label>
+            <Form.Control />
+        </Form.Group>
+    </Form.Row>
+
+    <Form.Group id="formGridCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+    </Form.Group>
+
+    <Button variant="primary" type="submit">
+        Submit
+    </Button>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+### Horizontal Form
+
+Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>` as well so they’re vertically centered with their associated form controls.
+
+At times, you may need to use margin or padding utilities to create that perfect alignment. For example, we’ve removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+
+Here is an example of a somehwat more complex horizontal form with input fields, checkboxes and radio buttons: 
+
+<ComponentPreview>
+<Form>
+    <Form.Group as={Row} controlId="formHorizontalEmail">
+        <Form.Label column sm={2}>
+            Email
+        </Form.Label>
+        <Col sm={10}>
+        <Form.Control type="email" placeholder="Email" />
+        </Col>
+    </Form.Group>
+    <Form.Group as={Row} controlId="formHorizontalPassword">
+        <Form.Label column sm={2}>
+            Password
+        </Form.Label>
+        <Col sm={10}>
+        <Form.Control type="password" placeholder="Password" />
+        </Col>
+    </Form.Group>
+    <fieldset>
+        <Form.Group as={Row}>
+            <Form.Label as="legend" column sm={2}>
+                Radios
+            </Form.Label>
+            <Col sm={10}>
+            <Form.Check
+                type="radio"
+                label="first radio"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1" />
+            <Form.Check
+                type="radio"
+                label="second radio"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios2" />
+            <Form.Check
+                type="radio"
+                label="third radio"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios3" />
+            </Col>
+        </Form.Group>
+    </fieldset>
+    <Form.Group as={Row} controlId="formHorizontalCheck">
+        <Col sm={{ span: 10, offset: 2 }}>
+        <Form.Check label="Remember me" />
+        </Col>
+    </Form.Group>
+    <Form.Group as={Row}>
+        <Col sm={{ span: 10, offset: 2 }}>
+        <Button type="submit">Sign in</Button>
+        </Col>
+    </Form.Group>
+</Form>
+</ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password" />
+        </div>
+    </div>
+    <fieldset class="form-group">
+        <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked />
+                    <label class="form-check-label" for="gridRadios1"> First radio</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
+                <label class="form-check-label" for="gridRadios2"> Second radio</label>
+            </div>
+            <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled />
+                <label class="form-check-label" for="gridRadios3">Third disabled radio</label>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+        <div class="form-group row">
+            <div class="col-sm-2">Checkbox</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" />
+                    <label class="form-check-label" for="gridCheck1">Example checkbox</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group as={Row} controlId="formHorizontalEmail">
+        <Form.Label column sm={2}>
+            Email
+        </Form.Label>
+        <Col sm={10}>
+        <Form.Control type="email" placeholder="Email" />
+        </Col>
+    </Form.Group>
+
+    <Form.Group as={Row} controlId="formHorizontalPassword">
+        <Form.Label column sm={2}>
+            Password
+        </Form.Label>
+        <Col sm={10}>
+        <Form.Control type="password" placeholder="Password" />
+        </Col>
+    </Form.Group>
+    <fieldset>
+        <Form.Group as={Row}>
+            <Form.Label as="legend" column sm={2}>
+                Radios
+            </Form.Label>
+            <Col sm={10}>
+            <Form.Check
+                type="radio"
+                label="first radio"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1" />
+            <Form.Check
+                type="radio"
+                label="second radio"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios2" />
+            <Form.Check
+                type="radio"
+                label="third radio"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios3" />
+            </Col>
+        </Form.Group>
+    </fieldset>
+    <Form.Group as={Row} controlId="formHorizontalCheck">
+        <Col sm={{ span: 10, offset: 2 }}>
+        <Form.Check label="Remember me" />
+        </Col>
+    </Form.Group>
+
+    <Form.Group as={Row}>
+        <Col sm={{ span: 10, offset: 2 }}>
+        <Button type="submit">Sign in</Button>
+        </Col>
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+### Column Sizing
+
+As shown in the previous examples, our grid system allows you to place any number of `.cols` within a `.row` or `.form-row`. They will split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.cols`equally split the rest, with specific column classes like `.col-7`.
+
+<ComponentPreview>
+<Form>
+    <Form.Group as={Row} controlId="formHorizontalSizing">
+        <Col sm={{ span: 7}}>
+            <Form.Control type="text" placeholder="Address" />
+        </Col>
+        <Col>
+            <Form.Control type="text" placeholder="City" />
+        </Col>
+        <Col>
+            <Form.Control type="text" placeholder="Postal Code" />
+        </Col>
+    </Form.Group>
+</Form>
+</ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-row">
+        <div class="col-7">
+            <input type="text" class="form-control" placeholder="Address" />
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="City" />
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Postal Code" />
+        </div>
+    </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group as={Row} controlId="formHorizontalSizing">
+        <Col sm={{ span: 7}}>
+            <Form.Control type="text" placeholder="Address" />
+        </Col>
+        <Col>
+            <Form.Control type="text" placeholder="City" />
+        </Col>
+        <Col>
+            <Form.Control type="text" placeholder="Postal Code" />
+        </Col>
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+### Inline Elements
+
+Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+
+<ComponentPreview>
+  {['checkbox', 'radio'].map(type => (
+    <div key={`inline-${type}`} className="mb-3">
+      <Form.Check inline label="1" type={type} id={`inline-${type}-1`} />
+      <Form.Check inline label="2" type={type} id={`inline-${type}-2`} />
+      <Form.Check inline label="3 (disabled)" type={type} id={`inline-${type}-3`} />
+    </div>
+  ))}
+</ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
+``` html
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+  <label class="form-check-label" for="inlineCheckbox1">1</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+  <label class="form-check-label" for="inlineCheckbox2">2</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled />
+  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+  <label class="form-check-label" for="inlineRadio1">1</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+  <label class="form-check-label" for="inlineRadio2">2</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled />
+  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form.Check inline label="1" type="checkbox" id="inline-checkbox-1" />
+<Form.Check inline label="2" type="checkbox" id="inline-checkbox-2" />
+<Form.Check inline label="3 (disabled)" type="checkbox" id="inline-checkbox-3" />
+
+<Form.Check inline label="1" type="radio" id="inline-radio-1" />
+<Form.Check inline label="2" type="radio" id="inline-radio-2" />
+<Form.Check inline label="3 (disabled)" type="radio" id="inline-radio-3" />
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+## Stylized Form Elements
+
+### Checkbox
+
+Default checkboxes improved with the help of `.form-check`, a single class that improves the layout and behavior of their HTML elements. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+
+Checkboxes are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>` and `<label>` are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify id and for attributes to relate the `<input>` and `<label>`.
+
+Disabled checkboxes and radios are supported. The disabled attribute will apply a lighter color to help indicate the input’s state.
+
+<ComponentPreview>
+<Form>
+    <Form.Group>
+        <div key="custom-checkbox" className="mb-3">
+            <Form.Check custom type="checkbox" id="customCheckbox1" label="Check this out!" />
+        </div>
+    </Form.Group>
+    <Form.Group>
+        <div key="custom-checkbox" className="mb-3">
+            <Form.Check custom disabled type="checkbox" id="customCheckbox2" label="You can't check this out!" />
+        </div>
+    </Form.Group>
+</Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+``` html
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheck1" />
+    <label class="custom-control-label" for="customCheck1">Check this out!</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled />
+    <label class="custom-control-label" for="customCheckDisabled1">You can't check this out!</label>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group>
+        <div key="custom-checkbox" className="mb-3">
+            <Form.Check custom type="checkbox" id="customCheckbox1" label="Check this out!" />
+        </div>
+    </Form.Group>
+    <Form.Group>
+        <div key="custom-checkbox" className="mb-3">
+            <Form.Check custom disabled type="checkbox" id="customCheckboxDisabled1" label="You can't check this out!" />
+        </div>
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+### Toggle / Switch
+
+A toggle or switch has the markup of a custom checkbox but uses the `.custom-switch` class to render a toggle switch. Toggles also support the `disabled` attribute.
+
+<ComponentPreview>
+<div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" name="customSwitch" id="customSwitch1" />
+    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div>
+<div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" name="customSwitch" id="customSwitch2" disabled />
+    <label class="custom-control-label" for="customSwitch2">You can't toggle this one</label>
+</div>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```  html
+<div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" name="customSwitch" id="customSwitch1" />
+    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div>
+<div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" name="customSwitch" id="customSwitch2" disabled />
+    <label class="custom-control-label" for="customSwitch2">You can't toggle this one</label>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form.Check custom type="switch" id="exampleCustomSwitch2" name="customSwitch" label="Toggle this switch" />
+<Form.Check custom disabled type="switch" id="exampleCustomSwitch2" name="customSwitch" label="You can't toggle this one" />
+```
+
+</ReactCodeBlock>
+</CodePreview>
