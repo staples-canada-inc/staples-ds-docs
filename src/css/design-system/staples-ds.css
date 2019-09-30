@@ -8022,7 +8022,15 @@ select[multiple]:focus option:checked {
   background-color: #198294; }
 
 .modal-dialog {
-  max-width: 720px; }
+  width: 570px;
+  max-width: 90%; }
+
+.modal-full {
+  max-width: 90%;
+  width: 90%; }
+
+.modal-sm {
+  width: 250px; }
 
 .modal-title {
   margin-top: 0px; }

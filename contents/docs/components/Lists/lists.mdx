@@ -4,113 +4,119 @@ root: '/docs'
 parents: ['Components']
 ---
 
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 # Lists
 
 Lists consist of related content grouped together and organized vertically.
 
-## Unordered List
+## Unordered & Ordered List
 
-Use the `<ul>` tag to create an unordered list that isn't numbered.
+Use the `<o>` tag to create an unordered list that isn't numbered.
+
+<ComponentPreview>
+<Row>
+    <Col>
+        <ul>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+        </ul>
+    </Col>
+    <Col>
+        <ol>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+        </ol>
+    </Col>
+</Row>    
+</ComponentPreview>
 
 ```html
-<ul>
-  <li>Bread</li>
-  <li>Eggs</li>
-  <li>Milk</li>
-  <li>Coffee</li>
-</ul>
+    <ul>
+    <li>Bread</li>
+    <li>Eggs</li>
+    <li>Milk</li>
+    <li>Coffee</li>
+    </ul>
+
+    <ol>
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Coffee</li>
+    </ol>
 ```
 
 You can also nest lists—ordered or unordered—within lists.
 
-### Unordered List with Nested List
+## Unordered & Ordered List with Nested List
+
+<ComponentPreview>
+<Row>
+    <Col>
+        <ul>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </ul>
+    </Col>
+    <Col>
+        <ol>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ol>
+        </ol>
+    </Col>
+</Row>
+</ComponentPreview>
 
 ```html
-<ul>
-  <li>Bread</li>
-  <li>Eggs</li>
-  <li>Milk</li>
-  <li>Coffee</li>
-  <ol>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ol>
-</ul>
+    <ul>
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Coffee</li>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </ul>
+
+    <ol>
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Coffee</li>
+        <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ol>
+    </ol>
 ```
 
-```html
-<ul>
-  <li>Bread</li>
-  <li>Eggs</li>
-  <li>Milk</li>
-  <li>Coffee</li>
-  <ul>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ul>
-</ul>
-```
-
-## Ordered List
-
-Use the `<ol>` tag to create a numbered list.
-
-```html
-<ol>
-  <li>Bread</li>
-  <li>Eggs</li>
-  <li>Milk</li>
-  <li>Coffee</li>
-</ol>
-```
-
-Again, you can nest lists within lists—ordered or unordered.
-
-### Ordered List with Nested List
-
-```html
-<ol>
-  <li>Bread</li>
-  <li>Eggs</li>
-  <li>Milk</li>
-  <li>Coffee</li>
-  <ol>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ol>
-</ol>
-```
-
-```html
-<ol>
-  <li>Bread</li>
-  <li>Eggs</li>
-  <li>Milk</li>
-  <li>Coffee</li>
-  <ul>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ul>
-</ol>
-```
-
-##List Groups
-
-A list group is an unordered list with list items and proper classes. Build upon it with the options that follow, or with your own CSS as needed.
-
-```html
-<ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-```
 
 ## Usage
 

@@ -27,22 +27,22 @@ import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
 
 A navigation bar is a section of a user interface intended to aid visitors in accessing information and navigating a site. Navigation bars are implemented in file browsers, web browsers and as a design element of web sites.
 
-### Responsive
+## Responsive
 
 Navbars are responsive by default. Their responsive behavior depends on the Collapse JavaScript plugin, and wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl}`for responsive collapsing. If you prefer to limit a navbar's horizontal width, you can use containers to do so.
 
-### Supported content
+## Supported content
 
 Navbars have built-in support for a handful of sub-components. Choose from the following as needed:
 
 - `.navbar-brand` for your company, product, or project name.
 - `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
+- `.navbar-toggler` for use with our collapse plugin and other navigation toggling behaviors.
 - `.form-inline` for any form controls and actions.
 - `.navbar-text` for adding vertically centered strings of text.
 - `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
 
-### Brand
+## Brand
 
 The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
 
@@ -69,7 +69,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 </nav>
 ```
 
-### Nav
+## Nav
 
 Navbar navigation links build on our `.nav` options with their own modifier class and require the use of toggler classes for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
 
@@ -78,7 +78,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
 
 You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
 
-#### Navbar with Dropdown
+### Navbar with Dropdown
 
 <ComponentPreview>
   <Navbar color="light" light expand="md">
@@ -130,7 +130,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 
 The navbar styling for Staples sub-sites can either be coloured in our brand red, lightest-gray or charcoal. The Staples logo should be left-justified with nav links right-justified on the same line.
 
-### Primary Theme
+## Primary Theme
 
 <ComponentPreview>
   <Navbar color="primary" dark expand="md">
@@ -163,7 +163,7 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 </ComponentPreview>
 
 
-### Light-Gray Theme
+## Light-Gray Theme
 
 <ComponentPreview>
   <Navbar color="light" light expand="md">
@@ -196,7 +196,7 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 </ComponentPreview>
 
 
-### Charcoal Theme
+## Charcoal Theme
 
 <ComponentPreview>
     <Navbar color="dark" dark expand="md">

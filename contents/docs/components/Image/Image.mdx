@@ -12,6 +12,7 @@ import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Figure from 'react-bootstrap/Figure'
 
 # Images
 
@@ -69,6 +70,7 @@ import Col from 'react-bootstrap/Col'
 </CodePreview>
 
 ## Fluid Images
+Use the `fluid` to scale image nicely to the parent element.
 
 <ComponentPreview>
     <Image src="https://source.unsplash.com/1500x250?ocean" fluid />
@@ -86,6 +88,53 @@ import Col from 'react-bootstrap/Col'
 
 ```html
 <Image src="..." alt="..." fluid />
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Figures
+Anytime you need to display a piece of content, like an image with an optional caption, consider using a `Figure`.
+
+<ComponentPreview>
+    <Figure>
+        <Figure.Image
+            width={650}
+            height={250}
+            alt="650x250"
+            src="https://source.unsplash.com/650x250?ocean"
+            fluid />
+        <Figure.Caption>
+            Nulla vitae elit libero, a pharetra augue mollis interdum.
+        </Figure.Caption>
+    </Figure>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<figure class="figure">
+    <img width="171" height="180" alt="..." src="..." class="figure-img img-fluid" />
+    <figcaption class="figure-caption">Nulla vitae elit libero, a pharetra augue mollis interdum.</figcaption>
+</figure>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Figure>
+    <Figure.Image
+        width={650}
+        height={250}
+        alt="650x250"
+        src="https://source.unsplash.com/650x250?ocean"
+        fluid />
+    <Figure.Caption>
+        Nulla vitae elit libero, a pharetra augue mollis interdum.
+    </Figure.Caption>
+</Figure>
 ```
 
 </ReactCodeBlock>
