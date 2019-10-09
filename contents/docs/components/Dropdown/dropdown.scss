@@ -1,3 +1,7 @@
+/////////////////////////////////////////////////
+// Toggle Defaults
+/////////////////////////////////////////////////
+
 .dropdown-item:hover,
 .dropdown-item:focus {
     color: $secondary;
@@ -70,6 +74,40 @@
 
 }
 
+/////////////////////////////////////////////////
+// Nav Link Dropdown Styles
+/////////////////////////////////////////////////
+
+a.dropdown-toggle.nav-link::after {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.38376L6 5.37501L10.5 1.38376' stroke='%23747679' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") !important;
+    width: 15px;
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    right: -13px;
+    top: .98rem;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    border: 0;
+}
+a.dropdown-toggle.nav-link:hover::after{
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.38376L6 5.37501L10.5 1.38376' stroke='%23747679' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") !important;
+    transition: transform 0.3s;
+}
+
+.dropdown.show > .dropdown-toggle.nav-link::after{
+    transform: rotate(-180deg);
+    width: 15px;
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    right: -13px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    border: 0;
+}
 
 /////////////////////////////////////////////////
 // Button Dropdown Styles
@@ -95,7 +133,7 @@
 }
 
 // Button Dropdown Visible Caret
-.btn-group.show>.dropdown-toggle::after {
+.btn-group.show>.dropdown-toggle::after, .btn-group.show>.dropdown-toggle:hover::after  {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.38376L6 5.37501L10.5 1.38376' stroke='%23ffffff' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     transform: rotate(-180deg);
     width: 15px;
@@ -107,6 +145,10 @@
     background-repeat: no-repeat;
     background-size: 25px;
     border: 0;
+}
+
+.navbar-nav > .dropdown.nav-item{
+    padding-right: 15px;
 }
 
 

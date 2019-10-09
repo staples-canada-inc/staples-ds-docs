@@ -4,6 +4,18 @@ root: '/docs'
 parents: ['Components']
 ---
 
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Button from 'react-bootstrap/Button'
+import Overlay from 'react-bootstrap/Overlay'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Popover from 'react-bootstrap/Popover'
+import PopoverContent from 'react-bootstrap/PopoverContent'
+import PopoverTitle from 'react-bootstrap/PopoverTitle'
+import { PopoverDemo1, PopoverDemo2, PopoverDemo3 } from './PopoverDemo'
+
 # Popovers
 
 The Popover plugin is similar to tooltips in that a pop-up box appears upon click of an element. The difference is that a popover can contain much more content.
@@ -12,20 +24,19 @@ The Popover plugin is similar to tooltips in that a pop-up box appears upon clic
 
 You can use buttons that will activate a popover on click, and dismiss the popover after another click.
 
-```html
-<button
-  type="button"
-  class="btn btn-lg btn-danger"
-  data-toggle="popover"
-  data-content="And here's some amazing content. It's very engaging. Right?"
->
-  Click to toggle popover
-</button>
-```
+<ComponentPreview>
+  <PopoverDemo1 />
+</ComponentPreview>
 
-You can also **add headers** in popovers.
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
+<script type="text/javascript">
+  $(function() {
+    $('[data-toggle="popover"]').popover()
+  })
+</script>
 <button
   type="button"
   class="btn btn-lg btn-danger"
@@ -37,105 +48,100 @@ You can also **add headers** in popovers.
 </button>
 ```
 
-## Text with Popovers
+</HtmlCodeBlock>
+<ReactCodeBlock>
 
-Not only do popvers work with buttons, but they can also work with links. Again, a click on the text will activate a popover upon click and will dismiss the popover after another click.
+```JavaScript
+const popoverDemo1 = (
+    <Popover id="popoverDemo1-basic">
+      <Popover.Title as="h3">Popover right</Popover.Title>
+      <Popover.Content>
+        And here's some <strong>amazing</strong> content. It's very engaging.
+        right?
+      </Popover.Content>
+    </Popover>
+  );
 
-```html
-<a
-  href="#"
-  data-toggle="popover"
-  title="Popover Header"
-  data-content="Some content inside the popover"
-  >Toggle popover</a
->
+function PopoverDemo() {
+<OverlayTrigger trigger="click" placement="right" overlay={popoverDemo1}>
+    <Button variant="success">Click to display popover</Button>
+</OverlayTrigger>
+
+return <PopoverDemo />
+}
+
+export default PopoverDemo;
 ```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Popover Direction
 
 Popovers can open in one of four directions (top, right, bottom, or left).
 
+<ComponentPreview>
+    <PopoverDemo3 />
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-<button
-  type="button"
-  class="btn btn-secondary"
-  data-container="body"
-  data-toggle="popover"
-  data-placement="top"
-  data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
->
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Popover on top
 </button>
 
-<button
-  type="button"
-  class="btn btn-secondary"
-  data-container="body"
-  data-toggle="popover"
-  data-placement="right"
-  data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
->
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Popover on right
 </button>
 
-<button
-  type="button"
-  class="btn btn-secondary"
-  data-container="body"
-  data-toggle="popover"
-  data-placement="bottom"
-  data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus."
->
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
   Popover on bottom
 </button>
 
-<button
-  type="button"
-  class="btn btn-secondary"
-  data-container="body"
-  data-toggle="popover"
-  data-placement="left"
-  data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
->
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Popover on left
 </button>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
 ```html
-<a
-  href="#"
-  title="Header"
-  data-toggle="popover"
-  data-placement="top"
-  data-content="Content"
-  >Popover on top</a
->
-<a
-  href="#"
-  title="Header"
-  data-toggle="popover"
-  data-placement="right"
-  data-content="Content"
-  >Popover on right</a
->
-<a
-  href="#"
-  title="Header"
-  data-toggle="popover"
-  data-placement="bottom"
-  data-content="Content"
-  >Popover on bottom</a
->
-<a
-  href="#"
-  title="Header"
-  data-toggle="popover"
-  data-placement="left"
-  data-content="Content"
-  >Popover on left</a
->
+const popoverDemo3 = (
+    <Popover id="popoverDemo3-basic">
+        <Popover.Title>Popover Title</Popover.Title>
+        <Popover.Content>
+            And here's some <strong>amazing</strong> content. It's very engaging.
+            right?
+        </Popover.Content>
+    </Popover>
+);
+
+return (
+    <>
+        <OverlayTrigger trigger="click" placement="top" overlay={popoverDemo3}>
+            <Button variant="tertiary" className="mr-3">Top</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger="click" placement="right" overlay={popoverDemo3}>
+            <Button variant="tertiary" className="mr-3">Right</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger="click" placement="bottom" overlay={popoverDemo3}>
+            <Button variant="tertiary" className="mr-3">Bottom</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger="click" placement="left" overlay={popoverDemo3}>
+            <Button variant="tertiary" className="mr-3">Left</Button>
+        </OverlayTrigger>
+    </>
+)
 ```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
 
 ## Dismissable Popovers
 
@@ -198,6 +204,9 @@ If you want the popover to display only on hover, use the `data-trigger` attribu
 
 ## Usage
 
+<CodePreview>
+<HtmlCodeBlock>
+
 To create a popover, add the `data-toggle="popover"` attribute to an element.
 
 Use the `title` attribute to specify the header text of the popover, and use the `data-content` attribute to specify the text that should be displayed inside the popover.
@@ -243,9 +252,9 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
 <table>
   <thead>
     <tr>
-      <th style={{width:100}}>Name</th>
-      <th style={{width:100}}>Type</th>
-      <th style={{width:50}}>Default</th>
+      <th style={{ width: 100 }}>Name</th>
+      <th style={{ width: 100 }}>Type</th>
+      <th style={{ width: 50 }}>Default</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -261,7 +270,13 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>string | element | false</td>
       <td>false</td>
       <td>
-        <p>Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
+        <p>
+          Appends the popover to a specific element. Example:{' '}
+          <code>container: 'body'</code>. This option is particularly useful in
+          that it allows you to position the popover in the flow of the document
+          near the triggering element - which will prevent the popover from
+          floating away from the triggering element during a window resize.
+        </p>
       </td>
     </tr>
     <tr>
@@ -269,8 +284,14 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default content value if <code>data-content</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+        <p>
+          Default content value if <code>data-content</code> attribute isn't
+          present.
+        </p>
+        <p>
+          If a function is given, it will be called with its <code>this</code>{' '}
+          reference set to the element that the popover is attached to.
+        </p>
       </td>
     </tr>
     <tr>
@@ -278,42 +299,88 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>number | object</td>
       <td>0</td>
       <td>
-        <p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
+        <p>
+          Delay showing and hiding the popover (ms) - does not apply to manual
+          trigger type
+        </p>
         <p>If a number is supplied, delay is applied to both hide/show</p>
-        <p>Object structure is: delay: <code>"show": 500, "hide": 100</code></p>
+        <p>
+          Object structure is: delay: <code>"show": 500, "hide": 100</code>
+        </p>
       </td>
     </tr>
     <tr>
       <td>html</td>
       <td>boolean</td>
       <td>false</td>
-      <td>Insert HTML into the popover. If false, <code>innerText</code> property will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+      <td>
+        Insert HTML into the popover. If false, <code>innerText</code> property
+        will be used to insert content into the DOM. Use text if you're worried
+        about XSS attacks.
+      </td>
     </tr>
     <tr>
       <td>placement</td>
       <td>string | function</td>
       <td>'right'</td>
       <td>
-        <p>How to position the popover - auto | top | bottom | left | right.<br/>When <code>auto</code> is specified, it will dynamically reorient the popover.</p>
-        <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+        <p>
+          How to position the popover - auto | top | bottom | left | right.
+          <br />
+          When <code>auto</code> is specified, it will dynamically reorient the
+          popover.
+        </p>
+        <p>
+          When a function is used to determine the placement, it is called with
+          the popover DOM node as its first argument and the triggering element
+          DOM node as its second. The <code>this</code> context is set to the
+          popover instance.
+        </p>
       </td>
     </tr>
     <tr>
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="https://codepen.io/Johann-S/pen/djJYPb">an informative example</a>.</td>
+      <td>
+        If a selector is provided, popover objects will be delegated to the
+        specified targets. In practice, this is used to enable dynamic HTML
+        content to have popovers added. See{' '}
+        <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and{' '}
+        <a href="https://codepen.io/Johann-S/pen/djJYPb">
+          an informative example
+        </a>
+        .
+      </td>
     </tr>
     <tr>
       <td>template</td>
       <td>string</td>
-      <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="popover-arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+      <td>
+        <code>
+          '&lt;div class="popover" role="tooltip"&gt;&lt;div
+          class="popover-arrow"&gt;&lt;/div&gt;&lt;h3
+          class="popover-header"&gt;&lt;/h3&gt;&lt;div
+          class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'
+        </code>
+      </td>
       <td>
         <p>Base HTML to use when creating the popover.</p>
-        <p>The popover's <code>title</code> will be injected into the <code>.popover-header</code>.</p>
-        <p>The popover's <code>content</code> will be injected into the <code>.popover-body</code>.</p>
-        <p><code>.popover-arrow</code> will become the popover's arrow.</p>
-        <p>The outermost wrapper element should have the <code>.popover</code> class.</p>
+        <p>
+          The popover's <code>title</code> will be injected into the{' '}
+          <code>.popover-header</code>.
+        </p>
+        <p>
+          The popover's <code>content</code> will be injected into the{' '}
+          <code>.popover-body</code>.
+        </p>
+        <p>
+          <code>.popover-arrow</code> will become the popover's arrow.
+        </p>
+        <p>
+          The outermost wrapper element should have the <code>.popover</code>{' '}
+          class.
+        </p>
       </td>
     </tr>
     <tr>
@@ -321,52 +388,93 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default title value if <code>title</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+        <p>
+          Default title value if <code>title</code> attribute isn't present.
+        </p>
+        <p>
+          If a function is given, it will be called with its <code>this</code>{' '}
+          reference set to the element that the popover is attached to.
+        </p>
       </td>
     </tr>
     <tr>
       <td>trigger</td>
       <td>string</td>
       <td>'click'</td>
-      <td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space. <code>manual</code> cannot be combined with any other trigger.</td>
+      <td>
+        How popover is triggered - click | hover | focus | manual. You may pass
+        multiple triggers; separate them with a space. <code>manual</code>{' '}
+        cannot be combined with any other trigger.
+      </td>
     </tr>
     <tr>
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Offset of the popover relative to its target. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">offset docs</a>.</td>
+      <td>
+        Offset of the popover relative to its target. For more information refer
+        to Popper.js's{' '}
+        <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">
+          offset docs
+        </a>
+        .
+      </td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Allow to specify which position Popper will use on fallback. For more information refer to
-      Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">behavior docs</a></td>
+      <td>
+        Allow to specify which position Popper will use on fallback. For more
+        information refer to Popper.js's{' '}
+        <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">
+          behavior docs
+        </a>
+      </td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Overflow constraint boundary of the popover. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+      <td>
+        Overflow constraint boundary of the popover. Accepts the values of{' '}
+        <code>'viewport'</code>, <code>'window'</code>,{' '}
+        <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript
+        only). For more information refer to Popper.js's{' '}
+        <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">
+          preventOverflow docs
+        </a>
+        .
+      </td>
     </tr>
     <tr>
       <td>sanitize</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code>, <code>'content'</code> and <code>'title'</code> options will be sanitized.</td>
+      <td>
+        Enable or disable the sanitization. If activated <code>'template'</code>
+        , <code>'content'</code> and <code>'title'</code> options will be
+        sanitized.
+      </td>
     </tr>
     <tr>
       <td>whiteList</td>
       <td>object</td>
-      <td><a href="https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer">Default value</a></td>
+      <td>
+        <a href="https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer">
+          Default value
+        </a>
+      </td>
       <td>Object which contains allowed attributes and tags</td>
     </tr>
     <tr>
       <td>sanitizeFn</td>
       <td>null | function</td>
       <td>null</td>
-      <td>Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization.</td>
+      <td>
+        Here you can supply your own sanitize function. This can be useful if
+        you prefer to use a dedicated library to perform sanitization.
+      </td>
     </tr>
   </tbody>
 </table>
@@ -496,3 +604,106 @@ $('#myPopover').on('hidden.bs.popover', function() {
   // do something...
 })
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+
+## Changing Containers
+
+You can specify a `container` to control the DOM element the overlay is appended to. This is especially useful when styles conflict with your Overlay's.
+
+```JavaScript
+function Example() {
+  const [show, setShow] = useState(false);
+  const [target, setTarget] = useState(null);
+  const ref = useRef(null);
+
+  const handleClick = event => {
+    setShow(!show);
+    setTarget(event.target);
+  };
+
+  return (
+    <ButtonToolbar ref={ref}>
+      <Button onClick={handleClick}>Holy guacamole!</Button>
+
+      <Overlay
+        show={show}
+        target={target}
+        placement="bottom"
+        container={ref.current}
+        containerPadding={20}
+      >
+        <Popover id="popover-contained">
+          <Popover.Title as="h3">Popover bottom</Popover.Title>
+          <Popover.Content>
+            <strong>Holy guacamole!</strong> Check this info.
+          </Popover.Content>
+        </Popover>
+      </Overlay>
+    </ButtonToolbar>
+  );
+}
+
+render(<Example />);
+```
+
+## Updating Position Dynamically
+
+Since we can't know every time your overlay changes size, to reposition it, you need to take manual action if you want to update the position of an Overlay in response to a change.
+
+For this, the Overlay component also injects a `scheduleUpdate()` method that an overlay component can use to reposition itself.
+
+```JavaScript
+const UpdatingPopover = React.forwardRef(
+  ({ scheduleUpdate, children, ...props }, ref) => {
+    useEffect(() => {
+      console.log('updating!');
+      scheduleUpdate();
+    }, [children, scheduleUpdate]);
+    return (
+      <Popover ref={ref} {...props}>
+        {children}
+      </Popover>
+    );
+  },
+);
+
+const longContent = `
+  Very long
+  Multiline content
+  that is engaging and what-not
+`;
+const shortContent = 'Short and sweet!';
+
+function Example() {
+  const [content, setContent] = useState(shortContent);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setContent(content === shortContent ? longContent : shortContent);
+    }, 3000);
+
+    return () => clearInterval(timerId);
+  });
+
+  return (
+    <OverlayTrigger
+      trigger="click"
+      overlay={
+        <UpdatingPopover id="popover-contained">{content}</UpdatingPopover>
+      }
+    >
+      <Button>Holy guacamole!</Button>
+    </OverlayTrigger>
+  );
+}
+
+render(<Example />);
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+

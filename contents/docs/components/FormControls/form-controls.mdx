@@ -1,0 +1,297 @@
+---
+title: Form Controls
+root: '/docs'
+parents: ['Components']
+---
+
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+
+import SingleDatePickerWrapper from './DatePicker';
+import DateRangePickerWrapper from './DateRangePicker';
+
+# Text Input
+
+Use the provided classes to opt into their customized displays for more consistent rendering across browsers and devices.
+
+Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection and more.
+
+## Input Type
+
+## Static Text Box
+
+<ComponentPreview>
+    <Form>
+        <Form.Control type="text" placeholder="Normal text" />
+    </Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```  html
+<div class="form-group">
+    <label for="exampleStaticInput">Plain Text (Static)</label>
+    <input id="exampleStaticInput" plaintext value="Some plain text/ static value" readonly="readonly" />
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Control type="text" placeholder="Normal text" />
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+## Text Area
+
+<ComponentPreview>
+    <Form>
+        <Form.Control as="textarea" rows="3" placeholder="Normal textarea" />
+    </Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Normal textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Control as="textarea" rows="3" placeholder="Normal textarea" />
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Date Picker
+
+This component is created and managed by airbnb and included in our design system for it's flexibility and functionality. For additional information on the react-dates component please refere to the documentation found on the [Github repo.](https://github.com/airbnb/react-dates)  
+
+<ComponentPreview>
+    <SingleDatePickerWrapper />
+</ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```  html
+<!-- Only available as a React component -->
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<SingleDatePickerWrapper />
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Date Range Picker
+
+This component is created and managed by airbnb and included in our design system for it's flexibility and functionality. For additional information on the react-dates component please refere to the documentation found on the [Github repo.](https://github.com/airbnb/react-dates)  
+
+<ComponentPreview>
+<DateRangePickerWrapper />
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<!-- Only available as a React component -->
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<DateRangePickerWrapper />
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+## File Selector
+
+<ComponentPreview>
+<Form>
+    <Button color="primary" className="mr-2 form-control-file-wrapper">
+        Upload File
+        <Form.Control type="file" />
+    </Button>
+</Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <button color="primary" type="button" class="form-control-file-wrapper btn btn-primary">
+        Upload File
+        <input type="file" class="form-control-file" />
+    </button>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Button color="primary" className="mr-2 form-control-file-wrapper">
+        Upload File
+        <Form.Control type="file" />
+    </Button>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Select
+
+## Select Menu
+
+Custom `<select>` menus only require a custom class `.custom-select` to trigger the custom styles. Custom styles are limited to the `<select>` initial appearance and cannot modify the `<option>` due to browser limitations.
+
+You may also choose from small or large custom selects to match similarly sized text inputs.
+submissions
+
+<ComponentPreview>
+<Form>
+  <Form.Group>
+		<select class="custom-select">
+            <option value="">Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+		</select>
+	</Form.Group>
+</Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-group">
+        <select class="custom-select" required>
+        <option value="">Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        </select>
+    </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group>
+        <select class="custom-select">
+            <option value="">Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+        </select>
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+
+## Multiple Select
+
+The `multiple` attribute is also supported. As is the size attribute along with multiple.
+
+<ComponentPreview>
+<Form>
+    <Form.Group>
+        <select class="custom-select" multiple>
+            <option value="">Select Multiple</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+        </select>
+    </Form.Group>
+</Form>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<form>
+    <div class="form-group">
+        <Label for="exampleSelectMulti">Select Multiple</Label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select>
+    </div>
+</form>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Form>
+    <Form.Group>
+        <select class="custom-select" multiple>
+            <option value="">Select Multiple</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+        </select>
+    </Form.Group>
+</Form>
+```
+
+</ReactCodeBlock>
+</CodePreview>

@@ -17,7 +17,7 @@ const defaultProps = {
     children: 'Loading...'
 };
 
-const SpinnerStaples = props => {
+function SpinnerStaples(props) {
     const {
         className,
         cssModule,
@@ -32,9 +32,9 @@ const SpinnerStaples = props => {
     const classes = mapToCssModules(
         classNames(
             className,
-            size ? `spinner-staples-${size}` : false,
+            size ? `spinner-staples-${size} spinner` : false,
             `spinner-${type}`,
-            color ? `text-${color}` : false
+            color ? `spinner-${color}` : false,
         ),
         cssModule
     );

@@ -4,6 +4,15 @@ root: '/docs'
 parents: ['Components']
 ---
 
+
+import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Button from 'react-bootstrap/Button'
+import Toast from 'react-bootstrap/Toast'
+import { ToastDemo, ToastAutohide } from './ToastDemo'
+
 # Toasts
 
 Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They’re built with flexbox, so they’re easy to align and position.
@@ -15,21 +24,55 @@ To encourage extensible and predictable toasts, we recommend a header and body. 
 
 Toasts are as flexible as you need and have very little required markup. At minimum, a single element is required to contain your "toasted" content with a dismiss button.
 
+<ComponentPreview>
+<Toast>
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+</Toast> 
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    <img src="..." class="rounded mr-2" alt="..." />
-    <strong class="mr-auto">Staples</strong>
-    <small>11 mins ago</small>
+    <p class="h5">This is a header</p>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="toast-body">
-    Hello, world! This is a toast message.
+    <p>Hello, world! This is a toast message.</p>
   </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Toast>
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+</Toast> 
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+
+<ComponentPreview>
+    <ToastDemo />
+</ComponentPreview>
 
 ## Translucent Toasts
 
@@ -55,59 +98,199 @@ Toasts are slightly translucent, and can blur the elements they appear over in b
 
 When you have multiple toasts, they stack vertically by default.
 
+<ComponentPreview>
+<Toast>
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+</Toast> 
+<Toast>
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+</Toast> 
+  </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    <img src="..." class="rounded mr-2" alt="...">
-    <strong class="mr-auto">Staples</strong>
-    <small class="text-muted">just now</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="toast-body">
-    See? Just like this.
-  </div>
+<div class="fade toast show" role="alert">
+    <div class="toast-header">
+        <p class="h5">This is a header</p>
+        <button type="button" class="close ml-2 mb-1" data-dismiss="toast">
+            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        <p>Hello, world! This is a toast message.</p>
+    </div>
 </div>
 
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    <img src="..." class="rounded mr-2" alt="..." />
-    <strong class="mr-auto">Staples</strong>
-    <small class="text-muted">2 seconds ago</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="toast-body">
-    Heads up, toasts will stack automatically
-  </div>
+<div class="fade toast show" role="alert">
+    <div class="toast-header">
+        <p class="h5">This is a header</p>
+        <button type="button" class="close ml-2 mb-1" data-dismiss="toast">
+            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        <p>Hello, world! This is a toast message.</p>
+    </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Toast>
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+</Toast>
+<Toast>
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+</Toast>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Position
 
 You can customize the placement of toasts as needed with css. The top right of an interface is commonly used for notifications, as is the top middle. However, if you intend on displaying toasts one at a time, you can specify the position in the `.toast` class itself.
 
+<ComponentPreview>
+<div
+  aria-live="polite"
+  aria-atomic="true"
+  style={{
+    position: 'relative',
+    minHeight: '100px',
+  }}
+>
+  <Toast
+    style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+    }}
+  >
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+  </Toast>
+</div>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-  <div class="toast" style="position: absolute; top: 0; right: 0;">
-    <div class="toast-header">
-      <img src="..." class="rounded mr-2" alt="..." />
-      <strong class="mr-auto">Staples</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 100px;">
+    <div class="fade toast show" role="alert" style="position: absolute; top: 0; right: 0;">
+        <div class="toast-header">
+            <p class="h5">This is a header</p>
+            <button type="button" class="close ml-2 mb-1" data-dismiss="toast">
+                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            <p>Hello, world! This is a toast message.</p>
+        </div>
     </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
 </div>
 ```
 
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<div
+  aria-live="polite"
+  aria-atomic="true"
+  style={{
+    position: 'relative',
+    minHeight: '100px',
+  }}
+>
+  <Toast
+    style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+    }}
+  >
+    <Toast.Header>
+        <p className="h5">This is a header</p>
+    </Toast.Header>
+    <Toast.Body>
+        <p>Hello, world! This is a toast message.</p>
+    </Toast.Body>
+  </Toast>
+</div>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 To generate multiple notifications at once, consider wrapping the toasts in a `<div>` element so they can easily stack as a group.
+
+<ComponentPreview>
+ <div
+  aria-live="polite"
+  aria-atomic="true"
+  style={{
+    position: 'relative',
+    minHeight: '200px',
+  }}
+>
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+    }}
+  >
+    <Toast>
+        <Toast.Header>
+            <p className="h5">This is a header</p>
+        </Toast.Header>
+        <Toast.Body>
+            <p>Hello, world! This is a toast message.</p>
+        </Toast.Body>
+    </Toast>
+    <Toast>
+        <Toast.Header>
+            <p className="h5">This is a header</p>
+        </Toast.Header>
+        <Toast.Body>
+            <p>Hello, world! This is a toast message.</p>
+        </Toast.Body>
+    </Toast>
+  </div>
+</div>
+</ComponentPreview>
+<CodePreview>
+<HtmlCodeBlock>
 
 ```html
 <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
@@ -115,105 +298,113 @@ To generate multiple notifications at once, consider wrapping the toasts in a `<
   <div style="position: absolute; top: 0; right: 0;">
 
     <!-- Then put toasts within -->
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <img src="..." class="rounded mr-2" alt="..." />
-        <strong class="mr-auto">Staples</strong>
-        <small class="text-muted">just now</small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="toast-body">
-        See? Just like this.
-      </div>
-    </div>
-
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <img src="..." class="rounded mr-2" alt="..." />
-        <strong class="mr-auto">Staples</strong>
-        <small class="text-muted">2 seconds ago</small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="toast-body">
-        Heads up, toasts will stack automatically
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-You can also use flexbox utilities to align toasts horizontally and/or vertically.
-
-```html
-<!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
-
-  <!-- Then put toasts within -->
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="..." class="rounded mr-2" alt="..." />
-      <strong class="mr-auto">Staples</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
-</div>
-```
-
-## Toast with Avatar
-
-Toasts can contain additional elements such as avatars, headers, and body copy as shown below. 
-
-
-```html
-<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-    <div class="toast-header border-0 pt-3 pl-3 pr-3">    
-        <div class="">
-            <img src="https://images.ctfassets.net/2yd1b0rk61ek/1f6o6A8a4QMY2Aqec9W511/628deae66cf70e357ced67e335c58fb7/190719_schoolsupplies_c.jpg" alt="..." class="avatar-img rounded-circle" width="36" height="36" />
-        </div>       
-        <strong class="mr-auto pl-3">Username</strong>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
-            </svg>
+    <div class="fade toast show" role="alert" style="position: absolute; top: 0; right: 0;">
+        <div class="toast-header">
+            <p class="h5">This is a header</p>
+            <button type="button" class="close ml-2 mb-1" data-dismiss="toast">
+                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
             </button>
+        </div>
+        <div class="toast-body">
+            <p>Hello, world! This is a toast message.</p>
+        </div>
     </div>
-    <div class="toast-body pl-3 pr-3">
-        This is an example of a toast message with two lines of copy.
-    </div>
-</div>  
-```
 
-## Toast with Links 
-Toasts can also contain links.
-
-```html
-<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-    <div class="toast-header border-0 pt-3 pl-3 pr-3">         
-        <strong class="mr-auto">1 item added to cart</strong>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
-            </svg>
-        </button>
+    <div class="fade toast show" role="alert" style="position: absolute; top: 0; right: 0;">
+        <div class="toast-header">
+            <p class="h5">This is a header</p>
+            <button type="button" class="close ml-2 mb-1" data-dismiss="toast">
+                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            <p>Hello, world! This is a toast message.</p>
+        </div>
     </div>
-    <div class="toast-body pt-0 pl-3 pr-3">
-        <p class="mt-0 mb-2">This is an example of a toast message.</p>
-        <a href="#">View Cart</a>
-    </div>
+  </div>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+ <div
+  aria-live="polite"
+  aria-atomic="true"
+  style={{
+    position: 'relative',
+    minHeight: '200px',
+  }}
+>
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+    }}
+  >
+    <Toast>
+        <Toast.Header>
+            <p className="h5">This is a header</p>
+        </Toast.Header>
+        <Toast.Body>
+            <p>Hello, world! This is a toast message.</p>
+        </Toast.Body>
+    </Toast>
+    <Toast>
+        <Toast.Header>
+            <p className="h5">This is a header</p>
+        </Toast.Header>
+        <Toast.Body>
+            <p>Hello, world! This is a toast message.</p>
+        </Toast.Body>
+    </Toast>
+  </div>
+</div>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Autohide
+As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
+
+<ComponentPreview>
+    <ToastAutohide />
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
+  <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+function Example() {
+  const [show, setShow] = useState(false);
+  return (
+    <Button className="mb-4" onClick={() => setShow(true)}>Show Autohide Toast</Button>
+    <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+        <Toast.Header>
+            <p className="h5">This is a header</p>
+        </Toast.Header>
+        <Toast.Body>
+            <p>Hello, world! This is a toast message.</p>
+        </Toast.Body>
+    </Toast>
+  );
+}
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Assistive Technology
 
@@ -225,14 +416,6 @@ Do not use toasts to convey essential information. If the notification's content
 
 You also need to adapt the `role` and `aria-live` level depending on the content. If it's an important message like an error, use `role="alert" aria-live="assertive"`, otherwise use `role="status" aria-live="polite"` attributes.
 
-As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
-
-
-```html
-<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
-  <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
-</div>
-```
 
 ## Usage
 

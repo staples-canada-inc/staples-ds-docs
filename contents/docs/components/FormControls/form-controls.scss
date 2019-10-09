@@ -1,0 +1,389 @@
+select:disabled:hover,
+input[type="checkbox"]:disabled:hover:after,
+input[type="radio"]:disabled:hover:after,
+input:disabled:hover,
+input:disabled {
+    cursor: not-allowed;
+}
+
+input[type="text"],
+.form-control,
+.custom-select {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: $line-height-base !important;
+    color: $dark-gray;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid $light-gray;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &::placeholder {
+        color: $light-gray;
+    }
+
+    &:focus {
+        border-color: $secondary;
+    }
+
+}
+
+// input:focus:required:valid,
+// input:focus:required:placeholder-shown {
+//     border: 1px solid $mid-gray;
+// }
+
+
+input[type="text"]:focus,
+.form-control:focus {
+    color: $dark-gray;
+    background-color: #fff;
+    border-color: $secondary;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+.form-group {
+    position: relative;
+}
+
+.btn-attached {
+    margin: 0px !important;
+    border-radius: 0px;
+    min-width: fit-content;
+}
+
+.attached-form-control {
+    height: calc(1.6875rem + 10px);
+}
+
+
+select[multiple]:focus option:checked {
+    background: $secondary;
+}
+
+
+.custom-file {
+    height: 46px;
+
+    &::placeholder {
+        color: $light-gray;
+    }
+
+    .custom-file-input,
+    .form-control-file {
+        height: 46px;
+        padding: 1rem;
+
+        &:focus~.custom-file-label {
+            border: 1px solid $secondary;
+        }
+
+        &:valid {
+            border: 1px solid $dark-gray;
+        }
+    }
+
+    .custom-file-label {
+        height: 46px;
+        padding: 1rem;
+        color: $light-gray;
+
+        &:after {
+            height: 46px;
+            padding: 1rem;
+            color: $primary;
+            background-color: $white;
+            border: 1px solid $primary;
+            margin-top: -1px;
+            margin-right: -1px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.custom-control {
+    min-height: 2.25rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.custom-control-input:disabled~.custom-control-label {
+    color: $light-gray;
+    cursor: not-allowed;
+}
+
+.custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-control-label {
+    line-height: 30px;
+    color: $tertiary;
+}
+
+
+////////////////////////////////////////////////////////////////
+// Custom Switch / Toggle
+////////////////////////////////////////////////////////////////
+.custom-switch {
+    padding-left: 3rem;
+}
+
+.custom-switch .custom-control-label::before {
+    left: -3rem;
+    height: 1.75rem;
+    width: 2.75rem !important;
+    pointer-events: all;
+    border-radius: 1.75rem !important;
+    background-color: $white;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color: $light-gray;
+}
+
+.custom-switch .custom-control-label::after {
+    top: calc(0.15rem + 3px);
+    left: calc(-3.1rem + 6px);
+    width: calc(1.75rem - 6px);
+    height: calc(1.75rem - 6px);
+    background-color: $light-gray;
+    border-radius: 50%;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-switch .custom-control-label:hover::before,
+.custom-switch .custom-control-label:hover::after {
+    cursor: pointer;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: $secondary;
+    border-color: $secondary;
+}
+
+.custom-control-input:checked~.custom-control-label::after {
+    left: calc(-2.2rem - 6px);
+}
+
+.custom-switch .custom-control-input:disabled~.custom-control-label::before {
+    background-color: $lightest-gray;
+    border-color: $light-gray;
+}
+
+.custom-switch .custom-control-input:disabled~.custom-control-label::after {
+    background-color: $white;
+    opacity: .8;
+}
+
+////////////////////////////////////////////////////////////////
+// Custom Checkbox
+////////////////////////////////////////////////////////////////
+.custom-checkbox {
+    color: $tertiary;
+    padding-left: 3rem;
+}
+
+.custom-checkbox .custom-control-label::before {
+    position: absolute;
+    top: 0.15rem;
+    left: -3rem;
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+    pointer-events: none;
+    content: "";
+    background-color: $white;
+    border: $light-gray solid 1px;
+}
+
+.custom-checkbox .custom-control-label::after {
+    position: absolute;
+    top: 0.15rem;
+    left: -3rem;
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    color: $white;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23ffffff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    left: calc(-2.55rem - 6px);
+}
+
+.custom-checkbox .custom-control-label:hover::before,
+.custom-checkbox .custom-control-label:hover::after {
+    cursor: pointer;
+}
+
+////////////////////////////////////////////////////////////////
+// Custom Radio
+////////////////////////////////////////////////////////////////
+.custom-radio {
+    padding-left: 3rem;
+}
+
+.custom-radio .custom-control-label::before {
+    position: absolute;
+    top: 0.15rem;
+    left: -3rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: $light-gray solid 1px;
+
+}
+
+.custom-radio .custom-control-label::after {
+    position: absolute;
+    top: 0.15rem;
+    left: -3rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    left: calc(-2.4rem - 4px);
+    top: 0.46rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' style='fill:rgb(255,255,255);' /%3E%3C/svg%3E");
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: $secondary;
+}
+
+
+////////////////////////////////////////////////////////////////
+// Date Picker
+////////////////////////////////////////////////////////////////
+
+table.CalendarMonth_table tr th, table.CalendarMonth_table tr td {
+    padding: 0.5rem;
+}
+.DayPicker_weekHeader_ul{
+    margin: -2px 0;
+}
+.DayPicker_weekHeader_li {
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
+}
+
+.CalendarDay__default:hover {
+    background: $light-gray;
+    border: 1px solid $light-gray;
+    color: inherit;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+    background: $dark-blue;
+    border: 1px double $dark-blue;
+    color: #fff;
+}
+
+.SingleDatePickerInput__withBorder{
+    border: 0px;
+    border-radius: 0px;
+}
+
+.SingleDatePickerInput{
+    div.DateInput{
+        width: auto;
+        .DateInput_fang{
+            margin-top: 1px;
+        }
+    }
+}
+
+.DateRangePickerInput {
+    input{
+        border: none;
+    }
+}
+
+.CalendarDay__selected_span{
+    background: $blue;
+    border: 1px double lighten($blue, 5%);
+}
+
+.CalendarDay__hovered_span{
+    background: $lightest-blue;
+    border: 1px double darken($lightest-blue, 5%);
+    color: $blue;
+}
+
+
+////////////////////////////////////////////////////////////////
+// Upload button
+////////////////////////////////////////////////////////////////
+
+.form-control-file-wrapper {
+position: relative;
+overflow: hidden;
+display: inline-block;
+}
+
+.form-control-file-wrapper input[type=file] {
+height: 40px;
+position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+////////////////////////////////////////////////////////////////
+// Select Input
+////////////////////////////////////////////////////////////////
+
+.custom-select, select:not([multiple]){
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.38376L6 5.37501L10.5 1.38376' stroke='%23747679' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 98% 55%;
+    background-size: 26px
+}
+
+/* CAUTION: IE hackery ahead */
+.custom-select::-ms-expand, select:not([multiple])::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    .custom-select, select:not([multiple]){
+        background:none\9;
+        padding: 5px\9;
+    } 
+}

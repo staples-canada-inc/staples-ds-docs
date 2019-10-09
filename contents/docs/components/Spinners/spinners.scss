@@ -34,19 +34,44 @@
     }
 
     .square:nth-child(1) {
-        animation-title: spinner-staples-animation-child-1;
+        animation-name: spinner-staples-animation-child-1;
         transition-timing-function: ease;
-        border-bottom: .19rem solid #cc0000;
-        border-left: .19rem solid #cc0000;
+        border-bottom: .15rem solid $primary;
+        border-left: .15rem solid $primary;
     }
 
     .square:nth-child(2) {
-        animation-title: spinner-staples-animation-child-2;
+        animation-name: spinner-staples-animation-child-2;
         transition-timing-function: ease;
-        border-top: .19rem solid #cc0000;
-        border-right: .19rem solid #cc0000;
+        border-top: .15rem solid $primary;
+        border-right: .15rem solid $primary;
     }
 }
+
+.spinner-staples.spinner-secondary{
+    .square:nth-child(1) {
+        border-bottom: .15rem solid $secondary;
+        border-left: .15rem solid $secondary;
+    }
+
+    .square:nth-child(2) {
+        border-top: .15rem solid $secondary;
+        border-right: .15rem solid $secondary;
+    }
+}
+
+.spinner-staples.spinner-tertiary{
+    .square:nth-child(1) {
+        border-bottom: .15rem solid $tertiary;
+        border-left: .15rem solid $tertiary;
+    }
+
+    .square:nth-child(2) {
+        border-top: .15rem solid $tertiary;
+        border-right: .15rem solid $tertiary;
+    }
+}
+
 
 .spinner-staples-sm {
     height: 1rem;
@@ -58,13 +83,37 @@
     }
 
     .square:nth-child(1) {
-        border-bottom: .2rem solid #cc0000;
-        border-left: .2rem solid #cc0000;
+        border-bottom: .15rem solid $primary;
+        border-left: .15rem solid $primary;
     }
 
     .square:nth-child(2) {
-        border-top: .2rem solid #cc0000;
-        border-right: .2rem solid #cc0000;
+        border-top: .15rem solid $primary;
+        border-right: .15rem solid $primary;
+    }
+}
+
+.spinner-staples-sm.spinner-secondary{
+    .square:nth-child(1) {
+        border-bottom: .15rem solid $secondary;
+        border-left: .15rem solid $secondary;
+    }
+
+    .square:nth-child(2) {
+        border-top: .15rem solid $secondary;
+        border-right: .15rem solid $secondary;
+    }
+}
+
+.spinner-staples-sm.spinner-tertiary{
+    .square:nth-child(1) {
+        border-bottom: .15rem solid $tertiary;
+        border-left: .15rem solid $tertiary;
+    }
+
+    .square:nth-child(2) {
+        border-top: .15rem solid $tertiary;
+        border-right: .15rem solid $tertiary;
     }
 }
 
@@ -79,17 +128,39 @@
     }
 
     .square:nth-child(1) {
-        border-bottom: .18rem solid #cc0000;
-        border-left: .18rem solid #cc0000;
+        border-bottom: .17rem solid $primary;
+        border-left: .17rem solid $primary;
     }
 
     .square:nth-child(2) {
-        border-top: .18rem solid #cc0000;
-        border-right: .18rem solid #cc0000;
+        border-top: .17rem solid $primary;
+        border-right: .17rem solid $primary;
     }
 }
 
+.spinner-staples-lg.spinner-secondary{
+    .square:nth-child(1) {
+        border-bottom: .17rem solid $secondary;
+        border-left: .17rem solid $secondary;
+    }
 
+    .square:nth-child(2) {
+        border-top: .17rem solid $secondary;
+        border-right: .17rem solid $secondary;
+    }
+}
+
+.spinner-staples-lg.spinner-tertiary{
+    .square:nth-child(1) {
+        border-bottom: .17rem solid $tertiary;
+        border-left: .17rem solid $tertiary;
+    }
+
+    .square:nth-child(2) {
+        border-top: .17rem solid $tertiary;
+        border-right: .17rem solid $tertiary;
+    }
+}
 
 
 @keyframes spinner-staples-animation-child-1 {
@@ -154,7 +225,23 @@
     }
 }
 
-// Spinner Alt
+////////////////////////////////////////////////
+// Color Variations
+///////////////////////////////////////////////
+
+
+$colors: (
+    primary: $primary, 
+    secondary: $secondary, 
+    tertiary: $tertiary
+);
+
+
+
+
+////////////////////////////////////////////////
+// Spinner Alt - Circle Spinner
+///////////////////////////////////////////////
 
 @keyframes spinner-border-lg {
     to {

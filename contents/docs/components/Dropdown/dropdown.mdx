@@ -14,6 +14,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import SplitButton from 'react-bootstrap/SplitButton'
 import Accordion from 'react-bootstrap/Accordion'
 import Nav from 'react-bootstrap/Nav'
+import Button from 'react-bootstrap/Button'
 
 
 # Dropdown Menu
@@ -224,15 +225,15 @@ In this dropdown menu, we have multi-leveled dropdowns which allows users to hav
 ## Split Button Dropdown
 
 <ComponentPreview>
-<Dropdown as={ButtonGroup}>
-    <Button variant="secondary">Split Button</Button>
-    <Dropdown.Toggle split variant="secondary" id="dropdown-split-basic" />
-    <Dropdown.Menu>
-        <Dropdown.Item href="#">Action</Dropdown.Item>
-        <Dropdown.Item href="#">Another action</Dropdown.Item>
-        <Dropdown.Item href="#">Something else</Dropdown.Item>
-    </Dropdown.Menu>
-</Dropdown>
+    <Dropdown as={ButtonGroup}>
+        <Button variant="secondary">Split Button</Button>
+        <Dropdown.Toggle split variant="secondary" id="dropdown-split-basic" />
+        <Dropdown.Menu>
+            <Dropdown.Item href="#">Action</Dropdown.Item>
+            <Dropdown.Item href="#">Another action</Dropdown.Item>
+            <Dropdown.Item href="#">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+    </Dropdown>
 </ComponentPreview>
 
 <CodePreview>
@@ -240,7 +241,7 @@ In this dropdown menu, we have multi-leveled dropdowns which allows users to hav
 
 ```html
 <div role="group" class="dropdown btn-group">
-    <button type="button" class="btn btn-secondary">Split Button</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle-split ">Split Button</button>
     <button aria-haspopup="true" aria-expanded="false" id="dropdown-split-basic" type="button" class="dropdown-toggle dropdown-toggle-split btn btn-secondary">
     </button>
     <div aria-labelledby="dropdown-split-basic" class="dropdown-menu">
@@ -256,7 +257,7 @@ In this dropdown menu, we have multi-leveled dropdowns which allows users to hav
 
 ```html
 <Dropdown as={ButtonGroup}>
-    <Button variant="success">Split Button</Button>
+    <Button variant="secondary">Split Button</Button>
     <Dropdown.Toggle split variant="secondary" id="dropdown-split-basic" />
     <Dropdown.Menu>
         <Dropdown.Item href="#">Action</Dropdown.Item>

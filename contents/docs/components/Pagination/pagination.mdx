@@ -4,9 +4,12 @@ root: '/docs'
 parents: ['Components']
 ---
 
-
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Pagination from 'react-bootstrap/Pagination'
+import PageItem from 'react-bootstrap/PageItem'
 
 # Pagination
 
@@ -17,30 +20,20 @@ Typically, pagination is used where there is more than 25 items displayed in one
 Here is a simple implementation of a pagination:
 
 <ComponentPreview>
-	<Pagination aria-label="Page navigation example">
-		<PaginationItem>
-			<PaginationLink first href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink previous href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">1</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">2</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">3</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink next href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink last href="#" />
-		</PaginationItem>
-	</Pagination>
+<Pagination>
+    <Pagination.First />
+    <Pagination.Prev />
+    <Pagination.Item>{1}</Pagination.Item>
+    <Pagination.Item active>{2}</Pagination.Item>
+    <Pagination.Item>{3}</Pagination.Item>
+    <Pagination.Next />
+    <Pagination.Last />
+</Pagination>
 </ComponentPreview>
+
+
+<CodePreview>
+<HtmlCodeBlock>
 
 ```  html
     <nav aria-label="Page navigation example">
@@ -72,203 +65,116 @@ Here is a simple implementation of a pagination:
     </nav>
 ```
 
-## Disabled and Active States
+</HtmlCodeBlock>
+<ReactCodeBlock>
 
-Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
-
-While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
-
-<ComponentPreview>
-	<Pagination aria-label="Page navigation example">
-		<PaginationItem disabled>
-			<PaginationLink first href="#" />
-		</PaginationItem>
-		<PaginationItem disabled>
-			<PaginationLink previous href="#" />
-		</PaginationItem>
-		<PaginationItem active>
-			<PaginationLink href="#">1</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">2</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">3</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink next href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink last href="#" />
-		</PaginationItem>
-	</Pagination>
-</ComponentPreview>
-
-```  html
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item disable" >
-                <a class="page-link" href="#" aria-label="First">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item disable" >
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">‹</span>
-                </a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">›</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Last">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+```html
+<Pagination>
+    <Pagination.First />
+    <Pagination.Prev />
+    <Pagination.Item>{1}</Pagination.Item>
+    <Pagination.Item active>{2}</Pagination.Item>
+    <Pagination.Item>{3}</Pagination.Item>
+    <Pagination.Next />
+    <Pagination.Last />
+</Pagination>
 ```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 ## Sizing
 
 Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes. You can also use classes `pagination-md` and `pagination-xl`.
 
-### Large Pagination
 
 <ComponentPreview>
-	<Pagination size="lg" aria-label="Page navigation example">
-		<PaginationItem>
-			<PaginationLink first href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink previous href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">1</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">2</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">3</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink next href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink last href="#" />
-		</PaginationItem>
-	</Pagination>
+<Pagination size="lg">
+    <Pagination.First />
+    <Pagination.Prev />
+    <Pagination.Item>{1}</Pagination.Item>
+    <Pagination.Item active>{2}</Pagination.Item>
+    <Pagination.Item>{3}</Pagination.Item>
+    <Pagination.Next />
+    <Pagination.Last />
+</Pagination>
+<br/>
+<Pagination size="sm">
+    <Pagination.First />
+    <Pagination.Prev />
+    <Pagination.Item>{1}</Pagination.Item>
+    <Pagination.Item active>{2}</Pagination.Item>
+    <Pagination.Item>{3}</Pagination.Item>
+    <Pagination.Next />
+    <Pagination.Last />
+</Pagination>
 </ComponentPreview>
 
-```  html
-    <nav aria-label="...">
-        <ul class="pagination pagination-lg">
-            <li class="page-item disable" >
-                <a class="page-link" href="#" aria-label="First">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item disable" >
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">‹</span>
-                </a>
-            </li>
-            <li class="page-item active" aria-current="page">
-                <span class="page-link">
-                    1
-                    <span class="sr-only">(current)</span>
-                </span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">›</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Last">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">
+        1
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>
+
+<nav aria-label="...">
+  <ul class="pagination pagination-sm">
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">
+        1
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>
 ```
 
-### Small Pagination
+</HtmlCodeBlock>
+<ReactCodeBlock>
 
-<ComponentPreview>
-	<Pagination size="sm" aria-label="Page navigation example">
-		<PaginationItem>
-			<PaginationLink first href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink previous href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">1</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">2</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink href="#">3</PaginationLink>
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink next href="#" />
-		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink last href="#" />
-		</PaginationItem>
-	</Pagination>
-</ComponentPreview>
+```html
+<Pagination size="lg">
+    <Pagination.First />
+    <Pagination.Prev />
+    <Pagination.Item>{1}</Pagination.Item>
+    <Pagination.Item active>{2}</Pagination.Item>
+    <Pagination.Item>{3}</Pagination.Item>
+    <Pagination.Next />
+    <Pagination.Last />
+</Pagination>
 
-```  html
-    <nav aria-label="...">
-        <ul class="pagination pagination-sm">
-            <li class="page-item disable" >
-                <a class="page-link" href="#" aria-label="First">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item disable" >
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">‹</span>
-                </a>
-            </li>
-            <li class="page-item active" aria-current="page">
-                <span class="page-link">
-                    1
-                    <span class="sr-only">(current)</span>
-                </span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">›</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Last">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<Pagination size="sm">
+    <Pagination.First />
+    <Pagination.Prev />
+    <Pagination.Item>{1}</Pagination.Item>
+    <Pagination.Item active>{2}</Pagination.Item>
+    <Pagination.Item>{3}</Pagination.Item>
+    <Pagination.Next />
+    <Pagination.Last />
+</Pagination>
 ```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Usage
 
 Pagination acts similiar to text links and breadcrumbs, where the current page indication is Mid-Gray in colour, and the inactive links remain Dark Blue. Links are underlined in hover state.
 
-### Assistive Technologies
+## Assistive Technologies
 
 We use a block of connected links for our pagination. This not only makes links harder to miss, but easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
 

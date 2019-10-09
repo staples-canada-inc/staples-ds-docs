@@ -8,48 +8,37 @@ import { ComponentPreview } from '../../../../src/pages/components/ComponentPrev
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
-
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 
 # Tabs
 
 Tabs are used to quickly switch between views or navigate content within the same context. We have two styles of tabs which can be used for Staples digital.
 
+
+## Simple Tabs
+
+A basic tab style where the tab in view is outlined. You can set a tab to be active by default by assigning the CSS class `.active`.
+
+<ComponentPreview>
+<Tabs defaultActiveKey="tab-2" id="uncontrolled-tab-example">
+    <Tab eventKey="tab-1" title="Tab 1"></Tab>
+    <Tab eventKey="tab-2" title="Tab 2"></Tab>
+    <Tab eventKey="tab-3" title="Tab 3"></Tab>
+</Tabs>
+</ComponentPreview>
+
+
 <CodePreview>
 <HtmlCodeBlock>
 
 ```html
-<li class="nav-item">
-    <a class="nav-link" href="#">
-    Tab 1
-    </a>
-</li>
-```
-
-</HtmlCodeBlock>
-
-<ReactCodeBlock>
-
-```html
-<UncontrolledAlert color="info">
-        I am an alert and I can be dismissed!
-</UncontrolledAlert>
-```
-
-</ReactCodeBlock>
-</CodePreview>
-
-
-### Simple Tabs
-
-A basic tab style where the tab in view is outlined. The text behaves similar to our links and breadcrumbs, where the current tab is Charcoal (#444444) and the additional tabs are Dark Blue (#198294).
-
-```html
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" href="#">Tab 1</a>
+    <a class="nav-link" href="# ">Tab 1</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Tab 2</a>
+    <a class="nav-link active" href="#">Tab 2</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" hreef="#">Tab 3</a>
@@ -57,251 +46,75 @@ A basic tab style where the tab in view is outlined. The text behaves similar to
 </ul>
 ```
 
-You can also set a tab to be active by default.
+</HtmlCodeBlock>
+<ReactCodeBlock>
 
 ```html
-<li class="nav-item">
-  <a class="nav-link active" href="#">Active</a>
-</li>
+<Tabs defaultActiveKey="tab-2" id="uncontrolled-tab-example">
+    <Tab eventKey="tab-1" title="Tab 1"></Tab>
+    <Tab eventKey="tab-2" title="Tab 2"></Tab>
+    <Tab eventKey="tab-3" title="Tab 3"></Tab>
+</Tabs>
 ```
 
-### Underlined Tabs
+</ReactCodeBlock>
+</CodePreview>
 
-A custom tab style where the tab in view is underlined. The additional tabs act similar to the style above, but underline on hover as well.
+## Pill Tabs (underlined)
+
+A pill tab style where the tab in view is underlined. The additional tabs act similar to the style above, but underline on hover as well.
 
 Here is an example of how a list of tabs are set up. This is to be done in the order that you wish to list the tabs.
 
+<ComponentPreview>
+<Tabs defaultActiveKey="tab-2" id="uncontrolled-tab-example" variant="pills">
+    <Tab eventKey="tab-1" title="Tab 1"></Tab>
+    <Tab eventKey="tab-2" title="Tab 2"></Tab>
+    <Tab eventKey="tab-3" title="Tab 3"></Tab>
+</Tabs>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-<ul class="nav border-bottom mb-3" id="pills-tab" role="tablist">
+<ul class="nav nav-pills">
   <li class="nav-item">
-    <a
-      class="nav-link active show"
-      id="pills-setup-tab"
-      data-toggle="pill"
-      href="#pills-setup"
-      role="tab"
-      aria-controls="pills-setup"
-      aria-selected="true"
-      >Tab 1</a
-    >
+    <a class="nav-link" href="#">Tab 1</a>
   </li>
   <li class="nav-item">
-    <a
-      class="nav-link"
-      id="pills-additional-tab"
-      data-toggle="pill"
-      href="#pills-additional"
-      role="tab"
-      aria-controls="pills-additional"
-      aria-selected="false"
-      >Tab 2</a
-    >
+    <a class="nav-link active" href="#">Tab 2</a>
   </li>
   <li class="nav-item">
-    <a
-      class="nav-link"
-      id="pills-additional-tab"
-      data-toggle="pill"
-      href="#pills-additional"
-      role="tab"
-      aria-controls="pills-additional"
-      aria-selected="false"
-      >Tab 3</a
-    >
+    <a class="nav-link" href="#">Tab 3</a>
   </li>
 </ul>
-
-<div class="tab-content" id="pills-tabContent">
-  <div
-    class="tab-pane fade active show"
-    id="pills-setup"
-    role="tabpanel"
-    aria-labelledby="pills-setup-tab"
-  >
-    Tab 1 ...
-    <div class="row mb-5 d-flex flex-wrap">
-      <div class="col-12 col-md-6 mb-4">
-        ...
-      </div>
-    </div>
-  </div>
-  <div
-    class="tab-pane fade"
-    id="pills-additional"
-    role="tabpanel"
-    aria-labelledby="pills-additional-tab"
-  >
-    Tab 2 ...
-    <div class="row mb-5 d-flex flex-wrap">
-      <div class="col-12 col-md-6 mb-4">
-        ...
-      </div>
-    </div>
-  </div>
-  <
-  <div
-    class="tab-pane fade"
-    id="pills-additional"
-    role="tabpanel"
-    aria-labelledby="pills-additional-tab"
-  >
-    > Tab 3 ...
-    <div class="row mb-5 d-flex flex-wrap">
-      <div class="col-12 col-md-6 mb-4">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Tabs defaultActiveKey="tab-2" id="uncontrolled-tab-example" variant="pills">
+    <Tab eventKey="tab-1" title="Tab 1"></Tab>
+    <Tab eventKey="tab-2" title="Tab 2"></Tab>
+    <Tab eventKey="tab-3" title="Tab 3"></Tab>
+</Tabs>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
 
 ## Responsive Tabs
 
 Tabs can behave responsively in one of two ways. They can either become an accordian(otherwise known as a collapse) or stack into a list group that is often positioned at the top of the page.
 
-### Tabs to Accordion
-
-Here we have to use `.card` to assist with turning the tabs into an accordian after the css is applied.
-
-```html
-<div class="container">
-  <ul id="tabs" class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a
-        id="tab-A"
-        href="#pane-A"
-        class="nav-link active"
-        data-toggle="tab"
-        role="tab"
-        >–A–</a
-      >
-    </li>
-    <li class="nav-item">
-      <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab"
-        >–B–</a
-      >
-    </li>
-    <li class="nav-item">
-      <a id="tab-C" href="#pane-C" class="nav-link" data-toggle="tab" role="tab"
-        >–C–</a
-      >
-    </li>
-  </ul>
-
-  <div id="content" class="tab-content" role="tablist">
-    <div
-      id="pane-A"
-      class="card tab-pane fade show active"
-      role="tabpanel"
-      aria-labelledby="tab-A"
-    >
-      <div class="card-header" role="tab" id="heading-A">
-        <h5 class="mb-0">
-          <!-- Note: `data-parent` removed from here -->
-          <a
-            data-toggle="collapse"
-            href="#collapse-A"
-            aria-expanded="true"
-            aria-controls="collapse-A"
-          >
-            Collapsible Group Item A
-          </a>
-        </h5>
-      </div>
-
-      <!-- Note: New place of `data-parent` -->
-      <div
-        id="collapse-A"
-        class="collapse show"
-        data-parent="#content"
-        role="tabpanel"
-        aria-labelledby="heading-A"
-      >
-        <div class="card-body">
-          [Tab content A]
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="pane-B"
-      class="card tab-pane fade"
-      role="tabpanel"
-      aria-labelledby="tab-B"
-    >
-      <div class="card-header" role="tab" id="heading-B">
-        <h5 class="mb-0">
-          <a
-            class="collapsed"
-            data-toggle="collapse"
-            href="#collapse-B"
-            aria-expanded="false"
-            aria-controls="collapse-B"
-          >
-            Collapsible Group Item B
-          </a>
-        </h5>
-      </div>
-      <div
-        id="collapse-B"
-        class="collapse"
-        data-parent="#content"
-        role="tabpanel"
-        aria-labelledby="heading-B"
-      >
-        <div class="card-body">
-          [Tab content B]
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="pane-C"
-      class="card tab-pane fade"
-      role="tabpanel"
-      aria-labelledby="tab-C"
-    >
-      <div class="card-header" role="tab" id="heading-C">
-        <h5 class="mb-0">
-          <a
-            class="collapsed"
-            data-toggle="collapse"
-            href="#collapse-C"
-            aria-expanded="false"
-            aria-controls="collapse-C"
-          >
-            Collapsible Group Item C
-          </a>
-        </h5>
-      </div>
-      <div
-        id="collapse-C"
-        class="collapse"
-        role="tabpanel"
-        data-parent="#content"
-        aria-labelledby="heading-C"
-      >
-        <div class="card-body">
-          [Tab content C]
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-### Tabs to List Group
-
-In order for tabs to stack into a list group in responsive views, use the following css:
-
-```
-Sample code
-```
 
 ## Usage
 
 Each tab label describes its content and sets user expectations. Labels are short and concise. Keep in mind that at mobile widths, the character length of a title will impact the experience.
 
-A maximum of 5-6 tabs may be displayed. If additional tabs are required, consider using a side navigation to organize content. See [Navigation](#navigation)
+A maximum of 5-6 tabs may be displayed. If additional tabs are required, consider using a side navigation to organize content.
 
 Regardless of tab style, the current tab's text colour will use the Charcoal (#444444) and the alternate tabs will remain Dark Blue (#198294).

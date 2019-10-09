@@ -1,7 +1,5 @@
 import React, { useState }  from 'react';
 import Modal from 'react-bootstrap/Modal'
-import ModalBody from 'react-bootstrap/ModalBody'
-import ModalFooter from 'react-bootstrap/ModalFooter'
 import Button from 'react-bootstrap/Button'
 
 function ModalDemo() {

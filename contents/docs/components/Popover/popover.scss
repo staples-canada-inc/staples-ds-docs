@@ -1,0 +1,27 @@
+.popover{
+    padding: 1rem;
+}
+.popover-header{
+    margin-bottom: 0;
+    color: inherit;
+    background-color: transparent;
+    border-bottom: none;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.bs-popover-right, .bs-popover-auto[x-placement^="right"] {
+    margin-left: 1rem;
+}
+
+.bs-popover-left, .bs-popover-auto[x-placement^="left"] {
+    margin-right: 1rem;
+}
+
+.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
+    margin-bottom: 1rem;
+}
+
+.bs-popover-bottom, .bs-popover-auto[x-placement^="bottom"] {
+    margin-top: 1rem;
+}
