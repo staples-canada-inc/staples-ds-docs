@@ -4,11 +4,10 @@ root: '/docs'
 parents: ['Components']
 ---
 
-
-import SpinnerStaples from "./SpinnerStaples";
+import SpinnerStaples from './SpinnerStaples'
 import Spinner from 'react-bootstrap/Spinner'
 import Button from 'react-bootstrap/Button'
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
@@ -21,33 +20,50 @@ Staples' spinners can be used to show the loading state in your projects. Theyâ€
 
 This is the branded custom spinner built for Staples Canada.
 
-
 <ComponentPreview>
-    <SpinnerStaples className="mr-5" color="primary" size="sm">Loading...</SpinnerStaples>
-	<SpinnerStaples className="mr-5" color="primary">Loading...</SpinnerStaples>
-	<SpinnerStaples className="mr-5" color="primary" size="lg">Loading...</SpinnerStaples>
-    <br/>
-    <br/>
-    <br/>
-	<SpinnerStaples className="mr-5" color="secondary" size="sm">Loading...</SpinnerStaples>
-	<SpinnerStaples className="mr-5" color="secondary">Loading...</SpinnerStaples>
-	<SpinnerStaples className="mr-5" color="secondary" size="lg">Loading...</SpinnerStaples>
-    <br/>
-    <br/>
-    <br/>
-	<SpinnerStaples className="mr-5" color="tertiary" size="sm">Loading...</SpinnerStaples>
-	<SpinnerStaples className="mr-5" color="tertiary">Loading...</SpinnerStaples>
-	<SpinnerStaples className="mr-5" color="tertiary" size="lg">Loading...</SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="primary" size="sm">
+    Loading...
+  </SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="primary">
+    Loading...
+  </SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="primary" size="lg">
+    Loading...
+  </SpinnerStaples>
+  <br />
+  <br />
+  <br />
+  <SpinnerStaples className="mr-5" color="secondary" size="sm">
+    Loading...
+  </SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="secondary">
+    Loading...
+  </SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="secondary" size="lg">
+    Loading...
+  </SpinnerStaples>
+  <br />
+  <br />
+  <br />
+  <SpinnerStaples className="mr-5" color="tertiary" size="sm">
+    Loading...
+  </SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="tertiary">
+    Loading...
+  </SpinnerStaples>
+  <SpinnerStaples className="mr-5" color="tertiary" size="lg">
+    Loading...
+  </SpinnerStaples>
 </ComponentPreview>
 
 <CodePreview>
 <HtmlCodeBlock>
 
-```  html
+```html
 <div role="status" class="spinner-staples">
-    <div class="square"></div>
-    <div class="square"></div>
-    <span class="sr-only">Loading...</span>
+  <div class="square"></div>
+  <div class="square"></div>
+  <span class="sr-only">Loading...</span>
 </div>
 ```
 
@@ -55,52 +71,79 @@ This is the branded custom spinner built for Staples Canada.
 <ReactCodeBlock>
 
 ```html
-<SpinnerStaples className="mr-5" color="primary" size="sm">Loading...</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="primary" size="sm"
+  >Loading...</SpinnerStaples
+>
 <SpinnerStaples className="mr-5" color="primary">Loading...</SpinnerStaples>
-<SpinnerStaples className="mr-5" color="primary" size="lg">Loading...</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="primary" size="lg"
+  >Loading...</SpinnerStaples
+>
 
-<SpinnerStaples className="mr-5" color="secondary" size="sm">Loading...</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="secondary" size="sm"
+  >Loading...</SpinnerStaples
+>
 <SpinnerStaples className="mr-5" color="secondary">Loading...</SpinnerStaples>
-<SpinnerStaples className="mr-5" color="secondary" size="lg">Loading...</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="secondary" size="lg"
+  >Loading...</SpinnerStaples
+>
 
-<SpinnerStaples className="mr-5" color="tertiary" size="sm">Loading...</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="tertiary" size="sm"
+  >Loading...</SpinnerStaples
+>
 <SpinnerStaples className="mr-5" color="tertiary">Loading...</SpinnerStaples>
-<SpinnerStaples className="mr-5" color="tertiary" size="lg">Loading...</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="tertiary" size="lg"
+  >Loading...</SpinnerStaples
+>
 ```
 
 </ReactCodeBlock>
 </CodePreview>
-
-
 
 ## Basic Spinner
 
 This is the Basic Spinner to be used in cases where the branded spinner is not ideal.
 
 <ComponentPreview>
-	<Spinner className="mr-5" color="primary" size="sm">Loading...</Spinner>
-	<Spinner className="mr-5" color="primary">Loading...</Spinner>
-	<Spinner className="mr-5" color="primary" size="lg">Loading...</Spinner>
-    <br/>
-    <br/>
-    <br/>    
-    <Spinner className="mr-5" color="secondary" size="sm">Loading...</Spinner>
-	<Spinner className="mr-5" color="secondary">Loading...</Spinner>
-	<Spinner className="mr-5" color="secondary" size="lg">Loading...</Spinner>
-    <br/>
-    <br/>
-    <br/>
-    <Spinner className="mr-5" color="tertiary" size="sm">Loading...</Spinner>
-	<Spinner className="mr-5" color="tertiary">Loading...</Spinner>
-	<Spinner className="mr-5" color="tertiary" size="lg">Loading...</Spinner>
+  <Spinner className="mr-5" color="primary" size="sm">
+    Loading...
+  </Spinner>
+  <Spinner className="mr-5" color="primary">
+    Loading...
+  </Spinner>
+  <Spinner className="mr-5" color="primary" size="lg">
+    Loading...
+  </Spinner>
+  <br />
+  <br />
+  <br />
+  <Spinner className="mr-5" color="secondary" size="sm">
+    Loading...
+  </Spinner>
+  <Spinner className="mr-5" color="secondary">
+    Loading...
+  </Spinner>
+  <Spinner className="mr-5" color="secondary" size="lg">
+    Loading...
+  </Spinner>
+  <br />
+  <br />
+  <br />
+  <Spinner className="mr-5" color="tertiary" size="sm">
+    Loading...
+  </Spinner>
+  <Spinner className="mr-5" color="tertiary">
+    Loading...
+  </Spinner>
+  <Spinner className="mr-5" color="tertiary" size="lg">
+    Loading...
+  </Spinner>
 </ComponentPreview>
 
-```  html
-    <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
+```html
+<div class="spinner-border text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
 ```
-
 
 ## Buttons with spinners
 
@@ -108,69 +151,75 @@ Like the original Bootstrap spinners, these can also be used with buttons. To us
 
 <ComponentPreview>
   <Button variant="primary" className="mr-4" disabled>
-      <SpinnerStaples
-          as="span"
-          animation="border"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-          className="mr-3" />
-      &nbsp;&nbsp;Loading...
+    <SpinnerStaples
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+      className="mr-3"
+    />
+    &nbsp;&nbsp;Loading...
   </Button>
   <Button variant="secondary" className="mr-4" disabled>
-      <SpinnerStaples
-          as="span"
-          animation="border"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-          className="mr-3"
-          color="secondary" />
-      &nbsp;&nbsp;Loading...
+    <SpinnerStaples
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+      className="mr-3"
+      color="secondary"
+    />
+    &nbsp;&nbsp;Loading...
   </Button>
   <Button variant="tertiary" className="mr-4" disabled>
-      <SpinnerStaples
-          as="span"
-          animation="border"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-          className="mr-3"
-          color="tertiary" />
-      &nbsp;&nbsp;Loading...
+    <SpinnerStaples
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+      className="mr-3"
+      color="tertiary"
+    />
+    &nbsp;&nbsp;Loading...
   </Button>
-  <br/>
-    <Button variant="primary" className="mr-4 mt-4" disabled>
-      <Spinner
-          as="span"
-          animation="border"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-          className="mr-3" />
-      &nbsp;&nbsp;Loading...
+  <br />
+  <Button variant="primary" className="mr-4 mt-4" disabled>
+    <Spinner
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+      className="mr-3"
+    />
+    &nbsp;&nbsp;Loading...
   </Button>
   <Button variant="secondary" className="mr-4 mt-4" disabled>
-      <Spinner
-          as="span"
-          animation="border"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-          className="mr-3"
-          color="secondary" />
-      &nbsp;&nbsp;Loading...
+    <Spinner
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+      className="mr-3"
+      color="secondary"
+    />
+    &nbsp;&nbsp;Loading...
   </Button>
   <Button variant="tertiary" className="mr-4 mt-4" disabled>
-      <Spinner
-          as="span"
-          animation="border"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-          className="mr-3"
-          color="tertiary" />
-      &nbsp;&nbsp;Loading...
+    <Spinner
+      as="span"
+      animation="border"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+      className="mr-3"
+      color="tertiary"
+    />
+    &nbsp;&nbsp;Loading...
   </Button>
 </ComponentPreview>
 

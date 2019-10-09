@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/design-system/staples-ds.css'
 import '../css/site/preview-overrides.css'
-import Header from '../Header'
+import Header from '../components/Header'
 import QuickAccess from './components/QuickAccess'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'

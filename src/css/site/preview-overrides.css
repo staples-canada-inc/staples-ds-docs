@@ -142,3 +142,8 @@ background-color: #F5F5F5;
     top: 30px;
     left: 30px;
 }
+
+[role="navigation"] h5:hover{
+    cursor: pointer;
+    color: #198294;
+}

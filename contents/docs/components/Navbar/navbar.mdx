@@ -7,7 +7,7 @@ parents: ['Components']
 import logo from '../../../../src/images/Staples_Logo_EN.svg'
 import logo_white from '../../../../src/images/Staples_Logo_White_EN.svg'
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
@@ -46,28 +46,28 @@ Here’s what you need to know before getting started with the Navbar:
 A responsive navigation header, including support for branding, navigation, and more. Here’s an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the lg (large) breakpoint.
 
 <ComponentPreview>
-<Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#link">Link</Nav.Link>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown" caret>
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
+  <Navbar bg="light" expand="lg">
+    <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link href="#link">Link</Nav.Link>
-    </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="secondary">Search</Button>
-    </Form>
-  </Navbar.Collapse>
-</Navbar>
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown" caret>
+          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        </NavDropdown>
+        <Nav.Link href="#link">Link</Nav.Link>
+      </Nav>
+      <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="secondary">Search</Button>
+      </Form>
+    </Navbar.Collapse>
+  </Navbar>
 </ComponentPreview>
 
 <CodePreview>
@@ -75,35 +75,58 @@ A responsive navigation header, including support for branding, navigation, and 
 
 ```html
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
 </nav>
 ```
 
@@ -112,25 +135,25 @@ A responsive navigation header, including support for branding, navigation, and 
 
 ```html
 <Navbar bg="light" expand="lg">
-    <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
-            </NavDropdown>
-        </Nav>
-        <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="secondary">Search</Button>
-        </Form>
-    </Navbar.Collapse>
+  <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+    <nav className="mr-auto">
+      <Nav.Link href="#">Home</Nav.Link>
+      <Nav.Link href="#">Link</Nav.Link>
+      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+        <NavDropdown.Item href="#">Action</NavDropdown.Item>
+        <NavDropdown.Item href="#">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="#">Something</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+      </NavDropdown>
+    </nav>
+    <form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <button variant="secondary">Search</button>
+    </form>
+  </Navbar.Collapse>
 </Navbar>
 ```
 
@@ -142,32 +165,30 @@ A responsive navigation header, including support for branding, navigation, and 
 The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
 
 <ComponentPreview>
-<h4> Text Based </h4>
+  <h4> Text Based </h4>
   <Navbar bg="light">
     <Navbar.Brand href="#">Brand link</Navbar.Brand>
   </Navbar>
-<br/>
-<h4>Image Based </h4>
+  <br />
+  <h4>Image Based </h4>
   <Navbar bg="light">
     <Navbar.Brand href="#">
-        <Image src={logo} alt="Staples Logo" height="35" />
+      <Image src={logo} alt="Staples Logo" height="35" />
     </Navbar.Brand>
   </Navbar>
 </ComponentPreview>
 
-
-
 <CodePreview>
 <HtmlCodeBlock>
 
-```  html
+```html
 <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Brand link</a>
+  <a class="navbar-brand" href="#">Brand link</a>
 </nav>
 <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="...." height="35" alt="Staples Logo" />
-    </a>
+  <a class="navbar-brand" href="#">
+    <img src="...." height="35" alt="Staples Logo" />
+  </a>
 </nav>
 ```
 
@@ -176,12 +197,12 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 
 ```html
 <Navbar bg="light">
-    <Navbar.Brand href="#">Brand link</Navbar.Brand>
+  <Navbar.Brand href="#">Brand link</Navbar.Brand>
 </Navbar>
 <Navbar bg="light">
-    <Navbar.Brand href="#">
-        <Image src={logo} alt="Staples Logo" height="35" />
-    </Navbar.Brand>
+  <Navbar.Brand href="#">
+    <image src="{logo}" alt="Staples Logo" height="35" />
+  </Navbar.Brand>
 </Navbar>
 ```
 
@@ -200,43 +221,80 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 ### Navbar with Dropdown
 
 <ComponentPreview>
-<Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Test link 1</Nav.Link>
-      <Nav.Link href="#link">Test link 2</Nav.Link>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown" caret>
-        <NavDropdown.Item href="#">Option 1</NavDropdown.Item>
-        <NavDropdown.Item href="#">Option 2</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#">Another Option</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
+  <Navbar bg="light" expand="lg">
+    <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link href="#home">Test link 1</Nav.Link>
+        <Nav.Link href="#link">Test link 2</Nav.Link>
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown" caret>
+          <NavDropdown.Item href="#">Option 1</NavDropdown.Item>
+          <NavDropdown.Item href="#">Option 2</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#">Another Option</NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 </ComponentPreview>
 
 <CodePreview>
 <HtmlCodeBlock>
 
-```  html
-<nav class="navbar navbar-expand-md navbar-light bg-light"><a href="/" class="navbar-brand"><img src={logo} style="height: 30px;"></a><button id="toggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-    <div toggler="#toggler" class="collapse navbar-collapse">
-        <ul class="ml-auto navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                    <div tabindex="-1" class="dropdown-divider"></div>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                </div>
-            </li>
-        </ul>
-    </div>
+```html
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a href="/" class="navbar-brand"><img src="{logo}" style="height: 30px;"/></a
+  ><button id="toggler" type="button" class="navbar-toggler">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div toggler="#toggler" class="collapse navbar-collapse">
+    <ul class="ml-auto navbar-nav">
+      <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+      <li class="dropdown nav-item">
+        <a
+          aria-haspopup="true"
+          href="#"
+          class="dropdown-toggle nav-link"
+          aria-expanded="false"
+          >Options</a
+        >
+        <div
+          tabindex="-1"
+          role="menu"
+          aria-hidden="true"
+          class="dropdown-menu dropdown-menu-right"
+        >
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 1
+          </button>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 2
+          </button>
+          <div tabindex="-1" class="dropdown-divider"></div>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Another Option
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
 ```
 
@@ -248,7 +306,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
   <Navbar.Brand href="#home">Staples Inc.</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
+    <nav className="mr-auto">
       <Nav.Link href="#home">Test link 1</Nav.Link>
       <Nav.Link href="#link">Test link 2</Nav.Link>
       <NavDropdown title="Dropdown" id="basic-nav-dropdown" caret>
@@ -257,7 +315,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
         <NavDropdown.Divider />
         <NavDropdown.Item href="#">Another Option</NavDropdown.Item>
       </NavDropdown>
-    </Nav>
+    </nav>
   </Navbar.Collapse>
 </Navbar>
 ```
@@ -270,35 +328,35 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 The navbar styling for Staples sub-sites can either be coloured in our brand red, lightest-gray or charcoal. The Staples logo should be left-justified with nav links right-justified on the same line.
 
 <ComponentPreview>
-    <h4>Primary Theme</h4>
-    <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-    </Navbar>
-    <br />
-    <h4>Light-Gray Theme</h4>
-    <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-    </Navbar>
-    <br />
-    <h4>Charcoal Theme</h4>
-    <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-    </Navbar>
+  <h4>Primary Theme</h4>
+  <Navbar bg="primary" variant="dark">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+  </Navbar>
+  <br />
+  <h4>Light-Gray Theme</h4>
+  <Navbar bg="light" variant="light">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+  </Navbar>
+  <br />
+  <h4>Charcoal Theme</h4>
+  <Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+  </Navbar>
 </ComponentPreview>
 
 <CodePreview>
@@ -307,56 +365,155 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 ```html
 <!-- Primary Theme -->
 <nav class="navbar navbar-dark bg-primary">
-      <div toggler="#toggler" class="collapse navbar-collapse">
-        <ul class="ml-auto navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                    <div tabindex="-1" class="dropdown-divider"></div>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                </div>
-            </li>
-        </ul>
-    </div>
+  <div toggler="#toggler" class="collapse navbar-collapse">
+    <ul class="ml-auto navbar-nav">
+      <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+      <li class="dropdown nav-item">
+        <a
+          aria-haspopup="true"
+          href="#"
+          class="dropdown-toggle nav-link"
+          aria-expanded="false"
+          >Options</a
+        >
+        <div
+          tabindex="-1"
+          role="menu"
+          aria-hidden="true"
+          class="dropdown-menu dropdown-menu-right"
+        >
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 1
+          </button>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 2
+          </button>
+          <div tabindex="-1" class="dropdown-divider"></div>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Another Option
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <!-- Light-Gray Theme -->
 <nav class="navbar navbar-light bg-light">
-      <div toggler="#toggler" class="collapse navbar-collapse">
-        <ul class="ml-auto navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                    <div tabindex="-1" class="dropdown-divider"></div>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                </div>
-            </li>
-        </ul>
-    </div>
+  <div toggler="#toggler" class="collapse navbar-collapse">
+    <ul class="ml-auto navbar-nav">
+      <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+      <li class="dropdown nav-item">
+        <a
+          aria-haspopup="true"
+          href="#"
+          class="dropdown-toggle nav-link"
+          aria-expanded="false"
+          >Options</a
+        >
+        <div
+          tabindex="-1"
+          role="menu"
+          aria-hidden="true"
+          class="dropdown-menu dropdown-menu-right"
+        >
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 1
+          </button>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 2
+          </button>
+          <div tabindex="-1" class="dropdown-divider"></div>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Another Option
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <!-- Charcoal Theme -->
 <nav class="navbar navbar-dark">
-      <div toggler="#toggler" class="collapse navbar-collapse">
-        <ul class="ml-auto navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
-            <li class="dropdown nav-item"><a aria-haspopup="true" href="#" class="dropdown-toggle nav-link" aria-expanded="false">Options</a>
-                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 1</button>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Option 2</button>
-                    <div tabindex="-1" class="dropdown-divider"></div>
-                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Option</button>
-                </div>
-            </li>
-        </ul>
-    </div>
+  <div toggler="#toggler" class="collapse navbar-collapse">
+    <ul class="ml-auto navbar-nav">
+      <li class="nav-item"><a href="#" class="nav-link">Test link 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Test Link 2</a></li>
+      <li class="dropdown nav-item">
+        <a
+          aria-haspopup="true"
+          href="#"
+          class="dropdown-toggle nav-link"
+          aria-expanded="false"
+          >Options</a
+        >
+        <div
+          tabindex="-1"
+          role="menu"
+          aria-hidden="true"
+          class="dropdown-menu dropdown-menu-right"
+        >
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 1
+          </button>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Option 2
+          </button>
+          <div tabindex="-1" class="dropdown-divider"></div>
+          <button
+            type="button"
+            tabindex="0"
+            role="menuitem"
+            class="dropdown-item"
+          >
+            Another Option
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
 ```
 
@@ -364,42 +521,42 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 <ReactCodeBlock>
 
 ```html
-    <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
-        </Form>
-    </Navbar>
-    <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-light">Search</Button>
-        </Form>
-    </Navbar>
-    <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-primary">Search</Button>
-        </Form>
-    </Navbar>
+<Navbar bg="dark" variant="dark">
+  <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+  <nav className="mr-auto">
+    <Nav.Link href="#home">Home</Nav.Link>
+    <Nav.Link href="#features">Features</Nav.Link>
+    <Nav.Link href="#pricing">Pricing</Nav.Link>
+  </nav>
+  <form inline>
+    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+    <button variant="outline-info">Search</button>
+  </form>
+</Navbar>
+<Navbar bg="primary" variant="dark">
+  <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+  <nav className="mr-auto">
+    <Nav.Link href="#home">Home</Nav.Link>
+    <Nav.Link href="#features">Features</Nav.Link>
+    <Nav.Link href="#pricing">Pricing</Nav.Link>
+  </nav>
+  <form inline>
+    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+    <button variant="outline-light">Search</button>
+  </form>
+</Navbar>
+<Navbar bg="light" variant="light">
+  <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+  <nav className="mr-auto">
+    <Nav.Link href="#home">Home</Nav.Link>
+    <Nav.Link href="#features">Features</Nav.Link>
+    <Nav.Link href="#pricing">Pricing</Nav.Link>
+  </nav>
+  <form inline>
+    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+    <button variant="outline-primary">Search</button>
+  </form>
+</Navbar>
 ```
 
 </ReactCodeBlock>

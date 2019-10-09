@@ -4,7 +4,7 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
@@ -20,7 +20,7 @@ Typically, pagination is used where there is more than 25 items displayed in one
 Here is a simple implementation of a pagination:
 
 <ComponentPreview>
-<Pagination>
+  <Pagination>
     <Pagination.First />
     <Pagination.Prev />
     <Pagination.Item>{1}</Pagination.Item>
@@ -28,41 +28,40 @@ Here is a simple implementation of a pagination:
     <Pagination.Item>{3}</Pagination.Item>
     <Pagination.Next />
     <Pagination.Last />
-</Pagination>
+  </Pagination>
 </ComponentPreview>
-
 
 <CodePreview>
 <HtmlCodeBlock>
 
-```  html
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="First">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">‹</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">›</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Last">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+```html
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="First">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">‹</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">›</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Last">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 ```
 
 </HtmlCodeBlock>
@@ -70,27 +69,25 @@ Here is a simple implementation of a pagination:
 
 ```html
 <Pagination>
-    <Pagination.First />
-    <Pagination.Prev />
-    <Pagination.Item>{1}</Pagination.Item>
-    <Pagination.Item active>{2}</Pagination.Item>
-    <Pagination.Item>{3}</Pagination.Item>
-    <Pagination.Next />
-    <Pagination.Last />
+  <Pagination.First />
+  <Pagination.Prev />
+  <Pagination.Item>{1}</Pagination.Item>
+  <Pagination.Item active>{2}</Pagination.Item>
+  <Pagination.Item>{3}</Pagination.Item>
+  <Pagination.Next />
+  <Pagination.Last />
 </Pagination>
 ```
 
 </ReactCodeBlock>
 </CodePreview>
 
-
 ## Sizing
 
 Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes. You can also use classes `pagination-md` and `pagination-xl`.
 
-
 <ComponentPreview>
-<Pagination size="lg">
+  <Pagination size="lg">
     <Pagination.First />
     <Pagination.Prev />
     <Pagination.Item>{1}</Pagination.Item>
@@ -98,9 +95,9 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
     <Pagination.Item>{3}</Pagination.Item>
     <Pagination.Next />
     <Pagination.Last />
-</Pagination>
-<br/>
-<Pagination size="sm">
+  </Pagination>
+  <br />
+  <Pagination size="sm">
     <Pagination.First />
     <Pagination.Prev />
     <Pagination.Item>{1}</Pagination.Item>
@@ -108,7 +105,7 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
     <Pagination.Item>{3}</Pagination.Item>
     <Pagination.Next />
     <Pagination.Last />
-</Pagination>
+  </Pagination>
 </ComponentPreview>
 
 <CodePreview>
@@ -147,23 +144,23 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 
 ```html
 <Pagination size="lg">
-    <Pagination.First />
-    <Pagination.Prev />
-    <Pagination.Item>{1}</Pagination.Item>
-    <Pagination.Item active>{2}</Pagination.Item>
-    <Pagination.Item>{3}</Pagination.Item>
-    <Pagination.Next />
-    <Pagination.Last />
+  <Pagination.First />
+  <Pagination.Prev />
+  <Pagination.Item>{1}</Pagination.Item>
+  <Pagination.Item active>{2}</Pagination.Item>
+  <Pagination.Item>{3}</Pagination.Item>
+  <Pagination.Next />
+  <Pagination.Last />
 </Pagination>
 
 <Pagination size="sm">
-    <Pagination.First />
-    <Pagination.Prev />
-    <Pagination.Item>{1}</Pagination.Item>
-    <Pagination.Item active>{2}</Pagination.Item>
-    <Pagination.Item>{3}</Pagination.Item>
-    <Pagination.Next />
-    <Pagination.Last />
+  <Pagination.First />
+  <Pagination.Prev />
+  <Pagination.Item>{1}</Pagination.Item>
+  <Pagination.Item active>{2}</Pagination.Item>
+  <Pagination.Item>{3}</Pagination.Item>
+  <Pagination.Next />
+  <Pagination.Last />
 </Pagination>
 ```
 

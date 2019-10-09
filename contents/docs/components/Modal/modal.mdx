@@ -4,7 +4,7 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
@@ -13,8 +13,6 @@ import VerticallyCenteredModal from './VerticallyCenteredModal'
 import ModalSizes from './ModalSizes'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
-
-
 
 # Modal
 
@@ -26,18 +24,18 @@ Below is a static modal (meaning its `position` and `display` have been overridd
 Here is an example of a simple modal:
 
 <ComponentPreview>
-<Modal.Dialog>
-  <Modal.Header closeButton>
-    <Modal.Title>Modal title</Modal.Title>
-  </Modal.Header>
-  <Modal.Body>
-    <p>Modal body text goes here.</p>
-  </Modal.Body>
-  <Modal.Footer>
-    <Button variant="tertiary">Close</Button>
-    <Button variant="secondary">Save changes</Button>
-  </Modal.Footer>
-</Modal.Dialog>
+  <Modal.Dialog>
+    <Modal.Header closeButton>
+      <Modal.Title>Modal title</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p>Modal body text goes here.</p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button variant="tertiary">Close</Button>
+      <Button variant="secondary">Save changes</Button>
+    </Modal.Footer>
+  </Modal.Dialog>
 </ComponentPreview>
 
 <CodePreview>
@@ -49,7 +47,12 @@ Here is an example of a simple modal:
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -57,7 +60,9 @@ Here is an example of a simple modal:
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
@@ -70,16 +75,16 @@ Here is an example of a simple modal:
 
 ```html
 <Modal.Dialog>
-    <Modal.Header closeButton>
-        <Modal.Title>Modal title</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-        <p>Modal body text goes here.</p>
-    </Modal.Body>
-    <Modal.Footer>
-        <Button variant="tertiary">Close</Button>
-        <Button variant="secondary">Save changes</Button>
-    </Modal.Footer>
+  <Modal.Header closeButton>
+    <Modal.Title>Modal title</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    <p>Modal body text goes here.</p>
+  </Modal.Body>
+  <Modal.Footer>
+    <button variant="tertiary">Close</button>
+    <button variant="secondary">Save changes</button>
+  </Modal.Footer>
 </Modal.Dialog>
 ```
 
@@ -91,7 +96,7 @@ Here is an example of a simple modal:
 A modal with header, body, and set of actions in the footer. Use `<Modal/>` in combination with other components to show or hide your Modal. The `<Modal/>` Component comes with a few convenient "sub components": `<Modal.Header/>`, `<Modal.Title/>`, `<Modal.Body/>`, and `<Modal.Footer/>`, which you can use to build the Modal content.
 
 <ComponentPreview>
-    <ModalDemo />
+  <ModalDemo />
 </ComponentPreview>
 
 <CodePreview>
@@ -99,29 +104,48 @@ A modal with header, body, and set of actions in the footer. Use `<Modal/>` in c
 
 ```html
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-seconary" data-toggle="modal" data-target="#exampleModal">
+<button
+  type="button"
+  class="btn btn-seconary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
   Launch demo modal
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal heading</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                This text is the text you're reading in this modal!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-tertiary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-secondary">Save changes</button>
-            </div>
-        </div>
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal heading</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This text is the text you're reading in this modal!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-tertiary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-secondary">Save changes</button>
+      </div>
     </div>
+  </div>
 </div>
 ```
 
@@ -170,7 +194,7 @@ render(<Example />);
 You can vertically center a modal by passing the "centered" prop.
 
 <ComponentPreview>
-    <VerticallyCenteredModal />
+  <VerticallyCenteredModal />
 </ComponentPreview>
 
 <CodePreview>
@@ -178,29 +202,48 @@ You can vertically center a modal by passing the "centered" prop.
 
 ```html
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModalLong"
+>
+  Launch demo modal
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal heading</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                This text is in the middle of the screen!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-tertiary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-secondary">Save changes</button>
-            </div>
-        </div>
+<div
+  class="modal fade"
+  id="exampleModalLong"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal heading</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This text is in the middle of the screen!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-tertiary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-secondary">Save changes</button>
+      </div>
     </div>
+  </div>
 </div>
 ```
 
@@ -210,7 +253,7 @@ You can vertically center a modal by passing the "centered" prop.
 ```JavaScript
 function ExampleCenter() {
     const [show, setShow] = useState(false);
-  
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -224,7 +267,7 @@ function ExampleCenter() {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        show={show} 
+        show={show}
         onHide={handleClose}
       >
         <Modal.Header closeButton>
@@ -244,19 +287,18 @@ function ExampleCenter() {
       </>
     );
   }
-render(<ExampleCenter />); 
+render(<ExampleCenter />);
 ```
 
 </ReactCodeBlock>
 </CodePreview>
-
 
 ## Modal Sizes
 
 You can specify a bootstrap large or small modal by using the "size" prop.
 
 <ComponentPreview>
-    <ModalSizes />
+  <ModalSizes />
 </ComponentPreview>
 
 <CodePreview>
@@ -264,54 +306,117 @@ You can specify a bootstrap large or small modal by using the "size" prop.
 
 ```html
 <!-- Small modal -->
-<button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-toggle="modal"
+  data-target=".bd-example-modal-sm"
+>
+  Small modal
+</button>
 
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Small Modal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            ...
-        </div>
+<div
+  class="modal fade bd-example-modal-sm"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mySmallModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Small Modal</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      ...
     </div>
+  </div>
 </div>
 
 <!-- Large modal -->
-<button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-toggle="modal"
+  data-target=".bd-example-modal-lg"
+>
+  Large modal
+</button>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Medium Modal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            ...
-        </div>
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Medium Modal</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      ...
     </div>
+  </div>
 </div>
 
 <!-- Full Screen modal -->
-<button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-full">Full screen</button>
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-toggle="modal"
+  data-target=".bd-example-modal-full"
+>
+  Full screen
+</button>
 
-<div class="modal fade bd-example-modal-full w-100" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-full">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Full Screen Modal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!</p>
-        </div>
+<div
+  class="modal fade bd-example-modal-full w-100"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-full">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          Full Screen Modal
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <p>
+        Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+        commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam
+        atque a dolores quisquam quisquam adipisci possimus laboriosam.
+        Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod.
+        Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni
+        incidunt dolore amet atque facilis ipsum deleniti rem!
+      </p>
     </div>
+  </div>
 </div>
 ```
 
@@ -343,7 +448,7 @@ function ModalSizes() {
           </Modal.Header>
           <Modal.Body>...</Modal.Body>
         </Modal>
-  
+
         <Modal
           size="lg"
           show={lgShow}

@@ -4,7 +4,7 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
@@ -21,16 +21,17 @@ import Row from 'react-bootstrap/Row'
 # List Group
 
 ## Basic Example
+
 A list group is an unordered list with list items and proper classes. Build upon it with the options that follow, or with your own CSS as needed.
 
 <ComponentPreview>
-    <ListGroup>
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-        <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-    </ListGroup>
+  <ListGroup>
+    <ListGroup.Item>Cras justo odio</ListGroup.Item>
+    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+    <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+    <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+  </ListGroup>
 </ComponentPreview>
 
 <CodePreview>
@@ -38,11 +39,11 @@ A list group is an unordered list with list items and proper classes. Build upon
 
 ```html
 <div class="list-group">
-    <div class="list-group-item">Cras justo odio</div>
-    <div class="list-group-item">Dapibus ac facilisis in</div>
-    <div class="list-group-item">Morbi leo risus</div>
-    <div class="list-group-item">Porta ac consectetur ac</div>
-    <div class="list-group-item">Vestibulum at eros</div>
+  <div class="list-group-item">Cras justo odio</div>
+  <div class="list-group-item">Dapibus ac facilisis in</div>
+  <div class="list-group-item">Morbi leo risus</div>
+  <div class="list-group-item">Porta ac consectetur ac</div>
+  <div class="list-group-item">Vestibulum at eros</div>
 </div>
 ```
 
@@ -51,11 +52,11 @@ A list group is an unordered list with list items and proper classes. Build upon
 
 ```html
 <ListGroup>
-    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-    <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-    <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+  <ListGroup.Item>Cras justo odio</ListGroup.Item>
+  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+  <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+  <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
 </ListGroup>
 ```
 
@@ -63,31 +64,40 @@ A list group is an unordered list with list items and proper classes. Build upon
 </CodePreview>
 
 ## Active & Disabled Items
+
 Set the `active` prop to indicate the list groups current active selection.
 Set the disabled prop to prevent actions on a `<List.Item>`. For elements that aren't naturally disable-able (like anchors) onClick handlers are added that call preventDefault to mimick disabled behavior.
 
 <ComponentPreview>
-<Row>
+  <Row>
     <Col>
-    <h4>Active</h4>
-        <ListGroup as="ul">
-            <ListGroup.Item as="li" active>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item as="li" active>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
-        </ListGroup>
+      <h4>Active</h4>
+      <ListGroup as="ul">
+        <ListGroup.Item as="li" active>
+          Cras justo odio
+        </ListGroup.Item>
+        <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+        <ListGroup.Item as="li" active>
+          Morbi leo risus
+        </ListGroup.Item>
+        <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+      </ListGroup>
     </Col>
-    <br/>
+    <br />
     <Col>
-    <h4>Disabled</h4>
-        <ListGroup as="ul">
-            <ListGroup.Item as="li" disabled>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item as="li" disabled>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
-        </ListGroup>
-    </Col>    
-</Row>
+      <h4>Disabled</h4>
+      <ListGroup as="ul">
+        <ListGroup.Item as="li" disabled>
+          Cras justo odio
+        </ListGroup.Item>
+        <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+        <ListGroup.Item as="li" disabled>
+          Morbi leo risus
+        </ListGroup.Item>
+        <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+      </ListGroup>
+    </Col>
+  </Row>
 </ComponentPreview>
 
 <CodePreview>
@@ -95,19 +105,19 @@ Set the disabled prop to prevent actions on a `<List.Item>`. For elements that a
 
 ```html
 <div class="list-group">
-    <div class="list-group-item active">Cras justo odio</div>
-    <div class="list-group-item">Dapibus ac facilisis in</div>
-    <div class="list-group-item active">Morbi leo risus</div>
-    <div class="list-group-item">Porta ac consectetur ac</div>
-    <div class="list-group-item">Vestibulum at eros</div>
+  <div class="list-group-item active">Cras justo odio</div>
+  <div class="list-group-item">Dapibus ac facilisis in</div>
+  <div class="list-group-item active">Morbi leo risus</div>
+  <div class="list-group-item">Porta ac consectetur ac</div>
+  <div class="list-group-item">Vestibulum at eros</div>
 </div>
 
 <div class="list-group">
-    <div class="list-group-item" disabled>Cras justo odio</div>
-    <div class="list-group-item">Dapibus ac facilisis in</div>
-    <div class="list-group-item" disabled>Morbi leo risus</div>
-    <div class="list-group-item">Porta ac consectetur ac</div>
-    <div class="list-group-item">Vestibulum at eros</div>
+  <div class="list-group-item" disabled>Cras justo odio</div>
+  <div class="list-group-item">Dapibus ac facilisis in</div>
+  <div class="list-group-item" disabled>Morbi leo risus</div>
+  <div class="list-group-item">Porta ac consectetur ac</div>
+  <div class="list-group-item">Vestibulum at eros</div>
 </div>
 ```
 
@@ -116,17 +126,17 @@ Set the disabled prop to prevent actions on a `<List.Item>`. For elements that a
 
 ```html
 <ListGroup as="ul">
-    <ListGroup.Item as="li" active>Cras justo odio</ListGroup.Item>
-    <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
-    <ListGroup.Item as="li" active>Morbi leo risus</ListGroup.Item>
-    <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+  <ListGroup.Item as="li" active>Cras justo odio</ListGroup.Item>
+  <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+  <ListGroup.Item as="li" active>Morbi leo risus</ListGroup.Item>
+  <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
 </ListGroup>
 
 <ListGroup as="ul">
-    <ListGroup.Item as="li" disabled>Cras justo odio</ListGroup.Item>
-    <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
-    <ListGroup.Item as="li" disabled>Morbi leo risus</ListGroup.Item>
-    <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+  <ListGroup.Item as="li" disabled>Cras justo odio</ListGroup.Item>
+  <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+  <ListGroup.Item as="li" disabled>Morbi leo risus</ListGroup.Item>
+  <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
 </ListGroup>
 ```
 
@@ -138,20 +148,20 @@ Set the disabled prop to prevent actions on a `<List.Item>`. For elements that a
 Use contextual variants on `<List.Item>`s to style them with a stateful background and color.
 
 <ComponentPreview>
-<ListGroup>
-  <ListGroup.Item>No style</ListGroup.Item>
-  <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-  <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
-  <ListGroup.Item variant="tertiary">Tertiary</ListGroup.Item>
-</ListGroup>
-<br/>
-<br/>
-<ListGroup>
-  <ListGroup.Item variant="success">Success</ListGroup.Item>
-  <ListGroup.Item variant="danger">Danger</ListGroup.Item>
-  <ListGroup.Item variant="warning">Warning</ListGroup.Item>
-  <ListGroup.Item variant="info">Info</ListGroup.Item>
-</ListGroup>
+  <ListGroup>
+    <ListGroup.Item>No style</ListGroup.Item>
+    <ListGroup.Item variant="primary">Primary</ListGroup.Item>
+    <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
+    <ListGroup.Item variant="tertiary">Tertiary</ListGroup.Item>
+  </ListGroup>
+  <br />
+  <br />
+  <ListGroup>
+    <ListGroup.Item variant="success">Success</ListGroup.Item>
+    <ListGroup.Item variant="danger">Danger</ListGroup.Item>
+    <ListGroup.Item variant="warning">Warning</ListGroup.Item>
+    <ListGroup.Item variant="info">Info</ListGroup.Item>
+  </ListGroup>
 </ComponentPreview>
 
 <CodePreview>
@@ -159,16 +169,16 @@ Use contextual variants on `<List.Item>`s to style them with a stateful backgrou
 
 ```html
 <div class="list-group">
-    <div class="list-group-item">No style</div>
-    <div class="list-group-item list-group-item-primary">Primary</div>
-    <div class="list-group-item list-group-item-secondary">Secondary</div>
-    <div class="list-group-item list-group-item-tertiary">Tertiary</div>
+  <div class="list-group-item">No style</div>
+  <div class="list-group-item list-group-item-primary">Primary</div>
+  <div class="list-group-item list-group-item-secondary">Secondary</div>
+  <div class="list-group-item list-group-item-tertiary">Tertiary</div>
 </div>
 <div class="list-group">
-    <div class="list-group-item list-group-item-success">Success</div>
-    <div class="list-group-item list-group-item-danger">Danger</div>
-    <div class="list-group-item list-group-item-warning">Warning</div>
-    <div class="list-group-item list-group-item-info">Info</div>
+  <div class="list-group-item list-group-item-success">Success</div>
+  <div class="list-group-item list-group-item-danger">Danger</div>
+  <div class="list-group-item list-group-item-warning">Warning</div>
+  <div class="list-group-item list-group-item-info">Info</div>
 </div>
 ```
 
@@ -177,18 +187,18 @@ Use contextual variants on `<List.Item>`s to style them with a stateful backgrou
 
 ```html
 <ListGroup>
-    <ListGroup>
-        <ListGroup.Item>No style</ListGroup.Item>
-        <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-        <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
-        <ListGroup.Item variant="tertiary">Tertiary</ListGroup.Item>
-    </ListGroup>
-    <ListGroup>
-        <ListGroup.Item variant="success">Success</ListGroup.Item>
-        <ListGroup.Item variant="danger">Danger</ListGroup.Item>
-        <ListGroup.Item variant="warning">Warning</ListGroup.Item>
-        <ListGroup.Item variant="info">Info</ListGroup.Item>
-    </ListGroup>
+  <ListGroup>
+    <ListGroup.Item>No style</ListGroup.Item>
+    <ListGroup.Item variant="primary">Primary</ListGroup.Item>
+    <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
+    <ListGroup.Item variant="tertiary">Tertiary</ListGroup.Item>
+  </ListGroup>
+  <ListGroup>
+    <ListGroup.Item variant="success">Success</ListGroup.Item>
+    <ListGroup.Item variant="danger">Danger</ListGroup.Item>
+    <ListGroup.Item variant="warning">Warning</ListGroup.Item>
+    <ListGroup.Item variant="info">Info</ListGroup.Item>
+  </ListGroup>
 </ListGroup>
 ```
 
@@ -196,8 +206,16 @@ Use contextual variants on `<List.Item>`s to style them with a stateful backgrou
 </CodePreview>
 
 <Alert variant="warning">
-    <Alert.Heading as="H5" className="mb-0"><strong>Conveying meaning to assistive technologies</strong></Alert.Heading>
-    <div>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</div>
+  <Alert.Heading as="H5" className="mb-0">
+    <strong>Conveying meaning to assistive technologies</strong>
+  </Alert.Heading>
+  <div>
+    Using color to add meaning only provides a visual indication, which will not
+    be conveyed to users of assistive technologies – such as screen readers.
+    Ensure that information denoted by the color is either obvious from the
+    content itself (e.g. the visible text), or is included through alternative
+    means, such as additional text hidden with the <code>.sr-only</code> class.
+  </div>
 </Alert>
 
 ## Tabbed List groups
@@ -205,29 +223,40 @@ Use contextual variants on `<List.Item>`s to style them with a stateful backgrou
 You can also use the `Tab` components to create ARIA compliant tabbable interfaces with the `<ListGroup>` component. Swap out the `<Nav>` component for the list group and you are good to go.
 
 <ComponentPreview>
-<Tab.Container id="list-group-tabs-example" defaultActiveKey="first">
-  <Row>
-    <Col sm={4}>
-      <ListGroup>
-        <ListGroup.Item eventKey="first" action >
-          Tab 1
-        </ListGroup.Item>
-        <ListGroup.Item eventKey="second" action>
-          Tab 2
-        </ListGroup.Item>
-      </ListGroup>
-    </Col>
-    <Col sm={8}>
-      <Tab.Content>
-        <Tab.Pane eventKey="first">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis nisl non elementum tristique. Donec eu ex facilisis, molestie nisl non, vestibulum est. Curabitur gravida quis lectus at vulputate.</p>
-        </Tab.Pane>
-        <Tab.Pane eventKey="second">
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras at velit vitae elit mattis dictum quis ac nulla. Morbi et ante lorem. Maecenas condimentum ante ex, sed suscipit leo posuere eu. Proin vel est iaculis, hendrerit augue ac, tempus est.</p>        </Tab.Pane>
-      </Tab.Content>
-    </Col>
-  </Row>
-</Tab.Container>
+  <Tab.Container id="list-group-tabs-example" defaultActiveKey="first">
+    <Row>
+      <Col sm={4}>
+        <ListGroup>
+          <ListGroup.Item eventKey="first" action>
+            Tab 1
+          </ListGroup.Item>
+          <ListGroup.Item eventKey="second" action>
+            Tab 2
+          </ListGroup.Item>
+        </ListGroup>
+      </Col>
+      <Col sm={8}>
+        <Tab.Content>
+          <Tab.Pane eventKey="first">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              iaculis nisl non elementum tristique. Donec eu ex facilisis,
+              molestie nisl non, vestibulum est. Curabitur gravida quis lectus
+              at vulputate.
+            </p>
+          </Tab.Pane>
+          <Tab.Pane eventKey="second">
+            <p>
+              Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras
+              at velit vitae elit mattis dictum quis ac nulla. Morbi et ante
+              lorem. Maecenas condimentum ante ex, sed suscipit leo posuere eu.
+              Proin vel est iaculis, hendrerit augue ac, tempus est.
+            </p>{' '}
+          </Tab.Pane>
+        </Tab.Content>
+      </Col>
+    </Row>
+  </Tab.Container>
 </ComponentPreview>
 
 <CodePreview>
@@ -275,5 +304,3 @@ You can also use the `Tab` components to create ARIA compliant tabbable interfac
 
 </ReactCodeBlock>
 </CodePreview>
-
-

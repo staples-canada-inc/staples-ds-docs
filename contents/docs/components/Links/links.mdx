@@ -4,7 +4,7 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 
 # Links
 
@@ -15,11 +15,11 @@ Links are words on a webpage that are also a hyperlink to another page. They are
 Simple links would be used in places such as tabs, breadcrumbs, pagination, etc.
 
 <ComponentPreview>
-	<a href="#">Link 1</a>
-	<br />
-	<a href="#">Link 2</a>
-	<br />
-	<a href="#">Link 3</a>
+  <a href="#">Link 1</a>
+  <br />
+  <a href="#">Link 2</a>
+  <br />
+  <a href="#">Link 3</a>
 </ComponentPreview>
 
 ```html
@@ -39,21 +39,29 @@ Text links are often underlined, in addition to coloured, to further help the us
 ### Style
 
 <table>
-    <thead>
-        <th>Link Type</th>
-        <th>Default</th>
-        <th>On Hover</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Simple Link (tabs, breadcrumbs, pagination, navigation)</td>
-            <td>Charcoal: #444444; <br/> text-decoration: none;</td>
-            <td>Dark Blue: #198294; <br/> text-decoration: none;</td>
-        </tr>
-        <tr>
-            <td>Text & Body Link</td>
-            <td>Dark Blue: #198294; <br/> text-decoration: underline;</td>
-            <td>Hover Blue: #146B79; <br/> text-decoration: underline;</td>
-        </tr>
-    </tbody>
+  <thead>
+    <th>Link Type</th>
+    <th>Default</th>
+    <th>On Hover</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Simple Link (tabs, breadcrumbs, pagination, navigation)</td>
+      <td>
+        Charcoal: #444444; <br /> text-decoration: none;
+      </td>
+      <td>
+        Dark Blue: #198294; <br /> text-decoration: none;
+      </td>
+    </tr>
+    <tr>
+      <td>Text & Body Link</td>
+      <td>
+        Dark Blue: #198294; <br /> text-decoration: underline;
+      </td>
+      <td>
+        Hover Blue: #146B79; <br /> text-decoration: underline;
+      </td>
+    </tr>
+  </tbody>
 </table>

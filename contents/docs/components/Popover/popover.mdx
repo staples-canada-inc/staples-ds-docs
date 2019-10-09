@@ -4,7 +4,7 @@ root: '/docs'
 parents: ['Components']
 ---
 
-import { ComponentPreview } from '../../../../src/ComponentPreview.tsx'
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
 import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
 import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
 import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
@@ -81,27 +81,55 @@ export default PopoverDemo;
 Popovers can open in one of four directions (top, right, bottom, or left).
 
 <ComponentPreview>
-    <PopoverDemo3 />
+  <PopoverDemo3 />
 </ComponentPreview>
 
 <CodePreview>
 <HtmlCodeBlock>
 
 ```html
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="top"
+  data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+>
   Popover on top
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="right"
+  data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+>
   Popover on right
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="bottom"
+  data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus."
+>
   Popover on bottom
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="left"
+  data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+>
   Popover on left
 </button>
 ```
@@ -140,8 +168,6 @@ return (
 
 </ReactCodeBlock>
 </CodePreview>
-
-
 
 ## Dismissable Popovers
 
@@ -452,9 +478,8 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>boolean</td>
       <td>true</td>
       <td>
-        Enable or disable the sanitization. If activated <code>'template'</code>
-        , <code>'content'</code> and <code>'title'</code> options will be
-        sanitized.
+        Enable or disable the sanitization. If activated <code>'template'</code>,{' '}
+        <code>'content'</code> and <code>'title'</code> options will be sanitized.
       </td>
     </tr>
     <tr>
@@ -608,7 +633,6 @@ $('#myPopover').on('hidden.bs.popover', function() {
 </HtmlCodeBlock>
 <ReactCodeBlock>
 
-
 ## Changing Containers
 
 You can specify a `container` to control the DOM element the overlay is appended to. This is especially useful when styles conflict with your Overlay's.
@@ -705,5 +729,3 @@ render(<Example />);
 
 </ReactCodeBlock>
 </CodePreview>
-
-
