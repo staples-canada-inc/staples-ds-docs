@@ -14,7 +14,7 @@ const Features = () => {
                             <CardText>
                                 Explore the documentation to learn how to use our design system and it's components in your next project.
                             </CardText>
-                            <a href="/docs/getting-started" className="btn btn-link">
+                            <a href="/getting-started" className="btn btn-link">
                                 View Documentation
                             </a>
                         </CardBody>
@@ -29,7 +29,7 @@ const Features = () => {
                             <CardText>
                                 Download all the resources and dependancies you'll need to start developing with the Staples Design System.
                             </CardText>
-                            <a href="/docs/resources-download" className="btn btn-link">
+                            <a href="/resources-download" className="btn btn-link">
                                 View Downloads
                             </a>
                         </CardBody>

@@ -1,6 +1,6 @@
 import React from 'react'
-import '../css/design-system/staples-ds.css'
-import '../css/site/preview-overrides.css'
+import '../styles/design-system/staples-ds.css'
+import '../styles/docs/styles.css'
 import Header from '../components/Header'
 import HeroBanner from './components/HeroBanner'
 import Features from './components/Features'

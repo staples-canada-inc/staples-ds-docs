@@ -5,12 +5,10 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { Header } from './components/Header'
 import { SidebarContents } from './components/SidebarContents'
-import { TableOfContents } from './components/TableOfContents'
 import PageLayout from 'react-sidebar'
-import './css/design-system/staples-ds.css'
-import './css/site/preview-overrides.css'
+import './styles/design-system/staples-ds.css'
+import './styles/docs/styles.css'
 import menuToggle from './images/menu-toggle.svg'
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 const mql = typeof window !== 'undefined' && window.matchMedia(`(min-width: 576px)`)
 
@@ -18,12 +16,12 @@ const styleOverrides = {
   sidebar: {
     width: '310px',
     top: '56px',
-    paddingTop: '30px',
-    paddingLeft: '30px',
+    paddingTop: '18px',
+    paddingLeft: '0px',
     height: '100%',
     overflow: 'hidden',
     borderRight: '1px solid #d9d9d6',
-    backgroundColor: '#f3f3f2',
+    backgroundColor: '#ffffff',
   },
   content: {
     top: '73px',
@@ -103,12 +101,6 @@ export class RootLayout extends React.Component {
           shadow={false}
           styles={styleOverrides}
         >
-            
-        {/* <Breadcrumb>
-            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-            <Breadcrumb.Item href="#">Components</Breadcrumb.Item>
-            <Breadcrumb.Item active>Alerts</Breadcrumb.Item>
-        </Breadcrumb> */}
           
           <Container fluid>
             <Row>

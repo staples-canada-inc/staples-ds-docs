@@ -4,139 +4,132 @@ root: '/docs'
 parents: ['Design']
 ---
 
-
-import grid_cols_rows from "../../../src/images/grid_cols_rows.jpg";
-import grid_gutters from "../../../src/images/grid_gutters.jpg";
-import grid_margins from "../../../src/images/grid_margins.jpg";
-import grid_padding from "../../../src/images/grid_padding.jpg";
-import sizing_scale from "../../../src/images/sizing_scale.jpg";
-import vertical_spacing from "../../../src/images/vertical_spacing.jpg";
+import grid_cols_rows from '../../../src/images/grid_cols_rows.jpg'
+import grid_gutters from '../../../src/images/grid_gutters.jpg'
+import grid_margins from '../../../src/images/grid_margins.jpg'
+import grid_padding from '../../../src/images/grid_padding.jpg'
+import sizing_scale from '../../../src/images/sizing_scale.jpg'
+import vertical_spacing from '../../../src/images/vertical_spacing.jpg'
 
 # Grid & Layout
 
-
 ## Mini Unit
+
 At the core of the Staples Design System lies the 6 px mini unit. Multiples of the mini unit compose the dimensions of columns, rows, margins, padding and gutters. The mini unit allows enough flexibility whilst still maintaining a consistent visual rhythm.
 
-Multiples of mini units create the breakpoint boundaries, so that content will seamlessly fit the grid regardless of screen size. This allows for fluid layouts that are essential to responsive design. 
-
-
+Multiples of mini units create the breakpoint boundaries, so that content will seamlessly fit the grid regardless of screen size. This allows for fluid layouts that are essential to responsive design.
 
 ## Grid Fundamentals
-The core concept of the 6x grid is to divide or multiply by six. Every element of the UI -- spacing, boxes, icons, images, rows, columns -- are either a multiple of six or are divisible by six. 
+
+The core concept of the 6x grid is to divide or multiply by six. Every element of the UI -- spacing, boxes, icons, images, rows, columns -- are either a multiple of six or are divisible by six.
 
 ### Fluid Grid
+
 A fluid grid divides a space by the same amount of columns regardless of screen size. Within a breakpoint, the unit size scales down to accommodate this constant column count.
 
 ### Fixed Grid
-A fixed grid starts with a fixed size from the established sizing scale (mini unit), then tiles content as needed. Content re-shuffling often follows a natural pattern of left-to-right, top-to-bottom sequence. 
+
+A fixed grid starts with a fixed size from the established sizing scale (mini unit), then tiles content as needed. Content re-shuffling often follows a natural pattern of left-to-right, top-to-bottom sequence.
 
 To implement a fixed grid, multiply units by six and mix them together. When tiling fixed boxes, a grid emerges naturally due to the consistent use of a sizing scale. Content will always match column sizes of breakpoint boundaries so long as you are following the established scaling correctly.
 
-
-
 ### Column and Rows
+
 Construct columns by either dividing a space into a fluid grid, or by tiling fixed boxes in multiples. For dense content like typography, element icons and smaller components use the mini unit for spatial reference and alignment. For larger items, like carousels, banners, promotions and modals, you can refer to larger units of the mini unit.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_cols_rows} class="w-100" />
+  <img src={grid_cols_rows} class="w-100" />
 </div>
 
-
 ### Margins
+
 The margins at the outer edge of the grid are always the same size regardless of breakpoint, even when columns are fluid. The Staples Design System uses a margin of 10px.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_margins} class="w-100" />
+  <img src={grid_margins} class="w-100" />
 </div>
 
-
 ### Padding
+
 Padding is always a fixed multiple of mini units. In the Staples Design System it’s 12 px at all standard breakpoints. Always align type against the padding. Some design tools add padding to text boxes by default; check text box padding and remove if necessary.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_padding} class="w-100" />
+  <img src={grid_padding} class="w-100" />
 </div>
 
-
 ### Gutters
+
 Grid gutters can be absent as illustrated above, or present as shown below. The margin around each grid box is 15px for a total gutter of 30px. Note how the total gutter size maintains the scaling proportions as it’s divisible by six. For closely related content, consider a gutterless grid. Apply gutters when content warrants more separation.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4">
-    <img src={grid_gutters} class="w-100" />
+  <img src={grid_gutters} class="w-100" />
 </div>
 
-
-
 ### Sizing Scale
+
 The sizing scale is centered around the mini unit. Use it to size content as well as negative space. Like a type scale, the sizing scale constrains the range of sizes to improve consistency and rhythm, while still allowing flexibility. Spacing tokens are applied to maintain consistency across Staples interfaces.
 
 <div class="col-12 col-md-9 bg-light w-100 text-center py-4 mb-5">
-    <img src={sizing_scale} class="w-100" />
+  <img src={sizing_scale} class="w-100" />
 </div>
 
-| Mini Unit(s)        | Sizing Scale       | 
-|---------------------|:------------------ |
-| 1x                  |  6 px              |
-| 2x                  |  12 px             |
-| 3x                  |  18 px             |
-| 4x                  |  24 px             |
-| 5x                  |  30 px             |
-| 6x                  |  36 px             |
-
-
+| Mini Unit(s) | Sizing Scale |
+| ------------ | :----------- |
+| 1x           | 6 px         |
+| 2x           | 12 px        |
+| 3x           | 18 px        |
+| 4x           | 24 px        |
+| 5x           | 30 px        |
+| 6x           | 36 px        |
 
 ### Aspect Ratio
+
 When sizing boxes, constrain dimensions to one of the aspect ratios shown below whenever possible. Doing so will heighten the perception of unity between products.
 
 Choose an aspect ratio from the table, then multiply the base unit in each dimension as needed to set width and height, maintaining the ratio in either portrait or landscape. Reference the table below as an example.
 
-| Aspect Ratio        | Base Unit         | Sizing Scale (px) | 
-|---------------------|-------------------|-------------------|
-| 1 : 1               | 24 px             | 24 x 24           |
-| 2 : 1               | 24 px             | 48 x 24           |
-| 2 : 3               | 24 px             | 48 x 72           |
-| 3 : 2               | 24 px             | 72 x 48           |
-| 4 : 3               | 24 px             | 98 x 72           |
-| 16 : 9              | 24 px             | 384 x 216         |
-
-
+| Aspect Ratio | Base Unit | Sizing Scale (px) |
+| ------------ | --------- | ----------------- |
+| 1 : 1        | 24 px     | 24 x 24           |
+| 2 : 1        | 24 px     | 48 x 24           |
+| 2 : 3        | 24 px     | 48 x 72           |
+| 3 : 2        | 24 px     | 72 x 48           |
+| 4 : 3        | 24 px     | 98 x 72           |
+| 16 : 9       | 24 px     | 384 x 216         |
 
 ### Vertical Rhythm
-Use the fixed sizing scale to set vertical spacing between sections, by adding it to the top or bottom margin of a box. 
+
+Use the fixed sizing scale to set vertical spacing between sections, by adding it to the top or bottom margin of a box.
 
 <div class="col col-md-9 bg-light w-100 text-center py-4">
-    <img src={vertical_spacing} class="w-100" />
+  <img src={vertical_spacing} class="w-100" />
 </div>
 
-The same applies to components. Use the mini unit for smaller spacing within components and text fields, or between text boxes and other dense items. When multiple components adhere to the same scale, grid relationships naturally emerge. 
-
+The same applies to components. Use the mini unit for smaller spacing within components and text fields, or between text boxes and other dense items. When multiple components adhere to the same scale, grid relationships naturally emerge.
 
 ---
 
 ## Usage
 
 ### Breakpoints
+
 Since Staples.ca is predominantly desktop first, we use a set of maximum-width media queries to create sensible breakpoints for the layouts of our interfaces. The breakpoints specify a maximum viewport width and allow us to scale down elements as the screen size gets smaller.
 
 Use this set of standard breakpoints to maintain layout integrity across screen sizes. For optimal results, test the design and code at each of these breakpoints.
 
-
-| Screen Size         | Device                    | Breakpoint (max-width) | 
-|---------------------|---------------------------|------------------------|
-| Extra-Small         | Portrait Phones           | < 576 px               |
-| Small               | Landscape Phones          | < 768 px               |
-| Medium              | Tablets                   | < 992 px               |
-| Large               | Desktops                  | < 1200 px              |
-| Extra-Large         | Large Desktops / Monitors | --                     |
-
-
-
+| Screen Size | Device                    | Breakpoint (max-width) |
+| ----------- | ------------------------- | ---------------------- |
+| Extra-Small | Portrait Phones           | < 576 px               |
+| Small       | Landscape Phones          | < 768 px               |
+| Medium      | Tablets                   | < 992 px               |
+| Large       | Desktops                  | < 1200 px              |
+| Extra-Large | Large Desktops / Monitors | --                     |
 
 ### Media Queries
+
 The following media query ranges—or breakpoints—can be used in your source Sass files for the layout, grid system, and components.
 
-``` scss
+```scss
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }
 
@@ -155,7 +148,7 @@ The following media query ranges—or breakpoints—can be used in your source S
 
 These media queries are also available via Sass mixins:
 
-``` scss
+```scss
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
@@ -168,21 +161,17 @@ These media queries are also available via Sass mixins:
     display: block;
 }
 }
-``````````````````````````
+```
 
 These breakpoints or media queries work in the opposite direction (the given screen size or larger) and can be used when designing a mobile first interface:
 
-
-
-| Screen Size         | Device                    | Breakpoint (min-width) | 
-|---------------------|---------------------------|------------------------|
-| Extra-Small         | Portrait Phones           | --                     |
-| Small               | Landscape Phones          | > 576 px               |
-| Medium              | Tablets                   | > 768 px               |
-| Large               | Desktops                  | > 992 px               |
-| Extra-Large         | Large Desktops / Monitors | > 1200 px              |
-
-
+| Screen Size | Device                    | Breakpoint (min-width) |
+| ----------- | ------------------------- | ---------------------- |
+| Extra-Small | Portrait Phones           | --                     |
+| Small       | Landscape Phones          | > 576 px               |
+| Medium      | Tablets                   | > 768 px               |
+| Large       | Desktops                  | > 992 px               |
+| Extra-Large | Large Desktops / Monitors | > 1200 px              |
 
 ```scss
 // Extra small devices (portrait phones, less than 576px)
@@ -221,7 +210,6 @@ Again, these media queries are also available via Sass mixins:
     }
 ```
 
-
 There are also media queries and mixins for targeting a single segment of screen sizes using both minimum and maximum breakpoint widths.
 
 ```scss
@@ -255,16 +243,16 @@ Since Staples.ca is predominantly desktop first, we use a set of maximum-width m
 
 Use this set of standard breakpoints to maintain layout integrity across screen sizes. For optimal results, test the design and code at each of these breakpoints.
 
-
-| Screen Size         | Device                    | Breakpoint (max-width) | 
-|---------------------|:-------------------------:|-----------------------:|
-| Extra-Small         | Portrait Phones           | < 576 px               |
-| Small               | Landscape Phones          | < 768 px               |
-| Medium              | Tablets                   | < 992 px               |
-| Large               | Desktops                  | < 1200 px              |
-| Extra-Large         | Large Desktops / Monitors | --                     |
+| Screen Size |          Device           | Breakpoint (max-width) |
+| ----------- | :-----------------------: | ---------------------: |
+| Extra-Small |      Portrait Phones      |               < 576 px |
+| Small       |     Landscape Phones      |               < 768 px |
+| Medium      |          Tablets          |               < 992 px |
+| Large       |         Desktops          |              < 1200 px |
+| Extra-Large | Large Desktops / Monitors |                     -- |
 
 #### Media Queries
+
 The following media query ranges—or breakpoints—can be used in your source Sass files for the layout, grid system, and components.
 
 ```scss
@@ -286,7 +274,7 @@ The following media query ranges—or breakpoints—can be used in your source S
 
 These media queries are also available via Sass mixins:
 
-``` scss
+```scss
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
@@ -303,15 +291,13 @@ These media queries are also available via Sass mixins:
 
 These breakpoints or media queries work in the opposite direction (the given screen size or larger) and can be used when designing a mobile first interface:
 
-
-| Screen Size         | Device                    | Breakpoint (min-width) | 
-|---------------------|:-------------------------:|-----------------------:|
-| Extra-Small         | Portrait Phones           | --                     |
-| Small               | Landscape Phones          | > 576 px               |
-| Medium              | Tablets                   | > 768 px               |
-| Large               | Desktops                  | > 992 px               |
-| Extra-Large         | Large Desktops / Monitors | > 1200 px              |
-
+| Screen Size |          Device           | Breakpoint (min-width) |
+| ----------- | :-----------------------: | ---------------------: |
+| Extra-Small |      Portrait Phones      |                     -- |
+| Small       |     Landscape Phones      |               > 576 px |
+| Medium      |          Tablets          |               > 768 px |
+| Large       |         Desktops          |               > 992 px |
+| Extra-Large | Large Desktops / Monitors |              > 1200 px |
 
 ```scss
 // Extra small devices (portrait phones, less than 576px)
@@ -375,3 +361,4 @@ There are also media queries and mixins for targeting a single segment of screen
 @include media-breakpoint-only(md) { ... }
 @include media-breakpoint-only(lg) { ... }
 @include media-breakpoint-only(xl) { ... }
+```

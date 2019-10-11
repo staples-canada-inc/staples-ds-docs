@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "docs"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": { "*": ["types/*"] },

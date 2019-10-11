@@ -5,13 +5,13 @@ module.exports = {
     plugins: [
         `gatsby-plugin-typescript`,
         'gatsby-plugin-react-helmet',
-        {
-            resolve: '@stackbit/gatsby-plugin-menus',
-            options: {
-                pageContextProperty: 'menus',
-                sourceUrlPath: 'fields.url',
-            }
-        },
+        // {
+        //     resolve: '@stackbit/gatsby-plugin-menus',
+        //     options: {
+        //         pageContextProperty: 'menus',
+        //         sourceUrlPath: 'fields.url',
+        //     }
+        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -19,19 +19,19 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        {
-            resolve: `gatsby-transformer-json`,
-            options: {
-                typeName: `MenuItems`, // a fixed string
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `menuItems`,
-                path: `${__dirname}/src/menuItems`,
-            },
-        },
+        // {
+        //     resolve: `gatsby-transformer-json`,
+        //     options: {
+        //         typeName: `MenuItems`, // a fixed string
+        //     },
+        // },
+        // {
+        //     resolve: `gatsby-source-filesystem`,
+        //     options: {
+        //         name: `menuItems`,
+        //         path: `${__dirname}/src/menuItems`,
+        //     },
+        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -140,5 +140,5 @@ module.exports = {
         // 'gatsby-plugin-offline',
     ],
     /// this must match the path your webpage is displayed from
-    pathPrefix: '/gatsby-antd-docs',
+  //  pathPrefix: '',
 }

@@ -7,11 +7,10 @@ import newId from '../utils/newid';
 
 
 const sidebarNav = {
-  overflowY: 'scroll',
+  /*overflowY: 'scroll',*/
   height: '100%',
   width: '100%',
-  paddingRight:
-    '17px' /* Increase/decrease this value for cross-browser compatibility */,
+  paddingRight:'0px' /* Increase/decrease this value for cross-browser compatibility */,
   boxSizing: 'content-box' /* So the width will be 100% + 17px */,
 }
 
@@ -112,8 +111,8 @@ export const SidebarContents = ({ root }: Props) => {
               item.id = newId();
               return (
                   <>
-                    <h5 id={item.id}>
-                        <strong>{item.title}</strong>
+                    <h5 id={item.id} className="sidebarHeading">
+                        {item.title}
                     </h5>
                     <UncontrolledCollapse toggler={`#${item.id}`}>
                         {loop(item.children)}
@@ -141,6 +140,7 @@ export const SidebarContents = ({ root }: Props) => {
             //defaultOpenKeys={defaultOpenKeys}
             selectedKeys={keys}
             style={sidebarNav}
+            className="sidebarNavigation"
           >
             {loop(tree)}
           </div>

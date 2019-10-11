@@ -13,14 +13,14 @@ const config = require('./gulp.config');
 // });
 
 // gulp.task('clean', function () {
-//     return del(['./src/css/design-system/staples-ds.css']);
+//     return del(['./src/styles/design-system/staples-ds.css']);
 // });
 
 gulp.task('sass', () => {
     return gulp.src(config.sass.src)
         .pipe(sassGlob())
         .pipe(isProd() ? sass({ outputStyle: 'compressed' }) : sass())
-         .on('error', error => console.log(error))
+        .on('error', error => console.log(error))
         .pipe(rename('staples-ds.css'))
         .pipe(gulp.dest(config.buildLocations.css));
 })
