@@ -18,7 +18,7 @@ const HeroBanner = () => {
                     <p className="lead col-md-6 pl-0 pb-4">Our design system provides a common language and guiding principals that help us build great experiences for Staple's employees and customers.</p>
                     <p className="mt-4 pt-4">
                         {/* <Button color="primary">Downloads</Button>  */}
-                        <Button color="primary" className="cta" href="/getting-started">View Documentation</Button>
+                        <Button color="primary" className="cta" href="/docs/getting-started">View Documentation</Button>
                     </p>
                 </Container>
             </Jumbotron>

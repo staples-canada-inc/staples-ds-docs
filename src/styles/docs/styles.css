@@ -146,6 +146,7 @@ background-color: #F5F5F5;
     padding: 18px 0px 18px 30px;
     margin-bottom: 0px;
     font-weight: normal;
+    margin-top: 0px;
 }
 
 .sidebarNavigation h5:hover{
@@ -157,4 +158,20 @@ background-color: #F5F5F5;
 
 .sidebarNavigation .nav-item .nav-link{
     padding-left: 30px;
+}
+
+
+/* MDX syntax related styles */
+
+.contains-task-list{
+    list-style-type:  none;
+    padding-left: 20px;
+}
+
+.contains-task-list li input{
+    margin-right: 10px;
+}
+
+.page-content a:not(.btn):not(.nav-link){
+    text-decoration: underline;
 }

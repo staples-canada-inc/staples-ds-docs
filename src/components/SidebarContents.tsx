@@ -6,6 +6,7 @@ import { UncontrolledCollapse } from 'reactstrap';
 import newId from '../utils/newid';
 
 
+
 const sidebarNav = {
   /*overflowY: 'scroll',*/
   height: '100%',
@@ -81,7 +82,7 @@ export const SidebarContents = ({ root }: Props) => {
     <StaticQuery
       query={graphql`
         query sidebarContentQuery {
-          allMdx(sort: { order: ASC, fields: [fields___slug] }) {
+          allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
             edges {
               node {
                 fields {

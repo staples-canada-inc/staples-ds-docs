@@ -8,6 +8,7 @@ import { SidebarContents } from './components/SidebarContents'
 import PageLayout from 'react-sidebar'
 import './styles/design-system/staples-ds.css'
 import './styles/docs/styles.css'
+import './scripts/docs/scripts.js'
 import menuToggle from './images/menu-toggle.svg'
 
 const mql = typeof window !== 'undefined' && window.matchMedia(`(min-width: 576px)`)
@@ -102,7 +103,7 @@ export class RootLayout extends React.Component {
           styles={styleOverrides}
         >
           
-          <Container fluid>
+          <Container fluid className="page-content">
             <Row>
               <Col xs="12" lg="9" className="pl-lg-5 ml-lg-5">
                 {this.props.children}
