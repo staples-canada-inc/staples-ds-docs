@@ -1,29 +1,30 @@
 import React, { Component } from 'react'
-import { NavItem, NavLink, Navbar, Nav, NavbarBrand } from 'reactstrap'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 import logo from '../images/Staples_Logo_White_EN.svg'
 
 export class Header extends Component {
   render() {
     return (
       <Navbar
-        color="dark"
-        dark
-        expand="md"
+        bg="dark"
+        expanded
         fixed="top"
         className="pl-5 pl-sm-2 py-3"
+        variant="dark"
       >
-        <NavbarBrand href="/" className="pl-3 pl-sm-2">
+        <Navbar.Brand href="/" className="pl-3 pl-sm-2">
           <img src={logo} style={{ height: '30px' }} />
           <p className=" py-1 pl-0 border-left pl-3 ml-3 d-inline">
             Design System
           </p>
-        </NavbarBrand>
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="https://github.com/staples-canada-inc/staples-ds-docs">
+        </Navbar.Brand>
+        <Nav className="ml-auto">
+          <Nav.Item>
+            <Nav.Link href="https://github.com/staples-canada-inc/staples-ds-docs">
               V1.0
-            </NavLink>
-          </NavItem>
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar>
     )

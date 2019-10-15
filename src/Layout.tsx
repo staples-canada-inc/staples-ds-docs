@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Helmet from 'react-helmet'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -6,10 +6,11 @@ import Col from 'react-bootstrap/Col'
 import { Header } from './components/Header'
 import { SidebarContents } from './components/SidebarContents'
 import PageLayout from 'react-sidebar'
-import './styles/design-system/staples-ds.css'
+import './styles/design-system/staples-ds.min.css'
 import './styles/docs/styles.css'
 import './scripts/docs/scripts.js'
 import menuToggle from './images/menu-toggle.svg'
+import Navbar from 'react-bootstrap/Navbar'
 
 const mql = typeof window !== 'undefined' && window.matchMedia(`(min-width: 576px)`)
 
@@ -72,6 +73,8 @@ export class RootLayout extends React.Component {
       open: false,
     })
   }
+
+
 
   toggleOpen(ev) {
     this.setState({ open: !this.state.open })

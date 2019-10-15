@@ -33,11 +33,6 @@ a, body, p{
     border: 2px solid #198294;
 }
 
-a[aria-current="page"]{
-    font-weight: bold;
-    text-decoration: underline;
-    color: #0e4953;
-}
 
 .nav.flex-column .nav-item .nav-link:hover{
     text-decoration: underline;
@@ -141,25 +136,79 @@ background-color: #F5F5F5;
     left: 30px;
 }
 
-.sidebarNavigation h5{
+.sidebarNavigation{
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sidebarNavigation::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+} 
+.sidebarNavigation::-moz-scrollbars {
+    display: none;
+    width: 0px;
+    background: transparent;
+}
+.sidebarNavigation::-o-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+} 
+.sidebarNavigation::-google-ms-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+}
+.sidebarNavigation::-khtml-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+}
+
+.sidebarNavigation::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+    display: none;
+}
+
+.sidebarNavigation span.h3{
     border-bottom: 1px solid #ddd;
-    padding: 18px 0px 18px 30px;
+    padding: 15px 0px 15px 30px;
     margin-bottom: 0px;
     font-weight: normal;
     margin-top: 0px;
+    display: block;
 }
 
-.sidebarNavigation h5:hover{
+.sidebarNavigation span.h3:hover{
     cursor: pointer;
     font-weight: bold;
     background: #f3f3f2;
 }
 
-
+.sidebarNavigation .nav-item {
+    margin: 0px;
+}
 .sidebarNavigation .nav-item .nav-link{
-    padding-left: 30px;
+    padding: 15px 30px;
 }
 
+.sidebarNavigation .nav-item .nav-link:hover, a[aria-current="page"]{
+    font-family: "TT Norms Medium";
+    background: #eff6f7;
+    font-weight: 600;
+    color: #198294;
+}
+
+.sidebarNavigation div[toggler^="#"]{
+    /* padding-top: 15px;
+    padding-bottom: 15px; */
+    border-bottom: 1px solid #ddd;
+}
 
 /* MDX syntax related styles */
 
@@ -172,6 +221,17 @@ background-color: #F5F5F5;
     margin-right: 10px;
 }
 
-.page-content a:not(.btn):not(.nav-link){
+.page-content a:not(.btn):not(.nav-link):not(.dropdown-item):not(.badge a){
     text-decoration: underline;
+}
+
+/* Used for styling the columns on the Layout component previews */
+.compPreview .col, .compPreview  *[class^='col-']{
+    background: #9BD3DD;
+    border: 1px solid #198294;
+    padding: 16px;
+}
+
+.compPreview .row + .row {
+    margin-top: 1rem;
 }

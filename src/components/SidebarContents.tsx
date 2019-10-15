@@ -6,9 +6,8 @@ import { UncontrolledCollapse } from 'reactstrap';
 import newId from '../utils/newid';
 
 
-
 const sidebarNav = {
-  /*overflowY: 'scroll',*/
+  overflowY: 'scroll',
   height: '100%',
   width: '100%',
   paddingRight:'0px' /* Increase/decrease this value for cross-browser compatibility */,
@@ -112,9 +111,9 @@ export const SidebarContents = ({ root }: Props) => {
               item.id = newId();
               return (
                   <>
-                    <h5 id={item.id} className="sidebarHeading">
+                    <span id={item.id} className="sidebarHeading h3">
                         {item.title}
-                    </h5>
+                    </span>
                     <UncontrolledCollapse toggler={`#${item.id}`}>
                         {loop(item.children)}
                     </UncontrolledCollapse>

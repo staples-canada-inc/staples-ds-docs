@@ -22,37 +22,37 @@ This is the branded custom spinner built for Staples Canada.
 
 <ComponentPreview>
   <SpinnerStaples className="mr-5" color="primary" size="sm">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <SpinnerStaples className="mr-5" color="primary">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <SpinnerStaples className="mr-5" color="primary" size="lg">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <br />
   <br />
   <br />
   <SpinnerStaples className="mr-5" color="secondary" size="sm">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <SpinnerStaples className="mr-5" color="secondary">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <SpinnerStaples className="mr-5" color="secondary" size="lg">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <br />
   <br />
   <br />
   <SpinnerStaples className="mr-5" color="tertiary" size="sm">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <SpinnerStaples className="mr-5" color="tertiary">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
   <SpinnerStaples className="mr-5" color="tertiary" size="lg">
-    Loading...
+    <span className="sr-only">Loading...</span>
   </SpinnerStaples>
 </ComponentPreview>
 
@@ -60,10 +60,52 @@ This is the branded custom spinner built for Staples Canada.
 <HtmlCodeBlock>
 
 ```html
-<div role="status" class="spinner-staples">
-  <div class="square"></div>
-  <div class="square"></div>
-  <span class="sr-only">Loading...</span>
+<div role="status" class="mr-5 spinner-staples-sm spinner spinner-staples spinner-primary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="mr-5 spinner-staples spinner-primary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="mr-5 spinner-staples-lg spinner spinner-staples spinner-primary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mr-5 spinner-staples-sm spinner spinner-staples spinner-secondary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="mr-5 spinner-staples spinner-secondary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="mr-5 spinner-staples-lg spinner spinner-staples spinner-secondary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mr-5 spinner-staples-sm spinner spinner-staples spinner-tertiary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="mr-5 spinner-staples spinner-tertiary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="mr-5 spinner-staples-lg spinner spinner-staples spinner-tertiary">
+    <div class="square"></div>
+    <div class="square"></div>
+    <span class="sr-only">Loading...</span>
 </div>
 ```
 
@@ -71,29 +113,35 @@ This is the branded custom spinner built for Staples Canada.
 <ReactCodeBlock>
 
 ```html
-<SpinnerStaples className="mr-5" color="primary" size="sm"
-  >Loading...</SpinnerStaples
->
-<SpinnerStaples className="mr-5" color="primary">Loading...</SpinnerStaples>
-<SpinnerStaples className="mr-5" color="primary" size="lg"
-  >Loading...</SpinnerStaples
->
+<SpinnerStaples className="mr-5" color="primary" size="sm">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="primary">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="primary" size="lg">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
 
-<SpinnerStaples className="mr-5" color="secondary" size="sm"
-  >Loading...</SpinnerStaples
->
-<SpinnerStaples className="mr-5" color="secondary">Loading...</SpinnerStaples>
-<SpinnerStaples className="mr-5" color="secondary" size="lg"
-  >Loading...</SpinnerStaples
->
+<SpinnerStaples className="mr-5" color="secondary" size="sm">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="secondary">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="secondary" size="lg">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
 
-<SpinnerStaples className="mr-5" color="tertiary" size="sm"
-  >Loading...</SpinnerStaples
->
-<SpinnerStaples className="mr-5" color="tertiary">Loading...</SpinnerStaples>
-<SpinnerStaples className="mr-5" color="tertiary" size="lg"
-  >Loading...</SpinnerStaples
->
+<SpinnerStaples className="mr-5" color="tertiary" size="sm">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="tertiary">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
+<SpinnerStaples className="mr-5" color="tertiary" size="lg">
+    <span className="sr-only">Loading...</span>
+</SpinnerStaples>
 ```
 
 </ReactCodeBlock>
@@ -104,46 +152,114 @@ This is the branded custom spinner built for Staples Canada.
 This is the Basic Spinner to be used in cases where the branded spinner is not ideal.
 
 <ComponentPreview>
-  <Spinner className="mr-5" color="primary" size="sm">
-    Loading...
+  <Spinner className="mr-5" variant="primary" size="sm" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
   </Spinner>
-  <Spinner className="mr-5" color="primary">
-    Loading...
+  <Spinner className="mr-5" variant="primary" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
   </Spinner>
-  <Spinner className="mr-5" color="primary" size="lg">
-    Loading...
-  </Spinner>
-  <br />
-  <br />
-  <br />
-  <Spinner className="mr-5" color="secondary" size="sm">
-    Loading...
-  </Spinner>
-  <Spinner className="mr-5" color="secondary">
-    Loading...
-  </Spinner>
-  <Spinner className="mr-5" color="secondary" size="lg">
-    Loading...
+  <Spinner className="mr-5" variant="primary" size="lg" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
   </Spinner>
   <br />
   <br />
   <br />
-  <Spinner className="mr-5" color="tertiary" size="sm">
-    Loading...
+  <Spinner className="mr-5" variant="secondary" size="sm" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
   </Spinner>
-  <Spinner className="mr-5" color="tertiary">
-    Loading...
+  <Spinner className="mr-5" variant="secondary" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
   </Spinner>
-  <Spinner className="mr-5" color="tertiary" size="lg">
-    Loading...
+  <Spinner className="mr-5" variant="secondary" size="lg" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+  </Spinner>
+  <br />
+  <br />
+  <br />
+  <Spinner className="mr-5" variant="tertiary" size="sm" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+  </Spinner>
+  <Spinner className="mr-5" variant="tertiary" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+  </Spinner>
+  <Spinner className="mr-5" variant="tertiary" size="lg" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
   </Spinner>
 </ComponentPreview>
 
+
+<CodePreview>
+<HtmlCodeBlock>
+
 ```html
-<div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
+<div role="status" class="spinner-border spinner-border-sm text-primary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="spinner-border text-primary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="spinner-border spinner-border-lg text-primary">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="spinner-border spinner-border-sm text-secondary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="spinner-border text-secondary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="spinner-border spinner-border-lg text-secondary">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="spinner-border spinner-border-sm text-tertiary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="spinner-border text-tertiary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div role="status" class="spinner-border spinner-border-lg text-tertiary">
+    <span class="sr-only">Loading...</span>
 </div>
 ```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Spinner className="mr-5" variant="primary" size="sm" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+<Spinner className="mr-5" variant="primary" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+<Spinner className="mr-5" variant="primary" size="lg" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+
+<Spinner className="mr-5" variant="secondary" size="sm" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+<Spinner className="mr-5" variant="secondary" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+<Spinner className="mr-5" variant="secondary" size="lg" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+
+<Spinner className="mr-5" variant="tertiary" size="sm" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+<Spinner className="mr-5" variant="tertiary" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+<Spinner className="mr-5" variant="tertiary" size="lg" animation="border" role="status">
+    <span className="sr-only">Loading...</span>
+</Spinner>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Buttons with spinners
 
@@ -222,6 +338,126 @@ Like the original Bootstrap spinners, these can also be used with buttons. To us
     &nbsp;&nbsp;Loading...
   </Button>
 </ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<button disabled="" type="button" class="mr-4 btn btn-primary">
+    <div role="status" as="span" animation="border" aria-hidden="true" class="mr-3 spinner-staples-sm spinner spinner-staples">
+        <div class="square"></div>
+        <div class="square"></div>
+        <span class="sr-only">Loading...</span>
+    </div>
+</button>
+<button disabled="" type="button" class="mr-4 btn btn-secondary">
+    <div role="status" as="span" animation="border" aria-hidden="true" class="mr-3 spinner-staples-sm spinner spinner-staples spinner-secondary">
+        <div class="square"></div>
+        <div class="square"></div>
+        <span class="sr-only">Loading...</span>
+    </div>
+</button>
+<button disabled="" type="button" class="mr-4 btn btn-tertiary">
+    <div role="status" as="span" animation="border" aria-hidden="true" class="mr-3 spinner-staples-sm spinner spinner-staples spinner-tertiary">
+        <div class="square"></div>
+        <div class="square"></div>
+        <span class="sr-only">Loading...</span>
+    </div>
+</button>
+
+<button disabled="" type="button" class="mr-4 mt-4 btn btn-primary">
+    <span role="status" aria-hidden="true" class="mr-3 spinner-border spinner-border-sm"></span>
+    &nbsp;&nbsp;Loading...
+</button>
+<button disabled="" type="button" class="mr-4 mt-4 btn btn-secondary">
+    <span role="status" aria-hidden="true" color="secondary" class="mr-3 spinner-border spinner-border-sm"></span>
+    &nbsp;&nbsp;Loading...
+</button>
+<button disabled="" type="button" class="mr-4 mt-4 btn btn-tertiary">
+    <span role="status" aria-hidden="true" color="tertiary" class="mr-3 spinner-border spinner-border-sm"></span>
+    &nbsp;&nbsp;Loading...
+</button>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Button variant="primary" className="mr-4" disabled>
+    <SpinnerStaples
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+        className="mr-3"
+    />
+&nbsp;&nbsp;Loading...
+</Button>
+<Button variant="secondary" className="mr-4" disabled>
+    <SpinnerStaples
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+        className="mr-3"
+        color="secondary"
+    />
+&nbsp;&nbsp;Loading...
+</Button>
+<Button variant="tertiary" className="mr-4" disabled>
+    <SpinnerStaples
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+        className="mr-3"
+        color="tertiary"
+    />
+&nbsp;&nbsp;Loading...
+</Button>
+<br />
+<Button variant="primary" className="mr-4 mt-4" disabled>
+    <Spinner
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+        className="mr-3"
+    />
+&nbsp;&nbsp;Loading...
+</Button>
+<Button variant="secondary" className="mr-4 mt-4" disabled>
+    <Spinner
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+        className="mr-3"
+        color="secondary"
+    />
+&nbsp;&nbsp;Loading...
+</Button>
+<Button variant="tertiary" className="mr-4 mt-4" disabled>
+    <Spinner
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+        className="mr-3"
+        color="tertiary"
+    />
+&nbsp;&nbsp;Loading...
+</Button>
+```
+
+</ReactCodeBlock>
+</CodePreview>
 
 ## Assistive Technology
 

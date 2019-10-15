@@ -14,7 +14,7 @@ const previewStyles = {
 export const ComponentPreview = ({ children }: any) => {
   return (
     <>
-      <Container fluid>
+      <Container fluid className="preview-box">
         <Row>
           <Col style={previewStyles}>{children}</Col>
         </Row>

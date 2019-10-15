@@ -1,0 +1,342 @@
+---
+title: Layout
+root: '/docs'
+parents: ['Components']
+---
+
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+import { ReactCodeBlock } from '../../../../src/pages/components/ReactCodeBlock.tsx'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+# Layout
+
+## Grid
+
+The grid system is on of the most powerful features of Bootstrap. It uses a series of containers, rows, and columns to layout and align content.
+It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+
+### Auto-Layout columns
+
+When no column widths are specified the `Col` component will render equal width columns
+
+<ComponentPreview>
+
+<Container className="compPreview">
+  <Row>
+    <Col>1 of 2</Col>
+    <Col>2 of 2</Col>
+  </Row>
+  <Row>
+    <Col>1 of 3</Col>
+    <Col>2 of 3</Col>
+    <Col>3 of 3</Col>
+  </Row>
+</Container>
+
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col">1 of 2</div>
+    <div class="col">2 of 2</div>
+  </div>
+  <div class="row">
+    <div class="col">1 of 3</div>
+    <div class="col">2 of 3</div>
+    <div class="col">3 of 3</div>
+  </div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Container>
+  <Row>
+    <Col>1 of 2</Col>
+    <Col>2 of 2</Col>
+  </Row>
+  <Row>
+    <Col>1 of 3</Col>
+    <Col>2 of 3</Col>
+    <Col>3 of 3</Col>
+  </Row>
+</Container>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+### Setting one column width
+
+Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it.
+Note that the other columns will resize no matter the width of the center column.
+
+<ComponentPreview>
+  <Container className="compPreview">
+    <Row>
+      <Col>1 of 3</Col>
+      <Col xs={6}>2 of 3 (wider)</Col>
+      <Col>3 of 3</Col>
+    </Row>
+    <Row>
+      <Col>1 of 3</Col>
+      <Col xs={5}>2 of 3 (wider)</Col>
+      <Col>3 of 3</Col>
+    </Row>
+  </Container>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col">1 of 3</div>
+    <div class="col-6">2 of 3 (wider)</div>
+    <div class="col">3 of 3</div>
+  </div>
+  <div class="row">
+    <div class="col">1 of 3</div>
+    <div class="col-5">2 of 3 (wider)</div>
+    <div class="col">3 of 3</div>
+  </div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Container className="compPreview">
+  <Row>
+    <Col>1 of 3</Col>
+    <Col xs={6}>2 of 3 (wider)</Col>
+    <Col>3 of 3</Col>
+  </Row>
+  <Row>
+    <Col>1 of 3</Col>
+    <Col xs={5}>2 of 3 (wider)</Col>
+    <Col>3 of 3</Col>
+  </Row>
+</Container>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Responsive grids
+
+The Col lets you specify column widths across 5 breakpoint sizes (xs, sm, md, large, and xl). For every breakpoint, you can specify the amount of columns to span, or set the prop to `<Col lg={true} />` for auto layout widths.
+
+<ComponentPreview>
+  <Container className="compPreview">
+    <Row>
+      <Col sm={8}>sm=8</Col>
+      <Col sm={4}>sm=4</Col>
+    </Row>
+    <Row>
+      <Col sm>sm=true</Col>
+      <Col sm>sm=true</Col>
+      <Col sm>sm=true</Col>
+    </Row>
+  </Container>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">sm=8</div>
+    <div class="col-sm-4">sm=4</div>
+  </div>
+  <div class="row">
+    <div class="col-sm">sm=true</div>
+    <div class="col-sm">sm=true</div>
+    <div class="col-sm">sm=true</div>
+  </div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Container>
+  <Row>
+    <Col sm={8}>sm=8</Col>
+    <Col sm={4}>sm=4</Col>
+  </Row>
+  <Row>
+    <Col sm>sm=true</Col>
+    <Col sm>sm=true</Col>
+    <Col sm>sm=true</Col>
+  </Row>
+</Container>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+You can also mix and match breakpoints to create different grids depending on the screen size.
+
+<ComponentPreview>
+<Container className="compPreview">
+  <Row>
+    <Col xs={12} md={8}>
+      xs=12 md=8
+    </Col>
+    <Col xs={6} md={4}>
+      xs=6 md=4
+    </Col>
+  </Row>
+<Row>
+  <Col xs={6} md={4}>
+    xs=6 md=4
+  </Col>
+  <Col xs={6} md={4}>
+    xs=6 md=4
+  </Col>
+  <Col xs={6} md={4}>
+    xs=6 md=4
+  </Col>
+</Row>
+  <Row>
+    <Col xs={6}>xs=6</Col>
+    <Col xs={6}>xs=6</Col>
+  </Row>
+</Container>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="container">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+    <div class="col-md-8 col-12">xs=12 md=8</div>
+    <div class="col-md-4 col-6">xs=6 md=4</div>
+  </div>
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="row">
+    <div class="col-md-4 col-6">xs=6 md=4</div>
+    <div class="col-md-4 col-6">xs=6 md=4</div>
+    <div class="col-md-4 col-6">xs=6 md=4</div>
+  </div>
+  <!-- Columns are always 50% wide, on mobile and desktop -->
+  <div class="row">
+    <div class="col-6">xs=6</div>
+    <div class="col-6">xs=6</div>
+  </div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Container>
+    // Stack the columns on mobile by making one full-width and the other half-width
+    <Row>
+        <Col xs={12} md={8}>
+            xs=12 md=8
+        </Col>
+        <Col xs={6} md={4}>
+            xs=6 md=4
+        </Col>
+    </Row>
+    // Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
+    <Row>
+        <Col xs={6} md={4}>
+            xs=6 md=4
+        </Col>
+        <Col xs={6} md={4}>
+            xs=6 md=4
+        </Col>
+        <Col xs={6} md={4}>
+            xs=6 md=4
+        </Col>
+    </Row>
+    // Columns are always 50% wide, on mobile and desktop
+    <Row>
+        <Col xs={6}>xs=6</Col>
+        <Col xs={6}>xs=6</Col>
+    </Row>
+</Container>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+
+## Offsetting Columns
+
+<ComponentPreview>
+<Container className="compPreview">
+  <Row>
+    <Col md={4}>md=4</Col>
+    <Col md={{ span: 4, offset: 4 }}>{`md={{ span: 4, offset: 4 }}`}</Col>
+  </Row>
+  <Row>
+    <Col md={{ span: 3, offset: 3 }}>{`md={{ span: 3, offset: 3 }}`}</Col>
+    <Col md={{ span: 3, offset: 3 }}>{`md={{ span: 3, offset: 3 }}`}</Col>
+  </Row>
+  <Row>
+    <Col md={{ span: 6, offset: 3 }}>{`md={{ span: 6, offset: 3 }}`}</Col>
+  </Row>
+</Container>
+</ComponentPreview>
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">md=4</div>
+        <div class="col-md-4 offset-md-4">md={{ span: 4, offset: 4 }}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 offset-md-3">md={{ span: 3, offset: 3 }}</div>
+        <div class="col-md-3 offset-md-3">md={{ span: 3, offset: 3 }}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">md={{ span: 6, offset: 3 }}</div>
+    </div>
+</div>
+```
+
+</HtmlCodeBlock>
+<ReactCodeBlock>
+
+```html
+<Container>
+  <Row>
+    <Col md={4}>md=4</Col>
+    <Col md={{ span: 4, offset: 4 }}>{`md={{ span: 4, offset: 4 }}`}</Col>
+  </Row>
+  <Row>
+    <Col md={{ span: 3, offset: 3 }}>{`md={{ span: 3, offset: 3 }}`}</Col>
+    <Col md={{ span: 3, offset: 3 }}>{`md={{ span: 3, offset: 3 }}`}</Col>
+  </Row>
+  <Row>
+    <Col md={{ span: 6, offset: 3 }}>{`md={{ span: 6, offset: 3 }}`}</Col>
+  </Row>
+</Container>
+```
+
+</ReactCodeBlock>
+</CodePreview>
+

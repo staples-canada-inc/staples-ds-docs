@@ -6,8 +6,6 @@ let sassGlob = require('gulp-sass-glob');
 // del = require('del');
 const config = require('./gulp.config');
 
-
-
 // gulp.task('default', function () {
 //     return gulp.watch('./contents/components/**/*', gulp.series('clean', 'sass'));
 // });
@@ -19,9 +17,10 @@ const config = require('./gulp.config');
 gulp.task('sass', () => {
     return gulp.src(config.sass.src)
         .pipe(sassGlob())
-        .pipe(isProd() ? sass({ outputStyle: 'compressed' }) : sass())
+        //.pipe(isProd() ? sass({ outputStyle: 'compressed' }) : sass())
+        .pipe(sass({ outputStyle: 'compressed' }))
         .on('error', error => console.log(error))
-        .pipe(rename('staples-ds.css'))
+        .pipe(rename('staples-ds.min.css'))
         .pipe(gulp.dest(config.buildLocations.css));
 })
 

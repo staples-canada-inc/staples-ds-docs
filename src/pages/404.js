@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/design-system/staples-ds.css'
+import '../styles/design-system/staples-ds.min.css'
 import '../styles/docs/styles.css'
 import Header from '../components/Header'
 import QuickAccess from './components/QuickAccess'
