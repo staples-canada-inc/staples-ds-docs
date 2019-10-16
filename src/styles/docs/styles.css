@@ -204,7 +204,7 @@ background-color: #F5F5F5;
     color: #198294;
 }
 
-.sidebarNavigation div[toggler*="#"]{
+.sidebarNavigation div[toggler*=""]{
     /* padding-top: 15px;
     padding-bottom: 15px; */
     border-bottom: 1px solid #ddd;
