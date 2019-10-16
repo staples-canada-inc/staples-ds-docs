@@ -8,7 +8,7 @@ const Features = () => {
                 <Col>
                     <Card>
                         <CardBody className="p-5">
-                            <CardTitle className="h3 mt-0 mb-3">
+                            <CardTitle className="h2 mt-0 mb-3">
                                 Start Learning
                             </CardTitle>
                             <CardText>
@@ -23,7 +23,7 @@ const Features = () => {
                 <Col>
                     <Card>
                         <CardBody className="p-5">
-                            <CardTitle className="h3 mt-0 mb-3">
+                            <CardTitle className="h2 mt-0 mb-3">
                                 Resources & Downloads
                             </CardTitle>
                             <CardText>

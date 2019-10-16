@@ -10,7 +10,7 @@ const QuickAccess = () => {
           <Col>
             <Card className="border-0">
               <Card.Body className="p-5">
-                <Card.Title className="h3 mt-0 mb-3">Content</Card.Title>
+                <Card.Title className="mt-0 mb-3"><h3>Content</h3></Card.Title>
                 <Card.Text>Why, when and how to use our design system.</Card.Text>
                 <a href="/docs/content/graphic-treatment">View Content Guidelines</a>
               </Card.Body>
@@ -19,7 +19,7 @@ const QuickAccess = () => {
           <Col>
             <Card className="border-0">
               <Card.Body className="p-5">
-                <Card.Title className="h3 mt-0 mb-3">Design</Card.Title>
+                <Card.Title className="mt-0 mb-3"><h3>Design</h3></Card.Title>
                 <Card.Text>Why, when and how to use our design system.</Card.Text>
                 <a href="/docs/design/accessible-design">View Design Guidelines</a>
               </Card.Body>
@@ -28,7 +28,7 @@ const QuickAccess = () => {
           <Col>
             <Card className="border-0">
               <Card.Body className="p-5">
-                <Card.Title className="h3 mt-0 mb-3">Components</Card.Title>
+                <Card.Title className="mt-0 mb-3"><h3>Components</h3></Card.Title>
                 <Card.Text>Why, when and how to use our design system.</Card.Text>
                 <a href="/docs/components/Alerts/">View Components</a>
               </Card.Body>
@@ -37,7 +37,7 @@ const QuickAccess = () => {
           <Col>
             <Card className="border-0">
               <Card.Body className="p-5">
-                <Card.Title className="h3 mt-0 mb-3">Templates</Card.Title>
+                <Card.Title className="mt-0 mb-3"><h3>Templates</h3></Card.Title>
                 <Card.Text>Why, when and how to use our design system.</Card.Text>
                 <a href="/docs#">Coming Soon</a>
               </Card.Body>

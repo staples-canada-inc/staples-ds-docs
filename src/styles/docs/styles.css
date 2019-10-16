@@ -204,7 +204,7 @@ background-color: #F5F5F5;
     color: #198294;
 }
 
-.sidebarNavigation div[toggler^="#"]{
+.sidebarNavigation div[toggler*="#"]{
     /* padding-top: 15px;
     padding-bottom: 15px; */
     border-bottom: 1px solid #ddd;
@@ -226,7 +226,7 @@ background-color: #F5F5F5;
 }
 
 /* Used for styling the columns on the Layout component previews */
-.compPreview .col, .compPreview  *[class^='col-']{
+.compPreview .col, .compPreview  [class*='col-']{
     background: #9BD3DD;
     border: 1px solid #198294;
     padding: 16px;
