@@ -97,7 +97,7 @@ export class RootLayout extends React.Component {
 
         <Header />
         <PageLayout
-          sidebar={<SidebarContents root={this.props.sidebarRoot} />}
+          sidebar={<SidebarContents root={this.props.sidebarRoot} key={this.id} />}
           open={this.state.open}
           docked={this.state.docked}
           onSetOpen={this.onSetOpen}

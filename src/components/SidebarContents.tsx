@@ -114,14 +114,14 @@ export const SidebarContents = ({ root }: Props) => {
                     <span id={item.id} className="sidebarHeading h3">
                         {item.title}
                     </span>
-                    <UncontrolledCollapse toggler={`#${item.id}`}>
+                    <UncontrolledCollapse toggler={item.id.toString()}>
                         {loop(item.children)}
                     </UncontrolledCollapse>
                 </>
               )
             }
             return (
-              <Nav.Item>
+              <Nav.Item key={item.id}>
                 <Link to={item.path} className="nav-link">
                   {item.title}
                 </Link>
@@ -136,9 +136,9 @@ export const SidebarContents = ({ root }: Props) => {
         //const defaultOpenKeys = dir.map(item => item.key)
         return (
           <div
-            vertical
+            //vertical
             //defaultOpenKeys={defaultOpenKeys}
-            selectedKeys={keys}
+            selectedkeys={keys}
             style={sidebarNav}
             className="sidebarNavigation"
           >
