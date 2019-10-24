@@ -521,42 +521,32 @@ The navbar styling for Staples sub-sites can either be coloured in our brand red
 <ReactCodeBlock>
 
 ```html
-<Navbar bg="dark" variant="dark">
-  <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-  <nav className="mr-auto">
-    <Nav.Link href="#home">Home</Nav.Link>
-    <Nav.Link href="#features">Features</Nav.Link>
-    <Nav.Link href="#pricing">Pricing</Nav.Link>
-  </nav>
-  <form inline>
-    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-    <button variant="outline-info">Search</button>
-  </form>
-</Navbar>
-<Navbar bg="primary" variant="dark">
-  <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-  <nav className="mr-auto">
-    <Nav.Link href="#home">Home</Nav.Link>
-    <Nav.Link href="#features">Features</Nav.Link>
-    <Nav.Link href="#pricing">Pricing</Nav.Link>
-  </nav>
-  <form inline>
-    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-    <button variant="outline-light">Search</button>
-  </form>
-</Navbar>
-<Navbar bg="light" variant="light">
-  <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-  <nav className="mr-auto">
-    <Nav.Link href="#home">Home</Nav.Link>
-    <Nav.Link href="#features">Features</Nav.Link>
-    <Nav.Link href="#pricing">Pricing</Nav.Link>
-  </nav>
-  <form inline>
-    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-    <button variant="outline-primary">Search</button>
-  </form>
-</Navbar>
+  <Navbar bg="primary" variant="dark">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+  </Navbar>
+
+  <Navbar bg="light" variant="light">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+  </Navbar>
+
+  <Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+  </Navbar>
 ```
 
 </ReactCodeBlock>
