@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import { pathPrefix } from '../../gatsby-config'
 import Nav from 'react-bootstrap/Nav'
-import { UncontrolledCollapse } from 'reactstrap';
+import Accordion from 'react-bootstrap/Accordion'
+//import { UncontrolledCollapse } from 'reactstrap';
 import newId from '../utils/newid';
 
 
@@ -75,8 +76,6 @@ interface Props {
 
 export const SidebarContents = ({ root }: Props) => {
 
-
-
   return (
     <StaticQuery
       query={graphql`
@@ -111,17 +110,24 @@ export const SidebarContents = ({ root }: Props) => {
               item.id = newId();
               return (
                   <>
-                    <span id={item.id} className="sidebarHeading h3">
+                  <Accordion>
+                    <Accordion.Toggle
+                        as="h3"
+                        variant="link"
+                        className="sidebarHeading pl-4"
+                        eventKey={item.id}
+                    >
                         {item.title}
-                    </span>
-                    <UncontrolledCollapse toggler={'\u0023'+item.id.toString()}>
-                        {loop(item.children)}
-                    </UncontrolledCollapse>
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey={item.id}>
+                        <div id={item.id}>{loop(item.children)}</div>
+                    </Accordion.Collapse>
+                    </Accordion>
                 </>
               )
             }
             return (
-              <Nav.Item key={item.id}>
+              <Nav.Item >
                 <Link to={item.path} className="nav-link">
                   {item.title}
                 </Link>

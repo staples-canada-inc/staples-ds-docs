@@ -184,12 +184,6 @@ background-color: #F5F5F5;
     display: block;
 }
 
-.sidebarNavigation span.h3:hover{
-    cursor: pointer;
-    font-weight: bold;
-    background: #f3f3f2;
-}
-
 .sidebarNavigation .nav-item {
     margin: 0px;
 }
@@ -204,9 +198,19 @@ background-color: #F5F5F5;
     color: #198294;
 }
 
-.sidebarNavigation div[toggler*=""]{
-    /* padding-top: 15px;
-    padding-bottom: 15px; */
+.sidebarNavigation .accordion h3{
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebarNavigation .accordion h3:hover{
+    cursor: pointer;
+    font-weight: bold;
+    background: #f3f3f2;
+}
+.sidebarNavigation .accordion .collapse.show {
     border-bottom: 1px solid #ddd;
 }
 
@@ -235,3 +239,4 @@ background-color: #F5F5F5;
 .compPreview .row + .row {
     margin-top: 1rem;
 }
+
