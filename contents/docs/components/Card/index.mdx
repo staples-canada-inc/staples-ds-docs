@@ -26,7 +26,7 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
 <Card style={{ width: 330 }}>
     <Card.Img variant="top" src="https://source.unsplash.com/600x300?nature" alt="..." />
     <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title as="p" className="h3 pt-0 mt-0">Card Title</Card.Title>
         <Card.Text>
         Some text to make up the bulk of
         the card's content.
@@ -43,7 +43,7 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
 <div class="card">
     <img class="card-img-top" src="..." alt="..." />
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <p class="card-title h3 pt-0 mt-0">Card title</p>
         <p class="card-text">Some text to make up the bulk of the card's content.</p>
         <a href="#" class="card-link">View More</a>
     </div>
@@ -57,7 +57,7 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
 <Card style={{ width: 330 }}>
     <Card.Img variant="top" src="..." alt="..." alt="..." />
     <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title as="p" className="h3 pt-0 mt-0">Card Title</Card.Title>
         <Card.Text>
         Some text to make up the bulk of
         the card's content.
@@ -79,7 +79,7 @@ You can also use buttons with links within a card using this documentation:
 <Card style={{ width: 500 }}>
     <Card.Img variant="top" src="https://source.unsplash.com/500x250?nature" alt="..." />
     <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title as="p" className="h3 pt-0 mt-0">Card Title</Card.Title>
         <br />
         <Button color="secondary" block>View More</Button>
     </Card.Body>
@@ -93,7 +93,7 @@ You can also use buttons with links within a card using this documentation:
 <div class="card">
     <img class="card-img-top" src="..." alt="..." />
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <p class="card-title h3 pt-0 mt-0">Card title</p>
         <button href="#" class="btn btn-secondary btn-block">View More</button>
     </div>
 </div>
@@ -106,7 +106,7 @@ You can also use buttons with links within a card using this documentation:
 <Card style={{ width: 500 }}>
     <Card.Img variant="top" src="..." alt="..."  />
     <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title as="p" className="h3 pt-0 mt-0">Card Title</Card.Title>
         <br />
         <Button color="secondary" block>View More</Button>
     </Card.Body>
@@ -166,8 +166,8 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 <ComponentPreview>
 <Card style={{ width: 330 }}>
     <Card.Body>
-        <Card.Title className="h5 mb-3">Card title</Card.Title>
-        <Card.Subtitle><strong>Card subtitle</strong></Card.Subtitle>
+        <Card.Title as="p" className="h3 pt-0 mt-0">Card title</Card.Title>
+        <Card.Subtitle as="h4" className="text-muted">Card subtitle</Card.Subtitle>
         <Card.Text>
             Some text to make up
             the bulk of the card's content.
@@ -183,8 +183,8 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 ```html
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-title h3 pt-0 mt-0">Card title</p>
+        <h4 class="card-subtitle mb-2 text-muted">Card subtitle</h4>
         <p class="card-text">Some text to make up the bulk of the card's content.</p>
         <a href="#">View More</a>
     </div>
@@ -197,7 +197,7 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 ```html
 <Card style={{ width: 330 }}>
     <Card.Body>
-        <Card.Title className="h5 mb-3">Card title</Card.Title>
+        <Card.Title as="p" className="h3 pt-0 mt-0">Card title</Card.Title>
         <Card.Subtitle><strong>Card subtitle</strong></Card.Subtitle>
         <Card.Text>
             Some text to make up

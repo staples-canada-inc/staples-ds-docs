@@ -262,22 +262,17 @@ $embed-responsive-aspect-ratios: join(((21 9), (16 9), (4 3), (1 1)),
     font-weight: bold;
 }
 
-$font-family-regular: "TT Norms Regular";
-$font-family-medium: "TT Norms Medium";
-$font-family-bold: "TT Norms Bold";
+$font-family-regular: 'TT Norms Regular' Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family-medium: 'TT Norms Medium';
+$font-family-bold: 'TT Norms Bold';
 
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: $font-family-regular !default;
-$font-family-monospace: SFMono-Regular,
-Menlo,
-Monaco,
-Consolas,
-"Liberation Mono",
-"Courier New",
-monospace !default;
+$font-family-monospace: 'Menlo', SFMono-Regular, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
 $font-family-base: $font-family-sans-serif !default;
+
 // stylelint-enable value-keyword-case
 // Typography sizes are modeled using 1rem as the base and a line height of 1.3rem
 
@@ -302,7 +297,7 @@ $h5-font-size: $font-size-base * .875 !default;
 $h6-font-size: $font-size-base * .85 !default;
 
 $headings-margin-bottom: 1.5rem !default;
-$headings-font-family: 'TT Norms Medium' Gotham, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$headings-font-family: 'TT Norms Regular' Gotham, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $headings-font-weight: 600 !default;
 $headings-line-height: 2.5 !default;
 $headings-color: inherit !default;
