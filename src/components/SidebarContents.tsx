@@ -114,7 +114,7 @@ export const SidebarContents = ({ root }: Props) => {
                     <span id={item.id} className="sidebarHeading h3">
                         {item.title}
                     </span>
-                    <UncontrolledCollapse toggler={item.id.toString()}>
+                    <UncontrolledCollapse toggler={'\u0023'+item.id.toString()}>
                         {loop(item.children)}
                     </UncontrolledCollapse>
                 </>
