@@ -77,12 +77,13 @@
     "@types/react-helmet": "5.0.8",
     "docz": "^2.0.0-rc.1",
     "gatsby-plugin-remove-trailing-slashes": "2.0.10",
+    "gatsby-remark-vscode": "^1.0.6",
     "gh-pages": "2.0.1",
+    "gulp-uglify": "^3.0.2",
     "prettier": "1.16.4",
     "prism-themes": "^1.1.0",
     "react-sidebar": "^3.0.2",
-    "reactstrap": "^8.0.1",
-    "gatsby-remark-vscode": "^1.0.6"
+    "reactstrap": "^8.0.1"
   },
   "repository": {
     "type": "git",

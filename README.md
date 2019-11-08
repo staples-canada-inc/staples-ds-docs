@@ -10,6 +10,10 @@ The Staples Design system is built with dependancies on [Bootstrap](https://getb
 To utilize the Staples Design System in an HTML project just include the `staples-ds.css` and `staples-ds.js` in the `<head>` tag of your .html file.
 These files are compiled with the required css and js code from [Bootstrap](https://getbootstrap.com).
 
+[Staples Design System CSS](https://github.com/staples-canada-inc/staples-ds-docs/blob/master/src/styles/design-system/staples-ds.min.css)
+
+[Staples Design System JS]()
+
 ### 2) Copy Components
 
 On each component page within our components documentation there are `HTML` snippets that can be copy and pasted into any `.html` file. With the Staples Design System files include these snippets will display match 
