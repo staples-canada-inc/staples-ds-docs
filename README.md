@@ -12,7 +12,7 @@ These files are compiled with the required css and js code from [Bootstrap](http
 
 [Staples Design System CSS](https://github.com/staples-canada-inc/staples-ds-docs/blob/master/src/styles/design-system/staples-ds.min.css)
 
-[Staples Design System JS]()
+[Staples Design System JS](https://github.com/staples-canada-inc/staples-ds-docs/blob/master/src/scripts/design-system/staples-ds.min.js)
 
 ### 2) Copy Components
 
