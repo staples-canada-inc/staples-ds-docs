@@ -1,0 +1,53 @@
+.dropzone{
+	.dropzone-target{
+		border: 2px dashed $secondary;
+		background-color: $lightest-blue;
+		&:hover{
+			background-color: $blue;
+			button{
+				background-color: $secondary;
+				color: $white;
+			}
+		}
+		button{
+			margin-right: 16px;
+		}
+	}
+	.faq-trigger{
+		color: $secondary;
+		&:hover{
+			text-decoration: underline;
+			color: darken($secondary, 8%);
+			cursor: pointer;
+		}
+	}
+	&.disabled{
+		.dropzone-target{
+			border: 2px dashed $mid-gray;
+			background-color: $light-gray;
+		}
+	}
+}
+
+.dropzone.disabled{
+	.dropzone-target{
+		color: $light-gray;
+		border: 2px dashed $light-gray;
+		background-color: $lightest-gray;
+		&:hover, &:active, &:focus{
+			background-color: $lightest-gray;
+			button{
+				background-color: $lightest-gray !important;
+				color: $light-gray !important;
+				cursor: not-allowed !important;
+				border: 1px solid $light-gray !important;
+			}
+		}
+		button{
+			margin-right: 16px;
+			background-color: $lightest-gray;
+			color: $light-gray;
+			border: 1px solid $light-gray;
+		}
+	}
+}

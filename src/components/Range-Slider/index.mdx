@@ -1,0 +1,43 @@
+---
+title: Range Slider
+root: '/docs'
+parents: ['Components']
+---
+
+import { ComponentPreview } from '../../../../src/pages/components/ComponentPreview.tsx'
+import { CodePreview } from '../../../../src/pages/components/CodePreview.tsx'
+import { HtmlCodeBlock } from '../../../../src/pages/components/HtmlCodeBlock.tsx'
+
+
+
+# Range Slider
+
+
+<ComponentPreview>
+	<input type="range" style="--min: 0;
+						 --max: 100;
+						 --val: 50;"/>
+</ComponentPreview>
+
+# Show Progress 
+
+<CodePreview>
+<HtmlCodeBlock>
+
+```js
+<script type="text/javascript">
+	const _R = document.querySelector('[type=range]');
+
+	document.documentElement.classList.add('js');
+
+	_R.addEventListener('input', e => {
+	_R.style.setProperty('--val', +_R.value);
+	}, false);
+</script>
+```
+
+</HtmlCodeBlock>
+</CodePreview>
+
+
+

@@ -1,0 +1,135 @@
+// Button Globals
+.btn-sm,
+.btn-group-sm>.btn {
+    line-height: 12px;
+}
+
+.btn.disabled {
+    cursor: not-allowed;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+// Default Button (Outline)
+
+.btn-primary.btn {
+    color: $primary;
+    border-color: $primary;
+    background-color: transparent;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+.btn-secondary.btn {
+    color: $secondary;
+    border-color: $secondary;
+    background-color: transparent;
+
+    &:hover {
+        color: $white;
+        background-color: $secondary;
+    }
+}
+
+.btn-tertiary.btn {
+    color: $tertiary;
+    border-color: $tertiary;
+    background-color: transparent;
+
+    &:hover {
+        color: $white;
+        background-color: $tertiary;
+    }
+}
+
+
+// CTA Button (Solid)
+
+.btn-primary.cta {
+    color: $white;
+    background-color: $primary;
+
+    &:hover {
+        background-color: darken($primary, 8%);
+        border-color: #990000;
+    }
+}
+
+.btn-secondary.cta {
+    color: $white;
+    background-color: $secondary;
+
+    &:hover {
+        background-color: darken($secondary, 8%);
+        border-color: #125c68;
+    }
+}
+
+.btn-tertiary.cta {
+    color: $white;
+    background-color: $tertiary;
+
+    &:hover {
+        background-color: darken($tertiary, 8%);
+        border-color: #5b5d5f;
+    }
+}
+
+// Button Active State
+
+.btn-primary.active {
+    background-color: darken($primary, 8%);
+    border-color: #990000;
+}
+
+.btn-secondary.active {
+    background-color: darken($secondary, 8%);
+    border-color: #125c68;
+}
+
+.btn-tertiary.active {
+    background-color: darken($tertiary, 8%);
+    border-color: #5b5d5f;
+}
+
+.btn-link.btn-secondary:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+    border: none;
+    color: $secondary;
+    text-decoration: underline;
+    padding: 0px !important;
+}
+
+
+// Button Link
+
+.btn-link {
+    background-color: transparent !important;
+    border: 0px !important;
+    border-color: transparent !important;
+    color: $secondary;
+    text-decoration: underline !important;
+    padding: 0px !important;
+    text-transform: none !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent !important;
+        border: none !important;
+        color: $secondary !important;
+        text-decoration: underline !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+}
+
+button.btn-link {
+    border: 0px !important;
+    border-color: transparent !important;
+}

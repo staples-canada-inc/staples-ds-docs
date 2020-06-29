@@ -1,7 +1,0 @@
-// Vendor - Bootstrap
-@import "./vendor/bootstrap/functions"; // Load Functions to preserve bootstrap dependancies
-@import "./variables"; // Replace bootstrap with our own custom variable overrides
-@import "./vendor/bootstrap/bootstrap"; // Load the rest of bootstrap
-
-// Component Styles
-@import "../../../../contents/docs/components/**/*";

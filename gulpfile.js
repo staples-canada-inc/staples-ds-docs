@@ -1,30 +1,31 @@
-let gulp = require('gulp');
-let sass = require('gulp-sass');
-let rename = require('gulp-rename');
-let gulpUtil = require('gulp-util');
-let sassGlob = require('gulp-sass-glob');
-let uglify = require('gulp-uglify');
+const { src, dest, parallel, watch } = require('gulp');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const autoprefixer = require('gulp-autoprefixer');
 
-// del = require('del');
-const config = require('./gulp.config');
 
-gulp.task('js', () => {
-    return gulp.src(config.js.src)
-    .pipe(uglify())
-    .on('error', error => console.log(error))
-    .pipe(rename('staples-ds.min.js'))
-    .pipe(gulp.dest(config.buildLocations.js))
-})
+function css(cb) {
+	return src('src/styles/scss/staples-ds.scss')
+		.pipe(sassGlob())
+		.pipe(sass({ outputStyle: 'compressed' }))
+		.pipe(autoprefixer())
+		.on('error', error => console.log(error))
+		.pipe(rename('staples-ds.min.css'))
+		.pipe(dest('dist/css/'));
+	cb();
+}
 
-gulp.task('sass', () => {
-    return gulp.src(config.sass.src)
-        .pipe(sassGlob())
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .on('error', error => console.log(error))
-        .pipe(rename('staples-ds.min.css'))
-        .pipe(gulp.dest(config.buildLocations.css));
-})
+function js(cb) {
+	return src('node_modules/bootstrap/dist/js/bootstrap.js')
+		.pipe(uglify())
+		.on('error', error => console.log(error))
+		.pipe(rename('staples-ds.min.js'))
+		.pipe(dest('dist/js/'))
+	cb();
+}
 
-function isProd() {
-    return gulpUtil.env.type === 'production';
+exports.default = function() {
+	watch('src/**/*.scss', { ignoreInitial: false }, parallel(css, js));
 }
